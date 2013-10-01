@@ -1,8 +1,9 @@
-Title: Devicons
-Author: Paul C Pederson
-Date: 2013/08/06
-Categories: Web, Experiment
-Description: Rendering three color icons in the browser with a custom web font.
+---
+title: Devicons
+date: 2013-08-06
+template: article.jade
+description: Rendering three color icons in the browser with a custom web font.
+---
 
 At work the other day I was thinking out loud about a strategy for generating full-color icons with a web font. Essentially the idea is to use :before and :after pseudo elements to provide a foreground and background to your icon, thusly giving it three colors. If you're a visual learner, it works like this:
 

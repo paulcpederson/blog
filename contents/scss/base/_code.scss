@@ -3,12 +3,7 @@
 code {
   font-family: $button-font;
   font-size: 0.85em;
-  color: #000;
-}
-
-pre code {
-  display: block;
-  line-height: 1.1;
+  color: $dark-gray;
 }
 
 p code {
@@ -16,8 +11,9 @@ p code {
   border-radius: 0.3em;
   position: relative;
   top: -0.15em;
-  background: #444;
-  color: #fff;
+  background: $off-white;
+  border: 1px solid $light-gray;
+  color: $dark-gray;
   white-space: nowrap;
 }
 
@@ -33,6 +29,7 @@ pre {
     background-color: $base03;
     color: $base0;
     width: 100%;
+    line-height: 1.25;
   }
 
   .comment, .template_comment, .diff .header, .doctype, .lisp .string, .javadoc {

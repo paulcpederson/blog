@@ -13,11 +13,7 @@ block append head
       link(rel='stylesheet', href='/css/' + css + '.css')
 
 block header
-  include author
   h1= page.title
-  p.author
-    | #{ "Written by " }
-    mixin author(page.metadata.author)
 
 block content
   article.article

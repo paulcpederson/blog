@@ -1,8 +1,9 @@
-Title: Sublime Writer
-Author: Paul C Pederson
-Date: 2012/11/21
-Categories: ST2
-Description: Bringing the beauty of iA Writer to Sublime Text 2
+---
+title: Sublime Writer
+date: 2012-11-21
+template: article.jade
+description: Bringing the beauty of iA Writer to Sublime Text 2
+---
 
 Immediately on its release, I fell in love with iA Writer. Like Clear, Solar, or the now assimilated Sparrow, iA Writer is one of a new generation of apps that strives for focus rather than features. Reading their [blog](http://informationarchitects.net/blog/responsive-typography-the-basics/ "Responsive Web Typography, the Basics."), one gets a true sense of just how in depth they went while designing the app.
 
