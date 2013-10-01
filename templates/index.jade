@@ -10,7 +10,7 @@ block content
         h2
           a(href=article.url)= article.title
       section.content
-        !{ typogr(article.intro).typogrify() }
+        p= article.metadata.description
         if article.hasMore
           p.more
             a(href=article.url) more

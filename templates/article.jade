@@ -7,6 +7,10 @@ block append vars
 block prepend title
   | #{ page.title + " - "}
 
+block append head
+  each css in page.metadata.css
+    link(rel='stylesheet', href='/css/' + css + '.css')
+
 block header
   include author
   h1= page.title
@@ -22,4 +26,6 @@ block prepend footer
   div.nav
     a(href=contents.index.url) « Full blog
 
-
+block append scripts
+  each js in page.metadata.js
+    script(src='/js/' + js + '.js')
