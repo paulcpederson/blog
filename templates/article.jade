@@ -8,8 +8,9 @@ block prepend title
   | #{ page.title + " - "}
 
 block append head
-  each css in page.metadata.css
-    link(rel='stylesheet', href='/css/' + css + '.css')
+  if page.metadata.css
+    each css in page.metadata.css
+      link(rel='stylesheet', href='/css/' + css + '.css')
 
 block header
   include author
@@ -27,5 +28,6 @@ block prepend footer
     a(href=contents.index.url) « Full blog
 
 block append scripts
-  each js in page.metadata.js
-    script(src='/js/' + js + '.js')
+  if page.metadata.js
+    each js in page.metadata.js
+      script(src='/js/' + js + '.js')
