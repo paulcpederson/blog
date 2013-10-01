@@ -21,66 +21,49 @@ p code {
   white-space: nowrap;
 }
 
-/* syntax hl stuff */
+/* Solarized Dark Theme */
+pre {
+  width: 100%;
+  @include box-sizing(border-box);
+  background-color: $base03;
 
-code.lang-markdown {
-  color: #424242;
-}
+  code {
+    display: block;
+    padding: 1em;
+    background-color: $base03;
+    color: $base0;
+    width: 100%;
+  }
 
-code.lang-markdown .header,
-code.lang-markdown .strong {
-  font-weight: bold;
-}
+  .comment, .template_comment, .diff .header, .doctype, .lisp .string, .javadoc {
+    color: $base01;
+  }
 
-code.lang-markdown .emphasis {
-  font-style: italic;
-}
+  .keyword, .css .rule .keyword, .winutils, .javascript .title, .method, .addition, .css .tag, .lisp .title {
+    color: $green;
+  }
 
-code.lang-markdown .horizontal_rule,
-code.lang-markdown .link_label,
-code.lang-markdown .code,
-code.lang-markdown .header,
-code.lang-markdown .link_url {
-  color: #555;
-}
+  .number, .command, .string, .tag .value, .phpdoc, .tex .formula, .regexp, .hexcolor {
+    color: $cyan;
+  }
 
-code.lang-markdown .blockquote,
-code.lang-markdown .bullet {
-  color: #bbb;
-}
+  .title, .localvars, .function .title, .chunk, .decorator, .builtin, .built_in, .lisp .title, .identifier, .title .keymethods, .id {
+    color: $blue;
+  }
 
-/* Tomorrow Theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-/* Original theme - https://github.com/chriskempson/tomorrow-theme */
-/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
-.tomorrow-comment, pre .comment, pre .title {
-  color: #8e908c;
-}
+  .attribute, .variable, .instancevar, .lisp .body, .smalltalk .number, .constant, .class .title, .parent, .haskell .label {
+    color: $yellow;
+  }
 
-.tomorrow-red, pre .variable, pre .attribute, pre .tag, pre .regexp, pre .ruby .constant, pre .xml .tag .title, pre .xml .pi, pre .xml .doctype, pre .html .doctype, pre .css .id, pre .css .class, pre .css .pseudo {
-  color: #c82829;
-}
+  .preprocessor, .pi, .shebang, .symbol, .diff .change, .special, .keymethods, .attr_selector, .important, .subst, .cdata {
+    color: $orange;
+  }
 
-.tomorrow-orange, pre .number, pre .preprocessor, pre .built_in, pre .literal, pre .params, pre .constant {
-  color: #f5871f;
-}
+  .deletion {
+    color: $red;
+  }
 
-.tomorrow-yellow, pre .class, pre .ruby .class .title, pre .css .rules .attribute {
-  color: #eab700;
-}
-
-.tomorrow-green, pre .string, pre .value, pre .inheritance, pre .header, pre .ruby .symbol, pre .xml .cdata {
-  color: #718c00;
-}
-
-.tomorrow-aqua, pre .css .hexcolor {
-  color: #3e999f;
-}
-
-.tomorrow-blue, pre .function, pre .python .decorator, pre .python .title, pre .ruby .function .title, pre .ruby .title .keyword, pre .perl .sub, pre .javascript .title, pre .coffeescript .title {
-  color: #4271ae;
-}
-
-.tomorrow-purple, pre .keyword, pre .javascript .function {
-  color: #8959a8;
+  .tex .formula {
+    background: $base02;
+  }
 }

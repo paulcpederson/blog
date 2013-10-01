@@ -5,7 +5,7 @@ block append vars
   - bodyclass = 'article-detail'
 
 block prepend title
-  | #{ page.title + " - "}
+  | #{ page.title + " | "}
 
 block append head
   if page.metadata.css

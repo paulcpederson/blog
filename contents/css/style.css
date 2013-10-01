@@ -232,6 +232,81 @@ a {
   color: #2aa198;
 }
 
+/* code styling */
+/* line 3, ../scss/base/_code.scss */
+code {
+  font-family: "Inconsolata", "Courier New", courier, monospace;
+  font-size: 0.85em;
+  color: #000;
+}
+
+/* line 9, ../scss/base/_code.scss */
+pre code {
+  display: block;
+  line-height: 1.1;
+}
+
+/* line 14, ../scss/base/_code.scss */
+p code {
+  padding: 0.1em 0.3em 0.2em;
+  border-radius: 0.3em;
+  position: relative;
+  top: -0.15em;
+  background: #444;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* Solarized Dark Theme */
+/* line 25, ../scss/base/_code.scss */
+pre {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #002b36;
+}
+/* line 30, ../scss/base/_code.scss */
+pre code {
+  display: block;
+  padding: 1em;
+  background-color: #002b36;
+  color: #839496;
+  width: 100%;
+}
+/* line 38, ../scss/base/_code.scss */
+pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .lisp .string, pre .javadoc {
+  color: #586e75;
+}
+/* line 42, ../scss/base/_code.scss */
+pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .method, pre .addition, pre .css .tag, pre .lisp .title {
+  color: #859900;
+}
+/* line 46, ../scss/base/_code.scss */
+pre .number, pre .command, pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula, pre .regexp, pre .hexcolor {
+  color: #2aa198;
+}
+/* line 50, ../scss/base/_code.scss */
+pre .title, pre .localvars, pre .function .title, pre .chunk, pre .decorator, pre .builtin, pre .built_in, pre .lisp .title, pre .identifier, pre .title .keymethods, pre .id {
+  color: #268bd2;
+}
+/* line 54, ../scss/base/_code.scss */
+pre .attribute, pre .variable, pre .instancevar, pre .lisp .body, pre .smalltalk .number, pre .constant, pre .class .title, pre .parent, pre .haskell .label {
+  color: #b58900;
+}
+/* line 58, ../scss/base/_code.scss */
+pre .preprocessor, pre .pi, pre .shebang, pre .symbol, pre .diff .change, pre .special, pre .keymethods, pre .attr_selector, pre .important, pre .subst, pre .cdata {
+  color: #cb4b16;
+}
+/* line 62, ../scss/base/_code.scss */
+pre .deletion {
+  color: #dc322f;
+}
+/* line 66, ../scss/base/_code.scss */
+pre .tex .formula {
+  background: #073642;
+}
+
 /* line 1, ../scss/base/_buttons.scss */
 .btn {
   display: inline-block;
