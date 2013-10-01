@@ -1,0 +1,295 @@
+@import url(http://fonts.googleapis.com/css?family=Karla);
+/* - - - - - - - - - - Basic Reset - - - - - - - - - - */
+/* line 2, ../scss/base/_reset.scss */
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 9, ../scss/base/_reset.scss */
+body {
+  margin: 0;
+}
+
+/* line 12, ../scss/base/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 13, ../scss/base/_reset.scss */
+audio[controls], canvas, video {
+  display: inline-block;
+  zoom: 1;
+}
+
+/* line 14, ../scss/base/_reset.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 15, ../scss/base/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 20, ../scss/base/_reset.scss */
+a, abbr, acronym, address, b, big, cite, code, del, em, i, ins, kbd, mark, output, q,
+samp, small, strike, strong, sub, sup, time, tt, var,
+dfn, dl, dt, dd, ol, ul, li,
+blockquote, h1, h2, h3, h4, h5, h6, p, pre,
+applet, canvas, embed, figure, figcaption, iframe, img, object {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 21, ../scss/base/_mixins.scss */
+.full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 27, ../scss/base/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 31, ../scss/base/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 2, ../scss/base/_grid.scss */
+.col {
+  display: block;
+  float: left;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, ../scss/base/_grid.scss */
+.col1of1 {
+  float: none;
+}
+
+/* line 10, ../scss/base/_grid.scss */
+.col1of2 {
+  width: 50%;
+}
+
+/* line 11, ../scss/base/_grid.scss */
+.col1of3 {
+  width: 33.33333%;
+}
+
+/* line 12, ../scss/base/_grid.scss */
+.col2of3 {
+  width: 66.66666%;
+}
+
+/* line 13, ../scss/base/_grid.scss */
+.col1of4 {
+  width: 25%;
+}
+
+/* line 14, ../scss/base/_grid.scss */
+.col3of4 {
+  width: 75%;
+}
+
+/* line 15, ../scss/base/_grid.scss */
+.col1of5 {
+  width: 20%;
+}
+
+/* line 16, ../scss/base/_grid.scss */
+.col2of5 {
+  width: 40%;
+}
+
+/* line 17, ../scss/base/_grid.scss */
+.col3of5 {
+  width: 60%;
+}
+
+/* line 18, ../scss/base/_grid.scss */
+.col4of5 {
+  width: 80%;
+}
+
+/* line 20, ../scss/base/_grid.scss */
+.col-group {
+  font-family: 'Courier New', Monospace;
+  letter-spacing: -.65em;
+  margin-left: -1em;
+  margin-right: -1em;
+  text-align: left;
+}
+/* line 26, ../scss/base/_grid.scss */
+.col-group .col {
+  display: inline-block;
+  float: none;
+  font-family: "Karla", Arial, Helvetica, sans;
+  letter-spacing: normal;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+}
+/* line 37, ../scss/base/_grid.scss */
+.col-group.no-padding {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 40, ../scss/base/_grid.scss */
+.col-group.no-padding .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* - - - - - - - - - Basic Typography - - - - - - - */
+/* line 4, ../scss/base/_typography.scss */
+body {
+  font-family: "Karla", Arial, Helvetica, sans;
+  color: #242323;
+  font-weight: 400;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+/* line 12, ../scss/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Facit", Arial, Helvetica, sans;
+  line-height: 1em;
+  font-weight: 400;
+  font-size: 3em;
+  margin: 1em 0 0.5em 0;
+  text-transform: none;
+}
+
+/* line 21, ../scss/base/_typography.scss */
+h1 {
+  font-size: 3em;
+}
+
+/* line 22, ../scss/base/_typography.scss */
+h2 {
+  font-size: 2.7em;
+}
+
+/* line 23, ../scss/base/_typography.scss */
+h3 {
+  font-size: 1.8em;
+}
+
+/* line 24, ../scss/base/_typography.scss */
+h4 {
+  font-size: 1.65em;
+}
+
+/* line 25, ../scss/base/_typography.scss */
+h5 {
+  font-size: 1.5em;
+}
+
+/* line 26, ../scss/base/_typography.scss */
+h6 {
+  font-size: 1.35em;
+}
+
+/* line 28, ../scss/base/_typography.scss */
+blockquote {
+  font-family: "Facit", Arial, Helvetica, sans;
+  text-align: center;
+  font-size: 2em;
+  line-height: 3em;
+  font-style: italic;
+}
+
+/* line 36, ../scss/base/_typography.scss */
+p {
+  line-height: 1.75em;
+  margin: 1em 0;
+}
+
+/* line 41, ../scss/base/_typography.scss */
+a {
+  text-decoration: none;
+  color: #2aa198;
+}
+
+/* line 1, ../scss/base/_buttons.scss */
+.btn {
+  display: inline-block;
+  padding: 1em;
+  background-color: transparent;
+  color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #30302f;
+  text-decoration: none;
+  font-family: "Inconsolata", "Courier New", courier, monospace;
+  font-size: 0.75em;
+  cursor: pointer;
+  -webkit-transition: background-color 75ms linear, color 75ms linear;
+  -moz-transition: background-color 75ms linear, color 75ms linear;
+  -o-transition: background-color 75ms linear, color 75ms linear;
+  transition: background-color 75ms linear, color 75ms linear;
+}
+/* line 13, ../scss/base/_buttons.scss */
+.btn:hover {
+  background-color: #30302f;
+  color: white;
+}
+
+/* line 6, ../scss/base/_layout.scss */
+.panel {
+  width: 100%;
+  padding: 2em 0;
+  background-color: white;
+}
+/* line 10, ../scss/base/_layout.scss */
+.panel.transparent {
+  background-color: transparent;
+}
+/* line 13, ../scss/base/_layout.scss */
+.panel.tan {
+  background-color: #002b36;
+}
+/* line 16, ../scss/base/_layout.scss */
+.panel.dark-gray {
+  background-color: #30302f;
+  color: white;
+}
+
+/* line 22, ../scss/base/_layout.scss */
+.feature {
+  margin-top: -3em;
+}
+
+/* line 26, ../scss/base/_layout.scss */
+.right {
+  float: right;
+}
+
+/* line 30, ../scss/base/_layout.scss */
+.left {
+  float: left;
+}

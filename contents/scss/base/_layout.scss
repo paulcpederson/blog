@@ -1,0 +1,32 @@
+// Nav
+
+// Footer
+
+// Reusable Layout Classes
+.panel {
+  width: 100%;
+  padding: 2em 0;
+  background-color: $white;
+  &.transparent {
+    background-color: transparent;
+  }
+  &.tan {
+    background-color: $base03;
+  }
+  &.dark-gray {
+    background-color: $dark-gray;
+    color: $white;
+  }
+}
+
+.feature {
+  margin-top: -3em;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
