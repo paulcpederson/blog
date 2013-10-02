@@ -14,24 +14,26 @@ html(lang='en')
       link(rel='stylesheet', href='/css/main.css')
       link(rel='stylesheet', href='/css/style.css')
   body(class=bodyclass)
-    header.header
-      div.content-wrap
-        block header
-          div.logo
-            h1
-              a(href=locals.url)= locals.name
-            p.description= locals.description
-    div#content
-      div.content-wrap
+    block header
+      header.panel.transparent.nav
+        nav.constrain
+          a.left(href=locals.url)= locals.name
+          a.right(href='/archive.html') Archive
+          span.right /
+          a.right(href='/') Blog
+    block hero
+    div.panel.white
+      div.constrain
         block content
           h2 Welcome to zombocom!
     footer
       div.content-wrap
         block footer
-          section.about
+          section
             !=contents['about.md'].html
           section.copy
             p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
+              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
               a(href='https://github.com/jnordberg/wintersmith') Wintersmith
               //- please leave the "powered by" if you use the design
     block scripts

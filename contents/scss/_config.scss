@@ -2,7 +2,7 @@
 $white:          #ffffff !default;
 $off-white:      #fefefe !default;
 $light-gray:     #dddddd !default;
-
+$gray:           #666666 !default;
 $dark-gray:      #30302F !default;
 $darker-gray:    #242323 !default;
 $darkest-gray:   #222222 !default;
@@ -25,6 +25,9 @@ $blue:      #268bd2 !default;
 $cyan:      #2aa198 !default;
 $green:     #859900 !default;
 
+$tan: $base3;
+$navy: $base03;
+
 // Font Families
 $body-font:      "Karla", Arial, Helvetica, sans !default;
 $header-font:    "Facit", Arial, Helvetica, sans !default;
@@ -40,7 +43,7 @@ $header-color:   $dark-gray;
 
 // Font Sizes
 $body-size:      1.125em;
-$header-size:    3em;
+$header-size:    1.5em;
 
 // Breakpoints
 $phone:        300px !default;

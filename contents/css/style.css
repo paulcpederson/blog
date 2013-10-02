@@ -176,39 +176,39 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "Facit", Arial, Helvetica, sans;
   line-height: 1em;
   font-weight: 400;
-  font-size: 3em;
-  margin: 1em 0 0.5em 0;
+  font-size: 1.5em;
+  margin: 2em 0 1em 0;
   text-transform: none;
 }
 
 /* line 21, ../scss/base/_typography.scss */
 h1 {
-  font-size: 3em;
+  font-size: 1.5em;
 }
 
 /* line 22, ../scss/base/_typography.scss */
 h2 {
-  font-size: 2.7em;
+  font-size: 1.35em;
 }
 
 /* line 23, ../scss/base/_typography.scss */
 h3 {
-  font-size: 1.8em;
+  font-size: 0.9em;
 }
 
 /* line 24, ../scss/base/_typography.scss */
 h4 {
-  font-size: 1.65em;
+  font-size: 0.825em;
 }
 
 /* line 25, ../scss/base/_typography.scss */
 h5 {
-  font-size: 1.5em;
+  font-size: 0.75em;
 }
 
 /* line 26, ../scss/base/_typography.scss */
 h6 {
-  font-size: 1.35em;
+  font-size: 0.675em;
 }
 
 /* line 28, ../scss/base/_typography.scss */
@@ -330,37 +330,174 @@ pre .tex .formula {
   color: white;
 }
 
-/* line 6, ../scss/base/_layout.scss */
+/* line 2, ../scss/base/_layout.scss */
+.nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+/* line 9, ../scss/base/_layout.scss */
+.nav a {
+  text-decoration: none;
+  padding: 0.25em 0;
+  margin: 0 0.5em;
+}
+/* line 14, ../scss/base/_layout.scss */
+.nav span {
+  padding: 0.25em;
+  line-height: 1em;
+}
+
+/* line 23, ../scss/base/_layout.scss */
 .panel {
   width: 100%;
   padding: 2em 0;
   background-color: white;
 }
-/* line 10, ../scss/base/_layout.scss */
+/* line 27, ../scss/base/_layout.scss */
 .panel.transparent {
   background-color: transparent;
 }
-/* line 13, ../scss/base/_layout.scss */
+/* line 30, ../scss/base/_layout.scss */
 .panel.tan {
   background-color: #002b36;
 }
-/* line 16, ../scss/base/_layout.scss */
+/* line 33, ../scss/base/_layout.scss */
 .panel.dark-gray {
   background-color: #30302f;
   color: white;
 }
 
-/* line 22, ../scss/base/_layout.scss */
+/* line 39, ../scss/base/_layout.scss */
+.constrain {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 48em;
+  padding: 0 1em;
+  margin: 0 auto;
+}
+
+/* line 47, ../scss/base/_layout.scss */
 .feature {
   margin-top: -3em;
 }
 
-/* line 26, ../scss/base/_layout.scss */
+/* line 51, ../scss/base/_layout.scss */
 .right {
   float: right;
 }
 
-/* line 30, ../scss/base/_layout.scss */
+/* line 55, ../scss/base/_layout.scss */
 .left {
   float: left;
+}
+
+/* line 1, ../scss/_home.scss */
+.nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+/* line 8, ../scss/_home.scss */
+.nav a {
+  text-decoration: none;
+  padding: 0.25em 0;
+  margin: 0 0.5em;
+}
+/* line 13, ../scss/_home.scss */
+.nav span {
+  padding: 0.25em;
+  line-height: 1em;
+}
+
+/* line 1, ../scss/_article.scss */
+.cyan {
+  border-top: 8px solid #2aa198;
+}
+/* line 4, ../scss/_article.scss */
+.cyan nav span {
+  color: #2aa198;
+}
+/* line 7, ../scss/_article.scss */
+.cyan nav a:hover {
+  color: #2aa198;
+  border-bottom: 2px solid #2aa198;
+}
+/* line 12, ../scss/_article.scss */
+.cyan .title {
+  color: #2aa198;
+}
+/* line 15, ../scss/_article.scss */
+.cyan .date {
+  color: #2aa198;
+}
+
+/* line 21, ../scss/_article.scss */
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  display: block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+}
+/* line 30, ../scss/_article.scss */
+.hero.tan {
+  background-color: #fdf6e3;
+}
+/* line 32, ../scss/_article.scss */
+.hero.tan.mesh:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-image: url(/img/tan-mesh.gif);
+  background-color: transparent;
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+/* line 48, ../scss/_article.scss */
+.title-wrap {
+  position: relative;
+  display: block;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25vh 1em 4em 1em;
+}
+
+/* line 56, ../scss/_article.scss */
+.title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* line 61, ../scss/_article.scss */
+.description {
+  text-align: center;
+  font-size: 1em;
+  max-width: 22em;
+  margin: 2em auto;
+  color: #666666;
+}
+
+/* line 69, ../scss/_article.scss */
+.date {
+  text-align: center;
+  padding-bottom: 3em;
 }
