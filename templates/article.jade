@@ -22,8 +22,8 @@ block hero
         p.date= moment.utc(page.date).format('M.D.YYYY')
 
 block content
-  article.article.constrained
-    section.content!= page.html
+  article.panel.white
+    section.constrain.content!= page.html
 
 block prepend footer
   div.back

@@ -1,19 +1,21 @@
-.cyan {
-  border-top: 8px solid $cyan;
-  nav {
-    span {
+body{
+  &.cyan {
+    border-top: 8px solid $cyan;
+    nav {
+      span {
+        color: $cyan;
+      }
+      a:hover {
+        color: $cyan;
+        border-bottom: 2px solid $cyan;
+      }
+    }
+    .title {
       color: $cyan;
     }
-    a:hover {
+    .date {
       color: $cyan;
-      border-bottom: 2px solid $cyan;
     }
-  }
-  .title {
-    color: $cyan;
-  }
-  .date {
-    color: $cyan;
   }
 }
 

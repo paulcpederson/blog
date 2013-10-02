@@ -14,4 +14,20 @@
     background-color: $dark-gray;
     color: $white;
   }
+  &.cyan {
+    border: 1px solid $cyan;
+    color: $cyan;
+    &:hover {
+      background-color: $cyan;
+      color: $white;
+    }
+  }
+  &.white {
+    border: 1px solid $white;
+    color: $white;
+    &:hover {
+      background-color: $white;
+      color: $cyan;
+    }
+  }
 }

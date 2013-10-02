@@ -1,9 +1,9 @@
 // Mini Inline-Block Grid
 .col {
-    display: block;
-    float: left;
-    position: relative;
-    @include box-sizing(border-box);
+  display: block;
+  float: left;
+  position: relative;
+  @include box-sizing(border-box);
 }
 
 .col1of1 { float: none; }

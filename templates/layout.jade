@@ -22,19 +22,14 @@ html(lang='en')
           span.right /
           a.right(href='/') Blog
     block hero
-    div.panel.white
+    block content
+      div.panel.white
+    footer.panel.dark-gray
       div.constrain
-        block content
-          h2 Welcome to zombocom!
-    footer
-      div.content-wrap
         block footer
           section
             !=contents['about.md'].html
           section.copy
-            p &copy; #{ new Date().getFullYear() } #{ locals.owner } &mdash; powered by&nbsp;
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
-              a(href='https://github.com/jnordberg/wintersmith') Wintersmith
-              //- please leave the "powered by" if you use the design
+            p &copy; #{ new Date().getFullYear() } Paul C Pederson
     block scripts
       script(src='/js/script.js')

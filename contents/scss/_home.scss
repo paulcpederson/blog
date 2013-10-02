@@ -1,17 +1,8 @@
-.nav {
-  display: block;
-  position: absolute;
-  top:0;
-  right: 0;
-  left: 0;
-  z-index: 3;
-  a {
-    text-decoration: none;
-    padding: 0.25em 0;
-    margin: 0 0.5em;
-  }
-  span {
-    padding: 0.25em;
-    line-height: 1em;
+.thumbs {
+  padding: 4em 0;
+  article {
+    @include box-sizing(border-box);
+    padding: 1em;
+    background-color: $tan;
   }
 }

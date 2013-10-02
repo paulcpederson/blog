@@ -1,22 +1,26 @@
 extends layout
 
+block append vars
+  - bodyclass = 'cyan'
+
 block content
-  include author
-  each article in articles
-    article.article.intro
-      header
-        p.date
-          span= moment.utc(article.date).format('DD. MMMM YYYY')
-        h2
-          a(href=article.url)= article.title
-      section.content
-        p= article.metadata.description
-        if article.hasMore
-          p.more
-            a(href=article.url) more
+  div.panel.white
+    div.constrain
+      div.col-group.clearfix.thumbs
+        each article in articles
+          div.col.col1of3.thumb
+            article
+              header
+                h2
+                  a(href=article.url)= article.title
+                p
+                  span= moment.utc(article.date).format('DD. MMMM YYYY')
+              section.content
+                p= article.metadata.description
+                a.btn.cyan(href=article.url) Read More »
 
 block prepend footer
-  div.nav
+  div
     if prevPage
       a(href=prevPage.url) « Newer
     else

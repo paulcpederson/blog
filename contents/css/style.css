@@ -247,7 +247,7 @@ p code {
   position: relative;
   top: -0.15em;
   background: #fefefe;
-  border: 1px solid #dddddd;
+  border: 1px solid #999999;
   color: #30302f;
   white-space: nowrap;
 }
@@ -329,6 +329,26 @@ pre .tex .formula {
   background-color: #30302f;
   color: white;
 }
+/* line 17, ../scss/base/_buttons.scss */
+.btn.cyan {
+  border: 1px solid #2aa198;
+  color: #2aa198;
+}
+/* line 20, ../scss/base/_buttons.scss */
+.btn.cyan:hover {
+  background-color: #2aa198;
+  color: white;
+}
+/* line 25, ../scss/base/_buttons.scss */
+.btn.white {
+  border: 1px solid white;
+  color: white;
+}
+/* line 28, ../scss/base/_buttons.scss */
+.btn.white:hover {
+  background-color: white;
+  color: #2aa198;
+}
 
 /* line 2, ../scss/base/_layout.scss */
 .nav {
@@ -343,35 +363,40 @@ pre .tex .formula {
 .nav a {
   text-decoration: none;
   padding: 0.25em 0;
-  margin: 0 0.5em;
 }
-/* line 14, ../scss/base/_layout.scss */
+/* line 13, ../scss/base/_layout.scss */
 .nav span {
-  padding: 0.25em;
+  padding: 0.25em 0.5em;
   line-height: 1em;
 }
 
-/* line 23, ../scss/base/_layout.scss */
+/* line 22, ../scss/base/_layout.scss */
 .panel {
   width: 100%;
   padding: 2em 0;
   background-color: white;
 }
-/* line 27, ../scss/base/_layout.scss */
+/* line 26, ../scss/base/_layout.scss */
 .panel.transparent {
   background-color: transparent;
 }
-/* line 30, ../scss/base/_layout.scss */
-.panel.tan {
-  background-color: #002b36;
+/* line 29, ../scss/base/_layout.scss */
+.panel.white {
+  background-color: white;
+  color: #666666;
 }
 /* line 33, ../scss/base/_layout.scss */
+.panel.tan {
+  background-color: #002b36;
+  color: #666666;
+}
+/* line 37, ../scss/base/_layout.scss */
 .panel.dark-gray {
   background-color: #30302f;
-  color: white;
+  color: #999999;
 }
 
-/* line 39, ../scss/base/_layout.scss */
+/* line 43, ../scss/base/_layout.scss */
 .constrain {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -382,65 +407,57 @@ pre .tex .formula {
   margin: 0 auto;
 }
 
-/* line 47, ../scss/base/_layout.scss */
+/* line 51, ../scss/base/_layout.scss */
 .feature {
   margin-top: -3em;
 }
 
-/* line 51, ../scss/base/_layout.scss */
+/* line 55, ../scss/base/_layout.scss */
 .right {
   float: right;
 }
 
-/* line 55, ../scss/base/_layout.scss */
+/* line 59, ../scss/base/_layout.scss */
 .left {
   float: left;
 }
 
 /* line 1, ../scss/_home.scss */
-.nav {
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  z-index: 3;
+.thumbs {
+  padding: 4em 0;
 }
-/* line 8, ../scss/_home.scss */
-.nav a {
-  text-decoration: none;
-  padding: 0.25em 0;
-  margin: 0 0.5em;
-}
-/* line 13, ../scss/_home.scss */
-.nav span {
-  padding: 0.25em;
-  line-height: 1em;
+/* line 3, ../scss/_home.scss */
+.thumbs article {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #fdf6e3;
 }
 
-/* line 1, ../scss/_article.scss */
-.cyan {
+/* line 2, ../scss/_article.scss */
+body.cyan {
   border-top: 8px solid #2aa198;
 }
-/* line 4, ../scss/_article.scss */
-.cyan nav span {
+/* line 5, ../scss/_article.scss */
+body.cyan nav span {
   color: #2aa198;
 }
-/* line 7, ../scss/_article.scss */
-.cyan nav a:hover {
+/* line 8, ../scss/_article.scss */
+body.cyan nav a:hover {
   color: #2aa198;
   border-bottom: 2px solid #2aa198;
 }
-/* line 12, ../scss/_article.scss */
-.cyan .title {
+/* line 13, ../scss/_article.scss */
+body.cyan .title {
   color: #2aa198;
 }
-/* line 15, ../scss/_article.scss */
-.cyan .date {
+/* line 16, ../scss/_article.scss */
+body.cyan .date {
   color: #2aa198;
 }
 
-/* line 21, ../scss/_article.scss */
+/* line 23, ../scss/_article.scss */
 .hero {
   width: 100%;
   min-height: 80vh;
@@ -451,11 +468,11 @@ pre .tex .formula {
   position: relative;
   background-size: cover;
 }
-/* line 30, ../scss/_article.scss */
+/* line 32, ../scss/_article.scss */
 .hero.tan {
   background-color: #fdf6e3;
 }
-/* line 32, ../scss/_article.scss */
+/* line 34, ../scss/_article.scss */
 .hero.tan.mesh:before {
   content: '';
   position: absolute;
@@ -470,7 +487,7 @@ pre .tex .formula {
   background-position: top left;
 }
 
-/* line 48, ../scss/_article.scss */
+/* line 50, ../scss/_article.scss */
 .title-wrap {
   position: relative;
   display: block;
@@ -481,13 +498,13 @@ pre .tex .formula {
   padding: 25vh 1em 4em 1em;
 }
 
-/* line 56, ../scss/_article.scss */
+/* line 58, ../scss/_article.scss */
 .title {
   text-align: center;
   font-size: 1.5em;
 }
 
-/* line 61, ../scss/_article.scss */
+/* line 63, ../scss/_article.scss */
 .description {
   text-align: center;
   font-size: 1em;
@@ -496,7 +513,7 @@ pre .tex .formula {
   color: #666666;
 }
 
-/* line 69, ../scss/_article.scss */
+/* line 71, ../scss/_article.scss */
 .date {
   text-align: center;
   padding-bottom: 3em;
