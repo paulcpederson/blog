@@ -41,11 +41,14 @@
 }
 
 .constrain {
-  @include box-sizing(border-box);
-  width: 100%;
-  max-width: 48em;
-  padding: 0 1em;
+  width: 80%;
+  max-width: 45em;
+  padding: 0 10%;
   margin: 0 auto;
+  .full-width {
+    width: 100vw;
+    height: auto;
+  }
 }
 
 .feature {

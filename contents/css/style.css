@@ -398,26 +398,28 @@ pre .tex .formula {
 
 /* line 43, ../scss/base/_layout.scss */
 .constrain {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 48em;
-  padding: 0 1em;
+  width: 80%;
+  max-width: 45em;
+  padding: 0 10%;
   margin: 0 auto;
 }
+/* line 48, ../scss/base/_layout.scss */
+.constrain .full-width {
+  width: 100vw;
+  height: auto;
+}
 
-/* line 51, ../scss/base/_layout.scss */
+/* line 54, ../scss/base/_layout.scss */
 .feature {
   margin-top: -3em;
 }
 
-/* line 55, ../scss/base/_layout.scss */
+/* line 58, ../scss/base/_layout.scss */
 .right {
   float: right;
 }
 
-/* line 59, ../scss/base/_layout.scss */
+/* line 62, ../scss/base/_layout.scss */
 .left {
   float: left;
 }
@@ -517,4 +519,10 @@ body.cyan .date {
 .date {
   text-align: center;
   padding-bottom: 3em;
+}
+
+/* line 77, ../scss/_article.scss */
+article .content {
+  margin-top: 3em;
+  margin-bottom: 5em;
 }
