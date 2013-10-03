@@ -441,25 +441,88 @@ pre .tex .formula {
 body.cyan {
   border-top: 8px solid #2aa198;
 }
-/* line 5, ../scss/_article.scss */
+/* line 43, ../scss/base/_mixins.scss */
 body.cyan nav span {
   color: #2aa198;
 }
-/* line 8, ../scss/_article.scss */
+/* line 46, ../scss/base/_mixins.scss */
 body.cyan nav a:hover {
   color: #2aa198;
   border-bottom: 2px solid #2aa198;
 }
-/* line 13, ../scss/_article.scss */
+/* line 51, ../scss/base/_mixins.scss */
 body.cyan .title {
   color: #2aa198;
 }
-/* line 16, ../scss/_article.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.cyan .date {
   color: #2aa198;
 }
+/* line 5, ../scss/_article.scss */
+body.yellow {
+  border-top: 8px solid #b58900;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.yellow nav span {
+  color: #b58900;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.yellow nav a:hover {
+  color: #b58900;
+  border-bottom: 2px solid #b58900;
+}
+/* line 51, ../scss/base/_mixins.scss */
+body.yellow .title {
+  color: #b58900;
+}
+/* line 54, ../scss/base/_mixins.scss */
+body.yellow .date {
+  color: #b58900;
+}
+/* line 8, ../scss/_article.scss */
+body.orange {
+  border-top: 8px solid #cb4b16;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.orange nav span {
+  color: #cb4b16;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.orange nav a:hover {
+  color: #cb4b16;
+  border-bottom: 2px solid #cb4b16;
+}
+/* line 51, ../scss/base/_mixins.scss */
+body.orange .title {
+  color: #cb4b16;
+}
+/* line 54, ../scss/base/_mixins.scss */
+body.orange .date {
+  color: #cb4b16;
+}
+/* line 11, ../scss/_article.scss */
+body.red {
+  border-top: 8px solid #dc322f;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.red nav span {
+  color: #dc322f;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.red nav a:hover {
+  color: #dc322f;
+  border-bottom: 2px solid #dc322f;
+}
+/* line 51, ../scss/base/_mixins.scss */
+body.red .title {
+  color: #dc322f;
+}
+/* line 54, ../scss/base/_mixins.scss */
+body.red .date {
+  color: #dc322f;
+}
 
-/* line 23, ../scss/_article.scss */
+/* line 17, ../scss/_article.scss */
 .hero {
   width: 100%;
   min-height: 80vh;
@@ -470,11 +533,11 @@ body.cyan .date {
   position: relative;
   background-size: cover;
 }
-/* line 32, ../scss/_article.scss */
+/* line 26, ../scss/_article.scss */
 .hero.tan {
   background-color: #fdf6e3;
 }
-/* line 34, ../scss/_article.scss */
+/* line 28, ../scss/_article.scss */
 .hero.tan.mesh:before {
   content: '';
   position: absolute;
@@ -483,13 +546,13 @@ body.cyan .date {
   bottom: 0;
   left: 0;
   display: block;
-  background-image: url(/img/tan-mesh.gif);
+  background-image: url(../img/tan-mesh.gif);
   background-color: transparent;
   background-repeat: repeat;
   background-position: top left;
 }
 
-/* line 50, ../scss/_article.scss */
+/* line 44, ../scss/_article.scss */
 .title-wrap {
   position: relative;
   display: block;
@@ -500,13 +563,13 @@ body.cyan .date {
   padding: 25vh 1em 4em 1em;
 }
 
-/* line 58, ../scss/_article.scss */
+/* line 52, ../scss/_article.scss */
 .title {
   text-align: center;
   font-size: 1.5em;
 }
 
-/* line 63, ../scss/_article.scss */
+/* line 57, ../scss/_article.scss */
 .description {
   text-align: center;
   font-size: 1em;
@@ -515,13 +578,13 @@ body.cyan .date {
   color: #666666;
 }
 
-/* line 71, ../scss/_article.scss */
+/* line 65, ../scss/_article.scss */
 .date {
   text-align: center;
   padding-bottom: 3em;
 }
 
-/* line 77, ../scss/_article.scss */
+/* line 71, ../scss/_article.scss */
 article .content {
   margin-top: 3em;
   margin-bottom: 5em;

@@ -36,3 +36,22 @@
 .clearfix {
   @include clearfix();
 }
+
+@mixin body-class($color){
+  border-top: 8px solid $color;
+  nav {
+    span {
+      color: $color;
+    }
+    a:hover {
+      color: $color;
+      border-bottom: 2px solid $color;
+    }
+  }
+  .title {
+    color: $color;
+  }
+  .date {
+    color: $color;
+  }
+}
