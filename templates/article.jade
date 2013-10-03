@@ -11,11 +11,11 @@ block prepend title
 block append head
   if page.metadata.css
     each css in page.metadata.css
-      link(rel='stylesheet', href='/css/' + css + '.css')
+      link(rel='stylesheet', href= locals.url + '/css/' + css + '.css')
 
 block hero
   if page.metadata.background
-    section(class='hero ' + page.metadata.canvas, style='background-image: url(/img/' + page.metadata.background + ')')
+    section(class='hero ' + page.metadata.canvas, style='background-image: url(' + locals.url + '/img/' + page.metadata.background + ')')
       div.title-wrap.constrain
         h1.title= page.title
         p.description= page.metadata.description
@@ -32,4 +32,4 @@ block prepend footer
 block append scripts
   if page.metadata.js
     each js in page.metadata.js
-      script(src='/js/' + js + '.js')
+      script(src= locals.url + '/js/' + js + '.js')
