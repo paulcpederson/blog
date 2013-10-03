@@ -1,0 +1,38 @@
+@mixin retina-display {
+  @media screen and (-webkit-min-device-pixel-ratio : 1.5), screen and (min-device-pixel-ratio : 1.5) {
+    @content;
+  }
+}
+
+@mixin respond-to($min-width, $max-width) {
+  @media only screen and (min-width : $min-width) and (max-width : $max-width) {
+    @content;
+  }
+}
+
+@mixin full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.full {
+  @include full;
+}
+
+@mixin clearfix(){
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}

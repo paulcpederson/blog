@@ -1,0 +1,66 @@
+/* code styling */
+
+code {
+  font-family: $button-font;
+  font-size: 0.85em;
+  color: $dark-gray;
+}
+
+p code {
+  padding: 0.1em 0.3em 0.2em;
+  border-radius: 0.3em;
+  position: relative;
+  top: -0.15em;
+  background: $off-white;
+  border: 1px solid $light-gray;
+  color: $dark-gray;
+  white-space: nowrap;
+}
+
+/* Solarized Dark Theme */
+pre {
+  width: 100%;
+  @include box-sizing(border-box);
+  background-color: $base03;
+
+  code {
+    display: block;
+    padding: 1em;
+    background-color: $base03;
+    color: $base0;
+    width: 100%;
+    line-height: 1.25;
+  }
+
+  .comment, .template_comment, .diff .header, .doctype, .lisp .string, .javadoc {
+    color: $base01;
+  }
+
+  .keyword, .css .rule .keyword, .winutils, .javascript .title, .method, .addition, .css .tag, .lisp .title {
+    color: $green;
+  }
+
+  .number, .command, .string, .tag .value, .phpdoc, .tex .formula, .regexp, .hexcolor {
+    color: $cyan;
+  }
+
+  .title, .localvars, .function .title, .chunk, .decorator, .builtin, .built_in, .lisp .title, .identifier, .title .keymethods, .id {
+    color: $blue;
+  }
+
+  .attribute, .variable, .instancevar, .lisp .body, .smalltalk .number, .constant, .class .title, .parent, .haskell .label {
+    color: $yellow;
+  }
+
+  .preprocessor, .pi, .shebang, .symbol, .diff .change, .special, .keymethods, .attr_selector, .important, .subst, .cdata {
+    color: $orange;
+  }
+
+  .deletion {
+    color: $red;
+  }
+
+  .tex .formula {
+    background: $base02;
+  }
+}

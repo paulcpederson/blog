@@ -12,21 +12,21 @@ block content
             article
               header
                 h2
-                  a(href=article.url)= article.title
+                  a(href= locals.url + article.url)= article.title
                 p
                   span= moment.utc(article.date).format('DD. MMMM YYYY')
               section.content
                 p= article.metadata.description
-                a.btn.cyan(href=article.url) Read More »
+                a.btn.cyan(href= locals.url + article.url) Read More »
 
 block prepend footer
   div
     if prevPage
-      a(href=prevPage.url) « Newer
+      a(href= locals.url + prevPage.url) « Newer
     else
-      a(href='/archive.html') « Archives
+      a(href= locals.url +'/archive.html') « Archives
     if nextPage
-      a(href=nextPage.url) Next page »
+      a(href= locals.url + nextPage.url) Next page »
 
 
 

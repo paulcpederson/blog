@@ -1,0 +1,44 @@
+/* - - - - - - - - - Basic Typography - - - - - - - */
+@import url(http://fonts.googleapis.com/css?family=Karla);
+
+body {
+  font-family: $body-font;
+  color: $body-color;
+  font-weight: $body-weight;
+  font-size: $body-size;
+  line-height: $body-size * 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font;
+  line-height: 1em;
+  font-weight: $header-weight;
+  font-size: $header-size;
+  margin: 2em 0 1em 0;
+  text-transform: none;
+}
+
+h1 { font-size: $header-size;}
+h2 { font-size: $header-size * 0.9;}
+h3 { font-size: $header-size * 0.6;}
+h4 { font-size: $header-size * 0.55;}
+h5 { font-size: $header-size * 0.5;}
+h6 { font-size: $header-size * 0.45;}
+
+blockquote {
+  font-family: $header-font;
+  text-align:center;
+  font-size: 2em;
+  line-height: 3em;
+  font-style: italic;
+}
+
+p {
+  line-height: 1.75em;
+  margin: 1em 0;
+}
+
+a {
+  text-decoration: none;
+  color: $cyan;
+}

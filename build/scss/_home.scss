@@ -1,0 +1,8 @@
+.thumbs {
+  padding: 4em 0;
+  article {
+    @include box-sizing(border-box);
+    padding: 1em;
+    background-color: $tan;
+  }
+}

@@ -1,0 +1,55 @@
+// UI Colors
+$white:          #ffffff !default;
+$off-white:      #fefefe !default;
+$lighter-gray:   #dddddd !default;
+$light-gray:     #999999 !default;
+$gray:           #666666 !default;
+$dark-gray:      #30302F !default;
+$darker-gray:    #242323 !default;
+$darkest-gray:   #222222 !default;
+
+// Solarized colors
+$base03:    #002b36 !default;
+$base02:    #073642 !default;
+$base01:    #586e75 !default;
+$base00:    #657b83 !default;
+$base0:     #839496 !default;
+$base1:     #93a1a1 !default;
+$base2:     #eee8d5 !default;
+$base3:     #fdf6e3 !default;
+$yellow:    #b58900 !default;
+$orange:    #cb4b16 !default;
+$red:       #dc322f !default;
+$magenta:   #d33682 !default;
+$violet:    #6c71c4 !default;
+$blue:      #268bd2 !default;
+$cyan:      #2aa198 !default;
+$green:     #859900 !default;
+
+$tan: $base3;
+$navy: $base03;
+
+// Font Families
+$body-font:      "Karla", Arial, Helvetica, sans !default;
+$header-font:    "Facit", Arial, Helvetica, sans !default;
+$button-font:    "Inconsolata", "Courier New", courier, monospace !default;
+
+// Font Weights
+$body-weight:    400 !default;
+$header-weight:  400 !default;
+
+// Font Colors
+$body-color:     $darker-gray;
+$header-color:   $dark-gray;
+
+// Font Sizes
+$body-size:      1.125em;
+$header-size:    1.5em;
+
+// Breakpoints
+$phone:        300px !default;
+$phone-wide:   480px !default;
+$tablet:       720px !default;
+$tablet-wide:  1080px !default;
+$desktop:      1280px !default;
+$desktop-wide: 1920px !default;

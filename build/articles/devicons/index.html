@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width">
+    <title>Devicons | Paul C Pederson
+    </title>
+    <link rel="alternate" href="http://paulcpederson.github.io/blog/feed.xml" type="application/rss+xml">
+    <link rel="stylesheet" href="http://paulcpederson.github.io/blog/css/main.css">
+    <link rel="stylesheet" href="http://paulcpederson.github.io/blog/css/style.css">
+  </head>
+  <body>
+    <header class="panel transparent nav">
+      <nav class="constrain"><a href="http://paulcpederson.github.io/blog" class="left">Paul C Pederson</a><a href="http://paulcpederson.github.io/blog/archive/" class="right">Archive</a><span class="right">/</span><a href="http://paulcpederson.github.io/blog" class="right">Blog</a></nav>
+    </header>
+    <article class="panel white">
+      <section class="constrain content"><p>At work the other day I was thinking out loud about a strategy for generating full-color icons with a web font. Essentially the idea is to use :before and :after pseudo elements to provide a foreground and background to your icon, thusly giving it three colors. If you&#39;re a visual learner, it works like this:</p>
+<p>![One devicon separated into layers labeled with :before, :after]</p>
+<p>People at my work tend to take pipe-dreams very seriously, so it wasn&#39;t all that surprising when one of my co-workers, <a href="http://atelier-wise.aws.af.cm/">Nik Wise</a> was listening to me, and then spent the next ten minutes actually implementing what I had just imagined.</p>
+<p>It turns out, that this technique is actually far simpler than I first thought it was going to be, and that the most time consuming part of the workflow is building and color separating the icons. Once you&#39;ve exported every layer as an .svg file, you just upload them all to icoMoon (or your web font tool of choice), assign them ligatures (so you can remember their names later), and download the bundle.</p>
+<p>After that, you just create :before and :after elements and make their content attribute equal to the corresponding icon. The css ends up looking something like this:</p>
+<pre><code>css for the icon</code></pre>
+<p>You can take a look at <a href="http://paulcpederson.github.io/devicons/">the proof of concept</a> to see them in action, or look at <a href="https://github.com/nikolaswise/devicons">the GitHub repo</a> to see how they&#39;re implemented. Nik has also written up a <a href="https://github.com/nikolaswise/three-color-icons">terrific write up</a> of the technique that goes into much more detail.</p>
+</section>
+    </article>
+    <footer class="panel dark-gray">
+      <div class="constrain">
+        <div class="back"><a href="/">« Blog</a></div>
+        <section><h3>Hi, I&#39;m Paul.</h3>
+<p>I design and develop digital experiences. I work at a research and development office focused on location-based technologies. You can find me online just about everywhere as @paulcpederson.</p>
+<p>This site was built using <a href="http://nodejs.org/">Node</a>, <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>, <a href="http://gruntjs.com/">Grunt</a>, and <a href="http://pages.github.com/">GitHub Pages</a>. You can find the source on <a href="https://github.com/paulcpederson/">my github</a>.</p>
+
+        </section>
+        <section class="copy">
+          <p>&copy; 2013 Paul C Pederson</p>
+        </section>
+      </div>
+    </footer>
+    <script src="/js/script.js"></script>
+  </body>
+</html>

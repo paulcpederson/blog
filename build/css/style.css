@@ -1,0 +1,528 @@
+@import url(http://fonts.googleapis.com/css?family=Karla);
+/* - - - - - - - - - - Basic Reset - - - - - - - - - - */
+/* line 2, ../scss/base/_reset.scss */
+html {
+  overflow-y: scroll;
+  font-size: 100%;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+/* line 9, ../scss/base/_reset.scss */
+body {
+  margin: 0;
+}
+
+/* line 12, ../scss/base/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section {
+  display: block;
+}
+
+/* line 13, ../scss/base/_reset.scss */
+audio[controls], canvas, video {
+  display: inline-block;
+  zoom: 1;
+}
+
+/* line 14, ../scss/base/_reset.scss */
+a:hover, a:active {
+  outline: 0;
+}
+
+/* line 15, ../scss/base/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 20, ../scss/base/_reset.scss */
+a, abbr, acronym, address, b, big, cite, code, del, em, i, ins, kbd, mark, output, q,
+samp, small, strike, strong, sub, sup, time, tt, var,
+dfn, dl, dt, dd, ol, ul, li,
+blockquote, h1, h2, h3, h4, h5, h6, p, pre,
+applet, canvas, embed, figure, figcaption, iframe, img, object {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  line-height: 1.0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* line 21, ../scss/base/_mixins.scss */
+.full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 27, ../scss/base/_mixins.scss */
+.clearfix:before, .clearfix:after {
+  content: "";
+  display: table;
+}
+/* line 31, ../scss/base/_mixins.scss */
+.clearfix:after {
+  clear: both;
+}
+
+/* line 2, ../scss/base/_grid.scss */
+.col {
+  display: block;
+  float: left;
+  position: relative;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* line 9, ../scss/base/_grid.scss */
+.col1of1 {
+  float: none;
+}
+
+/* line 10, ../scss/base/_grid.scss */
+.col1of2 {
+  width: 50%;
+}
+
+/* line 11, ../scss/base/_grid.scss */
+.col1of3 {
+  width: 33.33333%;
+}
+
+/* line 12, ../scss/base/_grid.scss */
+.col2of3 {
+  width: 66.66666%;
+}
+
+/* line 13, ../scss/base/_grid.scss */
+.col1of4 {
+  width: 25%;
+}
+
+/* line 14, ../scss/base/_grid.scss */
+.col3of4 {
+  width: 75%;
+}
+
+/* line 15, ../scss/base/_grid.scss */
+.col1of5 {
+  width: 20%;
+}
+
+/* line 16, ../scss/base/_grid.scss */
+.col2of5 {
+  width: 40%;
+}
+
+/* line 17, ../scss/base/_grid.scss */
+.col3of5 {
+  width: 60%;
+}
+
+/* line 18, ../scss/base/_grid.scss */
+.col4of5 {
+  width: 80%;
+}
+
+/* line 20, ../scss/base/_grid.scss */
+.col-group {
+  font-family: 'Courier New', Monospace;
+  letter-spacing: -.65em;
+  margin-left: -1em;
+  margin-right: -1em;
+  text-align: left;
+}
+/* line 26, ../scss/base/_grid.scss */
+.col-group .col {
+  display: inline-block;
+  float: none;
+  font-family: "Karla", Arial, Helvetica, sans;
+  letter-spacing: normal;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+}
+/* line 37, ../scss/base/_grid.scss */
+.col-group.no-padding {
+  margin-left: 0;
+  margin-right: 0;
+}
+/* line 40, ../scss/base/_grid.scss */
+.col-group.no-padding .col {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* - - - - - - - - - Basic Typography - - - - - - - */
+/* line 4, ../scss/base/_typography.scss */
+body {
+  font-family: "Karla", Arial, Helvetica, sans;
+  color: #242323;
+  font-weight: 400;
+  font-size: 1.125em;
+  line-height: 1.6875em;
+}
+
+/* line 12, ../scss/base/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Facit", Arial, Helvetica, sans;
+  line-height: 1em;
+  font-weight: 400;
+  font-size: 1.5em;
+  margin: 2em 0 1em 0;
+  text-transform: none;
+}
+
+/* line 21, ../scss/base/_typography.scss */
+h1 {
+  font-size: 1.5em;
+}
+
+/* line 22, ../scss/base/_typography.scss */
+h2 {
+  font-size: 1.35em;
+}
+
+/* line 23, ../scss/base/_typography.scss */
+h3 {
+  font-size: 0.9em;
+}
+
+/* line 24, ../scss/base/_typography.scss */
+h4 {
+  font-size: 0.825em;
+}
+
+/* line 25, ../scss/base/_typography.scss */
+h5 {
+  font-size: 0.75em;
+}
+
+/* line 26, ../scss/base/_typography.scss */
+h6 {
+  font-size: 0.675em;
+}
+
+/* line 28, ../scss/base/_typography.scss */
+blockquote {
+  font-family: "Facit", Arial, Helvetica, sans;
+  text-align: center;
+  font-size: 2em;
+  line-height: 3em;
+  font-style: italic;
+}
+
+/* line 36, ../scss/base/_typography.scss */
+p {
+  line-height: 1.75em;
+  margin: 1em 0;
+}
+
+/* line 41, ../scss/base/_typography.scss */
+a {
+  text-decoration: none;
+  color: #2aa198;
+}
+
+/* code styling */
+/* line 3, ../scss/base/_code.scss */
+code {
+  font-family: "Inconsolata", "Courier New", courier, monospace;
+  font-size: 0.85em;
+  color: #30302f;
+}
+
+/* line 9, ../scss/base/_code.scss */
+p code {
+  padding: 0.1em 0.3em 0.2em;
+  border-radius: 0.3em;
+  position: relative;
+  top: -0.15em;
+  background: #fefefe;
+  border: 1px solid #999999;
+  color: #30302f;
+  white-space: nowrap;
+}
+
+/* Solarized Dark Theme */
+/* line 21, ../scss/base/_code.scss */
+pre {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background-color: #002b36;
+}
+/* line 26, ../scss/base/_code.scss */
+pre code {
+  display: block;
+  padding: 1em;
+  background-color: #002b36;
+  color: #839496;
+  width: 100%;
+  line-height: 1.25;
+}
+/* line 35, ../scss/base/_code.scss */
+pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .lisp .string, pre .javadoc {
+  color: #586e75;
+}
+/* line 39, ../scss/base/_code.scss */
+pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .method, pre .addition, pre .css .tag, pre .lisp .title {
+  color: #859900;
+}
+/* line 43, ../scss/base/_code.scss */
+pre .number, pre .command, pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula, pre .regexp, pre .hexcolor {
+  color: #2aa198;
+}
+/* line 47, ../scss/base/_code.scss */
+pre .title, pre .localvars, pre .function .title, pre .chunk, pre .decorator, pre .builtin, pre .built_in, pre .lisp .title, pre .identifier, pre .title .keymethods, pre .id {
+  color: #268bd2;
+}
+/* line 51, ../scss/base/_code.scss */
+pre .attribute, pre .variable, pre .instancevar, pre .lisp .body, pre .smalltalk .number, pre .constant, pre .class .title, pre .parent, pre .haskell .label {
+  color: #b58900;
+}
+/* line 55, ../scss/base/_code.scss */
+pre .preprocessor, pre .pi, pre .shebang, pre .symbol, pre .diff .change, pre .special, pre .keymethods, pre .attr_selector, pre .important, pre .subst, pre .cdata {
+  color: #cb4b16;
+}
+/* line 59, ../scss/base/_code.scss */
+pre .deletion {
+  color: #dc322f;
+}
+/* line 63, ../scss/base/_code.scss */
+pre .tex .formula {
+  background: #073642;
+}
+
+/* line 1, ../scss/base/_buttons.scss */
+.btn {
+  display: inline-block;
+  padding: 1em;
+  background-color: transparent;
+  color: white;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #30302f;
+  text-decoration: none;
+  font-family: "Inconsolata", "Courier New", courier, monospace;
+  font-size: 0.75em;
+  cursor: pointer;
+  -webkit-transition: background-color 75ms linear, color 75ms linear;
+  -moz-transition: background-color 75ms linear, color 75ms linear;
+  -o-transition: background-color 75ms linear, color 75ms linear;
+  transition: background-color 75ms linear, color 75ms linear;
+}
+/* line 13, ../scss/base/_buttons.scss */
+.btn:hover {
+  background-color: #30302f;
+  color: white;
+}
+/* line 17, ../scss/base/_buttons.scss */
+.btn.cyan {
+  border: 1px solid #2aa198;
+  color: #2aa198;
+}
+/* line 20, ../scss/base/_buttons.scss */
+.btn.cyan:hover {
+  background-color: #2aa198;
+  color: white;
+}
+/* line 25, ../scss/base/_buttons.scss */
+.btn.white {
+  border: 1px solid white;
+  color: white;
+}
+/* line 28, ../scss/base/_buttons.scss */
+.btn.white:hover {
+  background-color: white;
+  color: #2aa198;
+}
+
+/* line 2, ../scss/base/_layout.scss */
+.nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+}
+/* line 9, ../scss/base/_layout.scss */
+.nav a {
+  text-decoration: none;
+  padding: 0.25em 0;
+}
+/* line 13, ../scss/base/_layout.scss */
+.nav span {
+  padding: 0.25em 0.5em;
+  line-height: 1em;
+}
+
+/* line 22, ../scss/base/_layout.scss */
+.panel {
+  width: 100%;
+  padding: 2em 0;
+  background-color: white;
+}
+/* line 26, ../scss/base/_layout.scss */
+.panel.transparent {
+  background-color: transparent;
+}
+/* line 29, ../scss/base/_layout.scss */
+.panel.white {
+  background-color: white;
+  color: #666666;
+}
+/* line 33, ../scss/base/_layout.scss */
+.panel.tan {
+  background-color: #002b36;
+  color: #666666;
+}
+/* line 37, ../scss/base/_layout.scss */
+.panel.dark-gray {
+  background-color: #30302f;
+  color: #999999;
+}
+
+/* line 43, ../scss/base/_layout.scss */
+.constrain {
+  width: 80%;
+  max-width: 45em;
+  padding: 0 10%;
+  margin: 0 auto;
+}
+/* line 48, ../scss/base/_layout.scss */
+.constrain .full-width {
+  width: 100vw;
+  height: auto;
+}
+
+/* line 54, ../scss/base/_layout.scss */
+.feature {
+  margin-top: -3em;
+}
+
+/* line 58, ../scss/base/_layout.scss */
+.right {
+  float: right;
+}
+
+/* line 62, ../scss/base/_layout.scss */
+.left {
+  float: left;
+}
+
+/* line 1, ../scss/_home.scss */
+.thumbs {
+  padding: 4em 0;
+}
+/* line 3, ../scss/_home.scss */
+.thumbs article {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 1em;
+  background-color: #fdf6e3;
+}
+
+/* line 2, ../scss/_article.scss */
+body.cyan {
+  border-top: 8px solid #2aa198;
+}
+/* line 5, ../scss/_article.scss */
+body.cyan nav span {
+  color: #2aa198;
+}
+/* line 8, ../scss/_article.scss */
+body.cyan nav a:hover {
+  color: #2aa198;
+  border-bottom: 2px solid #2aa198;
+}
+/* line 13, ../scss/_article.scss */
+body.cyan .title {
+  color: #2aa198;
+}
+/* line 16, ../scss/_article.scss */
+body.cyan .date {
+  color: #2aa198;
+}
+
+/* line 23, ../scss/_article.scss */
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  display: block;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  background-size: cover;
+}
+/* line 32, ../scss/_article.scss */
+.hero.tan {
+  background-color: #fdf6e3;
+}
+/* line 34, ../scss/_article.scss */
+.hero.tan.mesh:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-image: url(/img/tan-mesh.gif);
+  background-color: transparent;
+  background-repeat: repeat;
+  background-position: top left;
+}
+
+/* line 50, ../scss/_article.scss */
+.title-wrap {
+  position: relative;
+  display: block;
+  z-index: 2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 25vh 1em 4em 1em;
+}
+
+/* line 58, ../scss/_article.scss */
+.title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+/* line 63, ../scss/_article.scss */
+.description {
+  text-align: center;
+  font-size: 1em;
+  max-width: 22em;
+  margin: 2em auto;
+  color: #666666;
+}
+
+/* line 71, ../scss/_article.scss */
+.date {
+  text-align: center;
+  padding-bottom: 3em;
+}
+
+/* line 77, ../scss/_article.scss */
+article .content {
+  margin-top: 3em;
+  margin-bottom: 5em;
+}

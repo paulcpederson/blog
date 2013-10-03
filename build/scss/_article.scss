@@ -1,0 +1,81 @@
+body{
+  &.cyan {
+    border-top: 8px solid $cyan;
+    nav {
+      span {
+        color: $cyan;
+      }
+      a:hover {
+        color: $cyan;
+        border-bottom: 2px solid $cyan;
+      }
+    }
+    .title {
+      color: $cyan;
+    }
+    .date {
+      color: $cyan;
+    }
+  }
+}
+
+// hero banner
+.hero {
+  width: 100%;
+  min-height: 80vh;
+  display: block;
+  background-color: transparent;
+  background-repeat:no-repeat;
+  background-position:center;
+  position:relative;
+  background-size: cover;
+  &.tan{
+    background-color: $tan;
+    &.mesh:before {
+      content: '';
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
+      display: block;
+      background-image: url(/img/tan-mesh.gif);
+      background-color: transparent;
+      background-repeat: repeat;
+      background-position:top left;
+    }
+  }
+}
+
+.title-wrap {
+  position: relative;
+  display: block;
+  z-index: 2;
+  @include box-sizing(border-box);
+  padding: 25vh 1em 4em 1em;
+}
+
+.title {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.description {
+  text-align:center;
+  font-size: 1em;
+  max-width: 22em;
+  margin: 2em auto;
+  color: $gray;
+}
+
+.date {
+  text-align:center;
+  padding-bottom: 3em;
+}
+
+article {
+  .content {
+    margin-top: 3em;
+    margin-bottom: 5em;
+  }
+}

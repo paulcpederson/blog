@@ -1,0 +1,64 @@
+// Nav
+.nav {
+  display: block;
+  position: absolute;
+  top:0;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  a {
+    text-decoration: none;
+    padding: 0.25em 0;
+  }
+  span {
+    padding: 0.25em 0.5em;
+    line-height: 1em;
+  }
+}
+
+// Footer
+
+// Reusable Layout Classes
+.panel {
+  width: 100%;
+  padding: 2em 0;
+  background-color: $white;
+  &.transparent {
+    background-color: transparent;
+  }
+  &.white {
+    background-color: $white;
+    color: $gray;
+  }
+  &.tan {
+    background-color: $base03;
+    color: $gray;
+  }
+  &.dark-gray {
+    background-color: $dark-gray;
+    color: $light-gray;
+  }
+}
+
+.constrain {
+  width: 80%;
+  max-width: 45em;
+  padding: 0 10%;
+  margin: 0 auto;
+  .full-width {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+.feature {
+  margin-top: -3em;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}

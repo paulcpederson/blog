@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paul C Pederson</title>
+    <atom:link href="http://paulcpederson.github.io/blog/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link>http://paulcpederson.github.io/blog</link>
+    <description></description>
+    <pubDate>Mon, 05  Aug 2013 17:00:00 -0700</pubDate>
+    <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
+    <language>en</language>
+    <item>
+      <title>Devicons</title>
+      <link>http://paulcpederson.github.io/blog/articles/devicons/</link>
+      <pubDate>Mon, 05  Aug 2013 17:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://paulcpederson.github.io/blog/articles/devicons/</guid>
+      <author></author>
+      <description>&lt;p&gt;At work the other day I was thinking out loud about a strategy for generating full-color icons with a web font. Essentially the idea is to use :before and :after pseudo elements to provide a foreground and background to your icon, thusly giving it three colors. If you&amp;#39;re a visual learner, it works like this:&lt;/p&gt;
+&lt;p&gt;![One devicon separated into layers labeled with :before, :after]&lt;/p&gt;
+&lt;p&gt;People at my work tend to take pipe-dreams very seriously, so it wasn&amp;#39;t all that surprising when one of my co-workers, &lt;a href=&quot;http://atelier-wise.aws.af.cm/&quot;&gt;Nik Wise&lt;/a&gt; was listening to me, and then spent the next ten minutes actually implementing what I had just imagined.&lt;/p&gt;
+&lt;p&gt;It turns out, that this technique is actually far simpler than I first thought it was going to be, and that the most time consuming part of the workflow is building and color separating the icons. Once you&amp;#39;ve exported every layer as an .svg file, you just upload them all to icoMoon (or your web font tool of choice), assign them ligatures (so you can remember their names later), and download the bundle.&lt;/p&gt;
+&lt;p&gt;After that, you just create :before and :after elements and make their content attribute equal to the corresponding icon. The css ends up looking something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;css for the icon&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;You can take a look at &lt;a href=&quot;http://paulcpederson.github.io/devicons/&quot;&gt;the proof of concept&lt;/a&gt; to see them in action, or look at &lt;a href=&quot;https://github.com/nikolaswise/devicons&quot;&gt;the GitHub repo&lt;/a&gt; to see how they&amp;#39;re implemented. Nik has also written up a &lt;a href=&quot;https://github.com/nikolaswise/three-color-icons&quot;&gt;terrific write up&lt;/a&gt; of the technique that goes into much more detail.&lt;/p&gt;
+</description>
+    </item>
+    <item>
+      <title>Abstract Color</title>
+      <link>http://paulcpederson.github.io/blog/articles/abstract-color/</link>
+      <pubDate>Thu, 21 Mar 2013 17:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://paulcpederson.github.io/blog/articles/abstract-color/</guid>
+      <author></author>
+      <description>&lt;p&gt;Arguably the highpoint of American Art in the 20th century, Abstract Expressionism represented an undeniable paradigm shift in the way the Western art world made and thought about art.&lt;/p&gt;
+&lt;p&gt;Rooted in Modernism and popularized by the famous Jackson Pollock In the 1940&amp;#39;s, Abstract Expressionism was a new approach to studio art. All at once innovative, phallic, and raw, Ab-Ex generally presented little or no figurative elements, many times relying strictly on the “Painterly Gesture” of the artist.&lt;/p&gt;
+&lt;p&gt;The impact of Abstract Expressionism goes far deeper than studio art. One of the major contributions of the Abstract Expressionists was their bold and commanding use of color. When I&amp;#39;m stuck choosing colors for a project, I often reference works from this time. Because artists of this movement focused purely on form and process rather than figurative content, their use of color is often very bold and communicative. Below are some of my favorite artists from this period.&lt;/p&gt;
+&lt;h2&gt;Willem de Kooning&lt;/h2&gt;
+&lt;p&gt;(door to the river)&lt;/p&gt;
+&lt;p&gt;Willem de Kooning took color to another level. He worked with paint was very loosely, and he needed the paint to be wet for as long as possible. Because of this, he created very ellaborate color charts which outlined and organized colors by their dry time. This shows in his work as he tends to use colors that are slightly more earthy and desaturated, while still having an amazing presence.&lt;/p&gt;
+&lt;p&gt;(Gansevoort Street)&lt;/p&gt;
+&lt;p&gt;(Two Figures)&lt;/p&gt;
+&lt;p&gt;(Seated Man)&lt;/p&gt;
+&lt;p&gt;(Mailbox)&lt;/p&gt;
+&lt;h2&gt;Gerhard Richter&lt;/h2&gt;
+&lt;h2&gt;Ad Reinhart&lt;/h2&gt;
+&lt;h2&gt;Jackson Pollock&lt;/h2&gt;
+</description>
+    </item>
+    <item>
+      <title>Sublime Writer</title>
+      <link>http://paulcpederson.github.io/blog/articles/sublime-writer/</link>
+      <pubDate>Tue, 20 Nov 2012 16:00:00 -0800</pubDate>
+      <guid isPermaLink="true">http://paulcpederson.github.io/blog/articles/sublime-writer/</guid>
+      <author></author>
+      <description>&lt;p&gt;Immediately on its release, I fell in love with iA Writer. Like Clear, Solar, or the now assimilated Sparrow, iA Writer is one of a new generation of apps that strives for focus rather than features. Reading their &lt;a href=&quot;http://informationarchitects.net/blog/responsive-typography-the-basics/&quot; title=&quot;Responsive Web Typography, the Basics.&quot;&gt;blog&lt;/a&gt;, one gets a true sense of just how in depth they went while designing the app.&lt;/p&gt;
+&lt;p&gt;Sometimes, though, it can be faster to have your entire workflow within one app, and for me, that app is Sublime Text 2. That&amp;#39;s why I made &lt;a href=&quot;https://github.com/paulcpederson/sublime-writer&quot; title=&quot;Sublime Writer&quot;&gt;Sublime Writer&lt;/a&gt;. It gives Sublime Text 2 the beauty of iA Writer when you need to write web content (markdown), but lets you keep your favorite editor color scheme when you need to write code.&lt;/p&gt;
+&lt;p&gt;Sublime text also has the concept of “Distraction Free” mode (pictured below), which allows you to approximate iA Writer&amp;#39;s terrific “focus” mode. Essentially it enables you to move into a full-screen environment, removing all the chrome of the operating system.&lt;/p&gt;
+&lt;p&gt;![distraction free photo]&lt;/p&gt;
+&lt;p&gt;If you&amp;#39;re interested in checking it out, you can find a repo on my &lt;a href=&quot;https://github.com/paulcpederson/sublime-writer&quot;&gt;github&lt;/a&gt; or &lt;a href=&quot;http://paulcpederson.github.io/downloads/sublime-writer.zip&quot;&gt;download the zip&lt;/a&gt;. The GitHub repo has detailed instructions on how to install the theme in Sublime Text 2 (it&amp;#39;s really just adding it to a specific folder). The theme looks best with &lt;a href=&quot;http://www.boldmonday.com/en/nitti/&quot;&gt;Nitti&lt;/a&gt;, a terrific monospace font for reading and writing.&lt;/p&gt;
+</description>
+    </item>
+  </channel>
+</rss>

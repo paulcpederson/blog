@@ -11,16 +11,16 @@ html(lang='en')
         block title
           = locals.name
       link(rel='alternate', href=locals.url+'/feed.xml', type='application/rss+xml', title=locals.description)
-      link(rel='stylesheet', href='/css/main.css')
-      link(rel='stylesheet', href='/css/style.css')
+      link(rel='stylesheet', href=locals.url + '/css/main.css')
+      link(rel='stylesheet', href=locals.url + '/css/style.css')
   body(class=bodyclass)
     block header
       header.panel.transparent.nav
         nav.constrain
           a.left(href=locals.url)= locals.name
-          a.right(href='/archive.html') Archive
+          a.right(href=locals.url + '/archive/') Archive
           span.right /
-          a.right(href='/') Blog
+          a.right(href=locals.url) Blog
     block hero
     block content
       div.panel.white
