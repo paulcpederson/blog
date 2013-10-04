@@ -36,6 +36,11 @@ blockquote {
 p {
   line-height: 1.75em;
   margin: 1em 0;
+  &.small {
+    font-family: $button-font;
+    font-size: 0.75em;
+    color: $light-gray;
+  }
 }
 
 a {

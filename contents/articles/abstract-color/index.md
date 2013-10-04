@@ -7,6 +7,7 @@ thumbnail: pollock-thumb.jpg
 canvas: tan mesh
 spot: cyan
 description: How to steal colors from the masters of the Abstract Expressionism movement.
+featured: true
 ---
 
 Arguably the highpoint of American Art in the 20th century, Abstract Expressionism represented an undeniable paradigm shift in the way the Western art world made and thought about art.

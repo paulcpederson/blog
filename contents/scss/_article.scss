@@ -67,6 +67,25 @@ body{
   padding-bottom: 3em;
 }
 
+// Homepage Hero
+.hero {
+  &.homepage {
+    min-height: 50vh;
+    .title-wrap{
+      padding: 6em 0 5em 0;
+    }
+    .title {
+      text-align: left;
+      margin-top: 1.5em;
+    }
+    .description {
+      text-align: left;
+      margin: 2em 0;
+    }
+  }
+}
+
+
 article {
   .content {
     margin-top: 3em;

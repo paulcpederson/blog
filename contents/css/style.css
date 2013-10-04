@@ -225,8 +225,14 @@ p {
   line-height: 1.75em;
   margin: 1em 0;
 }
+/* line 39, ../scss/base/_typography.scss */
+p.small {
+  font-family: "Inconsolata", "Courier New", courier, monospace;
+  font-size: 0.75em;
+  color: #999999;
+}
 
-/* line 41, ../scss/base/_typography.scss */
+/* line 46, ../scss/base/_typography.scss */
 a {
   text-decoration: none;
   color: #2aa198;
@@ -584,7 +590,26 @@ body.red .date {
   padding-bottom: 3em;
 }
 
-/* line 71, ../scss/_article.scss */
+/* line 72, ../scss/_article.scss */
+.hero.homepage {
+  min-height: 50vh;
+}
+/* line 74, ../scss/_article.scss */
+.hero.homepage .title-wrap {
+  padding: 6em 0 5em 0;
+}
+/* line 77, ../scss/_article.scss */
+.hero.homepage .title {
+  text-align: left;
+  margin-top: 1.5em;
+}
+/* line 81, ../scss/_article.scss */
+.hero.homepage .description {
+  text-align: left;
+  margin: 2em 0;
+}
+
+/* line 90, ../scss/_article.scss */
 article .content {
   margin-top: 3em;
   margin-bottom: 5em;
