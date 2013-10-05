@@ -159,6 +159,15 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   padding-left: 0;
   padding-right: 0;
 }
+/* line 45, ../scss/base/_grid.scss */
+.col-group.table {
+  dispay: table;
+}
+/* line 47, ../scss/base/_grid.scss */
+.col-group.table .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
 
 /* - - - - - - - - - Basic Typography - - - - - - - */
 @font-face {
@@ -258,7 +267,40 @@ h6 {
   font-size: 0.675em;
 }
 
-/* line 92, ../scss/base/_typography.scss */
+/* line 94, ../scss/base/_typography.scss */
+h1.yellow, h2.yellow, h3.yellow, h4.yellow, h5.yellow, h6.yellow, a.yellow {
+  color: #b58900;
+}
+/* line 97, ../scss/base/_typography.scss */
+h1.orange, h2.orange, h3.orange, h4.orange, h5.orange, h6.orange, a.orange {
+  color: #cb4b16;
+}
+/* line 100, ../scss/base/_typography.scss */
+h1.red, h2.red, h3.red, h4.red, h5.red, h6.red, a.red {
+  color: #dc322f;
+}
+/* line 103, ../scss/base/_typography.scss */
+h1.magenta, h2.magenta, h3.magenta, h4.magenta, h5.magenta, h6.magenta, a.magenta {
+  color: #d33682;
+}
+/* line 106, ../scss/base/_typography.scss */
+h1.violet, h2.violet, h3.violet, h4.violet, h5.violet, h6.violet, a.violet {
+  color: #6c71c4;
+}
+/* line 109, ../scss/base/_typography.scss */
+h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue, a.blue {
+  color: #268bd2;
+}
+/* line 112, ../scss/base/_typography.scss */
+h1.cyan, h2.cyan, h3.cyan, h4.cyan, h5.cyan, h6.cyan, a.cyan {
+  color: #2aa198;
+}
+/* line 115, ../scss/base/_typography.scss */
+h1.green, h2.green, h3.green, h4.green, h5.green, h6.green, a.green {
+  color: #859900;
+}
+
+/* line 120, ../scss/base/_typography.scss */
 blockquote {
   font-family: "Facit", Arial, Helvetica, sans;
   text-align: center;
@@ -267,19 +309,19 @@ blockquote {
   font-style: italic;
 }
 
-/* line 100, ../scss/base/_typography.scss */
+/* line 128, ../scss/base/_typography.scss */
 p {
   line-height: 1.75em;
   margin: 1em 0;
 }
-/* line 103, ../scss/base/_typography.scss */
+/* line 131, ../scss/base/_typography.scss */
 p.small {
   font-family: "Inconsolata", "Courier New", courier, monospace;
   font-size: 0.75em;
   color: #999999;
 }
 
-/* line 110, ../scss/base/_typography.scss */
+/* line 138, ../scss/base/_typography.scss */
 a {
   text-decoration: none;
   color: #2aa198;
@@ -411,7 +453,7 @@ pre .tex .formula {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
 }
 /* line 9, ../scss/base/_layout.scss */
 .nav a {
@@ -478,17 +520,46 @@ pre .tex .formula {
   float: left;
 }
 
-/* line 1, ../scss/_home.scss */
-.thumbs {
-  padding: 4em 0;
+/* line 2, ../scss/_home.scss */
+.blog-roll {
+  position: relative;
+  margin: 3em 0;
 }
-/* line 3, ../scss/_home.scss */
-.thumbs article {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 1em;
-  background-color: #fdf6e3;
+/* line 5, ../scss/_home.scss */
+.blog-roll h2 {
+  margin: 1em 0;
+}
+/* line 8, ../scss/_home.scss */
+.blog-roll p {
+  font-size: 0.75em;
+}
+/* line 11, ../scss/_home.scss */
+.blog-roll .text {
+  margin-left: 55%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* line 17, ../scss/_home.scss */
+.thumbnail {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+/* line 27, ../scss/_home.scss */
+.thumbnail:hover {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 /* line 2, ../scss/_article.scss */
@@ -1140,12 +1211,12 @@ body.green article a {
 /* line 119, ../scss/_article.scss */
 .hero.homepage .title {
   text-align: left;
-  margin-top: 1.5em;
+  margin: 0;
 }
 /* line 123, ../scss/_article.scss */
 .hero.homepage .description {
   text-align: left;
-  margin: 2em 0;
+  margin: 1em 0;
 }
 
 /* line 131, ../scss/_article.scss */

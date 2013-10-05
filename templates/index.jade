@@ -20,27 +20,28 @@ block hero
 block content
   div.panel.white
     div.constrain
-      div.col-group.clearfix.thumbs
-        each article in articles
-          div.col.col1of3.thumb
-            article
-              header
-                h2
-                  a(href= locals.url + article.url)= article.title
-                p
-                  span= moment.utc(article.date).format('DD. MMMM YYYY')
-              section.content
-                p= article.metadata.description
-                a.btn.cyan(href= locals.url + article.url) Read More »
+      each article in articles
+        div.col-group.blog-roll
+          a.thumbnail(style='background-image: url(' + locals.url + '/img/' + article.metadata.thumbnail + ')', href= locals.url + article.url)
+          div.col2of5.col.text
+            header
+              h2
+                a(href= locals.url + article.url, class= article.metadata.spot)= article.title
+              p.small= moment.utc(article.date).format('DD MMMM YYYY')
+            section
+              p= article.metadata.description
+              p.small
+                a(href= locals.url + article.url, class= article.metadata.spot) Read More »
+  div.bottom-nav
+    div.constrain.clearfix
+        a.previous.left(href= locals.url + '/archive/')
+          p.small view all articles:
+          p Archive
 
-block prepend footer
-  div
-    if prevPage
-      a(href= locals.url + prevPage.url) « Newer
-    else
-      a(href= locals.url +'/archive.html') « Archives
-    if nextPage
-      a(href= locals.url + nextPage.url) Next page »
+        - var next = contents.index.articles[0]
+          a.next.right(href= locals.url + next.url)
+            p.small most recent article:
+            p= next.title
 
 
 

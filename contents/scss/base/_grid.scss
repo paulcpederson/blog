@@ -42,4 +42,11 @@
       padding-right: 0;
     }
   }
+  &.table {
+    dispay: table;
+    .table-cell {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
 }
