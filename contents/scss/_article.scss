@@ -104,11 +104,35 @@ article {
     display: block;
     a {
       width: 50%;
-      display: inline-block;
+      display: block;
       @include box-sizing(border-box);
-      padding: 3em;
       background: $cyan;
       color: $white;
+      @include transition(all 200ms linear);
+      .small {
+        color: $white;
+      }
+      p {
+        margin: 0.5em 0;
+      }
+      &.next {
+        padding: 3em 20% 2.5em 0;
+        background: url(../img/right-arrow.svg) 80% center no-repeat $cyan;
+        text-align: right;
+        &:hover {
+          padding-right: 18%;
+          background: url(../img/right-arrow.svg) 82% center no-repeat darken($cyan, 5%);
+        }
+      }
+      &.previous {
+        padding: 3em 0 2.5em 20%;
+        background: url(../img/left-arrow.svg) 10% center no-repeat $cyan;
+        text-align: left;
+        &:hover {
+          padding-left: 18%;
+          background: url(../img/left-arrow.svg) 8% center no-repeat darken($cyan, 5%);
+        }
+      }
     }
   }
 }

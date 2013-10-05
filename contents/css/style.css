@@ -631,11 +631,44 @@ article .content {
 /* line 105, ../scss/_article.scss */
 .bottom-nav .constrain a {
   width: 50%;
-  display: inline-block;
+  display: block;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 3em;
   background: #2aa198;
   color: white;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+/* line 112, ../scss/_article.scss */
+.bottom-nav .constrain a .small {
+  color: white;
+}
+/* line 115, ../scss/_article.scss */
+.bottom-nav .constrain a p {
+  margin: 0.5em 0;
+}
+/* line 118, ../scss/_article.scss */
+.bottom-nav .constrain a.next {
+  padding: 3em 20% 2.5em 0;
+  background: url(../img/right-arrow.svg) 80% center no-repeat #2aa198;
+  text-align: right;
+}
+/* line 122, ../scss/_article.scss */
+.bottom-nav .constrain a.next:hover {
+  padding-right: 18%;
+  background: url(../img/right-arrow.svg) 82% center no-repeat #258d85;
+}
+/* line 127, ../scss/_article.scss */
+.bottom-nav .constrain a.previous {
+  padding: 3em 0 2.5em 20%;
+  background: url(../img/left-arrow.svg) 10% center no-repeat #2aa198;
+  text-align: left;
+}
+/* line 131, ../scss/_article.scss */
+.bottom-nav .constrain a.previous:hover {
+  padding-left: 18%;
+  background: url(../img/left-arrow.svg) 8% center no-repeat #258d85;
 }
