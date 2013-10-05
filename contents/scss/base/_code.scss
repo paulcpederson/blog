@@ -22,7 +22,7 @@ pre {
   width: 100%;
   @include box-sizing(border-box);
   background-color: $base03;
-
+  margin: 2em 0;
   code {
     display: block;
     padding: 1em;
