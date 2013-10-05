@@ -16,12 +16,20 @@ block append head
 block hero
   if page.metadata.background
     section(class='hero ' + page.metadata.canvas, style='background-image: url(' + locals.url + '/img/' + page.metadata.background + ')')
-      div.title-wrap.constrain
-        h1.title= page.title
-        p.description= page.metadata.description
-        p.date= moment.utc(page.date).format('M.D.YYYY')
+      if page.metadata.feature
+        img.feature-image(src= locals.url + '/img/' + page.metadata.feature)
+      else
+        div.title-wrap.constrain
+          h1.title= page.title
+          p.description= page.metadata.description
+          p.date= moment.utc(page.date).format('M.D.YYYY')
 
 block content
+  if page.metadata.feature
+    div.title-wrap.constrain.in-article
+      h1.title= page.title
+      p.description= page.metadata.description
+      p.date= moment.utc(page.date).format('M.D.YYYY')
   article.panel.white
     section.constrain.content!= page.html
   div.bottom-nav

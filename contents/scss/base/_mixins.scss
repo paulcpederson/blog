@@ -43,9 +43,12 @@
     span {
       color: $color;
     }
-    a:hover {
+    a {
       color: $color;
-      border-bottom: 2px solid $color;
+      &:hover {
+        color: $color;
+        border-bottom: 2px solid $color;
+      }
     }
   }
   .title {
@@ -53,5 +56,35 @@
   }
   .date {
     color: $color;
+  }
+  .bottom-nav {
+    background: $color;
+    .constrain {
+      a {
+        background: $color;
+        &.next {
+          background: url(../img/right-arrow.svg) 80% center no-repeat $color;
+          &:hover {
+            background: url(../img/right-arrow.svg) 82% center no-repeat darken($color, 5%);
+          }
+        }
+        &.previous {
+          background: url(../img/left-arrow.svg) 10% center no-repeat $color;
+          &:hover {
+            background: url(../img/left-arrow.svg) 8% center no-repeat darken($color, 5%);
+          }
+        }
+      }
+    }
+  }
+  .dark-gray {
+    a {
+      color: $color;
+    }
+  }
+  article {
+    a {
+      color: $color;
+    }
   }
 }
