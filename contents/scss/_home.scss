@@ -1,3 +1,21 @@
+// Homepage Hero
+.hero {
+  &.homepage {
+    min-height: 50vh;
+    .title-wrap{
+      padding: 6em 0 5em 0;
+    }
+    .title {
+      text-align: left;
+      margin: 0;
+    }
+    .description {
+      text-align: left;
+      margin: 1em 0;
+    }
+  }
+}
+
 // Homepage Thumbnails
 .blog-roll {
   position: relative;

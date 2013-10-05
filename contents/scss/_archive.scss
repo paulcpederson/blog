@@ -1,0 +1,26 @@
+// Archive Styles
+.hero {
+  &.short {
+    min-height: 0;
+    .title-wrap {
+      padding: 3em;
+    }
+  }
+}
+
+.archive {
+  margin: 0 0 2em 0;
+  .small {
+    margin: 0;
+  }
+}
+
+.archive-title {
+  margin-bottom: 0;
+}
+
+.archive-description {
+  margin: 0;
+  font-size: 0.9em;
+  max-width: 24em;
+}
