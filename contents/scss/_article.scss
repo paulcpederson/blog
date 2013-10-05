@@ -11,8 +11,8 @@ body{
   &.red{
     @include body-class($red);
   }
-  &.light-blue{
-    @include body-class($light-blue);
+  &.blue{
+    @include body-class($blue);
   }
 }
 
