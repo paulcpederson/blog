@@ -1,7 +1,4 @@
 body{
-  &.cyan{
-    @include body-class($cyan);
-  }
   &.yellow{
     @include body-class($yellow);
   }
@@ -11,8 +8,20 @@ body{
   &.red{
     @include body-class($red);
   }
+  &.magenta{
+    @include body-class($magenta);
+  }
+  &.violet{
+    @include body-class($violet);
+  }
   &.blue{
     @include body-class($blue);
+  }
+  &.cyan{
+    @include body-class($cyan);
+  }
+  &.green{
+    @include body-class($green);
   }
 }
 

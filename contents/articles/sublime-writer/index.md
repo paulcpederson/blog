@@ -7,7 +7,7 @@ background: sublime-writer.jpg
 feature: sublime-writer-feature.png
 thumbnail: pollock-thumb.jpg
 canvas: navy mesh
-spot: blue
+spot: cyan
 ---
 
 Immediately on its release, I fell in love with iA Writer. Like Clear, Solar, or the now assimilated Sparrow, iA Writer is one of a new generation of apps that strives for focus rather than features. Reading their [blog](http://informationarchitects.net/blog/responsive-typography-the-basics/ "Responsive Web Typography, the Basics."), one gets a true sense of just how in depth they went while designing the app.
