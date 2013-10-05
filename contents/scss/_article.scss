@@ -85,10 +85,31 @@ body{
   }
 }
 
-
 article {
   .content {
     margin-top: 3em;
     margin-bottom: 5em;
   }
 }
+
+//Next-Previous Links
+.bottom-nav {
+  width: 100%;
+  padding: 0;
+  display:block;
+  background: $cyan;
+  margin: 2em 0 0 0;
+  text-align: center;
+  .constrain {
+    display: block;
+    a {
+      width: 50%;
+      display: inline-block;
+      @include box-sizing(border-box);
+      padding: 3em;
+      background: $cyan;
+      color: $white;
+    }
+  }
+}
+
