@@ -3,10 +3,10 @@ title: Abstract Color
 date: 2013-03-22
 template: article.jade
 background: pollock.jpg
-thumbnail: pollock-thumb-2.jpg
+thumbnail: pollock-thumb.jpg
 canvas: tan mesh
 spot: yellow
-description: How to steal colors from the masters of the Abstract Expressionism movement.
+description: How to steal colors from the masters of the Abstract Expressionism movement
 featured: true
 ---
 
