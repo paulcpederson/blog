@@ -445,8 +445,8 @@ pre .tex .formula {
   color: #666666;
 }
 /* line 37, ../scss/base/_layout.scss */
-.panel.dark-gray {
-  background-color: #30302f;
+.panel.navy {
+  background-color: #002b36;
   color: #999999;
 }
 
@@ -541,7 +541,7 @@ body.cyan .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #258d85;
 }
 /* line 81, ../scss/base/_mixins.scss */
-body.cyan .dark-gray a {
+body.cyan .navy a {
   color: #2aa198;
 }
 /* line 86, ../scss/base/_mixins.scss */
@@ -598,7 +598,7 @@ body.yellow .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #9c7600;
 }
 /* line 81, ../scss/base/_mixins.scss */
-body.yellow .dark-gray a {
+body.yellow .navy a {
   color: #b58900;
 }
 /* line 86, ../scss/base/_mixins.scss */
@@ -655,7 +655,7 @@ body.orange .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #b44214;
 }
 /* line 81, ../scss/base/_mixins.scss */
-body.orange .dark-gray a {
+body.orange .navy a {
   color: #cb4b16;
 }
 /* line 86, ../scss/base/_mixins.scss */
@@ -712,7 +712,7 @@ body.red .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #cf2623;
 }
 /* line 81, ../scss/base/_mixins.scss */
-body.red .dark-gray a {
+body.red .navy a {
   color: #dc322f;
 }
 /* line 86, ../scss/base/_mixins.scss */
@@ -769,7 +769,7 @@ body.blue .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #227dbc;
 }
 /* line 81, ../scss/base/_mixins.scss */
-body.blue .dark-gray a {
+body.blue .navy a {
   color: #268bd2;
 }
 /* line 86, ../scss/base/_mixins.scss */
