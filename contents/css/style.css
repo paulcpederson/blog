@@ -508,43 +508,53 @@ body.yellow nav a:hover {
   color: #b58900;
   border-bottom: 2px solid #b58900;
 }
-/* line 54, ../scss/base/_mixins.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.yellow .title-wrap .btn {
+  border-color: #b58900;
+  color: #b58900;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.yellow .title-wrap .btn:hover {
+  background-color: #b58900;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.yellow .title {
   color: #b58900;
 }
-/* line 57, ../scss/base/_mixins.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.yellow .date {
   color: #b58900;
 }
-/* line 60, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav {
   background: #b58900;
 }
-/* line 63, ../scss/base/_mixins.scss */
+/* line 73, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a {
   background: #b58900;
 }
-/* line 65, ../scss/base/_mixins.scss */
+/* line 75, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #b58900;
 }
-/* line 67, ../scss/base/_mixins.scss */
+/* line 77, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #9c7600;
 }
-/* line 71, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #b58900;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 83, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #9c7600;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 91, ../scss/base/_mixins.scss */
 body.yellow .navy a {
   color: #b58900;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 96, ../scss/base/_mixins.scss */
 body.yellow article a {
   color: #b58900;
 }
@@ -565,43 +575,53 @@ body.orange nav a:hover {
   color: #cb4b16;
   border-bottom: 2px solid #cb4b16;
 }
-/* line 54, ../scss/base/_mixins.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.orange .title-wrap .btn {
+  border-color: #cb4b16;
+  color: #cb4b16;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.orange .title-wrap .btn:hover {
+  background-color: #cb4b16;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.orange .title {
   color: #cb4b16;
 }
-/* line 57, ../scss/base/_mixins.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.orange .date {
   color: #cb4b16;
 }
-/* line 60, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.orange .bottom-nav {
   background: #cb4b16;
 }
-/* line 63, ../scss/base/_mixins.scss */
+/* line 73, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a {
   background: #cb4b16;
 }
-/* line 65, ../scss/base/_mixins.scss */
+/* line 75, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #cb4b16;
 }
-/* line 67, ../scss/base/_mixins.scss */
+/* line 77, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #b44214;
 }
-/* line 71, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #cb4b16;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 83, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #b44214;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 91, ../scss/base/_mixins.scss */
 body.orange .navy a {
   color: #cb4b16;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 96, ../scss/base/_mixins.scss */
 body.orange article a {
   color: #cb4b16;
 }
@@ -622,43 +642,53 @@ body.red nav a:hover {
   color: #dc322f;
   border-bottom: 2px solid #dc322f;
 }
-/* line 54, ../scss/base/_mixins.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.red .title-wrap .btn {
+  border-color: #dc322f;
+  color: #dc322f;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.red .title-wrap .btn:hover {
+  background-color: #dc322f;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.red .title {
   color: #dc322f;
 }
-/* line 57, ../scss/base/_mixins.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.red .date {
   color: #dc322f;
 }
-/* line 60, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.red .bottom-nav {
   background: #dc322f;
 }
-/* line 63, ../scss/base/_mixins.scss */
+/* line 73, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a {
   background: #dc322f;
 }
-/* line 65, ../scss/base/_mixins.scss */
+/* line 75, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #dc322f;
 }
-/* line 67, ../scss/base/_mixins.scss */
+/* line 77, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #cf2623;
 }
-/* line 71, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #dc322f;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 83, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #cf2623;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 91, ../scss/base/_mixins.scss */
 body.red .navy a {
   color: #dc322f;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 96, ../scss/base/_mixins.scss */
 body.red article a {
   color: #dc322f;
 }
@@ -679,43 +709,53 @@ body.magenta nav a:hover {
   color: #d33682;
   border-bottom: 2px solid #d33682;
 }
-/* line 54, ../scss/base/_mixins.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.magenta .title-wrap .btn {
+  border-color: #d33682;
+  color: #d33682;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.magenta .title-wrap .btn:hover {
+  background-color: #d33682;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.magenta .title {
   color: #d33682;
 }
-/* line 57, ../scss/base/_mixins.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.magenta .date {
   color: #d33682;
 }
-/* line 60, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav {
   background: #d33682;
 }
-/* line 63, ../scss/base/_mixins.scss */
+/* line 73, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a {
   background: #d33682;
 }
-/* line 65, ../scss/base/_mixins.scss */
+/* line 75, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #d33682;
 }
-/* line 67, ../scss/base/_mixins.scss */
+/* line 77, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #c42b75;
 }
-/* line 71, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #d33682;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 83, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #c42b75;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 91, ../scss/base/_mixins.scss */
 body.magenta .navy a {
   color: #d33682;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 96, ../scss/base/_mixins.scss */
 body.magenta article a {
   color: #d33682;
 }
@@ -736,43 +776,53 @@ body.violet nav a:hover {
   color: #6c71c4;
   border-bottom: 2px solid #6c71c4;
 }
-/* line 54, ../scss/base/_mixins.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.violet .title-wrap .btn {
+  border-color: #6c71c4;
+  color: #6c71c4;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.violet .title-wrap .btn:hover {
+  background-color: #6c71c4;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.violet .title {
   color: #6c71c4;
 }
-/* line 57, ../scss/base/_mixins.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.violet .date {
   color: #6c71c4;
 }
-/* line 60, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.violet .bottom-nav {
   background: #6c71c4;
 }
-/* line 63, ../scss/base/_mixins.scss */
+/* line 73, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a {
   background: #6c71c4;
 }
-/* line 65, ../scss/base/_mixins.scss */
+/* line 75, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #6c71c4;
 }
-/* line 67, ../scss/base/_mixins.scss */
+/* line 77, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #5a5fbd;
 }
-/* line 71, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #6c71c4;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 83, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #5a5fbd;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 91, ../scss/base/_mixins.scss */
 body.violet .navy a {
   color: #6c71c4;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 96, ../scss/base/_mixins.scss */
 body.violet article a {
   color: #6c71c4;
 }
@@ -793,43 +843,53 @@ body.blue nav a:hover {
   color: #268bd2;
   border-bottom: 2px solid #268bd2;
 }
-/* line 54, ../scss/base/_mixins.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.blue .title-wrap .btn {
+  border-color: #268bd2;
+  color: #268bd2;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.blue .title-wrap .btn:hover {
+  background-color: #268bd2;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.blue .title {
   color: #268bd2;
 }
-/* line 57, ../scss/base/_mixins.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.blue .date {
   color: #268bd2;
 }
-/* line 60, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.blue .bottom-nav {
   background: #268bd2;
 }
-/* line 63, ../scss/base/_mixins.scss */
+/* line 73, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a {
   background: #268bd2;
 }
-/* line 65, ../scss/base/_mixins.scss */
+/* line 75, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #268bd2;
 }
-/* line 67, ../scss/base/_mixins.scss */
+/* line 77, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #227dbc;
 }
-/* line 71, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #268bd2;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 83, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #227dbc;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 91, ../scss/base/_mixins.scss */
 body.blue .navy a {
   color: #268bd2;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 96, ../scss/base/_mixins.scss */
 body.blue article a {
   color: #268bd2;
 }
@@ -850,43 +910,53 @@ body.cyan nav a:hover {
   color: #2aa198;
   border-bottom: 2px solid #2aa198;
 }
-/* line 54, ../scss/base/_mixins.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.cyan .title-wrap .btn {
+  border-color: #2aa198;
+  color: #2aa198;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.cyan .title-wrap .btn:hover {
+  background-color: #2aa198;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.cyan .title {
   color: #2aa198;
 }
-/* line 57, ../scss/base/_mixins.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.cyan .date {
   color: #2aa198;
 }
-/* line 60, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav {
   background: #2aa198;
 }
-/* line 63, ../scss/base/_mixins.scss */
+/* line 73, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a {
   background: #2aa198;
 }
-/* line 65, ../scss/base/_mixins.scss */
+/* line 75, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #2aa198;
 }
-/* line 67, ../scss/base/_mixins.scss */
+/* line 77, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #258d85;
 }
-/* line 71, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #2aa198;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 83, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #258d85;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 91, ../scss/base/_mixins.scss */
 body.cyan .navy a {
   color: #2aa198;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 96, ../scss/base/_mixins.scss */
 body.cyan article a {
   color: #2aa198;
 }
@@ -907,43 +977,53 @@ body.green nav a:hover {
   color: #859900;
   border-bottom: 2px solid #859900;
 }
-/* line 54, ../scss/base/_mixins.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.green .title-wrap .btn {
+  border-color: #859900;
+  color: #859900;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.green .title-wrap .btn:hover {
+  background-color: #859900;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.green .title {
   color: #859900;
 }
-/* line 57, ../scss/base/_mixins.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.green .date {
   color: #859900;
 }
-/* line 60, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.green .bottom-nav {
   background: #859900;
 }
-/* line 63, ../scss/base/_mixins.scss */
+/* line 73, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a {
   background: #859900;
 }
-/* line 65, ../scss/base/_mixins.scss */
+/* line 75, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #859900;
 }
-/* line 67, ../scss/base/_mixins.scss */
+/* line 77, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #6f8000;
 }
-/* line 71, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #859900;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 83, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #6f8000;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 91, ../scss/base/_mixins.scss */
 body.green .navy a {
   color: #859900;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 96, ../scss/base/_mixins.scss */
 body.green article a {
   color: #859900;
 }

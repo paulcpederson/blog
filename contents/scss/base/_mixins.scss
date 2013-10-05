@@ -51,6 +51,16 @@
       }
     }
   }
+  .title-wrap {
+    .btn {
+      border-color: $color;
+      color: $color;
+      &:hover {
+        background-color: $color;
+        color: $white;
+      }
+    }
+  }
   .title {
     color: $color;
   }
