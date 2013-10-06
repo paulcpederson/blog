@@ -3,9 +3,9 @@ title: Devicons
 date: 2013-08-06
 template: article.jade
 thumbnail: pollock-thumb.jpg
-background: pollock.jpg
-canvas: tan mesh
-spot: orange
+background: devicons.svg
+canvas: navy mesh
+spot: green
 description: Rendering three color icons in the browser with a custom web font
 ---
 

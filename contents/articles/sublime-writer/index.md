@@ -5,7 +5,7 @@ template: article.jade
 description: Bringing the beauty and simplicity of iA Writer to Sublime Text 2
 background: sublime-writer.jpg
 feature: sublime-writer-feature.png
-thumbnail: pollock-thumb.jpg
+thumbnail: sublime-writer-thumb.jpg
 canvas: navy mesh
 spot: cyan
 ---
