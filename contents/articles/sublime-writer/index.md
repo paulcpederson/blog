@@ -16,7 +16,7 @@ Sometimes, though, it can be faster to have your entire workflow within one app,
 
 Sublime text also has the concept of "Distraction Free" mode (pictured below), which allows you to approximate iA Writer's terrific "focus" mode. Essentially it enables you to move into a full-screen environment, removing all the chrome of the operating system.
 
-![distraction free photo]
+![Distraction Free Mode](distraction-free.jpg)
 
 If you're interested in checking it out, you can find a repo on my [github](https://github.com/paulcpederson/sublime-writer) or [download the zip](/downloads/sublime-writer.zip). The GitHub repo has detailed instructions on how to install the theme in Sublime Text 2 (it's really just adding it to a specific folder). The theme looks best with [Nitti](http://www.boldmonday.com/en/nitti/), a terrific monospace font for reading and writing.
 
