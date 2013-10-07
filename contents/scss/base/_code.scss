@@ -22,10 +22,10 @@ p code {
 /* Solarized Dark Theme */
 pre {
   width: 100%;
-  @include box-sizing(border-box);
   background-color: $base03;
   margin: 2em 0;
   code {
+    @include box-sizing(border-box);
     display: block;
     padding: 1em;
     background-color: $base03;
