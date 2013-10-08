@@ -115,9 +115,13 @@ article {
     margin-bottom: 3em;
   }
   img {
-    max-width: 100%;
+    max-width: 125%;
+    margin: 2em 0 2em -12.5%;
     height: auto;
-    margin: 2em 0;
+  }
+  .full {
+    max-width: 125%;
+    margin: 2em 0 2em -12.5%;
   }
 }
 

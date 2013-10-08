@@ -1228,12 +1228,17 @@ article .content {
 }
 /* line 117, ../scss/_article.scss */
 article img {
-  max-width: 100%;
+  max-width: 125%;
+  margin: 2em 0 2em -12.5%;
   height: auto;
-  margin: 2em 0;
+}
+/* line 122, ../scss/_article.scss */
+article .full {
+  max-width: 125%;
+  margin: 2em 0 2em -12.5%;
 }
 
-/* line 125, ../scss/_article.scss */
+/* line 129, ../scss/_article.scss */
 .bottom-nav {
   width: 100%;
   padding: 0;
@@ -1242,11 +1247,11 @@ article img {
   margin: 0;
   text-align: center;
 }
-/* line 132, ../scss/_article.scss */
+/* line 136, ../scss/_article.scss */
 .bottom-nav .constrain {
   display: block;
 }
-/* line 134, ../scss/_article.scss */
+/* line 138, ../scss/_article.scss */
 .bottom-nav .constrain a {
   width: 50%;
   display: block;
@@ -1260,32 +1265,32 @@ article img {
   -o-transition: all 200ms linear;
   transition: all 200ms linear;
 }
-/* line 141, ../scss/_article.scss */
+/* line 145, ../scss/_article.scss */
 .bottom-nav .constrain a .small {
   color: white;
 }
-/* line 144, ../scss/_article.scss */
+/* line 148, ../scss/_article.scss */
 .bottom-nav .constrain a p {
   margin: 0.5em 0;
 }
-/* line 147, ../scss/_article.scss */
+/* line 151, ../scss/_article.scss */
 .bottom-nav .constrain a.next {
   padding: 3em 20% 2.5em 0;
   background: url(../img/right-arrow.svg) 80% center no-repeat #2aa198;
   text-align: right;
 }
-/* line 151, ../scss/_article.scss */
+/* line 155, ../scss/_article.scss */
 .bottom-nav .constrain a.next:hover {
   padding-right: 18%;
   background: url(../img/right-arrow.svg) 82% center no-repeat #258d85;
 }
-/* line 156, ../scss/_article.scss */
+/* line 160, ../scss/_article.scss */
 .bottom-nav .constrain a.previous {
   padding: 3em 0 2.5em 20%;
   background: url(../img/left-arrow.svg) 10% center no-repeat #2aa198;
   text-align: left;
 }
-/* line 160, ../scss/_article.scss */
+/* line 164, ../scss/_article.scss */
 .bottom-nav .constrain a.previous:hover {
   padding-left: 18%;
   background: url(../img/left-arrow.svg) 8% center no-repeat #258d85;
