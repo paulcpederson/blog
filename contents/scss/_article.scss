@@ -131,6 +131,10 @@ article {
     max-width: 125%;
     margin: 2em 0 2em -12.5%;
   }
+  a {
+    border-bottom: 2px solid transparent;
+    @include transition(150ms border-color linear);
+  }
 }
 
 //Next-Previous Links

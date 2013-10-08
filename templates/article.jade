@@ -20,7 +20,8 @@ block hero
         img.feature-image(src= locals.url + '/img/' + page.metadata.feature)
       else
         div.title-wrap.constrain
-          h1.title= page.title
+          h1.title
+            a(href= locals.url + page.url)= page.title
           p.description= page.metadata.description
           p.date= moment.utc(page.date).format('M.D.YYYY')
 

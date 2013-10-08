@@ -63,6 +63,9 @@
   }
   .title {
     color: $color;
+    a {
+      color: $color;
+    }
   }
   .date {
     color: $color;
@@ -95,6 +98,9 @@
   article {
     a {
       color: $color;
+      &:hover {
+        border-bottom: 2px solid $color;
+      }
     }
     blockquote {
       color: $color;

@@ -6,7 +6,7 @@ block append vars
   - bodyclass = 'cyan'
 
 block hero
-  section.hero.navy.short
+  section.hero.navy.short.mesh(style='background-image: url(' + locals.url + '/img/archive.svg);')
     div.title-wrap.constrain
       h1.title Archive
 
@@ -21,14 +21,14 @@ block content
       - var years = _.chain(archive).keys().reverse().value()
       each year, i in years
         div.col-group.year
-          div.col.col1of4
-            p.right= year
-          div.col.col3of4
-            - var yearArticles = _.groupBy(archive[year], function(item) { return map[item.date.getUTCMonth()] })
-            - var months = Object.keys(yearArticles);
-            each month, i in months
-              - var articles = yearArticles[month]
-              each article, i in articles
+          div.col.col1of5
+            p= year
+          - var yearArticles = _.groupBy(archive[year], function(item) { return map[item.date.getUTCMonth()] })
+          - var months = Object.keys(yearArticles);
+          each month, i in months
+            - var articles = yearArticles[month]
+            each article, i in articles
+              div.col.col2of5
                 div.archive
                   p.archive-title
                     a(href=article.url)= article.title

@@ -461,63 +461,68 @@ pre .tex .formula {
 .nav a {
   text-decoration: none;
   padding: 0.25em 0;
+  -webkit-transition: 150ms border-color linear;
+  -moz-transition: 150ms border-color linear;
+  -o-transition: 150ms border-color linear;
+  transition: 150ms border-color linear;
+  border-bottom: 2px solid transparent;
 }
-/* line 13, ../scss/base/_layout.scss */
+/* line 15, ../scss/base/_layout.scss */
 .nav span {
   padding: 0.25em 0.5em;
   line-height: 1em;
 }
 
-/* line 22, ../scss/base/_layout.scss */
+/* line 24, ../scss/base/_layout.scss */
 .panel {
   width: 100%;
   padding: 2em 0;
   background-color: white;
 }
-/* line 26, ../scss/base/_layout.scss */
+/* line 28, ../scss/base/_layout.scss */
 .panel.transparent {
   background-color: transparent;
 }
-/* line 29, ../scss/base/_layout.scss */
+/* line 31, ../scss/base/_layout.scss */
 .panel.white {
   background-color: white;
   color: #666666;
 }
-/* line 33, ../scss/base/_layout.scss */
+/* line 35, ../scss/base/_layout.scss */
 .panel.tan {
   background-color: #002b36;
   color: #666666;
 }
-/* line 37, ../scss/base/_layout.scss */
+/* line 39, ../scss/base/_layout.scss */
 .panel.navy {
   background-color: #002b36;
   color: #999999;
 }
 
-/* line 43, ../scss/base/_layout.scss */
+/* line 45, ../scss/base/_layout.scss */
 .constrain {
   width: 80%;
   max-width: 45em;
   padding: 0 10%;
   margin: 0 auto;
 }
-/* line 48, ../scss/base/_layout.scss */
+/* line 50, ../scss/base/_layout.scss */
 .constrain .full-width {
   width: 100vw;
   height: auto;
 }
 
-/* line 54, ../scss/base/_layout.scss */
+/* line 56, ../scss/base/_layout.scss */
 .feature {
   margin-top: -3em;
 }
 
-/* line 58, ../scss/base/_layout.scss */
+/* line 60, ../scss/base/_layout.scss */
 .right {
   float: right;
 }
 
-/* line 62, ../scss/base/_layout.scss */
+/* line 64, ../scss/base/_layout.scss */
 .left {
   float: left;
 }
@@ -614,43 +619,51 @@ body.yellow .title-wrap .btn:hover {
 body.yellow .title {
   color: #b58900;
 }
-/* line 67, ../scss/base/_mixins.scss */
-body.yellow .date {
+/* line 66, ../scss/base/_mixins.scss */
+body.yellow .title a {
   color: #b58900;
 }
 /* line 70, ../scss/base/_mixins.scss */
+body.yellow .date {
+  color: #b58900;
+}
+/* line 73, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav {
   background: #b58900;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a {
   background: #b58900;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 78, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #b58900;
 }
-/* line 77, ../scss/base/_mixins.scss */
+/* line 80, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #9c7600;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 84, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #b58900;
 }
-/* line 83, ../scss/base/_mixins.scss */
+/* line 86, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #9c7600;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 94, ../scss/base/_mixins.scss */
 body.yellow .navy a {
   color: #b58900;
 }
-/* line 96, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.yellow article a {
   color: #b58900;
 }
-/* line 99, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.yellow article a:hover {
+  border-bottom: 2px solid #b58900;
+}
+/* line 105, ../scss/base/_mixins.scss */
 body.yellow article blockquote {
   color: #b58900;
   border-left: 3px solid #b58900;
@@ -686,43 +699,51 @@ body.orange .title-wrap .btn:hover {
 body.orange .title {
   color: #cb4b16;
 }
-/* line 67, ../scss/base/_mixins.scss */
-body.orange .date {
+/* line 66, ../scss/base/_mixins.scss */
+body.orange .title a {
   color: #cb4b16;
 }
 /* line 70, ../scss/base/_mixins.scss */
+body.orange .date {
+  color: #cb4b16;
+}
+/* line 73, ../scss/base/_mixins.scss */
 body.orange .bottom-nav {
   background: #cb4b16;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a {
   background: #cb4b16;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 78, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #cb4b16;
 }
-/* line 77, ../scss/base/_mixins.scss */
+/* line 80, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #b44214;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 84, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #cb4b16;
 }
-/* line 83, ../scss/base/_mixins.scss */
+/* line 86, ../scss/base/_mixins.scss */
 body.orange .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #b44214;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 94, ../scss/base/_mixins.scss */
 body.orange .navy a {
   color: #cb4b16;
 }
-/* line 96, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.orange article a {
   color: #cb4b16;
 }
-/* line 99, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.orange article a:hover {
+  border-bottom: 2px solid #cb4b16;
+}
+/* line 105, ../scss/base/_mixins.scss */
 body.orange article blockquote {
   color: #cb4b16;
   border-left: 3px solid #cb4b16;
@@ -758,43 +779,51 @@ body.red .title-wrap .btn:hover {
 body.red .title {
   color: #dc322f;
 }
-/* line 67, ../scss/base/_mixins.scss */
-body.red .date {
+/* line 66, ../scss/base/_mixins.scss */
+body.red .title a {
   color: #dc322f;
 }
 /* line 70, ../scss/base/_mixins.scss */
+body.red .date {
+  color: #dc322f;
+}
+/* line 73, ../scss/base/_mixins.scss */
 body.red .bottom-nav {
   background: #dc322f;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a {
   background: #dc322f;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 78, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #dc322f;
 }
-/* line 77, ../scss/base/_mixins.scss */
+/* line 80, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #cf2623;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 84, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #dc322f;
 }
-/* line 83, ../scss/base/_mixins.scss */
+/* line 86, ../scss/base/_mixins.scss */
 body.red .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #cf2623;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 94, ../scss/base/_mixins.scss */
 body.red .navy a {
   color: #dc322f;
 }
-/* line 96, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.red article a {
   color: #dc322f;
 }
-/* line 99, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.red article a:hover {
+  border-bottom: 2px solid #dc322f;
+}
+/* line 105, ../scss/base/_mixins.scss */
 body.red article blockquote {
   color: #dc322f;
   border-left: 3px solid #dc322f;
@@ -830,43 +859,51 @@ body.magenta .title-wrap .btn:hover {
 body.magenta .title {
   color: #d33682;
 }
-/* line 67, ../scss/base/_mixins.scss */
-body.magenta .date {
+/* line 66, ../scss/base/_mixins.scss */
+body.magenta .title a {
   color: #d33682;
 }
 /* line 70, ../scss/base/_mixins.scss */
+body.magenta .date {
+  color: #d33682;
+}
+/* line 73, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav {
   background: #d33682;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a {
   background: #d33682;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 78, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #d33682;
 }
-/* line 77, ../scss/base/_mixins.scss */
+/* line 80, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #c42b75;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 84, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #d33682;
 }
-/* line 83, ../scss/base/_mixins.scss */
+/* line 86, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #c42b75;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 94, ../scss/base/_mixins.scss */
 body.magenta .navy a {
   color: #d33682;
 }
-/* line 96, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.magenta article a {
   color: #d33682;
 }
-/* line 99, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.magenta article a:hover {
+  border-bottom: 2px solid #d33682;
+}
+/* line 105, ../scss/base/_mixins.scss */
 body.magenta article blockquote {
   color: #d33682;
   border-left: 3px solid #d33682;
@@ -902,43 +939,51 @@ body.violet .title-wrap .btn:hover {
 body.violet .title {
   color: #6c71c4;
 }
-/* line 67, ../scss/base/_mixins.scss */
-body.violet .date {
+/* line 66, ../scss/base/_mixins.scss */
+body.violet .title a {
   color: #6c71c4;
 }
 /* line 70, ../scss/base/_mixins.scss */
+body.violet .date {
+  color: #6c71c4;
+}
+/* line 73, ../scss/base/_mixins.scss */
 body.violet .bottom-nav {
   background: #6c71c4;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a {
   background: #6c71c4;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 78, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #6c71c4;
 }
-/* line 77, ../scss/base/_mixins.scss */
+/* line 80, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #5a5fbd;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 84, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #6c71c4;
 }
-/* line 83, ../scss/base/_mixins.scss */
+/* line 86, ../scss/base/_mixins.scss */
 body.violet .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #5a5fbd;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 94, ../scss/base/_mixins.scss */
 body.violet .navy a {
   color: #6c71c4;
 }
-/* line 96, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.violet article a {
   color: #6c71c4;
 }
-/* line 99, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.violet article a:hover {
+  border-bottom: 2px solid #6c71c4;
+}
+/* line 105, ../scss/base/_mixins.scss */
 body.violet article blockquote {
   color: #6c71c4;
   border-left: 3px solid #6c71c4;
@@ -974,43 +1019,51 @@ body.blue .title-wrap .btn:hover {
 body.blue .title {
   color: #268bd2;
 }
-/* line 67, ../scss/base/_mixins.scss */
-body.blue .date {
+/* line 66, ../scss/base/_mixins.scss */
+body.blue .title a {
   color: #268bd2;
 }
 /* line 70, ../scss/base/_mixins.scss */
+body.blue .date {
+  color: #268bd2;
+}
+/* line 73, ../scss/base/_mixins.scss */
 body.blue .bottom-nav {
   background: #268bd2;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a {
   background: #268bd2;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 78, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #268bd2;
 }
-/* line 77, ../scss/base/_mixins.scss */
+/* line 80, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #227dbc;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 84, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #268bd2;
 }
-/* line 83, ../scss/base/_mixins.scss */
+/* line 86, ../scss/base/_mixins.scss */
 body.blue .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #227dbc;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 94, ../scss/base/_mixins.scss */
 body.blue .navy a {
   color: #268bd2;
 }
-/* line 96, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.blue article a {
   color: #268bd2;
 }
-/* line 99, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.blue article a:hover {
+  border-bottom: 2px solid #268bd2;
+}
+/* line 105, ../scss/base/_mixins.scss */
 body.blue article blockquote {
   color: #268bd2;
   border-left: 3px solid #268bd2;
@@ -1046,43 +1099,51 @@ body.cyan .title-wrap .btn:hover {
 body.cyan .title {
   color: #2aa198;
 }
-/* line 67, ../scss/base/_mixins.scss */
-body.cyan .date {
+/* line 66, ../scss/base/_mixins.scss */
+body.cyan .title a {
   color: #2aa198;
 }
 /* line 70, ../scss/base/_mixins.scss */
+body.cyan .date {
+  color: #2aa198;
+}
+/* line 73, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav {
   background: #2aa198;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a {
   background: #2aa198;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 78, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #2aa198;
 }
-/* line 77, ../scss/base/_mixins.scss */
+/* line 80, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #258d85;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 84, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #2aa198;
 }
-/* line 83, ../scss/base/_mixins.scss */
+/* line 86, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #258d85;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 94, ../scss/base/_mixins.scss */
 body.cyan .navy a {
   color: #2aa198;
 }
-/* line 96, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.cyan article a {
   color: #2aa198;
 }
-/* line 99, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.cyan article a:hover {
+  border-bottom: 2px solid #2aa198;
+}
+/* line 105, ../scss/base/_mixins.scss */
 body.cyan article blockquote {
   color: #2aa198;
   border-left: 3px solid #2aa198;
@@ -1118,43 +1179,51 @@ body.green .title-wrap .btn:hover {
 body.green .title {
   color: #859900;
 }
-/* line 67, ../scss/base/_mixins.scss */
-body.green .date {
+/* line 66, ../scss/base/_mixins.scss */
+body.green .title a {
   color: #859900;
 }
 /* line 70, ../scss/base/_mixins.scss */
+body.green .date {
+  color: #859900;
+}
+/* line 73, ../scss/base/_mixins.scss */
 body.green .bottom-nav {
   background: #859900;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a {
   background: #859900;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 78, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a.next {
   background: url(../img/right-arrow.svg) 80% center no-repeat #859900;
 }
-/* line 77, ../scss/base/_mixins.scss */
+/* line 80, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a.next:hover {
   background: url(../img/right-arrow.svg) 82% center no-repeat #6f8000;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 84, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a.previous {
   background: url(../img/left-arrow.svg) 10% center no-repeat #859900;
 }
-/* line 83, ../scss/base/_mixins.scss */
+/* line 86, ../scss/base/_mixins.scss */
 body.green .bottom-nav .constrain a.previous:hover {
   background: url(../img/left-arrow.svg) 8% center no-repeat #6f8000;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 94, ../scss/base/_mixins.scss */
 body.green .navy a {
   color: #859900;
 }
-/* line 96, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.green article a {
   color: #859900;
 }
-/* line 99, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.green article a:hover {
+  border-bottom: 2px solid #859900;
+}
+/* line 105, ../scss/base/_mixins.scss */
 body.green article blockquote {
   color: #859900;
   border-left: 3px solid #859900;
@@ -1287,8 +1356,16 @@ article .full {
   max-width: 125%;
   margin: 2em 0 2em -12.5%;
 }
+/* line 134, ../scss/_article.scss */
+article a {
+  border-bottom: 2px solid transparent;
+  -webkit-transition: 150ms border-color linear;
+  -moz-transition: 150ms border-color linear;
+  -o-transition: 150ms border-color linear;
+  transition: 150ms border-color linear;
+}
 
-/* line 137, ../scss/_article.scss */
+/* line 141, ../scss/_article.scss */
 .bottom-nav {
   width: 100%;
   padding: 0;
@@ -1297,7 +1374,7 @@ article .full {
   margin: 0;
   text-align: center;
 }
-/* line 144, ../scss/_article.scss */
+/* line 148, ../scss/_article.scss */
 .bottom-nav a {
   width: 50%;
   display: block;
@@ -1311,32 +1388,32 @@ article .full {
   -o-transition: all 200ms linear;
   transition: all 200ms linear;
 }
-/* line 151, ../scss/_article.scss */
+/* line 155, ../scss/_article.scss */
 .bottom-nav a .small {
   color: white;
 }
-/* line 154, ../scss/_article.scss */
+/* line 158, ../scss/_article.scss */
 .bottom-nav a p {
   margin: 0.5em 0;
 }
-/* line 157, ../scss/_article.scss */
+/* line 161, ../scss/_article.scss */
 .bottom-nav a.next {
   padding: 3em 20% 2.5em 0;
   background: url(../img/right-arrow.svg) 80% center no-repeat #2aa198;
   text-align: right;
 }
-/* line 161, ../scss/_article.scss */
+/* line 165, ../scss/_article.scss */
 .bottom-nav a.next:hover {
   padding-right: 18%;
   background: url(../img/right-arrow.svg) 82% center no-repeat #258d85;
 }
-/* line 166, ../scss/_article.scss */
+/* line 170, ../scss/_article.scss */
 .bottom-nav a.previous {
   padding: 3em 0 2.5em 20%;
   background: url(../img/left-arrow.svg) 10% center no-repeat #2aa198;
   text-align: left;
 }
-/* line 170, ../scss/_article.scss */
+/* line 174, ../scss/_article.scss */
 .bottom-nav a.previous:hover {
   padding-left: 18%;
   background: url(../img/left-arrow.svg) 8% center no-repeat #258d85;
@@ -1353,19 +1430,20 @@ article .full {
 
 /* line 11, ../scss/_archive.scss */
 .archive {
-  margin: 0 0 2em 0;
-}
-/* line 13, ../scss/_archive.scss */
-.archive .small {
-  margin: 0;
+  margin-bottom: 1em;
 }
 
-/* line 18, ../scss/_archive.scss */
+/* line 15, ../scss/_archive.scss */
+.year {
+  margin: 1.5em 0;
+}
+
+/* line 19, ../scss/_archive.scss */
 .archive-title {
   margin-bottom: 0;
 }
 
-/* line 22, ../scss/_archive.scss */
+/* line 23, ../scss/_archive.scss */
 .archive-description {
   margin: 0;
   font-size: 0.9em;

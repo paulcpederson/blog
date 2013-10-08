@@ -9,6 +9,8 @@
   a {
     text-decoration: none;
     padding: 0.25em 0;
+    @include transition(150ms border-color linear);
+    border-bottom: 2px solid transparent;
   }
   span {
     padding: 0.25em 0.5em;

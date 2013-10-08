@@ -12,7 +12,8 @@ block hero
         section(class='hero homepage ' + article.metadata.canvas, style='background-image: url(' + locals.url + '/img/' + article.metadata.background + ')')
           div.title-wrap.constrain
             p.small Featured Post:
-            h2.title= article.title
+            h2.title
+              a(href= locals.url + article.url)= article.title
             p.description= article.metadata.description
             a(href= locals.url + article.url, class= 'btn ' + article.metadata.spot) Read More »
 
