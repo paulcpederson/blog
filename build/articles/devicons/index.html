@@ -6,29 +6,72 @@
     <meta name="viewport" content="width=device-width">
     <title>Devicons | Paul C Pederson
     </title>
-    <link rel="alternate" href="http://paulcpederson.github.io/blog/feed.xml" type="application/rss+xml">
-    <link rel="stylesheet" href="http://paulcpederson.github.io/blog/css/main.css">
-    <link rel="stylesheet" href="http://paulcpederson.github.io/blog/css/style.css">
+    <link rel="alternate" href="http://localhost:8080/feed.xml" type="application/rss+xml">
+    <link rel="stylesheet" href="http://localhost:8080/css/main.css">
+    <link rel="stylesheet" href="http://localhost:8080/css/style.css">
   </head>
-  <body>
+  <body class="green">
     <header class="panel transparent nav">
-      <nav class="constrain"><a href="http://paulcpederson.github.io/blog" class="left">Paul C Pederson</a><a href="http://paulcpederson.github.io/blog/archive/" class="right">Archive</a><span class="right">/</span><a href="http://paulcpederson.github.io/blog" class="right">Blog</a></nav>
+      <nav class="constrain"><a href="http://localhost:8080" class="left">Paul C Pederson</a><a href="http://localhost:8080/archive/" class="right">Archive</a><span class="right">/</span><a href="http://localhost:8080" class="right">Blog</a></nav>
     </header>
+    <section style="background-image: url(http://localhost:8080/img/devicons.svg)" class="hero navy mesh">
+      <div class="title-wrap constrain">
+        <h1 class="title">Devicons</h1>
+        <p class="description">Rendering three color icons in the browser with a custom web font</p>
+        <p class="date">8.6.2013</p>
+      </div>
+    </section>
     <article class="panel white">
-      <section class="constrain content"><p>At work the other day I was thinking out loud about a strategy for generating full-color icons with a web font. Essentially the idea is to use :before and :after pseudo elements to provide a foreground and background to your icon, thusly giving it three colors. If you&#39;re a visual learner, it works like this:</p>
-<p>![One devicon separated into layers labeled with :before, :after]</p>
-<p>People at my work tend to take pipe-dreams very seriously, so it wasn&#39;t all that surprising when one of my co-workers, <a href="http://atelier-wise.aws.af.cm/">Nik Wise</a> was listening to me, and then spent the next ten minutes actually implementing what I had just imagined.</p>
+      <section class="constrain content"><p>At work the other day I was thinking out loud about a strategy for generating full-color icons with a web font. Essentially the idea is to use <code>:before</code> and <code>:after</code> pseudo elements to provide a foreground and background to your icon, thusly giving it three colors. If you&#39;re a visual learner, it works like this:</p>
+<p><img src="/articles/devicons/before-after.svg" alt="Illustration"></p>
+<p>People at my work tend to take pipe-dreams very seriously, so it wasn&#39;t all that surprising that one of my co-workers, <a href="http://atelier-wise.aws.af.cm/">Nik Wise</a> was listening to me, and then spent the next ten minutes expertly implementing what I had just imagined.</p>
 <p>It turns out, that this technique is actually far simpler than I first thought it was going to be, and that the most time consuming part of the workflow is building and color separating the icons. Once you&#39;ve exported every layer as an .svg file, you just upload them all to icoMoon (or your web font tool of choice), assign them ligatures (so you can remember their names later), and download the bundle.</p>
-<p>After that, you just create :before and :after elements and make their content attribute equal to the corresponding icon. The css ends up looking something like this:</p>
-<pre><code>css for the icon</code></pre>
-<p>You can take a look at <a href="http://paulcpederson.github.io/devicons/">the proof of concept</a> to see them in action, or look at <a href="https://github.com/nikolaswise/devicons">the GitHub repo</a> to see how they&#39;re implemented. Nik has also written up a <a href="https://github.com/nikolaswise/three-color-icons">terrific write up</a> of the technique that goes into much more detail.</p>
+<p>After that, you just create <code>:before</code> and <code>:after</code> elements and make their content attribute equal to the corresponding icon. The css ends up looking something like this:</p>
+<pre><code class="lang-css"><span class="at_rule">@<span class="keyword">font-face</span></span> <span class="rules">{
+  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">'devicons'</span>;</span></span>
+  <span class="rule"><span class="attribute">src</span>:<span class="value"><span class="function">url(<span class="string">'fonts/devicons.eot'</span>)</span>;</span></span>
+  <span class="rule"><span class="attribute">font-weight</span>:<span class="value"> normal;</span></span>
+  <span class="rule"><span class="attribute">font-style</span>:<span class="value"> normal;</span></span>
+<span class="rule">}</span></span>
+
+<span class="class">.icon-finder</span> <span class="rules">{
+  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> <span class="string">'devicons'</span>;</span></span>
+  <span class="rule"><span class="attribute">font-feature-settings</span>:<span class="value"><span class="string">"liga"</span>,<span class="string">"dlig"</span>;</span></span>
+  <span class="rule"><span class="attribute">text-rendering</span>:<span class="value">optimizeLegibility;</span></span>
+  <span class="rule"><span class="attribute">line-height</span>:<span class="value"> <span class="number">1</span>;</span></span>
+  <span class="rule"><span class="attribute">-webkit-font-smoothing</span>:<span class="value"> antialiased;</span></span>
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#231F20</span>;</span></span>
+<span class="rule">}</span></span>
+
+<span class="class">.icon-finder</span><span class="pseudo">:before</span><span class="rules">{
+  <span class="rule"><span class="attribute">margin-right</span>:<span class="value"> -<span class="number">1</span>em;</span></span>
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#71A0D2</span>;</span></span>
+  <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">"finderback"</span>;</span></span>
+<span class="rule">}</span></span>
+
+<span class="class">.icon-finder</span><span class="pseudo">:after</span><span class="rules">{
+  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">1</span>em;</span></span>
+  <span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#E05130</span>;</span></span>
+  <span class="rule"><span class="attribute">content</span>:<span class="value"> <span class="string">"finderfront"</span>;</span></span>
+<span class="rule">}</span></span></code></pre>
+<p>The above assumes you set up your webfont with the ligatures “finder”, “finderback”, and “finderfront”, each representing one of the three layers of your icon.</p>
+<p>The corresponding html is dead simple:</p>
+<pre><code class="lang-html">&lt;h3 class=&quot;icon-finder&quot;&gt;finder&lt;/h3&gt;</code></pre>
+<p>You can take a look at <a href="http://paulcpederson.github.io/devicons/">the proof of concept</a> to see them in action, or look at <a href="https://github.com/nikolaswise/devicons">the GitHub repo</a> to see how they&#39;re implemented. Nik has also written a <a href="https://github.com/nikolaswise/three-color-icons">terrific write up</a> of the technique that goes into much more detail.</p>
 </section>
     </article>
-    <footer class="panel dark-gray">
+    <div class="bottom-nav">
+      <div class="constrain clearfix"><a href="http://localhost:8080/articles/sublime-writer/" class="previous left">
+          <p class="small">previous article:</p>
+          <p>Sublime Writer</p></a><a href="http://localhost:8080/articles/abstract-color/" class="next right">
+          <p class="small">next article:</p>
+          <p>Abstract Color</p></a>
+      </div>
+    </div>
+    <footer class="panel navy">
       <div class="constrain">
-        <div class="back"><a href="/">« Blog</a></div>
-        <section><h3>Hi, I&#39;m Paul.</h3>
-<p>I design and develop digital experiences. I work at a research and development office focused on location-based technologies. You can find me online just about everywhere as @paulcpederson.</p>
+        <section><h2>Hi, I&#39;m Paul.</h2>
+<p>I design and develop digital experiences. I work at a research and development office in Portland, Oregon focused on location-based technologies. You can find me online just about everywhere as @paulcpederson.</p>
 <p>This site was built using <a href="http://nodejs.org/">Node</a>, <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>, <a href="http://gruntjs.com/">Grunt</a>, and <a href="http://pages.github.com/">GitHub Pages</a>. You can find the source on <a href="https://github.com/paulcpederson/">my github</a>.</p>
 
         </section>

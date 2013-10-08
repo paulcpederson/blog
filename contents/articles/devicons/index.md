@@ -2,7 +2,7 @@
 title: Devicons
 date: 2013-08-06
 template: article.jade
-thumbnail: pollock-thumb.jpg
+thumbnail: devicons-thumb.jpg
 background: devicons.svg
 canvas: navy mesh
 spot: green

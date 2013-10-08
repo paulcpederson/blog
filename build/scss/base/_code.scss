@@ -7,23 +7,25 @@ code {
 }
 
 p code {
-  padding: 0.1em 0.3em 0.2em;
-  border-radius: 0.3em;
+  padding: 0.35em;
+  border-radius: 3px;
   position: relative;
-  top: -0.15em;
-  background: $off-white;
-  border: 1px solid $light-gray;
-  color: $dark-gray;
+  top: -0.05em;
+  background: #F8F8F8;
+  border: 1px solid #EFEFEF;
+  color: $gray;
   white-space: nowrap;
+  font-size: 0.75em;
+  margin: 0 4px;
 }
 
 /* Solarized Dark Theme */
 pre {
   width: 100%;
-  @include box-sizing(border-box);
   background-color: $base03;
-
+  margin: 2em 0;
   code {
+    @include box-sizing(border-box);
     display: block;
     padding: 1em;
     background-color: $base03;

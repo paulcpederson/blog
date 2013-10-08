@@ -1,4 +1,3 @@
-@import url(http://fonts.googleapis.com/css?family=Karla);
 /* - - - - - - - - - - Basic Reset - - - - - - - - - - */
 /* line 2, ../scss/base/_reset.scss */
 html {
@@ -160,9 +159,66 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   padding-left: 0;
   padding-right: 0;
 }
+/* line 45, ../scss/base/_grid.scss */
+.col-group.table {
+  dispay: table;
+}
+/* line 47, ../scss/base/_grid.scss */
+.col-group.table .table-cell {
+  display: table-cell;
+  vertical-align: middle;
+}
 
 /* - - - - - - - - - Basic Typography - - - - - - - */
-/* line 4, ../scss/base/_typography.scss */
+@font-face {
+  font-family: 'Facit';
+  src: url("../fonts/facit-regular-webfont.eot");
+  src: url("../fonts/facit-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/facit-regular-webfont.woff") format("woff"), url("../fonts/facit-regular-webfont.ttf") format("truetype"), url("../fonts/facit-regular-webfont.svg#facitregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Inconsolata';
+  src: url("../fonts/inconsolata-regular-webfont.eot");
+  src: url("../fonts/inconsolata-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/inconsolata-regular-webfont.woff") format("woff"), url("../fonts/inconsolata-regular-webfont.ttf") format("truetype"), url("../fonts/inconsolata-regular-webfont.svg#inconsolataregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url("../fonts/karla-bold-webfont.eot");
+  src: url("../fonts/karla-bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-bold-webfont.woff") format("woff"), url("../fonts/karla-bold-webfont.ttf") format("truetype"), url("../fonts/karla-bold-webfont.svg#karlabold") format("svg");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url("../fonts/karla-bolditalic-webfont.eot");
+  src: url("../fonts/karla-bolditalic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-bolditalic-webfont.woff") format("woff"), url("../fonts/karla-bolditalic-webfont.ttf") format("truetype"), url("../fonts/karla-bolditalic-webfont.svg#karlabolditalic") format("svg");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url("../fonts/karla-italic-webfont.eot");
+  src: url("../fonts/karla-italic-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-italic-webfont.woff") format("woff"), url("../fonts/karla-italic-webfont.ttf") format("truetype"), url("../fonts/karla-italic-webfont.svg#karlaitalic") format("svg");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Karla';
+  src: url("../fonts/karla-regular-webfont.eot");
+  src: url("../fonts/karla-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/karla-regular-webfont.woff") format("woff"), url("../fonts/karla-regular-webfont.ttf") format("truetype"), url("../fonts/karla-regular-webfont.svg#karlaregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* line 68, ../scss/base/_typography.scss */
 body {
   font-family: "Karla", Arial, Helvetica, sans;
   color: #242323;
@@ -171,7 +227,7 @@ body {
   line-height: 1.6875em;
 }
 
-/* line 12, ../scss/base/_typography.scss */
+/* line 76, ../scss/base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Facit", Arial, Helvetica, sans;
   line-height: 1em;
@@ -181,52 +237,91 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: none;
 }
 
-/* line 21, ../scss/base/_typography.scss */
+/* line 85, ../scss/base/_typography.scss */
 h1 {
   font-size: 1.5em;
 }
 
-/* line 22, ../scss/base/_typography.scss */
+/* line 86, ../scss/base/_typography.scss */
 h2 {
   font-size: 1.35em;
 }
 
-/* line 23, ../scss/base/_typography.scss */
+/* line 87, ../scss/base/_typography.scss */
 h3 {
   font-size: 0.9em;
 }
 
-/* line 24, ../scss/base/_typography.scss */
+/* line 88, ../scss/base/_typography.scss */
 h4 {
   font-size: 0.825em;
 }
 
-/* line 25, ../scss/base/_typography.scss */
+/* line 89, ../scss/base/_typography.scss */
 h5 {
   font-size: 0.75em;
 }
 
-/* line 26, ../scss/base/_typography.scss */
+/* line 90, ../scss/base/_typography.scss */
 h6 {
   font-size: 0.675em;
 }
 
-/* line 28, ../scss/base/_typography.scss */
-blockquote {
-  font-family: "Facit", Arial, Helvetica, sans;
-  text-align: center;
-  font-size: 2em;
-  line-height: 3em;
-  font-style: italic;
+/* line 94, ../scss/base/_typography.scss */
+h1.yellow, h2.yellow, h3.yellow, h4.yellow, h5.yellow, h6.yellow, a.yellow {
+  color: #b58900;
+}
+/* line 97, ../scss/base/_typography.scss */
+h1.orange, h2.orange, h3.orange, h4.orange, h5.orange, h6.orange, a.orange {
+  color: #cb4b16;
+}
+/* line 100, ../scss/base/_typography.scss */
+h1.red, h2.red, h3.red, h4.red, h5.red, h6.red, a.red {
+  color: #dc322f;
+}
+/* line 103, ../scss/base/_typography.scss */
+h1.magenta, h2.magenta, h3.magenta, h4.magenta, h5.magenta, h6.magenta, a.magenta {
+  color: #d33682;
+}
+/* line 106, ../scss/base/_typography.scss */
+h1.violet, h2.violet, h3.violet, h4.violet, h5.violet, h6.violet, a.violet {
+  color: #6c71c4;
+}
+/* line 109, ../scss/base/_typography.scss */
+h1.blue, h2.blue, h3.blue, h4.blue, h5.blue, h6.blue, a.blue {
+  color: #268bd2;
+}
+/* line 112, ../scss/base/_typography.scss */
+h1.cyan, h2.cyan, h3.cyan, h4.cyan, h5.cyan, h6.cyan, a.cyan {
+  color: #2aa198;
+}
+/* line 115, ../scss/base/_typography.scss */
+h1.green, h2.green, h3.green, h4.green, h5.green, h6.green, a.green {
+  color: #859900;
 }
 
-/* line 36, ../scss/base/_typography.scss */
+/* line 120, ../scss/base/_typography.scss */
+blockquote {
+  font-family: "Facit", Arial, Helvetica, sans;
+  text-align: left;
+  font-size: 1.25em;
+  line-height: 2em;
+  padding: 0 2em;
+}
+
+/* line 128, ../scss/base/_typography.scss */
 p {
   line-height: 1.75em;
   margin: 1em 0;
 }
+/* line 131, ../scss/base/_typography.scss */
+p.small {
+  font-family: "Inconsolata", "Courier New", courier, monospace;
+  font-size: 0.75em;
+  color: #999999;
+}
 
-/* line 41, ../scss/base/_typography.scss */
+/* line 138, ../scss/base/_typography.scss */
 a {
   text-decoration: none;
   color: #2aa198;
@@ -242,27 +337,30 @@ code {
 
 /* line 9, ../scss/base/_code.scss */
 p code {
-  padding: 0.1em 0.3em 0.2em;
-  border-radius: 0.3em;
+  padding: 0.35em;
+  border-radius: 3px;
   position: relative;
-  top: -0.15em;
-  background: #fefefe;
-  border: 1px solid #999999;
-  color: #30302f;
+  top: -0.05em;
+  background: #F8F8F8;
+  border: 1px solid #EFEFEF;
+  color: #666666;
   white-space: nowrap;
+  font-size: 0.75em;
+  margin: 0 4px;
 }
 
 /* Solarized Dark Theme */
-/* line 21, ../scss/base/_code.scss */
+/* line 23, ../scss/base/_code.scss */
 pre {
   width: 100%;
+  background-color: #002b36;
+  margin: 2em 0;
+}
+/* line 27, ../scss/base/_code.scss */
+pre code {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  background-color: #002b36;
-}
-/* line 26, ../scss/base/_code.scss */
-pre code {
   display: block;
   padding: 1em;
   background-color: #002b36;
@@ -270,35 +368,35 @@ pre code {
   width: 100%;
   line-height: 1.25;
 }
-/* line 35, ../scss/base/_code.scss */
+/* line 37, ../scss/base/_code.scss */
 pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .lisp .string, pre .javadoc {
   color: #586e75;
 }
-/* line 39, ../scss/base/_code.scss */
+/* line 41, ../scss/base/_code.scss */
 pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .method, pre .addition, pre .css .tag, pre .lisp .title {
   color: #859900;
 }
-/* line 43, ../scss/base/_code.scss */
+/* line 45, ../scss/base/_code.scss */
 pre .number, pre .command, pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula, pre .regexp, pre .hexcolor {
   color: #2aa198;
 }
-/* line 47, ../scss/base/_code.scss */
+/* line 49, ../scss/base/_code.scss */
 pre .title, pre .localvars, pre .function .title, pre .chunk, pre .decorator, pre .builtin, pre .built_in, pre .lisp .title, pre .identifier, pre .title .keymethods, pre .id {
   color: #268bd2;
 }
-/* line 51, ../scss/base/_code.scss */
+/* line 53, ../scss/base/_code.scss */
 pre .attribute, pre .variable, pre .instancevar, pre .lisp .body, pre .smalltalk .number, pre .constant, pre .class .title, pre .parent, pre .haskell .label {
   color: #b58900;
 }
-/* line 55, ../scss/base/_code.scss */
+/* line 57, ../scss/base/_code.scss */
 pre .preprocessor, pre .pi, pre .shebang, pre .symbol, pre .diff .change, pre .special, pre .keymethods, pre .attr_selector, pre .important, pre .subst, pre .cdata {
   color: #cb4b16;
 }
-/* line 59, ../scss/base/_code.scss */
+/* line 61, ../scss/base/_code.scss */
 pre .deletion {
   color: #dc322f;
 }
-/* line 63, ../scss/base/_code.scss */
+/* line 65, ../scss/base/_code.scss */
 pre .tex .formula {
   background: #073642;
 }
@@ -357,7 +455,7 @@ pre .tex .formula {
   top: 0;
   right: 0;
   left: 0;
-  z-index: 3;
+  z-index: 4;
 }
 /* line 9, ../scss/base/_layout.scss */
 .nav a {
@@ -391,8 +489,8 @@ pre .tex .formula {
   color: #666666;
 }
 /* line 37, ../scss/base/_layout.scss */
-.panel.dark-gray {
-  background-color: #30302f;
+.panel.navy {
+  background-color: #002b36;
   color: #999999;
 }
 
@@ -424,42 +522,645 @@ pre .tex .formula {
   float: left;
 }
 
-/* line 1, ../scss/_home.scss */
-.thumbs {
-  padding: 4em 0;
-}
 /* line 3, ../scss/_home.scss */
-.thumbs article {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 1em;
-  background-color: #fdf6e3;
+.hero.homepage {
+  min-height: 50vh;
+}
+/* line 5, ../scss/_home.scss */
+.hero.homepage .title-wrap {
+  padding: 6em 0 5em 0;
+}
+/* line 8, ../scss/_home.scss */
+.hero.homepage .title {
+  text-align: left;
+  margin: 0;
+}
+/* line 12, ../scss/_home.scss */
+.hero.homepage .description {
+  text-align: left;
+  margin: 1em 0;
+}
+
+/* line 20, ../scss/_home.scss */
+.blog-roll {
+  position: relative;
+  margin: 3em 0;
+}
+/* line 23, ../scss/_home.scss */
+.blog-roll h2 {
+  margin: 1em 0;
+}
+/* line 26, ../scss/_home.scss */
+.blog-roll p {
+  font-size: 0.75em;
+}
+/* line 29, ../scss/_home.scss */
+.blog-roll .text {
+  margin-left: 55%;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+/* line 35, ../scss/_home.scss */
+.thumbnail {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 50%;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+/* line 45, ../scss/_home.scss */
+.thumbnail:hover {
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 
 /* line 2, ../scss/_article.scss */
+body.yellow {
+  border-top: 8px solid #b58900;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.yellow nav span {
+  color: #b58900;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.yellow nav a {
+  color: #b58900;
+}
+/* line 48, ../scss/base/_mixins.scss */
+body.yellow nav a:hover {
+  color: #b58900;
+  border-bottom: 2px solid #b58900;
+}
+/* line 55, ../scss/base/_mixins.scss */
+body.yellow .title-wrap .btn {
+  border-color: #b58900;
+  color: #b58900;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.yellow .title-wrap .btn:hover {
+  background-color: #b58900;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
+body.yellow .title {
+  color: #b58900;
+}
+/* line 67, ../scss/base/_mixins.scss */
+body.yellow .date {
+  color: #b58900;
+}
+/* line 70, ../scss/base/_mixins.scss */
+body.yellow .bottom-nav {
+  background: #b58900;
+}
+/* line 73, ../scss/base/_mixins.scss */
+body.yellow .bottom-nav .constrain a {
+  background: #b58900;
+}
+/* line 75, ../scss/base/_mixins.scss */
+body.yellow .bottom-nav .constrain a.next {
+  background: url(../img/right-arrow.svg) 80% center no-repeat #b58900;
+}
+/* line 77, ../scss/base/_mixins.scss */
+body.yellow .bottom-nav .constrain a.next:hover {
+  background: url(../img/right-arrow.svg) 82% center no-repeat #9c7600;
+}
+/* line 81, ../scss/base/_mixins.scss */
+body.yellow .bottom-nav .constrain a.previous {
+  background: url(../img/left-arrow.svg) 10% center no-repeat #b58900;
+}
+/* line 83, ../scss/base/_mixins.scss */
+body.yellow .bottom-nav .constrain a.previous:hover {
+  background: url(../img/left-arrow.svg) 8% center no-repeat #9c7600;
+}
+/* line 91, ../scss/base/_mixins.scss */
+body.yellow .navy a {
+  color: #b58900;
+}
+/* line 96, ../scss/base/_mixins.scss */
+body.yellow article a {
+  color: #b58900;
+}
+/* line 99, ../scss/base/_mixins.scss */
+body.yellow article blockquote {
+  color: #b58900;
+  border-left: 3px solid #b58900;
+}
+/* line 5, ../scss/_article.scss */
+body.orange {
+  border-top: 8px solid #cb4b16;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.orange nav span {
+  color: #cb4b16;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.orange nav a {
+  color: #cb4b16;
+}
+/* line 48, ../scss/base/_mixins.scss */
+body.orange nav a:hover {
+  color: #cb4b16;
+  border-bottom: 2px solid #cb4b16;
+}
+/* line 55, ../scss/base/_mixins.scss */
+body.orange .title-wrap .btn {
+  border-color: #cb4b16;
+  color: #cb4b16;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.orange .title-wrap .btn:hover {
+  background-color: #cb4b16;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
+body.orange .title {
+  color: #cb4b16;
+}
+/* line 67, ../scss/base/_mixins.scss */
+body.orange .date {
+  color: #cb4b16;
+}
+/* line 70, ../scss/base/_mixins.scss */
+body.orange .bottom-nav {
+  background: #cb4b16;
+}
+/* line 73, ../scss/base/_mixins.scss */
+body.orange .bottom-nav .constrain a {
+  background: #cb4b16;
+}
+/* line 75, ../scss/base/_mixins.scss */
+body.orange .bottom-nav .constrain a.next {
+  background: url(../img/right-arrow.svg) 80% center no-repeat #cb4b16;
+}
+/* line 77, ../scss/base/_mixins.scss */
+body.orange .bottom-nav .constrain a.next:hover {
+  background: url(../img/right-arrow.svg) 82% center no-repeat #b44214;
+}
+/* line 81, ../scss/base/_mixins.scss */
+body.orange .bottom-nav .constrain a.previous {
+  background: url(../img/left-arrow.svg) 10% center no-repeat #cb4b16;
+}
+/* line 83, ../scss/base/_mixins.scss */
+body.orange .bottom-nav .constrain a.previous:hover {
+  background: url(../img/left-arrow.svg) 8% center no-repeat #b44214;
+}
+/* line 91, ../scss/base/_mixins.scss */
+body.orange .navy a {
+  color: #cb4b16;
+}
+/* line 96, ../scss/base/_mixins.scss */
+body.orange article a {
+  color: #cb4b16;
+}
+/* line 99, ../scss/base/_mixins.scss */
+body.orange article blockquote {
+  color: #cb4b16;
+  border-left: 3px solid #cb4b16;
+}
+/* line 8, ../scss/_article.scss */
+body.red {
+  border-top: 8px solid #dc322f;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.red nav span {
+  color: #dc322f;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.red nav a {
+  color: #dc322f;
+}
+/* line 48, ../scss/base/_mixins.scss */
+body.red nav a:hover {
+  color: #dc322f;
+  border-bottom: 2px solid #dc322f;
+}
+/* line 55, ../scss/base/_mixins.scss */
+body.red .title-wrap .btn {
+  border-color: #dc322f;
+  color: #dc322f;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.red .title-wrap .btn:hover {
+  background-color: #dc322f;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
+body.red .title {
+  color: #dc322f;
+}
+/* line 67, ../scss/base/_mixins.scss */
+body.red .date {
+  color: #dc322f;
+}
+/* line 70, ../scss/base/_mixins.scss */
+body.red .bottom-nav {
+  background: #dc322f;
+}
+/* line 73, ../scss/base/_mixins.scss */
+body.red .bottom-nav .constrain a {
+  background: #dc322f;
+}
+/* line 75, ../scss/base/_mixins.scss */
+body.red .bottom-nav .constrain a.next {
+  background: url(../img/right-arrow.svg) 80% center no-repeat #dc322f;
+}
+/* line 77, ../scss/base/_mixins.scss */
+body.red .bottom-nav .constrain a.next:hover {
+  background: url(../img/right-arrow.svg) 82% center no-repeat #cf2623;
+}
+/* line 81, ../scss/base/_mixins.scss */
+body.red .bottom-nav .constrain a.previous {
+  background: url(../img/left-arrow.svg) 10% center no-repeat #dc322f;
+}
+/* line 83, ../scss/base/_mixins.scss */
+body.red .bottom-nav .constrain a.previous:hover {
+  background: url(../img/left-arrow.svg) 8% center no-repeat #cf2623;
+}
+/* line 91, ../scss/base/_mixins.scss */
+body.red .navy a {
+  color: #dc322f;
+}
+/* line 96, ../scss/base/_mixins.scss */
+body.red article a {
+  color: #dc322f;
+}
+/* line 99, ../scss/base/_mixins.scss */
+body.red article blockquote {
+  color: #dc322f;
+  border-left: 3px solid #dc322f;
+}
+/* line 11, ../scss/_article.scss */
+body.magenta {
+  border-top: 8px solid #d33682;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.magenta nav span {
+  color: #d33682;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.magenta nav a {
+  color: #d33682;
+}
+/* line 48, ../scss/base/_mixins.scss */
+body.magenta nav a:hover {
+  color: #d33682;
+  border-bottom: 2px solid #d33682;
+}
+/* line 55, ../scss/base/_mixins.scss */
+body.magenta .title-wrap .btn {
+  border-color: #d33682;
+  color: #d33682;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.magenta .title-wrap .btn:hover {
+  background-color: #d33682;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
+body.magenta .title {
+  color: #d33682;
+}
+/* line 67, ../scss/base/_mixins.scss */
+body.magenta .date {
+  color: #d33682;
+}
+/* line 70, ../scss/base/_mixins.scss */
+body.magenta .bottom-nav {
+  background: #d33682;
+}
+/* line 73, ../scss/base/_mixins.scss */
+body.magenta .bottom-nav .constrain a {
+  background: #d33682;
+}
+/* line 75, ../scss/base/_mixins.scss */
+body.magenta .bottom-nav .constrain a.next {
+  background: url(../img/right-arrow.svg) 80% center no-repeat #d33682;
+}
+/* line 77, ../scss/base/_mixins.scss */
+body.magenta .bottom-nav .constrain a.next:hover {
+  background: url(../img/right-arrow.svg) 82% center no-repeat #c42b75;
+}
+/* line 81, ../scss/base/_mixins.scss */
+body.magenta .bottom-nav .constrain a.previous {
+  background: url(../img/left-arrow.svg) 10% center no-repeat #d33682;
+}
+/* line 83, ../scss/base/_mixins.scss */
+body.magenta .bottom-nav .constrain a.previous:hover {
+  background: url(../img/left-arrow.svg) 8% center no-repeat #c42b75;
+}
+/* line 91, ../scss/base/_mixins.scss */
+body.magenta .navy a {
+  color: #d33682;
+}
+/* line 96, ../scss/base/_mixins.scss */
+body.magenta article a {
+  color: #d33682;
+}
+/* line 99, ../scss/base/_mixins.scss */
+body.magenta article blockquote {
+  color: #d33682;
+  border-left: 3px solid #d33682;
+}
+/* line 14, ../scss/_article.scss */
+body.violet {
+  border-top: 8px solid #6c71c4;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.violet nav span {
+  color: #6c71c4;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.violet nav a {
+  color: #6c71c4;
+}
+/* line 48, ../scss/base/_mixins.scss */
+body.violet nav a:hover {
+  color: #6c71c4;
+  border-bottom: 2px solid #6c71c4;
+}
+/* line 55, ../scss/base/_mixins.scss */
+body.violet .title-wrap .btn {
+  border-color: #6c71c4;
+  color: #6c71c4;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.violet .title-wrap .btn:hover {
+  background-color: #6c71c4;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
+body.violet .title {
+  color: #6c71c4;
+}
+/* line 67, ../scss/base/_mixins.scss */
+body.violet .date {
+  color: #6c71c4;
+}
+/* line 70, ../scss/base/_mixins.scss */
+body.violet .bottom-nav {
+  background: #6c71c4;
+}
+/* line 73, ../scss/base/_mixins.scss */
+body.violet .bottom-nav .constrain a {
+  background: #6c71c4;
+}
+/* line 75, ../scss/base/_mixins.scss */
+body.violet .bottom-nav .constrain a.next {
+  background: url(../img/right-arrow.svg) 80% center no-repeat #6c71c4;
+}
+/* line 77, ../scss/base/_mixins.scss */
+body.violet .bottom-nav .constrain a.next:hover {
+  background: url(../img/right-arrow.svg) 82% center no-repeat #5a5fbd;
+}
+/* line 81, ../scss/base/_mixins.scss */
+body.violet .bottom-nav .constrain a.previous {
+  background: url(../img/left-arrow.svg) 10% center no-repeat #6c71c4;
+}
+/* line 83, ../scss/base/_mixins.scss */
+body.violet .bottom-nav .constrain a.previous:hover {
+  background: url(../img/left-arrow.svg) 8% center no-repeat #5a5fbd;
+}
+/* line 91, ../scss/base/_mixins.scss */
+body.violet .navy a {
+  color: #6c71c4;
+}
+/* line 96, ../scss/base/_mixins.scss */
+body.violet article a {
+  color: #6c71c4;
+}
+/* line 99, ../scss/base/_mixins.scss */
+body.violet article blockquote {
+  color: #6c71c4;
+  border-left: 3px solid #6c71c4;
+}
+/* line 17, ../scss/_article.scss */
+body.blue {
+  border-top: 8px solid #268bd2;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.blue nav span {
+  color: #268bd2;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.blue nav a {
+  color: #268bd2;
+}
+/* line 48, ../scss/base/_mixins.scss */
+body.blue nav a:hover {
+  color: #268bd2;
+  border-bottom: 2px solid #268bd2;
+}
+/* line 55, ../scss/base/_mixins.scss */
+body.blue .title-wrap .btn {
+  border-color: #268bd2;
+  color: #268bd2;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.blue .title-wrap .btn:hover {
+  background-color: #268bd2;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
+body.blue .title {
+  color: #268bd2;
+}
+/* line 67, ../scss/base/_mixins.scss */
+body.blue .date {
+  color: #268bd2;
+}
+/* line 70, ../scss/base/_mixins.scss */
+body.blue .bottom-nav {
+  background: #268bd2;
+}
+/* line 73, ../scss/base/_mixins.scss */
+body.blue .bottom-nav .constrain a {
+  background: #268bd2;
+}
+/* line 75, ../scss/base/_mixins.scss */
+body.blue .bottom-nav .constrain a.next {
+  background: url(../img/right-arrow.svg) 80% center no-repeat #268bd2;
+}
+/* line 77, ../scss/base/_mixins.scss */
+body.blue .bottom-nav .constrain a.next:hover {
+  background: url(../img/right-arrow.svg) 82% center no-repeat #227dbc;
+}
+/* line 81, ../scss/base/_mixins.scss */
+body.blue .bottom-nav .constrain a.previous {
+  background: url(../img/left-arrow.svg) 10% center no-repeat #268bd2;
+}
+/* line 83, ../scss/base/_mixins.scss */
+body.blue .bottom-nav .constrain a.previous:hover {
+  background: url(../img/left-arrow.svg) 8% center no-repeat #227dbc;
+}
+/* line 91, ../scss/base/_mixins.scss */
+body.blue .navy a {
+  color: #268bd2;
+}
+/* line 96, ../scss/base/_mixins.scss */
+body.blue article a {
+  color: #268bd2;
+}
+/* line 99, ../scss/base/_mixins.scss */
+body.blue article blockquote {
+  color: #268bd2;
+  border-left: 3px solid #268bd2;
+}
+/* line 20, ../scss/_article.scss */
 body.cyan {
   border-top: 8px solid #2aa198;
 }
-/* line 5, ../scss/_article.scss */
+/* line 43, ../scss/base/_mixins.scss */
 body.cyan nav span {
   color: #2aa198;
 }
-/* line 8, ../scss/_article.scss */
+/* line 46, ../scss/base/_mixins.scss */
+body.cyan nav a {
+  color: #2aa198;
+}
+/* line 48, ../scss/base/_mixins.scss */
 body.cyan nav a:hover {
   color: #2aa198;
   border-bottom: 2px solid #2aa198;
 }
-/* line 13, ../scss/_article.scss */
+/* line 55, ../scss/base/_mixins.scss */
+body.cyan .title-wrap .btn {
+  border-color: #2aa198;
+  color: #2aa198;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.cyan .title-wrap .btn:hover {
+  background-color: #2aa198;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
 body.cyan .title {
   color: #2aa198;
 }
-/* line 16, ../scss/_article.scss */
+/* line 67, ../scss/base/_mixins.scss */
 body.cyan .date {
   color: #2aa198;
 }
-
+/* line 70, ../scss/base/_mixins.scss */
+body.cyan .bottom-nav {
+  background: #2aa198;
+}
+/* line 73, ../scss/base/_mixins.scss */
+body.cyan .bottom-nav .constrain a {
+  background: #2aa198;
+}
+/* line 75, ../scss/base/_mixins.scss */
+body.cyan .bottom-nav .constrain a.next {
+  background: url(../img/right-arrow.svg) 80% center no-repeat #2aa198;
+}
+/* line 77, ../scss/base/_mixins.scss */
+body.cyan .bottom-nav .constrain a.next:hover {
+  background: url(../img/right-arrow.svg) 82% center no-repeat #258d85;
+}
+/* line 81, ../scss/base/_mixins.scss */
+body.cyan .bottom-nav .constrain a.previous {
+  background: url(../img/left-arrow.svg) 10% center no-repeat #2aa198;
+}
+/* line 83, ../scss/base/_mixins.scss */
+body.cyan .bottom-nav .constrain a.previous:hover {
+  background: url(../img/left-arrow.svg) 8% center no-repeat #258d85;
+}
+/* line 91, ../scss/base/_mixins.scss */
+body.cyan .navy a {
+  color: #2aa198;
+}
+/* line 96, ../scss/base/_mixins.scss */
+body.cyan article a {
+  color: #2aa198;
+}
+/* line 99, ../scss/base/_mixins.scss */
+body.cyan article blockquote {
+  color: #2aa198;
+  border-left: 3px solid #2aa198;
+}
 /* line 23, ../scss/_article.scss */
+body.green {
+  border-top: 8px solid #859900;
+}
+/* line 43, ../scss/base/_mixins.scss */
+body.green nav span {
+  color: #859900;
+}
+/* line 46, ../scss/base/_mixins.scss */
+body.green nav a {
+  color: #859900;
+}
+/* line 48, ../scss/base/_mixins.scss */
+body.green nav a:hover {
+  color: #859900;
+  border-bottom: 2px solid #859900;
+}
+/* line 55, ../scss/base/_mixins.scss */
+body.green .title-wrap .btn {
+  border-color: #859900;
+  color: #859900;
+}
+/* line 58, ../scss/base/_mixins.scss */
+body.green .title-wrap .btn:hover {
+  background-color: #859900;
+  color: white;
+}
+/* line 64, ../scss/base/_mixins.scss */
+body.green .title {
+  color: #859900;
+}
+/* line 67, ../scss/base/_mixins.scss */
+body.green .date {
+  color: #859900;
+}
+/* line 70, ../scss/base/_mixins.scss */
+body.green .bottom-nav {
+  background: #859900;
+}
+/* line 73, ../scss/base/_mixins.scss */
+body.green .bottom-nav .constrain a {
+  background: #859900;
+}
+/* line 75, ../scss/base/_mixins.scss */
+body.green .bottom-nav .constrain a.next {
+  background: url(../img/right-arrow.svg) 80% center no-repeat #859900;
+}
+/* line 77, ../scss/base/_mixins.scss */
+body.green .bottom-nav .constrain a.next:hover {
+  background: url(../img/right-arrow.svg) 82% center no-repeat #6f8000;
+}
+/* line 81, ../scss/base/_mixins.scss */
+body.green .bottom-nav .constrain a.previous {
+  background: url(../img/left-arrow.svg) 10% center no-repeat #859900;
+}
+/* line 83, ../scss/base/_mixins.scss */
+body.green .bottom-nav .constrain a.previous:hover {
+  background: url(../img/left-arrow.svg) 8% center no-repeat #6f8000;
+}
+/* line 91, ../scss/base/_mixins.scss */
+body.green .navy a {
+  color: #859900;
+}
+/* line 96, ../scss/base/_mixins.scss */
+body.green article a {
+  color: #859900;
+}
+/* line 99, ../scss/base/_mixins.scss */
+body.green article blockquote {
+  color: #859900;
+  border-left: 3px solid #859900;
+}
+
+/* line 29, ../scss/_article.scss */
 .hero {
   width: 100%;
   min-height: 80vh;
@@ -470,12 +1171,8 @@ body.cyan .date {
   position: relative;
   background-size: cover;
 }
-/* line 32, ../scss/_article.scss */
-.hero.tan {
-  background-color: #fdf6e3;
-}
-/* line 34, ../scss/_article.scss */
-.hero.tan.mesh:before {
+/* line 38, ../scss/_article.scss */
+.hero.mesh:before {
   content: '';
   position: absolute;
   top: 0;
@@ -483,13 +1180,33 @@ body.cyan .date {
   bottom: 0;
   left: 0;
   display: block;
-  background-image: url(/img/tan-mesh.gif);
+  background-image: url(../img/navy-mesh.gif);
   background-color: transparent;
   background-repeat: repeat;
   background-position: top left;
 }
+/* line 51, ../scss/_article.scss */
+.hero.tan {
+  background-color: #fdf6e3;
+}
+/* line 53, ../scss/_article.scss */
+.hero.tan.mesh:before {
+  background-image: url(../img/tan-mesh.gif);
+}
+/* line 57, ../scss/_article.scss */
+.hero.navy {
+  background-color: #002b36;
+}
+/* line 59, ../scss/_article.scss */
+.hero.navy.mesh:before {
+  background-image: url(../img/navy-mesh.gif);
+}
+/* line 62, ../scss/_article.scss */
+.hero.navy .description {
+  color: #dddddd;
+}
 
-/* line 50, ../scss/_article.scss */
+/* line 68, ../scss/_article.scss */
 .title-wrap {
   position: relative;
   display: block;
@@ -499,14 +1216,22 @@ body.cyan .date {
   box-sizing: border-box;
   padding: 25vh 1em 4em 1em;
 }
+/* line 74, ../scss/_article.scss */
+.title-wrap.in-article {
+  padding: 1.5em 1em 0 1em;
+}
+/* line 76, ../scss/_article.scss */
+.title-wrap.in-article .date {
+  padding-bottom: 0;
+}
 
-/* line 58, ../scss/_article.scss */
+/* line 82, ../scss/_article.scss */
 .title {
   text-align: center;
   font-size: 1.5em;
 }
 
-/* line 63, ../scss/_article.scss */
+/* line 87, ../scss/_article.scss */
 .description {
   text-align: center;
   font-size: 1em;
@@ -515,14 +1240,134 @@ body.cyan .date {
   color: #666666;
 }
 
-/* line 71, ../scss/_article.scss */
+/* line 95, ../scss/_article.scss */
 .date {
   text-align: center;
   padding-bottom: 3em;
 }
 
-/* line 77, ../scss/_article.scss */
+/* line 100, ../scss/_article.scss */
+.feature-image {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 90%;
+  height: auto;
+  max-width: 40em;
+  display: block;
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+  padding: 6em 1em 4em 1em;
+}
+
+/* line 113, ../scss/_article.scss */
 article .content {
-  margin-top: 3em;
-  margin-bottom: 5em;
+  margin-top: 1em;
+  margin-bottom: 3em;
+}
+/* line 117, ../scss/_article.scss */
+article img {
+  max-width: 125%;
+  margin: 1em 0 0 -12.5%;
+  height: auto;
+}
+/* line 121, ../scss/_article.scss */
+article img.skinny {
+  margin-left: 0;
+  max-width: 100%;
+}
+/* line 126, ../scss/_article.scss */
+article blockquote {
+  max-width: 20em;
+  margin: 2em 0 2em -12.5%;
+}
+/* line 130, ../scss/_article.scss */
+article .full {
+  max-width: 125%;
+  margin: 2em 0 2em -12.5%;
+}
+
+/* line 137, ../scss/_article.scss */
+.bottom-nav {
+  width: 100%;
+  padding: 0;
+  display: block;
+  background: #2aa198;
+  margin: 0;
+  text-align: center;
+}
+/* line 144, ../scss/_article.scss */
+.bottom-nav a {
+  width: 50%;
+  display: block;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  background: #2aa198;
+  color: white;
+  -webkit-transition: all 200ms linear;
+  -moz-transition: all 200ms linear;
+  -o-transition: all 200ms linear;
+  transition: all 200ms linear;
+}
+/* line 151, ../scss/_article.scss */
+.bottom-nav a .small {
+  color: white;
+}
+/* line 154, ../scss/_article.scss */
+.bottom-nav a p {
+  margin: 0.5em 0;
+}
+/* line 157, ../scss/_article.scss */
+.bottom-nav a.next {
+  padding: 3em 20% 2.5em 0;
+  background: url(../img/right-arrow.svg) 80% center no-repeat #2aa198;
+  text-align: right;
+}
+/* line 161, ../scss/_article.scss */
+.bottom-nav a.next:hover {
+  padding-right: 18%;
+  background: url(../img/right-arrow.svg) 82% center no-repeat #258d85;
+}
+/* line 166, ../scss/_article.scss */
+.bottom-nav a.previous {
+  padding: 3em 0 2.5em 20%;
+  background: url(../img/left-arrow.svg) 10% center no-repeat #2aa198;
+  text-align: left;
+}
+/* line 170, ../scss/_article.scss */
+.bottom-nav a.previous:hover {
+  padding-left: 18%;
+  background: url(../img/left-arrow.svg) 8% center no-repeat #258d85;
+}
+
+/* line 3, ../scss/_archive.scss */
+.hero.short {
+  min-height: 0;
+}
+/* line 5, ../scss/_archive.scss */
+.hero.short .title-wrap {
+  padding: 3em;
+}
+
+/* line 11, ../scss/_archive.scss */
+.archive {
+  margin: 0 0 2em 0;
+}
+/* line 13, ../scss/_archive.scss */
+.archive .small {
+  margin: 0;
+}
+
+/* line 18, ../scss/_archive.scss */
+.archive-title {
+  margin-bottom: 0;
+}
+
+/* line 22, ../scss/_archive.scss */
+.archive-description {
+  margin: 0;
+  font-size: 0.9em;
+  max-width: 24em;
 }

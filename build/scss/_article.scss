@@ -1,21 +1,27 @@
 body{
-  &.cyan {
-    border-top: 8px solid $cyan;
-    nav {
-      span {
-        color: $cyan;
-      }
-      a:hover {
-        color: $cyan;
-        border-bottom: 2px solid $cyan;
-      }
-    }
-    .title {
-      color: $cyan;
-    }
-    .date {
-      color: $cyan;
-    }
+  &.yellow{
+    @include body-class($yellow);
+  }
+  &.orange{
+    @include body-class($orange);
+  }
+  &.red{
+    @include body-class($red);
+  }
+  &.magenta{
+    @include body-class($magenta);
+  }
+  &.violet{
+    @include body-class($violet);
+  }
+  &.blue{
+    @include body-class($blue);
+  }
+  &.cyan{
+    @include body-class($cyan);
+  }
+  &.green{
+    @include body-class($green);
   }
 }
 
@@ -29,20 +35,32 @@ body{
   background-position:center;
   position:relative;
   background-size: cover;
+  &.mesh:before {
+    content: '';
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    display: block;
+    background-image: url(../img/navy-mesh.gif);
+    background-color: transparent;
+    background-repeat: repeat;
+    background-position:top left;
+  }
   &.tan{
     background-color: $tan;
     &.mesh:before {
-      content: '';
-      position:absolute;
-      top:0;
-      right:0;
-      bottom:0;
-      left:0;
-      display: block;
-      background-image: url(/img/tan-mesh.gif);
-      background-color: transparent;
-      background-repeat: repeat;
-      background-position:top left;
+      background-image: url(../img/tan-mesh.gif);
+    }
+  }
+  &.navy{
+    background-color: $navy;
+    &.mesh:before {
+      background-image: url(../img/navy-mesh.gif);
+    }
+    .description {
+      color: $lighter-gray;
     }
   }
 }
@@ -53,6 +71,12 @@ body{
   z-index: 2;
   @include box-sizing(border-box);
   padding: 25vh 1em 4em 1em;
+  &.in-article {
+    padding: 1.5em 1em 0 1em;
+    .date {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .title {
@@ -73,9 +97,81 @@ body{
   padding-bottom: 3em;
 }
 
+.feature-image {
+  @include box-sizing(border-box);
+  width: 90%;
+  height: auto;
+  max-width: 40em;
+  display: block;
+  position: relative;
+  z-index: 3;
+  margin: 0 auto;
+  padding: 6em 1em 4em 1em;
+}
+
 article {
   .content {
-    margin-top: 3em;
-    margin-bottom: 5em;
+    margin-top: 1em;
+    margin-bottom: 3em;
+  }
+  img {
+    max-width: 125%;
+    margin: 1em 0 0 -12.5%;
+    height: auto;
+    &.skinny {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+  blockquote {
+    max-width: 20em;
+    margin: 2em 0 2em -12.5%;
+  }
+  .full {
+    max-width: 125%;
+    margin: 2em 0 2em -12.5%;
   }
 }
+
+//Next-Previous Links
+.bottom-nav {
+  width: 100%;
+  padding: 0;
+  display:block;
+  background: $cyan;
+  margin: 0;
+  text-align: center;
+  a {
+    width: 50%;
+    display: block;
+    @include box-sizing(border-box);
+    background: $cyan;
+    color: $white;
+    @include transition(all 200ms linear);
+    .small {
+      color: $white;
+    }
+    p {
+      margin: 0.5em 0;
+    }
+    &.next {
+      padding: 3em 20% 2.5em 0;
+      background: url(../img/right-arrow.svg) 80% center no-repeat $cyan;
+      text-align: right;
+      &:hover {
+        padding-right: 18%;
+        background: url(../img/right-arrow.svg) 82% center no-repeat darken($cyan, 5%);
+      }
+    }
+    &.previous {
+      padding: 3em 0 2.5em 20%;
+      background: url(../img/left-arrow.svg) 10% center no-repeat $cyan;
+      text-align: left;
+      &:hover {
+        padding-left: 18%;
+        background: url(../img/left-arrow.svg) 8% center no-repeat darken($cyan, 5%);
+      }
+    }
+  }
+}
+

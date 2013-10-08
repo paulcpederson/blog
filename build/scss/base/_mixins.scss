@@ -36,3 +36,69 @@
 .clearfix {
   @include clearfix();
 }
+
+@mixin body-class($color){
+  border-top: 8px solid $color;
+  nav {
+    span {
+      color: $color;
+    }
+    a {
+      color: $color;
+      &:hover {
+        color: $color;
+        border-bottom: 2px solid $color;
+      }
+    }
+  }
+  .title-wrap {
+    .btn {
+      border-color: $color;
+      color: $color;
+      &:hover {
+        background-color: $color;
+        color: $white;
+      }
+    }
+  }
+  .title {
+    color: $color;
+  }
+  .date {
+    color: $color;
+  }
+  .bottom-nav {
+    background: $color;
+    .constrain {
+      a {
+        background: $color;
+        &.next {
+          background: url(../img/right-arrow.svg) 80% center no-repeat $color;
+          &:hover {
+            background: url(../img/right-arrow.svg) 82% center no-repeat darken($color, 5%);
+          }
+        }
+        &.previous {
+          background: url(../img/left-arrow.svg) 10% center no-repeat $color;
+          &:hover {
+            background: url(../img/left-arrow.svg) 8% center no-repeat darken($color, 5%);
+          }
+        }
+      }
+    }
+  }
+  .navy {
+    a {
+      color: $color;
+    }
+  }
+  article {
+    a {
+      color: $color;
+    }
+    blockquote {
+      color: $color;
+      border-left: 3px solid $color;
+    }
+  }
+}
