@@ -116,8 +116,16 @@ article {
   }
   img {
     max-width: 125%;
-    margin: 2em 0 2em -12.5%;
+    margin: 1em 0 0 -12.5%;
     height: auto;
+    &.skinny {
+      margin-left: 0;
+      max-width: 100%;
+    }
+  }
+  blockquote {
+    max-width: 20em;
+    margin: 2em 0 2em -12.5%;
   }
   .full {
     max-width: 125%;
@@ -133,38 +141,35 @@ article {
   background: $cyan;
   margin: 0;
   text-align: center;
-  .constrain {
+  a {
+    width: 50%;
     display: block;
-    a {
-      width: 50%;
-      display: block;
-      @include box-sizing(border-box);
-      background: $cyan;
+    @include box-sizing(border-box);
+    background: $cyan;
+    color: $white;
+    @include transition(all 200ms linear);
+    .small {
       color: $white;
-      @include transition(all 200ms linear);
-      .small {
-        color: $white;
+    }
+    p {
+      margin: 0.5em 0;
+    }
+    &.next {
+      padding: 3em 20% 2.5em 0;
+      background: url(../img/right-arrow.svg) 80% center no-repeat $cyan;
+      text-align: right;
+      &:hover {
+        padding-right: 18%;
+        background: url(../img/right-arrow.svg) 82% center no-repeat darken($cyan, 5%);
       }
-      p {
-        margin: 0.5em 0;
-      }
-      &.next {
-        padding: 3em 20% 2.5em 0;
-        background: url(../img/right-arrow.svg) 80% center no-repeat $cyan;
-        text-align: right;
-        &:hover {
-          padding-right: 18%;
-          background: url(../img/right-arrow.svg) 82% center no-repeat darken($cyan, 5%);
-        }
-      }
-      &.previous {
-        padding: 3em 0 2.5em 20%;
-        background: url(../img/left-arrow.svg) 10% center no-repeat $cyan;
-        text-align: left;
-        &:hover {
-          padding-left: 18%;
-          background: url(../img/left-arrow.svg) 8% center no-repeat darken($cyan, 5%);
-        }
+    }
+    &.previous {
+      padding: 3em 0 2.5em 20%;
+      background: url(../img/left-arrow.svg) 10% center no-repeat $cyan;
+      text-align: left;
+      &:hover {
+        padding-left: 18%;
+        background: url(../img/left-arrow.svg) 8% center no-repeat darken($cyan, 5%);
       }
     }
   }

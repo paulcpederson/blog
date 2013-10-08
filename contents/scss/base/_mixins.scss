@@ -96,5 +96,9 @@
     a {
       color: $color;
     }
+    blockquote {
+      color: $color;
+      border-left: 3px solid $color;
+    }
   }
 }
