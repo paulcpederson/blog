@@ -1,6 +1,7 @@
 {
   "locals": {
     "url": "http://localhost:8080",
+    "build": "http://paulcpederson.github.io/blog",
     "name": "Paul C Pederson"
   },
   "plugins": [

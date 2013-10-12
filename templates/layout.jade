@@ -10,6 +10,10 @@ html(lang='en')
       title
         block title
           = locals.name
+
+      - if (env.mode == 'build'){
+      -   locals.url = locals.build
+      - }
       link(rel='alternate', href=locals.url + '/feed.xml', type='application/rss+xml', title=locals.description)
       link(rel='stylesheet', href=locals.url + '/css/main.css')
       link(rel='stylesheet', href=locals.url + '/css/style.css')
@@ -21,6 +25,7 @@ html(lang='en')
           a.right(href=locals.url + '/archive/') Archive
           span.right /
           a.right(href=locals.url) Blog
+          a= mode
     block hero
     block content
       div.panel.white
