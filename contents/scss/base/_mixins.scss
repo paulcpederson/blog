@@ -71,23 +71,15 @@
     color: $color;
   }
   .bottom-nav {
-    background: $color;
-    .constrain {
-      a {
-        background: $color;
-        &.next {
-          background: url(../img/right-arrow.svg) 80% center no-repeat $color;
-          &:hover, &:focus {
-            background: url(../img/right-arrow.svg) 82% center no-repeat darken($color, 5%);
-          }
-        }
-        &.previous {
-          background: url(../img/left-arrow.svg) 10% center no-repeat $color;
-          &:hover, &:focus {
-            background: url(../img/left-arrow.svg) 8% center no-repeat darken($color, 5%);
-          }
-        }
-      }
+    background-color: $color;
+    a {
+      background-color: $color;
+    }
+  }
+  .next, .previous {
+    background-color: $color;
+    &:hover, &:focus {
+      background-color: darken($color, 5%);
     }
   }
   .navy {
