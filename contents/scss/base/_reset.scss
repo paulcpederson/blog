@@ -11,7 +11,7 @@ body {
 }
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
 audio[controls], canvas, video { display: inline-block; zoom: 1; }
-a:hover, a:active { outline: 0; }
+a:hover, a:active, a:focus { outline: 0; }
 svg:not(:root) { overflow: hidden; }
 a, abbr, acronym, address, b, big, cite, code, del, em, i, ins, kbd, mark, output, q,
 samp, small, strike, strong, sub, sup, time, tt, var,
@@ -27,3 +27,4 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   padding: 0;
   vertical-align: baseline;
 }
+

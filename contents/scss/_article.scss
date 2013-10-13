@@ -116,12 +116,28 @@ article {
   }
   img {
     max-width: 125%;
-    margin: 1em 0 0 -12.5%;
+    margin: 1em 0 0.5em -12.5%;
     height: auto;
+    position: relative;
     &.skinny {
       margin-left: 0;
       max-width: 100%;
     }
+  }
+  .caption {
+    font-size: 0.75em;
+    color: $light-gray;
+    line-height: 1em;
+    margin: -1em 0 2em -12.5%;
+    padding-left: 1em;
+    border-left: 2px solid $lighter-gray;
+    font-style: italic;
+  }
+  strong {
+    font-weight: 600;
+  }
+  em {
+    font-style: italic;
   }
   blockquote {
     max-width: 20em;

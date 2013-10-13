@@ -45,7 +45,7 @@
     }
     a {
       color: $color;
-      &:hover {
+      &:hover, &:focus {
         color: $color;
         border-bottom: 2px solid $color;
       }
@@ -55,7 +55,7 @@
     .btn {
       border-color: $color;
       color: $color;
-      &:hover {
+      &:hover, &:focus {
         background-color: $color;
         color: $white;
       }
@@ -77,13 +77,13 @@
         background: $color;
         &.next {
           background: url(../img/right-arrow.svg) 80% center no-repeat $color;
-          &:hover {
+          &:hover, &:focus {
             background: url(../img/right-arrow.svg) 82% center no-repeat darken($color, 5%);
           }
         }
         &.previous {
           background: url(../img/left-arrow.svg) 10% center no-repeat $color;
-          &:hover {
+          &:hover, &:focus {
             background: url(../img/left-arrow.svg) 8% center no-repeat darken($color, 5%);
           }
         }
@@ -98,13 +98,21 @@
   article {
     a {
       color: $color;
-      &:hover {
+      &:hover, &:focus {
         border-bottom: 2px solid $color;
       }
     }
     blockquote {
       color: $color;
       border-left: 3px solid $color;
+    }
+  }
+  footer {
+    a {
+      &:hover, &:focus {
+        color: $color;
+        border-bottom: 2px solid $color;
+      }
     }
   }
 }
