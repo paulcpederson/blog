@@ -116,12 +116,28 @@ article {
   }
   img {
     max-width: 125%;
-    margin: 1em 0 0 -12.5%;
+    margin: 1em 0 0.5em -12.5%;
     height: auto;
+    position: relative;
     &.skinny {
       margin-left: 0;
       max-width: 100%;
     }
+  }
+  .caption {
+    font-size: 0.75em;
+    color: $light-gray;
+    line-height: 1em;
+    margin: -1em 0 2em -12.5%;
+    padding-left: 1em;
+    border-left: 2px solid $lighter-gray;
+    font-style: italic;
+  }
+  strong {
+    font-weight: 600;
+  }
+  em {
+    font-style: italic;
   }
   blockquote {
     max-width: 20em;
@@ -160,21 +176,41 @@ article {
     }
     &.next {
       padding: 3em 20% 2.5em 0;
-      background: url(../img/right-arrow.svg) 80% center no-repeat $cyan;
+      background-image: url(../img/right-arrow.svg);
+      background-position:  80% center;
+      background-repeat: no-repeat;
       text-align: right;
       &:hover {
         padding-right: 18%;
-        background: url(../img/right-arrow.svg) 82% center no-repeat darken($cyan, 5%);
+        background-position:  82% center;
       }
     }
     &.previous {
       padding: 3em 0 2.5em 20%;
-      background: url(../img/left-arrow.svg) 10% center no-repeat $cyan;
+      background-image: url(../img/left-arrow.svg);
+      background-position:  10% center;
+      background-repeat: no-repeat;
       text-align: left;
       &:hover {
         padding-left: 18%;
-        background: url(../img/left-arrow.svg) 8% center no-repeat darken($cyan, 5%);
+        background-position:  8% center;
       }
+    }
+    &.next, &.previous {
+      @include respond-to(0px, 700px){
+        background: none;
+        background-image: none;
+        padding: 1em 2em;
+        &:hover {
+          padding: 1em 2em;
+        }
+      }
+    }
+  }
+  .constrain {
+    @include respond-to(0, 700px){
+      padding: 0;
+      width: 100%;
     }
   }
 }

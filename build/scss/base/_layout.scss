@@ -19,6 +19,12 @@
 }
 
 // Footer
+footer {
+  a {
+    @include transition(150ms border-color linear);
+    border-bottom: 2px solid transparent;
+  }
+}
 
 // Reusable Layout Classes
 .panel {

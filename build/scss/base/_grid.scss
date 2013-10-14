@@ -50,3 +50,15 @@
     }
   }
 }
+
+@include respond-to(0px, 700px){
+  .col1of2 { width: 100%; }
+  .col1of3 { width: 100%; }
+  .col2of3 { width: 100%; }
+  .col1of4 { width: 100%; }
+  .col3of4 { width: 100%; }
+  .col1of5 { width: 100%; }
+  .col2of5 { width: 100%; }
+  .col3of5 { width: 100%; }
+  .col4of5 { width: 100%; }
+}
