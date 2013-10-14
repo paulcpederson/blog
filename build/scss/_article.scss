@@ -28,7 +28,6 @@ body{
 // hero banner
 .hero {
   width: 100%;
-  min-height: 80vh;
   display: block;
   background-color: transparent;
   background-repeat:no-repeat;
@@ -127,7 +126,7 @@ article {
   .caption {
     font-size: 0.75em;
     color: $light-gray;
-    line-height: 1em;
+    line-height: 1.25em;
     margin: -1em 0 2em -12.5%;
     padding-left: 1em;
     border-left: 2px solid $lighter-gray;

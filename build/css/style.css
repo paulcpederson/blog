@@ -1278,7 +1278,6 @@ body.green footer a:hover, body.green footer a:focus {
 /* line 29, ../scss/_article.scss */
 .hero {
   width: 100%;
-  min-height: 80vh;
   display: block;
   background-color: transparent;
   background-repeat: no-repeat;
@@ -1286,7 +1285,7 @@ body.green footer a:hover, body.green footer a:focus {
   position: relative;
   background-size: cover;
 }
-/* line 38, ../scss/_article.scss */
+/* line 37, ../scss/_article.scss */
 .hero.mesh:before {
   content: '';
   position: absolute;
@@ -1300,28 +1299,28 @@ body.green footer a:hover, body.green footer a:focus {
   background-repeat: repeat;
   background-position: top left;
 }
-/* line 51, ../scss/_article.scss */
+/* line 50, ../scss/_article.scss */
 .hero.tan {
   background-color: #fdf6e3;
 }
-/* line 53, ../scss/_article.scss */
+/* line 52, ../scss/_article.scss */
 .hero.tan.mesh:before {
   background-image: url(../img/tan-mesh.gif);
 }
-/* line 57, ../scss/_article.scss */
+/* line 56, ../scss/_article.scss */
 .hero.navy {
   background-color: #002b36;
 }
-/* line 59, ../scss/_article.scss */
+/* line 58, ../scss/_article.scss */
 .hero.navy.mesh:before {
   background-image: url(../img/navy-mesh.gif);
 }
-/* line 62, ../scss/_article.scss */
+/* line 61, ../scss/_article.scss */
 .hero.navy .description {
   color: #dddddd;
 }
 
-/* line 68, ../scss/_article.scss */
+/* line 67, ../scss/_article.scss */
 .title-wrap {
   position: relative;
   display: block;
@@ -1331,22 +1330,22 @@ body.green footer a:hover, body.green footer a:focus {
   box-sizing: border-box;
   padding: 25vh 1em 4em 1em;
 }
-/* line 74, ../scss/_article.scss */
+/* line 73, ../scss/_article.scss */
 .title-wrap.in-article {
   padding: 1.5em 1em 0 1em;
 }
-/* line 76, ../scss/_article.scss */
+/* line 75, ../scss/_article.scss */
 .title-wrap.in-article .date {
   padding-bottom: 0;
 }
 
-/* line 82, ../scss/_article.scss */
+/* line 81, ../scss/_article.scss */
 .title {
   text-align: center;
   font-size: 1.5em;
 }
 
-/* line 87, ../scss/_article.scss */
+/* line 86, ../scss/_article.scss */
 .description {
   text-align: center;
   font-size: 1em;
@@ -1355,13 +1354,13 @@ body.green footer a:hover, body.green footer a:focus {
   color: #666666;
 }
 
-/* line 95, ../scss/_article.scss */
+/* line 94, ../scss/_article.scss */
 .date {
   text-align: center;
   padding-bottom: 3em;
 }
 
-/* line 100, ../scss/_article.scss */
+/* line 99, ../scss/_article.scss */
 .feature-image {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -1376,52 +1375,52 @@ body.green footer a:hover, body.green footer a:focus {
   padding: 6em 1em 4em 1em;
 }
 
-/* line 113, ../scss/_article.scss */
+/* line 112, ../scss/_article.scss */
 article .content {
   margin-top: 1em;
   margin-bottom: 3em;
 }
-/* line 117, ../scss/_article.scss */
+/* line 116, ../scss/_article.scss */
 article img {
   max-width: 125%;
   margin: 1em 0 0.5em -12.5%;
   height: auto;
   position: relative;
 }
-/* line 122, ../scss/_article.scss */
+/* line 121, ../scss/_article.scss */
 article img.skinny {
   margin-left: 0;
   max-width: 100%;
 }
-/* line 127, ../scss/_article.scss */
+/* line 126, ../scss/_article.scss */
 article .caption {
   font-size: 0.75em;
   color: #999999;
-  line-height: 1em;
+  line-height: 1.25em;
   margin: -1em 0 2em -12.5%;
   padding-left: 1em;
   border-left: 2px solid #dddddd;
   font-style: italic;
 }
-/* line 136, ../scss/_article.scss */
+/* line 135, ../scss/_article.scss */
 article strong {
   font-weight: 600;
 }
-/* line 139, ../scss/_article.scss */
+/* line 138, ../scss/_article.scss */
 article em {
   font-style: italic;
 }
-/* line 142, ../scss/_article.scss */
+/* line 141, ../scss/_article.scss */
 article blockquote {
   max-width: 20em;
   margin: 2em 0 2em -12.5%;
 }
-/* line 146, ../scss/_article.scss */
+/* line 145, ../scss/_article.scss */
 article .full {
   max-width: 125%;
   margin: 2em 0 2em -12.5%;
 }
-/* line 150, ../scss/_article.scss */
+/* line 149, ../scss/_article.scss */
 article a {
   border-bottom: 2px solid transparent;
   -webkit-transition: 150ms border-color linear;
@@ -1430,7 +1429,7 @@ article a {
   transition: 150ms border-color linear;
 }
 
-/* line 157, ../scss/_article.scss */
+/* line 156, ../scss/_article.scss */
 .bottom-nav {
   width: 100%;
   padding: 0;
@@ -1439,7 +1438,7 @@ article a {
   margin: 0;
   text-align: center;
 }
-/* line 164, ../scss/_article.scss */
+/* line 163, ../scss/_article.scss */
 .bottom-nav a {
   width: 50%;
   display: block;
@@ -1453,15 +1452,15 @@ article a {
   -o-transition: all 200ms linear;
   transition: all 200ms linear;
 }
-/* line 171, ../scss/_article.scss */
+/* line 170, ../scss/_article.scss */
 .bottom-nav a .small {
   color: white;
 }
-/* line 174, ../scss/_article.scss */
+/* line 173, ../scss/_article.scss */
 .bottom-nav a p {
   margin: 0.5em 0;
 }
-/* line 177, ../scss/_article.scss */
+/* line 176, ../scss/_article.scss */
 .bottom-nav a.next {
   padding: 3em 20% 2.5em 0;
   background-image: url(../img/right-arrow.svg);
@@ -1469,12 +1468,12 @@ article a {
   background-repeat: no-repeat;
   text-align: right;
 }
-/* line 183, ../scss/_article.scss */
+/* line 182, ../scss/_article.scss */
 .bottom-nav a.next:hover {
   padding-right: 18%;
   background-position: 82% center;
 }
-/* line 188, ../scss/_article.scss */
+/* line 187, ../scss/_article.scss */
 .bottom-nav a.previous {
   padding: 3em 0 2.5em 20%;
   background-image: url(../img/left-arrow.svg);
@@ -1482,25 +1481,25 @@ article a {
   background-repeat: no-repeat;
   text-align: left;
 }
-/* line 194, ../scss/_article.scss */
+/* line 193, ../scss/_article.scss */
 .bottom-nav a.previous:hover {
   padding-left: 18%;
   background-position: 8% center;
 }
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  /* line 199, ../scss/_article.scss */
+  /* line 198, ../scss/_article.scss */
   .bottom-nav a.next, .bottom-nav a.previous {
     background: none;
     background-image: none;
     padding: 1em 2em;
   }
-  /* line 204, ../scss/_article.scss */
+  /* line 203, ../scss/_article.scss */
   .bottom-nav a.next:hover, .bottom-nav a.previous:hover {
     padding: 1em 2em;
   }
 }
 @media only screen and (min-width: 0) and (max-width: 700px) {
-  /* line 210, ../scss/_article.scss */
+  /* line 209, ../scss/_article.scss */
   .bottom-nav .constrain {
     padding: 0;
     width: 100%;
