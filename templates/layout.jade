@@ -35,5 +35,11 @@ html(lang='en')
             !=contents['about.md'].html
           section.copy
             p &copy; #{ new Date().getFullYear() } Paul C Pederson
+          section.footer-social
+            a.icon-twitter(href='https://twitter.com/paulcpederson')
+            a.icon-github(href='https://github.com/paulcpederson')
+            a.icon-google(href='https://plus.google.com/117963508642452000116?rel=author')
+            a.icon-dribbble(href='http://dribbble.com/paulcpederson')
+        </section>
     block scripts
       script(src='/js/script.js')

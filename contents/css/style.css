@@ -538,57 +538,97 @@ footer a {
   transition: 150ms border-color linear;
   border-bottom: 2px solid transparent;
 }
+/* line 27, ../scss/base/_layout.scss */
+footer section.footer-social {
+  margin: 0 0 1em 0;
+}
+/* line 29, ../scss/base/_layout.scss */
+footer section.footer-social a {
+  margin-right: 1em;
+}
+/* line 32, ../scss/base/_layout.scss */
+footer section.footer-social .icon-twitter, footer section.footer-social .icon-github, footer section.footer-social .icon-dribbble, footer section.footer-social .icon-google {
+  display: inline-block;
+  color: #999999;
+  width: 16px;
+  height: 16px;
+  background: url("../img/twitter.svg") center center no-repeat transparent;
+  background-size: 16px;
+  opacity: 0.8;
+  border-bottom: none;
+  -webkit-transition: 150ms opacity linear;
+  -moz-transition: 150ms opacity linear;
+  -o-transition: 150ms opacity linear;
+  transition: 150ms opacity linear;
+}
+/* line 42, ../scss/base/_layout.scss */
+footer section.footer-social .icon-twitter:hover, footer section.footer-social .icon-github:hover, footer section.footer-social .icon-dribbble:hover, footer section.footer-social .icon-google:hover {
+  opacity: 1;
+  border: none;
+}
+/* line 48, ../scss/base/_layout.scss */
+footer section.footer-social .icon-github {
+  background-image: url("../img/github.svg");
+}
+/* line 53, ../scss/base/_layout.scss */
+footer section.footer-social .icon-dribbble {
+  background-image: url("../img/dribbble.svg");
+}
+/* line 58, ../scss/base/_layout.scss */
+footer section.footer-social .icon-google {
+  background-image: url("../img/google-plus.svg");
+}
 
-/* line 30, ../scss/base/_layout.scss */
+/* line 67, ../scss/base/_layout.scss */
 .panel {
   width: 100%;
   padding: 2em 0;
   background-color: white;
 }
-/* line 34, ../scss/base/_layout.scss */
+/* line 71, ../scss/base/_layout.scss */
 .panel.transparent {
   background-color: transparent;
 }
-/* line 37, ../scss/base/_layout.scss */
+/* line 74, ../scss/base/_layout.scss */
 .panel.white {
   background-color: white;
   color: #666666;
 }
-/* line 41, ../scss/base/_layout.scss */
+/* line 78, ../scss/base/_layout.scss */
 .panel.tan {
   background-color: #002b36;
   color: #666666;
 }
-/* line 45, ../scss/base/_layout.scss */
+/* line 82, ../scss/base/_layout.scss */
 .panel.navy {
   background-color: #002b36;
   color: #999999;
 }
 
-/* line 51, ../scss/base/_layout.scss */
+/* line 88, ../scss/base/_layout.scss */
 .constrain {
   width: 80%;
   max-width: 45em;
   padding: 0 10%;
   margin: 0 auto;
 }
-/* line 56, ../scss/base/_layout.scss */
+/* line 93, ../scss/base/_layout.scss */
 .constrain .full-width {
   width: 100vw;
   height: auto;
 }
 
-/* line 62, ../scss/base/_layout.scss */
+/* line 99, ../scss/base/_layout.scss */
 .feature {
   margin-top: -3em;
 }
 
-/* line 66, ../scss/base/_layout.scss */
+/* line 103, ../scss/base/_layout.scss */
 .right {
   float: right;
 }
 
-/* line 70, ../scss/base/_layout.scss */
+/* line 107, ../scss/base/_layout.scss */
 .left {
   float: left;
 }
