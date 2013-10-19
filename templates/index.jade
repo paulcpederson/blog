@@ -42,8 +42,12 @@ block content
         a.previous.left(href= locals.url + '/archive/')
           p.small view all articles:
           p Archive
-
-        - var next = contents.index.articles[0]
+          - var next;
+          - for (var i = contents.index.articles.length - 1; i > 0; i-- ){
+          -   if (!contents.index.articles[i].metadata.draft){
+          -     next = contents.index.articles[i];
+          -   }
+          - }
           a.next.right(href= locals.url + next.url)
             p.small most recent article:
             p= next.title
