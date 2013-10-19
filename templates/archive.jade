@@ -28,13 +28,14 @@ block content
             p= year
           - var yearArticles = _.groupBy(archive[year], function(item) { return map[item.date.getUTCMonth()] })
           - var months = Object.keys(yearArticles);
-          each month, i in months
-            - var articles = yearArticles[month]
-            each article, i in articles
-              div.col.col2of5
-                div.archive
-                  p.archive-title
-                    a(href=article.url)= article.title
-                  p.small= moment.utc(article.date).format('M.D.YYYY')
-                  p.archive-description= article.metadata.description
+          div.col.col4of5
+            each month, i in months
+              - var articles = yearArticles[month]
+                each article, i in articles
+                  if !article.metadata.draft
+                    div.archive
+                      p.archive-title
+                        a(href=article.url)= article.title
+                      p.small= moment.utc(article.date).format('M.D.YYYY')
+                      p.archive-description= article.metadata.description
 

@@ -6,6 +6,7 @@ background: balkan.jpg
 thumbnail: balkan-thumb.jpg
 canvas: navy mesh
 spot: blue
+draft: true
 description: "In 1879 the USGS started mapping the country. The topographic maps they created are beautiful data visualization at its finest"
 ---
 
