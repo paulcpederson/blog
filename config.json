@@ -2,6 +2,7 @@
   "locals": {
     "url": "http://localhost:8080",
     "build": "http://paulcpederson.com",
+    "description": "I'm a web designer and developer living in Portland, OR. I write about the art, maps, design, and the internet.",
     "name": "Paul C Pederson"
   },
   "plugins": [

@@ -5,6 +5,9 @@ extends layout
 block append vars
   - bodyclass = 'cyan'
 
+block prepend description
+  meta(name='description', content='Archive of blog articles written by Paul C Pederson')
+
 block hero
   section.hero.navy.short.mesh(style='background-image: url(' + locals.url + '/img/archive.svg);')
     div.title-wrap.constrain

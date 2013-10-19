@@ -5,6 +5,9 @@ block append vars
     if article.metadata.featured
       - bodyclass = article.metadata.spot
 
+block prepend description
+  meta(name='description', content= locals.description)
+
 block hero
   each article in articles
     if article.metadata.featured
