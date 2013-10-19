@@ -22,9 +22,8 @@ html(lang='en')
         nav.constrain
           a.left(href=locals.url)= locals.name
           a.right(href=locals.url + '/archive/') Archive
-          span.right /
-          a.right(href=locals.url) Blog
-          a= mode
+          span.right.hide-mobile /
+          a.right.hide-mobile(href=locals.url) Blog
     block hero
     block content
       div.panel.white

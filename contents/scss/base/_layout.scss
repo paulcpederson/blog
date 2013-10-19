@@ -16,6 +16,11 @@
     padding: 0.25em 0.5em;
     line-height: 1em;
   }
+  .hide-mobile {
+    @include respond-to(0, 400px){
+      display: none;
+    }
+  }
 }
 
 // Footer

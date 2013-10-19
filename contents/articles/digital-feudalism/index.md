@@ -9,9 +9,9 @@ spot: blue
 description: "Hasty notes on Aral Balkan's terrific talk at Realtime Conf 2013 regarding data ownership and the open source experience"
 ---
 
-*Cover Image from [cvonposer](http://www.flickr.com/photos/cvonposer/6401515437/) on Flickr. Licensed under Creative Commons*
+<p class="caption">Cover Image from <a href="http://www.flickr.com/photos/cvonposer/6401515437/">cvonposer</a> on Flickr. Licensed under Creative Commons</p>
 
-**At Realtime Conf 2013, [Aral Balkan](http://aralbalkan.com/) gave an awesome talk about data ownership and the future of the open source experience. He covers a lot of ground ranging from Apple, Google, and the NSA to cyborgs and design. I've written down the highlights below.**
+At Realtime Conf 2013, [Aral Balkan](http://aralbalkan.com/) gave an awesome talk about data ownership and the future of the open source experience. He covers a lot of ground ranging from Apple, Google, and the NSA to cyborgs and design. I've written down the highlights below.
 
 ### Being a Cyborg
 

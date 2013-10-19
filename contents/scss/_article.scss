@@ -69,7 +69,7 @@ body{
   display: block;
   z-index: 2;
   @include box-sizing(border-box);
-  padding: 25vh 1em 4em 1em;
+  padding: 8em 1em 4em 1em;
   &.in-article {
     padding: 1.5em 1em 0 1em;
     .date {
@@ -174,35 +174,46 @@ article {
       margin: 0.5em 0;
     }
     &.next {
-      padding: 3em 20% 2.5em 0;
+      padding: 3em 12% 2.5em 0;
       background-image: url(../img/right-arrow.svg);
-      background-position:  80% center;
+      background-position:  90% center;
       background-repeat: no-repeat;
       text-align: right;
+      @include respond-to(0, 560px){
+        background-position: 100% center;
+        border-top: 1px solid rgba(0,0,0,0.2);
+        margin-top: -1px;
+      }
       &:hover {
-        padding-right: 18%;
-        background-position:  82% center;
+        padding-right: 10%;
+        background-position:  92% center;
+        @include respond-to(0, 560px){
+          background-position: 100% center;
+        }
       }
     }
     &.previous {
-      padding: 3em 0 2.5em 20%;
+      padding: 3em 0 2.5em 12%;
       background-image: url(../img/left-arrow.svg);
       background-position:  10% center;
       background-repeat: no-repeat;
       text-align: left;
+      @include respond-to(0, 560px){
+        background-position: left center;
+      }
       &:hover {
-        padding-left: 18%;
+        padding-left: 10%;
         background-position:  8% center;
+        @include respond-to(0, 560px){
+          background-position: left center;
+        }
       }
     }
     &.next, &.previous {
-      @include respond-to(0px, 700px){
-        background: none;
-        background-image: none;
-        padding: 1em 2em;
-        &:hover {
-          padding: 1em 2em;
-        }
+      @include respond-to(0, 560px){
+        width: 100%;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
       }
     }
   }
