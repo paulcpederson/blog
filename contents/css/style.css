@@ -295,22 +295,22 @@ h2 {
 
 /* line 87, ../scss/base/_typography.scss */
 h3 {
-  font-size: 0.9em;
+  font-size: 1.275em;
 }
 
 /* line 88, ../scss/base/_typography.scss */
 h4 {
-  font-size: 0.825em;
+  font-size: 1.2em;
 }
 
 /* line 89, ../scss/base/_typography.scss */
 h5 {
-  font-size: 0.75em;
+  font-size: 1.125em;
 }
 
 /* line 90, ../scss/base/_typography.scss */
 h6 {
-  font-size: 0.675em;
+  font-size: 1.05em;
 }
 
 /* line 94, ../scss/base/_typography.scss */
@@ -371,6 +371,17 @@ p.small {
 a {
   text-decoration: none;
   color: #2aa198;
+}
+
+/* line 143, ../scss/base/_typography.scss */
+ul {
+  margin: 2em 0;
+}
+/* line 145, ../scss/base/_typography.scss */
+ul li {
+  font-size: 0.85em;
+  line-height: 2em;
+  margin-left: 1.5em;
 }
 
 /* code styling */
@@ -730,7 +741,11 @@ body.yellow article blockquote {
   color: #b58900;
   border-left: 3px solid #b58900;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.yellow article h2, body.yellow article h3, body.yellow article h4, body.yellow article h5, body.yellow article h6 {
+  color: #b58900;
+}
+/* line 107, ../scss/base/_mixins.scss */
 body.yellow footer a:hover, body.yellow footer a:focus {
   color: #b58900;
   border-bottom: 2px solid #b58900;
@@ -807,7 +822,11 @@ body.orange article blockquote {
   color: #cb4b16;
   border-left: 3px solid #cb4b16;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.orange article h2, body.orange article h3, body.orange article h4, body.orange article h5, body.orange article h6 {
+  color: #cb4b16;
+}
+/* line 107, ../scss/base/_mixins.scss */
 body.orange footer a:hover, body.orange footer a:focus {
   color: #cb4b16;
   border-bottom: 2px solid #cb4b16;
@@ -884,7 +903,11 @@ body.red article blockquote {
   color: #dc322f;
   border-left: 3px solid #dc322f;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.red article h2, body.red article h3, body.red article h4, body.red article h5, body.red article h6 {
+  color: #dc322f;
+}
+/* line 107, ../scss/base/_mixins.scss */
 body.red footer a:hover, body.red footer a:focus {
   color: #dc322f;
   border-bottom: 2px solid #dc322f;
@@ -961,7 +984,11 @@ body.magenta article blockquote {
   color: #d33682;
   border-left: 3px solid #d33682;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.magenta article h2, body.magenta article h3, body.magenta article h4, body.magenta article h5, body.magenta article h6 {
+  color: #d33682;
+}
+/* line 107, ../scss/base/_mixins.scss */
 body.magenta footer a:hover, body.magenta footer a:focus {
   color: #d33682;
   border-bottom: 2px solid #d33682;
@@ -1038,7 +1065,11 @@ body.violet article blockquote {
   color: #6c71c4;
   border-left: 3px solid #6c71c4;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.violet article h2, body.violet article h3, body.violet article h4, body.violet article h5, body.violet article h6 {
+  color: #6c71c4;
+}
+/* line 107, ../scss/base/_mixins.scss */
 body.violet footer a:hover, body.violet footer a:focus {
   color: #6c71c4;
   border-bottom: 2px solid #6c71c4;
@@ -1115,7 +1146,11 @@ body.blue article blockquote {
   color: #268bd2;
   border-left: 3px solid #268bd2;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.blue article h2, body.blue article h3, body.blue article h4, body.blue article h5, body.blue article h6 {
+  color: #268bd2;
+}
+/* line 107, ../scss/base/_mixins.scss */
 body.blue footer a:hover, body.blue footer a:focus {
   color: #268bd2;
   border-bottom: 2px solid #268bd2;
@@ -1192,7 +1227,11 @@ body.cyan article blockquote {
   color: #2aa198;
   border-left: 3px solid #2aa198;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.cyan article h2, body.cyan article h3, body.cyan article h4, body.cyan article h5, body.cyan article h6 {
+  color: #2aa198;
+}
+/* line 107, ../scss/base/_mixins.scss */
 body.cyan footer a:hover, body.cyan footer a:focus {
   color: #2aa198;
   border-bottom: 2px solid #2aa198;
@@ -1269,7 +1308,11 @@ body.green article blockquote {
   color: #859900;
   border-left: 3px solid #859900;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 101, ../scss/base/_mixins.scss */
+body.green article h2, body.green article h3, body.green article h4, body.green article h5, body.green article h6 {
+  color: #859900;
+}
+/* line 107, ../scss/base/_mixins.scss */
 body.green footer a:hover, body.green footer a:focus {
   color: #859900;
   border-bottom: 2px solid #859900;

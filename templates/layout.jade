@@ -10,7 +10,6 @@ html(lang='en')
       title
         block title
           = locals.name
-
       - if (env.mode == 'build'){
       -   locals.url = locals.build
       - }
