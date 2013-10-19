@@ -5,9 +5,52 @@
     <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://localhost:8080</link>
     <description></description>
-    <pubDate>Mon, 05  Aug 2013 17:00:00 -0700</pubDate>
+    <pubDate>Thu, 17 Oct 2013 17:00:00 -0700</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Digital Feudalism</title>
+      <link>http://localhost:8080/articles/digital-feudalism/</link>
+      <pubDate>Thu, 17 Oct 2013 17:00:00 -0700</pubDate>
+      <guid isPermaLink="true">http://localhost:8080/articles/digital-feudalism/</guid>
+      <author></author>
+      <description>&lt;p class=&quot;caption&quot;&gt;Cover Image from &lt;a href=&quot;http://www.flickr.com/photos/cvonposer/6401515437/&quot;&gt;cvonposer&lt;/a&gt; on Flickr. Licensed under Creative Commons&lt;/p&gt;
+
+&lt;p&gt;At Realtime Conf 2013, &lt;a href=&quot;http://aralbalkan.com/&quot;&gt;Aral Balkan&lt;/a&gt; gave an awesome talk about data ownership and the future of the open source experience. He covers a lot of ground ranging from Apple, Google, and the NSA to cyborgs and design. I&amp;#39;ve written down the highlights below.&lt;/p&gt;
+&lt;h3&gt;Being a Cyborg&lt;/h3&gt;
+&lt;p&gt;Where do we draw the boundaries of our person? Balkan rightly argues that phones and other devices are cybernetic extensions of us. The camera extends your eyes, the phone/text amplifies your voice, the storage and RAM extend your memory. Your device is part of you and extends your abilities.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;We are cyborgs.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;What naturally follows is that surveillance is a violation of the person. Eric Schmidt (of Google) said, “If you have something you want somebody to know, maybe you shouldn‘t be doing it in the first place.” Basically, this is total bullshit. Eric does a lot of things he doesn’t want other people to know about, namely masturbation.&lt;/p&gt;
+&lt;p&gt;Clearly Eric doesn&amp;#39;t understand that privacy is about what you &lt;em&gt;want&lt;/em&gt; to share. Article 12 protects this. It&amp;#39;s a fundamental right.&lt;/p&gt;
+&lt;h3&gt;Google&lt;/h3&gt;
+&lt;p&gt;Google has always been about services. They have multiple devices, and one login. Same experience on all devices.
+Google&amp;#39;s business model is monetizing your data.&lt;/p&gt;
+&lt;p&gt;They use games as a means to get data. Ingres teaches pedestrian routes. ReCaptcha teaches how to digitize books.&lt;/p&gt;
+&lt;p&gt;End game is to give you services, devices, and connectivity so they have &lt;em&gt;all your data&lt;/em&gt; (to monetize). Google needs you to volunteer all your data. They need your data to survive.&lt;/p&gt;
+&lt;h3&gt;What to Do?&lt;/h3&gt;
+&lt;p&gt;We need to own our ‘digital self’. Unfortunately this is hard. It is quite possible for developers and ‘enthusiasts’, but it is not possible for your grandma.&lt;/p&gt;
+&lt;p&gt;We need to make open source better, and not just the code. We need to think about the experience. Open source software is still feature driven. It must become experience driven.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Hardware + Software + Connectivity = Experience&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;An experience is comprised of hardware, software, and connectivity. Open source and indie data projects need to think about all of these elements. In order to provide users (especially non-enthusiast users) a good overall experience, all of these levels are important. We need ‘experience driven’ open source.&lt;/p&gt;
+&lt;p&gt;Indie Data is empowering regular people to own their own data. Visit &lt;a href=&quot;http://indiedata.org/&quot;&gt;Indie Data&lt;/a&gt; to learn more.&lt;/p&gt;
+&lt;h4&gt;Design&lt;/h4&gt;
+&lt;p&gt;Balkan devoted quite a bit of his talk to design. Basically he said three things:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Design is about focus. It&amp;#39;s about saying no no no no.&lt;/li&gt;
+&lt;li&gt;Design is not a veneer. Not makeup.&lt;/li&gt;
+&lt;li&gt;Design leads development and development informs design.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Vision. Everything is filtered through design vision. We need to understand humans to make things for humans. What sort of things? Things that make their lives better.&lt;/p&gt;
+&lt;p&gt;Watch the &lt;a href=&quot;http://thelink.is/uxtalk&quot;&gt;full UX talk&lt;/a&gt; if you&amp;#39;re interested in more about ux.&lt;/p&gt;
+&lt;p&gt;Watch &lt;a href=&quot;http://tacma.net/&quot;&gt;Terms and Conditions May Apply&lt;/a&gt; to learn more and teach friends about privacy.&lt;/p&gt;
+&lt;p&gt;Most people are digital serfs, having to rent their services with their data. Let&amp;#39;s build something to free them from that slavery. Let them keep their data &lt;em&gt;and&lt;/em&gt; have a great experience.&lt;/p&gt;
+&lt;p&gt;Currently Balkan is working on &lt;a href=&quot;http://aralbalkan.com/notes/codename-prometheus/&quot;&gt;Codename Prometheus&lt;/a&gt;, a project that ambitiously tries to solve all of these problems. I can&amp;#39;t wait.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Devicons</title>
       <link>http://localhost:8080/articles/devicons/</link>

@@ -32,6 +32,7 @@ pre {
     color: $base0;
     width: 100%;
     line-height: 1.25;
+    overflow: auto;
   }
 
   .comment, .template_comment, .diff .header, .doctype, .lisp .string, .javadoc {

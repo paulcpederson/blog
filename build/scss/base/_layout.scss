@@ -16,6 +16,11 @@
     padding: 0.25em 0.5em;
     line-height: 1em;
   }
+  .hide-mobile {
+    @include respond-to(0, 400px){
+      display: none;
+    }
+  }
 }
 
 // Footer
@@ -24,7 +29,44 @@ footer {
     @include transition(150ms border-color linear);
     border-bottom: 2px solid transparent;
   }
+  section.footer-social {
+    margin: 0 0 1em 0;
+    a {
+      margin-right: 1em;
+    }
+    .icon-twitter {
+      display: inline-block;
+      color: $light-gray;
+      width: 16px;
+      height: 16px;
+      background:url('../img/twitter.svg') center center no-repeat  transparent;
+      background-size: 16px;
+      opacity: 0.8;
+      border-bottom: none;
+      @include transition(150ms opacity linear);
+      &:hover {
+        opacity: 1;
+        border: none;
+      }
+    }
+
+    .icon-github {
+      @extend .icon-twitter;
+      background-image: url('../img/github.svg');
+    }
+
+    .icon-dribbble {
+      @extend .icon-twitter;
+      background-image: url('../img/dribbble.svg');
+    }
+
+    .icon-google {
+      @extend .icon-twitter;
+      background-image: url('../img/google-plus.svg');
+    }
+  }
 }
+
 
 // Reusable Layout Classes
 .panel {

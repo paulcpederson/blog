@@ -84,10 +84,10 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { font-size: $header-size;}
 h2 { font-size: $header-size * 0.9;}
-h3 { font-size: $header-size * 0.6;}
-h4 { font-size: $header-size * 0.55;}
-h5 { font-size: $header-size * 0.5;}
-h6 { font-size: $header-size * 0.45;}
+h3 { font-size: $header-size * 0.85;}
+h4 { font-size: $header-size * 0.8;}
+h5 { font-size: $header-size * 0.75;}
+h6 { font-size: $header-size * 0.7;}
 
 // spot color classes
 h1, h2, h3, h4, h5, h6, a {
@@ -138,4 +138,13 @@ p {
 a {
   text-decoration: none;
   color: $cyan;
+}
+
+ul {
+  margin: 2em 0;
+  li {
+    font-size: 0.85em;
+    line-height: 2em;
+    margin-left: 1.5em;
+  }
 }
