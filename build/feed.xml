@@ -4,7 +4,7 @@
     <title>Paul C Pederson</title>
     <atom:link href="http://localhost:8080/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://localhost:8080</link>
-    <description></description>
+    <description>I'm a web designer and developer living in Portland, OR. I write about the art, maps, design, and the internet.</description>
     <pubDate>Thu, 17 Oct 2013 17:00:00 -0700</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
