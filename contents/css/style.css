@@ -1648,3 +1648,26 @@ article a {
   font-size: 0.9em;
   max-width: 24em;
 }
+
+/* line 1, ../scss/_map.scss */
+body {
+  position: relative;
+}
+
+/* line 5, ../scss/_map.scss */
+#map {
+  display: block;
+  height: 90vh;
+  background: #999999;
+}
+
+/* line 11, ../scss/_map.scss */
+#article {
+  margin-top: 0;
+  padding-top: 0;
+}
+/* line 14, ../scss/_map.scss */
+#article .title {
+  margin-top: 0;
+  padding-top: 0.75em;
+}
