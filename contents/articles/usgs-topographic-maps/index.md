@@ -3,9 +3,9 @@ title: USGS Topographic Maps
 date: 2013-11-15
 template: map.jade
 background: balkan.jpg
-thumbnail: balkan-thumb.jpg
+thumbnail: usgs-thumb.jpg
 canvas: navy mesh
-spot: blue
+spot: green
 draft: true
 description: "In 1879 the USGS started mapping the country. The topographic maps they created are beautiful data visualization at its finest"
 ---

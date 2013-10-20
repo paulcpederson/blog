@@ -20,7 +20,7 @@ block content
   - }).value()
   - var map = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
   div.panel.white
-    section.archive.constrain
+    section.constrain
       - var years = _.chain(archive).keys().reverse().value()
       each year, i in years
         div.col-group.year
@@ -29,11 +29,11 @@ block content
           - var yearArticles = _.groupBy(archive[year], function(item) { return map[item.date.getUTCMonth()] })
           - var months = Object.keys(yearArticles);
           div.col.col4of5
-            each month, i in months
-              - var articles = yearArticles[month]
-                each article, i in articles
-                  if !article.metadata.draft
-                    div.archive
+            div.col-group
+              each month, i in months
+                - var articles = yearArticles[month]
+                  each article, i in articles
+                    div.archive.col.col1of2
                       p.archive-title
                         a(href=article.url)= article.title
                       p.small= moment.utc(article.date).format('M.D.YYYY')

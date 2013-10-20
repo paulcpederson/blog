@@ -10,44 +10,37 @@ block prepend description
 
 block hero
   each article in articles
-    if !article.metadata.draft
-      if article.metadata.featured
-        if article.metadata.background
-          section(class='hero homepage ' + article.metadata.canvas, style='background-image: url(' + locals.url + '/img/' + article.metadata.background + ')')
-            div.title-wrap.constrain
-              p.small Featured Post:
-              h2.title
-                a(href= locals.url + article.url)= article.title
-              p.description= article.metadata.description
-              a(href= locals.url + article.url, class= 'btn ' + article.metadata.spot) Read More »
+    if article.metadata.featured
+      if article.metadata.background
+        section(class='hero homepage ' + article.metadata.canvas, style='background-image: url(' + locals.url + '/img/' + article.metadata.background + ')')
+          div.title-wrap.constrain
+            p.small Featured Post:
+            h2.title
+              a(href= locals.url + article.url)= article.title
+            p.description= article.metadata.description
+            a(href= locals.url + article.url, class= 'btn ' + article.metadata.spot) Read More »
 
 block content
   div.panel.white
     div.constrain
       each article in articles
-        if !article.metadata.draft
-          div.col-group.blog-roll
-            a.thumbnail(style='background-image: url(' + locals.url + '/img/' + article.metadata.thumbnail + ')', href= locals.url + article.url)
-            div.col2of5.col.text
-              header
-                h2
-                  a(href= locals.url + article.url, class= article.metadata.spot)= article.title
-                p.small= moment.utc(article.date).format('DD MMMM YYYY')
-              section
-                p= article.metadata.description
-                p.small
-                  a(href= locals.url + article.url, class= article.metadata.spot) Read More »
+        div.col-group.blog-roll
+          a.thumbnail(style='background-image: url(' + locals.url + '/img/' + article.metadata.thumbnail + ')', href= locals.url + article.url)
+          div.col2of5.col.text
+            header
+              h2
+                a(href= locals.url + article.url, class= article.metadata.spot)= article.title
+              p.small= moment.utc(article.date).format('DD MMMM YYYY')
+            section
+              p= article.metadata.description
+              p.small
+                a(href= locals.url + article.url, class= article.metadata.spot) Read More »
   div.bottom-nav
     div.constrain.clearfix
         a.previous.left(href= locals.url + '/archive/')
           p.small view all articles:
           p Archive
-          - var next;
-          - for (var i = contents.index.articles.length - 1; i > 0; i-- ){
-          -   if (!contents.index.articles[i].metadata.draft){
-          -     next = contents.index.articles[i];
-          -   }
-          - }
+          - var next = contents.index.articles[0]
           a.next.right(href= locals.url + next.url)
             p.small most recent article:
             p= next.title
