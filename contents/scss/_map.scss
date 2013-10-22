@@ -6,6 +6,30 @@ body{
   display: block;
   height: 90vh;
   background: $light-gray;
+  .leaflet-top {
+    top: 50%;
+    margin-top: -50px;
+  }
+  .leaflet-bar {
+    @include box-shadow(none);
+    @include border-radius(3px);
+    a {
+      @include transition(100ms all linear);
+      font-family: $button-font;
+      width: 26px;
+      height: 26px;
+      line-height: 26px;
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      &:hover {
+        color: $white;
+      }
+      &:last-child {
+        margin-top: -1px;
+      }
+    }
+  }
 }
 
 #article {
@@ -13,6 +37,6 @@ body{
   padding-top: 0;
   .title {
     margin-top: 0;
-    padding-top: 0.4em;
+    padding-top: 0.6em;
   }
 }

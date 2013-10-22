@@ -788,7 +788,17 @@ body.yellow article blockquote {
   color: #b58900;
   border-left: 3px solid #b58900;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.yellow .leaflet-bar a {
+  border: 1px solid #b58900;
+  color: #b58900;
+  background-color: transparent;
+}
+/* line 107, ../scss/base/_mixins.scss */
+body.yellow .leaflet-bar a:hover {
+  background-color: #b58900;
+}
+/* line 114, ../scss/base/_mixins.scss */
 body.yellow footer a:hover, body.yellow footer a:focus {
   color: #b58900;
   border-bottom: 2px solid #b58900;
@@ -865,7 +875,17 @@ body.orange article blockquote {
   color: #cb4b16;
   border-left: 3px solid #cb4b16;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.orange .leaflet-bar a {
+  border: 1px solid #cb4b16;
+  color: #cb4b16;
+  background-color: transparent;
+}
+/* line 107, ../scss/base/_mixins.scss */
+body.orange .leaflet-bar a:hover {
+  background-color: #cb4b16;
+}
+/* line 114, ../scss/base/_mixins.scss */
 body.orange footer a:hover, body.orange footer a:focus {
   color: #cb4b16;
   border-bottom: 2px solid #cb4b16;
@@ -942,7 +962,17 @@ body.red article blockquote {
   color: #dc322f;
   border-left: 3px solid #dc322f;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.red .leaflet-bar a {
+  border: 1px solid #dc322f;
+  color: #dc322f;
+  background-color: transparent;
+}
+/* line 107, ../scss/base/_mixins.scss */
+body.red .leaflet-bar a:hover {
+  background-color: #dc322f;
+}
+/* line 114, ../scss/base/_mixins.scss */
 body.red footer a:hover, body.red footer a:focus {
   color: #dc322f;
   border-bottom: 2px solid #dc322f;
@@ -1019,7 +1049,17 @@ body.magenta article blockquote {
   color: #d33682;
   border-left: 3px solid #d33682;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.magenta .leaflet-bar a {
+  border: 1px solid #d33682;
+  color: #d33682;
+  background-color: transparent;
+}
+/* line 107, ../scss/base/_mixins.scss */
+body.magenta .leaflet-bar a:hover {
+  background-color: #d33682;
+}
+/* line 114, ../scss/base/_mixins.scss */
 body.magenta footer a:hover, body.magenta footer a:focus {
   color: #d33682;
   border-bottom: 2px solid #d33682;
@@ -1096,7 +1136,17 @@ body.violet article blockquote {
   color: #6c71c4;
   border-left: 3px solid #6c71c4;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.violet .leaflet-bar a {
+  border: 1px solid #6c71c4;
+  color: #6c71c4;
+  background-color: transparent;
+}
+/* line 107, ../scss/base/_mixins.scss */
+body.violet .leaflet-bar a:hover {
+  background-color: #6c71c4;
+}
+/* line 114, ../scss/base/_mixins.scss */
 body.violet footer a:hover, body.violet footer a:focus {
   color: #6c71c4;
   border-bottom: 2px solid #6c71c4;
@@ -1173,7 +1223,17 @@ body.blue article blockquote {
   color: #268bd2;
   border-left: 3px solid #268bd2;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.blue .leaflet-bar a {
+  border: 1px solid #268bd2;
+  color: #268bd2;
+  background-color: transparent;
+}
+/* line 107, ../scss/base/_mixins.scss */
+body.blue .leaflet-bar a:hover {
+  background-color: #268bd2;
+}
+/* line 114, ../scss/base/_mixins.scss */
 body.blue footer a:hover, body.blue footer a:focus {
   color: #268bd2;
   border-bottom: 2px solid #268bd2;
@@ -1250,7 +1310,17 @@ body.cyan article blockquote {
   color: #2aa198;
   border-left: 3px solid #2aa198;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.cyan .leaflet-bar a {
+  border: 1px solid #2aa198;
+  color: #2aa198;
+  background-color: transparent;
+}
+/* line 107, ../scss/base/_mixins.scss */
+body.cyan .leaflet-bar a:hover {
+  background-color: #2aa198;
+}
+/* line 114, ../scss/base/_mixins.scss */
 body.cyan footer a:hover, body.cyan footer a:focus {
   color: #2aa198;
   border-bottom: 2px solid #2aa198;
@@ -1327,7 +1397,17 @@ body.green article blockquote {
   color: #859900;
   border-left: 3px solid #859900;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.green .leaflet-bar a {
+  border: 1px solid #859900;
+  color: #859900;
+  background-color: transparent;
+}
+/* line 107, ../scss/base/_mixins.scss */
+body.green .leaflet-bar a:hover {
+  background-color: #859900;
+}
+/* line 114, ../scss/base/_mixins.scss */
 body.green footer a:hover, body.green footer a:focus {
   color: #859900;
   border-bottom: 2px solid #859900;
@@ -1647,14 +1727,52 @@ body {
   height: 90vh;
   background: #999999;
 }
+/* line 9, ../scss/_map.scss */
+#map .leaflet-top {
+  top: 50%;
+  margin-top: -50px;
+}
+/* line 13, ../scss/_map.scss */
+#map .leaflet-bar {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 16, ../scss/_map.scss */
+#map .leaflet-bar a {
+  -webkit-transition: 100ms all linear;
+  -moz-transition: 100ms all linear;
+  -o-transition: 100ms all linear;
+  transition: 100ms all linear;
+  font-family: "Inconsolata", "Courier New", courier, monospace;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+}
+/* line 25, ../scss/_map.scss */
+#map .leaflet-bar a:hover {
+  color: white;
+}
+/* line 28, ../scss/_map.scss */
+#map .leaflet-bar a:last-child {
+  margin-top: -1px;
+}
 
-/* line 11, ../scss/_map.scss */
+/* line 35, ../scss/_map.scss */
 #article {
   margin-top: 0;
   padding-top: 0;
 }
-/* line 14, ../scss/_map.scss */
+/* line 38, ../scss/_map.scss */
 #article .title {
   margin-top: 0;
-  padding-top: 0.4em;
+  padding-top: 0.6em;
 }

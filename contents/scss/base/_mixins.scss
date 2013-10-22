@@ -99,6 +99,16 @@
       border-left: 3px solid $color;
     }
   }
+  .leaflet-bar {
+    a {
+      border: 1px solid $color;
+      color: $color;
+      background-color: transparent;
+      &:hover {
+        background-color: $color;
+      }
+    }
+  }
   footer {
     a {
       &:hover, &:focus {
