@@ -61,4 +61,5 @@ Most people are digital serfs, having to rent their services with their data. Le
 
 Currently Balkan is working on [Codename Prometheus](http://aralbalkan.com/notes/codename-prometheus/), a project that ambitiously tries to solve all of these problems. I can't wait.
 
+<div class="video-wrap"><iframe src="//player.vimeo.com/video/77257232?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
 
