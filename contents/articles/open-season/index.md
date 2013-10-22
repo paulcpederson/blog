@@ -19,7 +19,7 @@ Node has several non-blocking work-flows for growing the community. Node is pret
 
 NPM is where you can put *anything*. No dependency hell. Any number of people can work on something. This grows a community fast. Thousands and thousands of modules exist in an interrelated ecosystem.
 
->NPM is more interesting that Node.
+>NPM is more interesting than Node.
 
 Publishing small modules that have version numbers is important. It helps to distribute maintenance and responsibility. Everybody owns their own chunk. If you have a feature you want in another module, just write your own module with that feature and depend on the original module. In that way, you become the owner of that module.
 
