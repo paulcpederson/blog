@@ -16,6 +16,11 @@
   "jade": {
     "pretty": true
   },
+  "ignore":  [
+    "scss",
+    "**/config.json",
+    "**/.DS_Store"
+  ],
   "markdown": {
     "smartLists": true,
     "smartypants": true
