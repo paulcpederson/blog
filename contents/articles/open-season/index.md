@@ -54,3 +54,7 @@ Ogden then showed a great chart that diagrammed all the components needed to hav
 **Open Government:** People aren't even sure if this is a good idea yet. It's very early. Local government is a way to get around the mistrust of federal government. Talked about Code for America, and Textizen along with lots of other startups who are working to make open government a reality.
 
 People should bravely leave their silos and go help the fight of the frontier. Work together to make everything more transparent and open.
+
+Check out the slides [here](http://maxogden.github.io/slides/realtimeconf/#/1) or watch the video:
+
+<div class="video-wrap"><iframe src="//player.vimeo.com/video/77376239?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
