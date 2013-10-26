@@ -2,7 +2,7 @@
   "locals": {
     "url": "",
     "build": "http://paulcpederson.com",
-    "description": "I'm a web designer and developer living in Portland, OR. I write about the art, maps, design, and the internet.",
+    "description": "I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.",
     "name": "Paul C Pederson"
   },
   "plugins": [
