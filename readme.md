@@ -29,6 +29,7 @@ css:
   - file1
   - file2
 ---
+```
 
 - **title:** title of the post (not the slug) that will appear in list and archive.
 - **date:** YYYY-MM-DD formatted date
