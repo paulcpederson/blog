@@ -1,0 +1,19 @@
+doctype xml
+urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9", xmlns:image="http://www.google.com/schemas/sitemap-image/1.1")
+  - for (var i = 0; i < contents.index.articles.length;  i++){
+  -   var article = contents.index.articles[i]
+    url
+      loc= 'http://paulcpederson.com' + article.url
+      image:image
+        image:loc= 'http://paulcpederson.com' + article.metadata.thumbnail
+      changefreq monthly
+  - }
+    url
+      loc http://paulcpederson.com/archive/
+      changefreq daily
+    url
+      loc http://paulcpederson.com/
+      changefreq daily
+    url
+      loc http://paulcpederson.com/feed.xml
+      changefreq daily
