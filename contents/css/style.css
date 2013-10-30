@@ -695,10 +695,10 @@ footer section.footer-social .icon-google {
   right: 50%;
   background-size: cover;
   background-position: center;
-  -webkit-transition: all 200ms linear;
-  -moz-transition: all 200ms linear;
-  -o-transition: all 200ms linear;
-  transition: all 200ms linear;
+  -webkit-transition: box-shadow 200ms linear;
+  -moz-transition: box-shadow 200ms linear;
+  -o-transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear;
 }
 /* line 48, ../scss/_home.scss */
 .thumbnail:hover {
