@@ -6,6 +6,17 @@ body{
   display: block;
   height: 90vh;
   background: $light-gray;
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+    @include box-shadow(inset 0 100px 200px rgba(0, 0, 0, 0.2), inset 0 0 200px rgba(0, 0, 0, 0.7));
+  }
   .leaflet-top {
     top: 50%;
     margin-top: -50px;
@@ -22,8 +33,10 @@ body{
       display: block;
       text-align: center;
       text-decoration: none;
+      border: 1px solid $white;
+      background: transparent;
       &:hover {
-        color: $white;
+        background: $white;
       }
       &:last-child {
         margin-top: -1px;

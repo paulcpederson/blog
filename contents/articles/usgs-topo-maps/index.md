@@ -4,6 +4,7 @@ date: 2013-11-15
 template: map.jade
 thumbnail: usgs-thumb.jpg
 spot: green
+white: true
 description: "In 1879 the USGS started mapping the country. The topographic maps they created are beautiful data visualization at its finest"
 js:
   - leaflet
@@ -15,7 +16,7 @@ css:
 
 The USGS began mapping the country in 1879 and has been the main mapping agency of the United States ever since. The best known USGS maps are the 1:24,000-scale topographic maps, also known as seven point five minute quadrangles. Originally meant to help with mineral exploration, these maps quickly became the defacto standard for trusted topological information in the United States.
 
-From 1947 to 1992 the USGS created over 55,000 of these maps for the lower United States and periodically revised them. This is the only uniform map series that covers the entire area of the United States in considerable detail. These maps are used by people who love the outdoors, land planners, and emergency responders for decades.
+From 1947 to 1992 the USGS created over 55,000 of these maps for the lower United States and periodically revised them. This is the only uniform map series that covers the entire area of the United States in considerable detail. These maps have been used for decades by people who love the outdoors, land planners, and emergency responders.
 
 The map above is a digitized version of these paper maps, which was made into a feature service and hosted on ArcGIS Online.
 

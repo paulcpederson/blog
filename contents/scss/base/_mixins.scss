@@ -101,11 +101,9 @@
   }
   .leaflet-bar {
     a {
-      border: 1px solid $color;
-      color: $color;
-      background-color: transparent;
+      color: $white;
       &:hover {
-        background-color: $color;
+        color: $color;
       }
     }
   }

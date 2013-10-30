@@ -2,8 +2,7 @@
 extends layout
 
 block append vars
-  if page.metadata.spot
-    - bodyclass = page.metadata.spot
+  - bodyclass = page.metadata.spot + ' map'
 
 block prepend description
   meta(name='description', content= page.metadata.description)
