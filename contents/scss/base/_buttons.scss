@@ -22,6 +22,14 @@
       color: $white;
     }
   }
+  &.green {
+    border: 1px solid $green;
+    color: $green;
+    &:hover {
+      background-color: $green;
+      color: $white;
+    }
+  }
   &.white {
     border: 1px solid $white;
     color: $white;

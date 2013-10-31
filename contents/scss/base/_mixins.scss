@@ -93,6 +93,11 @@
       &:hover, &:focus {
         border-bottom: 2px solid $color;
       }
+      &.btn {
+        &:hover {
+          border-width: 1px;
+        }
+      }
     }
     blockquote {
       color: $color;
