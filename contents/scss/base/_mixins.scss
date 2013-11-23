@@ -4,9 +4,15 @@
   }
 }
 
-@mixin respond-to($min-width, $max-width) {
-  @media only screen and (min-width : $min-width) and (max-width : $max-width) {
-    @content;
+@mixin respond-to($min-width, $max-width: false) {
+  @if $min-width and $max-width {
+    @media only screen and (min-width : $min-width) and (max-width : $max-width) {
+      @content;
+    }
+  } @else {
+    @media only screen and (min-width : $min-width) {
+      @content;
+    }
   }
 }
 

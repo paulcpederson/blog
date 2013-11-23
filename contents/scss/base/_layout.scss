@@ -24,12 +24,15 @@
     }
   }
 }
+
 .map .panel.nav {
-  a {
-    color: $white;
-  }
-  span {
-    color: $white;
+  @include respond-to(481px){
+    a {
+      color: $white;
+    }
+    span {
+      color: $white;
+    }
   }
   @include respond-to(0, 480px){
     background-color: $navy;
