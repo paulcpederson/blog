@@ -50,7 +50,7 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   vertical-align: baseline;
 }
 
-/* line 21, ../scss/base/_mixins.scss */
+/* line 27, ../scss/base/_mixins.scss */
 .full {
   position: absolute;
   top: 0;
@@ -59,12 +59,12 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   left: 0;
 }
 
-/* line 27, ../scss/base/_mixins.scss */
+/* line 33, ../scss/base/_mixins.scss */
 .clearfix:before, .clearfix:after {
   content: "";
   display: table;
 }
-/* line 31, ../scss/base/_mixins.scss */
+/* line 37, ../scss/base/_mixins.scss */
 .clearfix:after {
   clear: both;
 }
@@ -496,11 +496,21 @@ pre .tex .formula {
   color: white;
 }
 /* line 25, ../scss/base/_buttons.scss */
+.btn.green {
+  border: 1px solid #859900;
+  color: #859900;
+}
+/* line 28, ../scss/base/_buttons.scss */
+.btn.green:hover {
+  background-color: #859900;
+  color: white;
+}
+/* line 33, ../scss/base/_buttons.scss */
 .btn.white {
   border: 1px solid white;
   color: white;
 }
-/* line 28, ../scss/base/_buttons.scss */
+/* line 36, ../scss/base/_buttons.scss */
 .btn.white:hover {
   background-color: white;
   color: #2aa198;
@@ -514,9 +524,11 @@ pre .tex .formula {
   right: 0;
   left: 0;
   z-index: 4;
+  pointer-events: none;
 }
-/* line 9, ../scss/base/_layout.scss */
+/* line 10, ../scss/base/_layout.scss */
 .nav a {
+  pointer-events: auto;
   text-decoration: none;
   padding: 0.25em 0;
   -webkit-transition: 150ms border-color linear;
@@ -525,19 +537,36 @@ pre .tex .formula {
   transition: 150ms border-color linear;
   border-bottom: 2px solid transparent;
 }
-/* line 15, ../scss/base/_layout.scss */
+/* line 17, ../scss/base/_layout.scss */
 .nav span {
   padding: 0.25em 0.5em;
   line-height: 1em;
 }
 @media only screen and (min-width: 0) and (max-width: 400px) {
-  /* line 19, ../scss/base/_layout.scss */
+  /* line 21, ../scss/base/_layout.scss */
   .nav .hide-mobile {
     display: none;
   }
 }
 
-/* line 28, ../scss/base/_layout.scss */
+@media only screen and (min-width: 481px) {
+  /* line 30, ../scss/base/_layout.scss */
+  .map .panel.nav a {
+    color: white;
+  }
+  /* line 33, ../scss/base/_layout.scss */
+  .map .panel.nav span {
+    color: white;
+  }
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  /* line 28, ../scss/base/_layout.scss */
+  .map .panel.nav {
+    background-color: #002b36;
+  }
+}
+
+/* line 44, ../scss/base/_layout.scss */
 footer a {
   -webkit-transition: 150ms border-color linear;
   -moz-transition: 150ms border-color linear;
@@ -545,15 +574,15 @@ footer a {
   transition: 150ms border-color linear;
   border-bottom: 2px solid transparent;
 }
-/* line 32, ../scss/base/_layout.scss */
+/* line 48, ../scss/base/_layout.scss */
 footer section.footer-social {
   margin: 0 0 1em 0;
 }
-/* line 34, ../scss/base/_layout.scss */
+/* line 50, ../scss/base/_layout.scss */
 footer section.footer-social a {
   margin-right: 1em;
 }
-/* line 37, ../scss/base/_layout.scss */
+/* line 53, ../scss/base/_layout.scss */
 footer section.footer-social .icon-twitter, footer section.footer-social .icon-github, footer section.footer-social .icon-dribbble, footer section.footer-social .icon-google {
   display: inline-block;
   color: #999999;
@@ -568,124 +597,120 @@ footer section.footer-social .icon-twitter, footer section.footer-social .icon-g
   -o-transition: 150ms opacity linear;
   transition: 150ms opacity linear;
 }
-/* line 47, ../scss/base/_layout.scss */
+/* line 63, ../scss/base/_layout.scss */
 footer section.footer-social .icon-twitter:hover, footer section.footer-social .icon-github:hover, footer section.footer-social .icon-dribbble:hover, footer section.footer-social .icon-google:hover {
   opacity: 1;
   border: none;
 }
-/* line 53, ../scss/base/_layout.scss */
+/* line 69, ../scss/base/_layout.scss */
 footer section.footer-social .icon-github {
   background-image: url("../img/github.svg");
 }
-/* line 58, ../scss/base/_layout.scss */
+/* line 74, ../scss/base/_layout.scss */
 footer section.footer-social .icon-dribbble {
   background-image: url("../img/dribbble.svg");
 }
-/* line 63, ../scss/base/_layout.scss */
+/* line 79, ../scss/base/_layout.scss */
 footer section.footer-social .icon-google {
   background-image: url("../img/google-plus.svg");
 }
 
-/* line 72, ../scss/base/_layout.scss */
+/* line 88, ../scss/base/_layout.scss */
 .panel {
   width: 100%;
   padding: 2em 0;
   background-color: white;
 }
-/* line 76, ../scss/base/_layout.scss */
+/* line 92, ../scss/base/_layout.scss */
 .panel.transparent {
   background-color: transparent;
 }
-/* line 79, ../scss/base/_layout.scss */
+/* line 95, ../scss/base/_layout.scss */
 .panel.white {
   background-color: white;
   color: #666666;
 }
-/* line 83, ../scss/base/_layout.scss */
+/* line 99, ../scss/base/_layout.scss */
 .panel.tan {
   background-color: #002b36;
   color: #666666;
 }
-/* line 87, ../scss/base/_layout.scss */
+/* line 103, ../scss/base/_layout.scss */
 .panel.navy {
   background-color: #002b36;
   color: #999999;
 }
 
-/* line 93, ../scss/base/_layout.scss */
+/* line 109, ../scss/base/_layout.scss */
 .constrain {
   width: 80%;
   max-width: 45em;
   padding: 0 10%;
   margin: 0 auto;
 }
-/* line 98, ../scss/base/_layout.scss */
+/* line 114, ../scss/base/_layout.scss */
 .constrain .full-width {
   width: 100vw;
   height: auto;
 }
 
-/* line 104, ../scss/base/_layout.scss */
+/* line 120, ../scss/base/_layout.scss */
 .feature {
   margin-top: -3em;
 }
 
-/* line 108, ../scss/base/_layout.scss */
+/* line 124, ../scss/base/_layout.scss */
 .right {
   float: right;
 }
 
-/* line 112, ../scss/base/_layout.scss */
+/* line 128, ../scss/base/_layout.scss */
 .left {
   float: left;
 }
 
-/* line 3, ../scss/_home.scss */
-.hero.homepage {
-  min-height: 50vh;
-}
-/* line 5, ../scss/_home.scss */
+/* line 4, ../scss/_home.scss */
 .hero.homepage .title-wrap {
   padding: 6em 0 5em 0;
 }
-/* line 8, ../scss/_home.scss */
+/* line 7, ../scss/_home.scss */
 .hero.homepage .title {
   text-align: left;
   margin: 0;
 }
-/* line 12, ../scss/_home.scss */
+/* line 11, ../scss/_home.scss */
 .hero.homepage .description {
   text-align: left;
   margin: 1em 0;
 }
 
-/* line 20, ../scss/_home.scss */
+/* line 19, ../scss/_home.scss */
 .blog-roll {
   position: relative;
   margin: 3em 0;
 }
-/* line 23, ../scss/_home.scss */
+/* line 22, ../scss/_home.scss */
 .blog-roll h2 {
   margin: 1em 0;
 }
-/* line 26, ../scss/_home.scss */
+/* line 25, ../scss/_home.scss */
 .blog-roll p {
   font-size: 0.75em;
 }
-/* line 29, ../scss/_home.scss */
+/* line 28, ../scss/_home.scss */
 .blog-roll .text {
   margin-left: 55%;
   padding-top: 1em;
   padding-bottom: 1em;
 }
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  /* line 29, ../scss/_home.scss */
+  /* line 28, ../scss/_home.scss */
   .blog-roll .text {
     margin-left: 0;
   }
 }
 
-/* line 38, ../scss/_home.scss */
+/* line 37, ../scss/_home.scss */
 .thumbnail {
   display: inline-block;
   position: absolute;
@@ -700,14 +725,14 @@ footer section.footer-social .icon-google {
   -o-transition: box-shadow 200ms linear;
   transition: box-shadow 200ms linear;
 }
-/* line 48, ../scss/_home.scss */
+/* line 47, ../scss/_home.scss */
 .thumbnail:hover {
   -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
 }
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  /* line 38, ../scss/_home.scss */
+  /* line 37, ../scss/_home.scss */
   .thumbnail {
     display: block;
     width: 100%;
@@ -720,75 +745,87 @@ footer section.footer-social .icon-google {
 body.yellow {
   border-top: 8px solid #b58900;
 }
-/* line 43, ../scss/base/_mixins.scss */
+/* line 49, ../scss/base/_mixins.scss */
 body.yellow nav span {
   color: #b58900;
 }
-/* line 46, ../scss/base/_mixins.scss */
+/* line 52, ../scss/base/_mixins.scss */
 body.yellow nav a {
   color: #b58900;
 }
-/* line 48, ../scss/base/_mixins.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.yellow nav a:hover, body.yellow nav a:focus {
   color: #b58900;
   border-bottom: 2px solid #b58900;
 }
-/* line 55, ../scss/base/_mixins.scss */
+/* line 61, ../scss/base/_mixins.scss */
 body.yellow .title-wrap .btn {
   border-color: #b58900;
   color: #b58900;
 }
-/* line 58, ../scss/base/_mixins.scss */
+/* line 64, ../scss/base/_mixins.scss */
 body.yellow .title-wrap .btn:hover, body.yellow .title-wrap .btn:focus {
   background-color: #b58900;
   color: white;
 }
-/* line 64, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.yellow .title {
   color: #b58900;
 }
-/* line 66, ../scss/base/_mixins.scss */
+/* line 72, ../scss/base/_mixins.scss */
 body.yellow .title a {
   color: #b58900;
 }
-/* line 70, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.yellow .date {
   color: #b58900;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 79, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav {
   background-color: #b58900;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.yellow .bottom-nav a {
   background-color: #b58900;
 }
-/* line 79, ../scss/base/_mixins.scss */
+/* line 85, ../scss/base/_mixins.scss */
 body.yellow .next, body.yellow .previous {
   background-color: #b58900;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 87, ../scss/base/_mixins.scss */
 body.yellow .next:hover, body.yellow .next:focus, body.yellow .previous:hover, body.yellow .previous:focus {
   background-color: #9c7600;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 92, ../scss/base/_mixins.scss */
 body.yellow .navy a {
   color: #b58900;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 97, ../scss/base/_mixins.scss */
 body.yellow article a {
   color: #b58900;
 }
-/* line 93, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.yellow article a:hover, body.yellow article a:focus {
   border-bottom: 2px solid #b58900;
 }
-/* line 97, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.yellow article a.btn:hover {
+  border-width: 1px;
+}
+/* line 108, ../scss/base/_mixins.scss */
 body.yellow article blockquote {
   color: #b58900;
   border-left: 3px solid #b58900;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 114, ../scss/base/_mixins.scss */
+body.yellow .leaflet-bar a {
+  color: white;
+}
+/* line 116, ../scss/base/_mixins.scss */
+body.yellow .leaflet-bar a:hover {
+  color: #b58900;
+}
+/* line 123, ../scss/base/_mixins.scss */
 body.yellow footer a:hover, body.yellow footer a:focus {
   color: #b58900;
   border-bottom: 2px solid #b58900;
@@ -797,75 +834,87 @@ body.yellow footer a:hover, body.yellow footer a:focus {
 body.orange {
   border-top: 8px solid #cb4b16;
 }
-/* line 43, ../scss/base/_mixins.scss */
+/* line 49, ../scss/base/_mixins.scss */
 body.orange nav span {
   color: #cb4b16;
 }
-/* line 46, ../scss/base/_mixins.scss */
+/* line 52, ../scss/base/_mixins.scss */
 body.orange nav a {
   color: #cb4b16;
 }
-/* line 48, ../scss/base/_mixins.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.orange nav a:hover, body.orange nav a:focus {
   color: #cb4b16;
   border-bottom: 2px solid #cb4b16;
 }
-/* line 55, ../scss/base/_mixins.scss */
+/* line 61, ../scss/base/_mixins.scss */
 body.orange .title-wrap .btn {
   border-color: #cb4b16;
   color: #cb4b16;
 }
-/* line 58, ../scss/base/_mixins.scss */
+/* line 64, ../scss/base/_mixins.scss */
 body.orange .title-wrap .btn:hover, body.orange .title-wrap .btn:focus {
   background-color: #cb4b16;
   color: white;
 }
-/* line 64, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.orange .title {
   color: #cb4b16;
 }
-/* line 66, ../scss/base/_mixins.scss */
+/* line 72, ../scss/base/_mixins.scss */
 body.orange .title a {
   color: #cb4b16;
 }
-/* line 70, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.orange .date {
   color: #cb4b16;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 79, ../scss/base/_mixins.scss */
 body.orange .bottom-nav {
   background-color: #cb4b16;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.orange .bottom-nav a {
   background-color: #cb4b16;
 }
-/* line 79, ../scss/base/_mixins.scss */
+/* line 85, ../scss/base/_mixins.scss */
 body.orange .next, body.orange .previous {
   background-color: #cb4b16;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 87, ../scss/base/_mixins.scss */
 body.orange .next:hover, body.orange .next:focus, body.orange .previous:hover, body.orange .previous:focus {
   background-color: #b44214;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 92, ../scss/base/_mixins.scss */
 body.orange .navy a {
   color: #cb4b16;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 97, ../scss/base/_mixins.scss */
 body.orange article a {
   color: #cb4b16;
 }
-/* line 93, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.orange article a:hover, body.orange article a:focus {
   border-bottom: 2px solid #cb4b16;
 }
-/* line 97, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.orange article a.btn:hover {
+  border-width: 1px;
+}
+/* line 108, ../scss/base/_mixins.scss */
 body.orange article blockquote {
   color: #cb4b16;
   border-left: 3px solid #cb4b16;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 114, ../scss/base/_mixins.scss */
+body.orange .leaflet-bar a {
+  color: white;
+}
+/* line 116, ../scss/base/_mixins.scss */
+body.orange .leaflet-bar a:hover {
+  color: #cb4b16;
+}
+/* line 123, ../scss/base/_mixins.scss */
 body.orange footer a:hover, body.orange footer a:focus {
   color: #cb4b16;
   border-bottom: 2px solid #cb4b16;
@@ -874,75 +923,87 @@ body.orange footer a:hover, body.orange footer a:focus {
 body.red {
   border-top: 8px solid #dc322f;
 }
-/* line 43, ../scss/base/_mixins.scss */
+/* line 49, ../scss/base/_mixins.scss */
 body.red nav span {
   color: #dc322f;
 }
-/* line 46, ../scss/base/_mixins.scss */
+/* line 52, ../scss/base/_mixins.scss */
 body.red nav a {
   color: #dc322f;
 }
-/* line 48, ../scss/base/_mixins.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.red nav a:hover, body.red nav a:focus {
   color: #dc322f;
   border-bottom: 2px solid #dc322f;
 }
-/* line 55, ../scss/base/_mixins.scss */
+/* line 61, ../scss/base/_mixins.scss */
 body.red .title-wrap .btn {
   border-color: #dc322f;
   color: #dc322f;
 }
-/* line 58, ../scss/base/_mixins.scss */
+/* line 64, ../scss/base/_mixins.scss */
 body.red .title-wrap .btn:hover, body.red .title-wrap .btn:focus {
   background-color: #dc322f;
   color: white;
 }
-/* line 64, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.red .title {
   color: #dc322f;
 }
-/* line 66, ../scss/base/_mixins.scss */
+/* line 72, ../scss/base/_mixins.scss */
 body.red .title a {
   color: #dc322f;
 }
-/* line 70, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.red .date {
   color: #dc322f;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 79, ../scss/base/_mixins.scss */
 body.red .bottom-nav {
   background-color: #dc322f;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.red .bottom-nav a {
   background-color: #dc322f;
 }
-/* line 79, ../scss/base/_mixins.scss */
+/* line 85, ../scss/base/_mixins.scss */
 body.red .next, body.red .previous {
   background-color: #dc322f;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 87, ../scss/base/_mixins.scss */
 body.red .next:hover, body.red .next:focus, body.red .previous:hover, body.red .previous:focus {
   background-color: #cf2623;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 92, ../scss/base/_mixins.scss */
 body.red .navy a {
   color: #dc322f;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 97, ../scss/base/_mixins.scss */
 body.red article a {
   color: #dc322f;
 }
-/* line 93, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.red article a:hover, body.red article a:focus {
   border-bottom: 2px solid #dc322f;
 }
-/* line 97, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.red article a.btn:hover {
+  border-width: 1px;
+}
+/* line 108, ../scss/base/_mixins.scss */
 body.red article blockquote {
   color: #dc322f;
   border-left: 3px solid #dc322f;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 114, ../scss/base/_mixins.scss */
+body.red .leaflet-bar a {
+  color: white;
+}
+/* line 116, ../scss/base/_mixins.scss */
+body.red .leaflet-bar a:hover {
+  color: #dc322f;
+}
+/* line 123, ../scss/base/_mixins.scss */
 body.red footer a:hover, body.red footer a:focus {
   color: #dc322f;
   border-bottom: 2px solid #dc322f;
@@ -951,75 +1012,87 @@ body.red footer a:hover, body.red footer a:focus {
 body.magenta {
   border-top: 8px solid #d33682;
 }
-/* line 43, ../scss/base/_mixins.scss */
+/* line 49, ../scss/base/_mixins.scss */
 body.magenta nav span {
   color: #d33682;
 }
-/* line 46, ../scss/base/_mixins.scss */
+/* line 52, ../scss/base/_mixins.scss */
 body.magenta nav a {
   color: #d33682;
 }
-/* line 48, ../scss/base/_mixins.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.magenta nav a:hover, body.magenta nav a:focus {
   color: #d33682;
   border-bottom: 2px solid #d33682;
 }
-/* line 55, ../scss/base/_mixins.scss */
+/* line 61, ../scss/base/_mixins.scss */
 body.magenta .title-wrap .btn {
   border-color: #d33682;
   color: #d33682;
 }
-/* line 58, ../scss/base/_mixins.scss */
+/* line 64, ../scss/base/_mixins.scss */
 body.magenta .title-wrap .btn:hover, body.magenta .title-wrap .btn:focus {
   background-color: #d33682;
   color: white;
 }
-/* line 64, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.magenta .title {
   color: #d33682;
 }
-/* line 66, ../scss/base/_mixins.scss */
+/* line 72, ../scss/base/_mixins.scss */
 body.magenta .title a {
   color: #d33682;
 }
-/* line 70, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.magenta .date {
   color: #d33682;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 79, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav {
   background-color: #d33682;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.magenta .bottom-nav a {
   background-color: #d33682;
 }
-/* line 79, ../scss/base/_mixins.scss */
+/* line 85, ../scss/base/_mixins.scss */
 body.magenta .next, body.magenta .previous {
   background-color: #d33682;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 87, ../scss/base/_mixins.scss */
 body.magenta .next:hover, body.magenta .next:focus, body.magenta .previous:hover, body.magenta .previous:focus {
   background-color: #c42b75;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 92, ../scss/base/_mixins.scss */
 body.magenta .navy a {
   color: #d33682;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 97, ../scss/base/_mixins.scss */
 body.magenta article a {
   color: #d33682;
 }
-/* line 93, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.magenta article a:hover, body.magenta article a:focus {
   border-bottom: 2px solid #d33682;
 }
-/* line 97, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.magenta article a.btn:hover {
+  border-width: 1px;
+}
+/* line 108, ../scss/base/_mixins.scss */
 body.magenta article blockquote {
   color: #d33682;
   border-left: 3px solid #d33682;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 114, ../scss/base/_mixins.scss */
+body.magenta .leaflet-bar a {
+  color: white;
+}
+/* line 116, ../scss/base/_mixins.scss */
+body.magenta .leaflet-bar a:hover {
+  color: #d33682;
+}
+/* line 123, ../scss/base/_mixins.scss */
 body.magenta footer a:hover, body.magenta footer a:focus {
   color: #d33682;
   border-bottom: 2px solid #d33682;
@@ -1028,75 +1101,87 @@ body.magenta footer a:hover, body.magenta footer a:focus {
 body.violet {
   border-top: 8px solid #6c71c4;
 }
-/* line 43, ../scss/base/_mixins.scss */
+/* line 49, ../scss/base/_mixins.scss */
 body.violet nav span {
   color: #6c71c4;
 }
-/* line 46, ../scss/base/_mixins.scss */
+/* line 52, ../scss/base/_mixins.scss */
 body.violet nav a {
   color: #6c71c4;
 }
-/* line 48, ../scss/base/_mixins.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.violet nav a:hover, body.violet nav a:focus {
   color: #6c71c4;
   border-bottom: 2px solid #6c71c4;
 }
-/* line 55, ../scss/base/_mixins.scss */
+/* line 61, ../scss/base/_mixins.scss */
 body.violet .title-wrap .btn {
   border-color: #6c71c4;
   color: #6c71c4;
 }
-/* line 58, ../scss/base/_mixins.scss */
+/* line 64, ../scss/base/_mixins.scss */
 body.violet .title-wrap .btn:hover, body.violet .title-wrap .btn:focus {
   background-color: #6c71c4;
   color: white;
 }
-/* line 64, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.violet .title {
   color: #6c71c4;
 }
-/* line 66, ../scss/base/_mixins.scss */
+/* line 72, ../scss/base/_mixins.scss */
 body.violet .title a {
   color: #6c71c4;
 }
-/* line 70, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.violet .date {
   color: #6c71c4;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 79, ../scss/base/_mixins.scss */
 body.violet .bottom-nav {
   background-color: #6c71c4;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.violet .bottom-nav a {
   background-color: #6c71c4;
 }
-/* line 79, ../scss/base/_mixins.scss */
+/* line 85, ../scss/base/_mixins.scss */
 body.violet .next, body.violet .previous {
   background-color: #6c71c4;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 87, ../scss/base/_mixins.scss */
 body.violet .next:hover, body.violet .next:focus, body.violet .previous:hover, body.violet .previous:focus {
   background-color: #5a5fbd;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 92, ../scss/base/_mixins.scss */
 body.violet .navy a {
   color: #6c71c4;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 97, ../scss/base/_mixins.scss */
 body.violet article a {
   color: #6c71c4;
 }
-/* line 93, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.violet article a:hover, body.violet article a:focus {
   border-bottom: 2px solid #6c71c4;
 }
-/* line 97, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.violet article a.btn:hover {
+  border-width: 1px;
+}
+/* line 108, ../scss/base/_mixins.scss */
 body.violet article blockquote {
   color: #6c71c4;
   border-left: 3px solid #6c71c4;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 114, ../scss/base/_mixins.scss */
+body.violet .leaflet-bar a {
+  color: white;
+}
+/* line 116, ../scss/base/_mixins.scss */
+body.violet .leaflet-bar a:hover {
+  color: #6c71c4;
+}
+/* line 123, ../scss/base/_mixins.scss */
 body.violet footer a:hover, body.violet footer a:focus {
   color: #6c71c4;
   border-bottom: 2px solid #6c71c4;
@@ -1105,75 +1190,87 @@ body.violet footer a:hover, body.violet footer a:focus {
 body.blue {
   border-top: 8px solid #268bd2;
 }
-/* line 43, ../scss/base/_mixins.scss */
+/* line 49, ../scss/base/_mixins.scss */
 body.blue nav span {
   color: #268bd2;
 }
-/* line 46, ../scss/base/_mixins.scss */
+/* line 52, ../scss/base/_mixins.scss */
 body.blue nav a {
   color: #268bd2;
 }
-/* line 48, ../scss/base/_mixins.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.blue nav a:hover, body.blue nav a:focus {
   color: #268bd2;
   border-bottom: 2px solid #268bd2;
 }
-/* line 55, ../scss/base/_mixins.scss */
+/* line 61, ../scss/base/_mixins.scss */
 body.blue .title-wrap .btn {
   border-color: #268bd2;
   color: #268bd2;
 }
-/* line 58, ../scss/base/_mixins.scss */
+/* line 64, ../scss/base/_mixins.scss */
 body.blue .title-wrap .btn:hover, body.blue .title-wrap .btn:focus {
   background-color: #268bd2;
   color: white;
 }
-/* line 64, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.blue .title {
   color: #268bd2;
 }
-/* line 66, ../scss/base/_mixins.scss */
+/* line 72, ../scss/base/_mixins.scss */
 body.blue .title a {
   color: #268bd2;
 }
-/* line 70, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.blue .date {
   color: #268bd2;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 79, ../scss/base/_mixins.scss */
 body.blue .bottom-nav {
   background-color: #268bd2;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.blue .bottom-nav a {
   background-color: #268bd2;
 }
-/* line 79, ../scss/base/_mixins.scss */
+/* line 85, ../scss/base/_mixins.scss */
 body.blue .next, body.blue .previous {
   background-color: #268bd2;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 87, ../scss/base/_mixins.scss */
 body.blue .next:hover, body.blue .next:focus, body.blue .previous:hover, body.blue .previous:focus {
   background-color: #227dbc;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 92, ../scss/base/_mixins.scss */
 body.blue .navy a {
   color: #268bd2;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 97, ../scss/base/_mixins.scss */
 body.blue article a {
   color: #268bd2;
 }
-/* line 93, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.blue article a:hover, body.blue article a:focus {
   border-bottom: 2px solid #268bd2;
 }
-/* line 97, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.blue article a.btn:hover {
+  border-width: 1px;
+}
+/* line 108, ../scss/base/_mixins.scss */
 body.blue article blockquote {
   color: #268bd2;
   border-left: 3px solid #268bd2;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 114, ../scss/base/_mixins.scss */
+body.blue .leaflet-bar a {
+  color: white;
+}
+/* line 116, ../scss/base/_mixins.scss */
+body.blue .leaflet-bar a:hover {
+  color: #268bd2;
+}
+/* line 123, ../scss/base/_mixins.scss */
 body.blue footer a:hover, body.blue footer a:focus {
   color: #268bd2;
   border-bottom: 2px solid #268bd2;
@@ -1182,75 +1279,87 @@ body.blue footer a:hover, body.blue footer a:focus {
 body.cyan {
   border-top: 8px solid #2aa198;
 }
-/* line 43, ../scss/base/_mixins.scss */
+/* line 49, ../scss/base/_mixins.scss */
 body.cyan nav span {
   color: #2aa198;
 }
-/* line 46, ../scss/base/_mixins.scss */
+/* line 52, ../scss/base/_mixins.scss */
 body.cyan nav a {
   color: #2aa198;
 }
-/* line 48, ../scss/base/_mixins.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.cyan nav a:hover, body.cyan nav a:focus {
   color: #2aa198;
   border-bottom: 2px solid #2aa198;
 }
-/* line 55, ../scss/base/_mixins.scss */
+/* line 61, ../scss/base/_mixins.scss */
 body.cyan .title-wrap .btn {
   border-color: #2aa198;
   color: #2aa198;
 }
-/* line 58, ../scss/base/_mixins.scss */
+/* line 64, ../scss/base/_mixins.scss */
 body.cyan .title-wrap .btn:hover, body.cyan .title-wrap .btn:focus {
   background-color: #2aa198;
   color: white;
 }
-/* line 64, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.cyan .title {
   color: #2aa198;
 }
-/* line 66, ../scss/base/_mixins.scss */
+/* line 72, ../scss/base/_mixins.scss */
 body.cyan .title a {
   color: #2aa198;
 }
-/* line 70, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.cyan .date {
   color: #2aa198;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 79, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav {
   background-color: #2aa198;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.cyan .bottom-nav a {
   background-color: #2aa198;
 }
-/* line 79, ../scss/base/_mixins.scss */
+/* line 85, ../scss/base/_mixins.scss */
 body.cyan .next, body.cyan .previous {
   background-color: #2aa198;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 87, ../scss/base/_mixins.scss */
 body.cyan .next:hover, body.cyan .next:focus, body.cyan .previous:hover, body.cyan .previous:focus {
   background-color: #258d85;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 92, ../scss/base/_mixins.scss */
 body.cyan .navy a {
   color: #2aa198;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 97, ../scss/base/_mixins.scss */
 body.cyan article a {
   color: #2aa198;
 }
-/* line 93, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.cyan article a:hover, body.cyan article a:focus {
   border-bottom: 2px solid #2aa198;
 }
-/* line 97, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.cyan article a.btn:hover {
+  border-width: 1px;
+}
+/* line 108, ../scss/base/_mixins.scss */
 body.cyan article blockquote {
   color: #2aa198;
   border-left: 3px solid #2aa198;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 114, ../scss/base/_mixins.scss */
+body.cyan .leaflet-bar a {
+  color: white;
+}
+/* line 116, ../scss/base/_mixins.scss */
+body.cyan .leaflet-bar a:hover {
+  color: #2aa198;
+}
+/* line 123, ../scss/base/_mixins.scss */
 body.cyan footer a:hover, body.cyan footer a:focus {
   color: #2aa198;
   border-bottom: 2px solid #2aa198;
@@ -1259,75 +1368,87 @@ body.cyan footer a:hover, body.cyan footer a:focus {
 body.green {
   border-top: 8px solid #859900;
 }
-/* line 43, ../scss/base/_mixins.scss */
+/* line 49, ../scss/base/_mixins.scss */
 body.green nav span {
   color: #859900;
 }
-/* line 46, ../scss/base/_mixins.scss */
+/* line 52, ../scss/base/_mixins.scss */
 body.green nav a {
   color: #859900;
 }
-/* line 48, ../scss/base/_mixins.scss */
+/* line 54, ../scss/base/_mixins.scss */
 body.green nav a:hover, body.green nav a:focus {
   color: #859900;
   border-bottom: 2px solid #859900;
 }
-/* line 55, ../scss/base/_mixins.scss */
+/* line 61, ../scss/base/_mixins.scss */
 body.green .title-wrap .btn {
   border-color: #859900;
   color: #859900;
 }
-/* line 58, ../scss/base/_mixins.scss */
+/* line 64, ../scss/base/_mixins.scss */
 body.green .title-wrap .btn:hover, body.green .title-wrap .btn:focus {
   background-color: #859900;
   color: white;
 }
-/* line 64, ../scss/base/_mixins.scss */
+/* line 70, ../scss/base/_mixins.scss */
 body.green .title {
   color: #859900;
 }
-/* line 66, ../scss/base/_mixins.scss */
+/* line 72, ../scss/base/_mixins.scss */
 body.green .title a {
   color: #859900;
 }
-/* line 70, ../scss/base/_mixins.scss */
+/* line 76, ../scss/base/_mixins.scss */
 body.green .date {
   color: #859900;
 }
-/* line 73, ../scss/base/_mixins.scss */
+/* line 79, ../scss/base/_mixins.scss */
 body.green .bottom-nav {
   background-color: #859900;
 }
-/* line 75, ../scss/base/_mixins.scss */
+/* line 81, ../scss/base/_mixins.scss */
 body.green .bottom-nav a {
   background-color: #859900;
 }
-/* line 79, ../scss/base/_mixins.scss */
+/* line 85, ../scss/base/_mixins.scss */
 body.green .next, body.green .previous {
   background-color: #859900;
 }
-/* line 81, ../scss/base/_mixins.scss */
+/* line 87, ../scss/base/_mixins.scss */
 body.green .next:hover, body.green .next:focus, body.green .previous:hover, body.green .previous:focus {
   background-color: #6f8000;
 }
-/* line 86, ../scss/base/_mixins.scss */
+/* line 92, ../scss/base/_mixins.scss */
 body.green .navy a {
   color: #859900;
 }
-/* line 91, ../scss/base/_mixins.scss */
+/* line 97, ../scss/base/_mixins.scss */
 body.green article a {
   color: #859900;
 }
-/* line 93, ../scss/base/_mixins.scss */
+/* line 99, ../scss/base/_mixins.scss */
 body.green article a:hover, body.green article a:focus {
   border-bottom: 2px solid #859900;
 }
-/* line 97, ../scss/base/_mixins.scss */
+/* line 103, ../scss/base/_mixins.scss */
+body.green article a.btn:hover {
+  border-width: 1px;
+}
+/* line 108, ../scss/base/_mixins.scss */
 body.green article blockquote {
   color: #859900;
   border-left: 3px solid #859900;
 }
-/* line 104, ../scss/base/_mixins.scss */
+/* line 114, ../scss/base/_mixins.scss */
+body.green .leaflet-bar a {
+  color: white;
+}
+/* line 116, ../scss/base/_mixins.scss */
+body.green .leaflet-bar a:hover {
+  color: #859900;
+}
+/* line 123, ../scss/base/_mixins.scss */
 body.green footer a:hover, body.green footer a:focus {
   color: #859900;
   border-bottom: 2px solid #859900;
@@ -1637,24 +1758,112 @@ article a {
 }
 
 /* line 1, ../scss/_map.scss */
-body {
-  position: relative;
-}
-
-/* line 5, ../scss/_map.scss */
-#map {
+.map-div {
   display: block;
-  height: 90vh;
   background: #999999;
 }
-
-/* line 11, ../scss/_map.scss */
-#article {
-  margin-top: 0;
-  padding-top: 0;
+/* line 4, ../scss/_map.scss */
+.map-div:before {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  z-index: 2;
+  pointer-events: none;
+  -webkit-box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.2), inset 0 0 200px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.2), inset 0 0 200px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.2), inset 0 0 200px rgba(0, 0, 0, 0.7);
 }
-/* line 14, ../scss/_map.scss */
-#article .title {
-  margin-top: 0;
-  padding-top: 0.4em;
+/* line 15, ../scss/_map.scss */
+.map-div .leaflet-bar {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 18, ../scss/_map.scss */
+.map-div .leaflet-bar a {
+  -webkit-transition: 100ms all linear;
+  -moz-transition: 100ms all linear;
+  -o-transition: 100ms all linear;
+  transition: 100ms all linear;
+  font-family: "Inconsolata", "Courier New", courier, monospace;
+  width: 26px;
+  height: 26px;
+  line-height: 26px;
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid white;
+  background: transparent;
+}
+/* line 29, ../scss/_map.scss */
+.map-div .leaflet-bar a:hover {
+  background: white;
+}
+/* line 32, ../scss/_map.scss */
+.map-div .leaflet-bar a:last-child {
+  margin-top: -1px;
+  border-bottom: 1px solid white;
+}
+
+/* line 40, ../scss/_map.scss */
+.hero-map {
+  height: 100%;
+  height: 70vh;
+}
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  /* line 40, ../scss/_map.scss */
+  .hero-map {
+    display: none;
+  }
+}
+/* line 46, ../scss/_map.scss */
+.hero-map .leaflet-top {
+  top: 50%;
+  margin-top: -50px;
+}
+
+@media only screen and (min-width: 0) and (max-width: 480px) {
+  /* line 53, ../scss/_map.scss */
+  .map .title-wrap {
+    padding-top: 6em;
+  }
+}
+
+/* line 60, ../scss/_map.scss */
+.back-to {
+  color: white;
+  position: absolute;
+  bottom: 1em;
+  left: 2em;
+  z-index: 3;
+  font-size: 1em;
+}
+/* line 67, ../scss/_map.scss */
+.back-to:before {
+  content: "";
+  display: inline-block;
+  background: url(../img/left-arrow.svg) no-repeat center right transparent;
+  background-size: 16px;
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  -webkit-transition: 150ms left linear;
+  -moz-transition: 150ms left linear;
+  -o-transition: 150ms left linear;
+  transition: 150ms left linear;
+}
+/* line 81, ../scss/_map.scss */
+.back-to:hover:before {
+  left: -24px;
 }

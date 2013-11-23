@@ -1,13 +1,14 @@
 // Map
 var map = L.map('map', {
-    center: [45.52, -122.67],
-    zoom: 13,
+    center: [35.686720682320455, -93.43391418457031],
+    //center: [36.314848507137064, -112.81422615051268], grand canyon
+    zoom: 14,
+    maxZoom: 15,
+    minZoom: 9,
     scrollWheelZoom: false,
     attributionControl: false
 });
 
-L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/997/256/{z}/{x}/{y}.png', {
-  maxZoom: 18
+L.esri.tiledMapLayer("http://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer", {
+  opacity : 1
 }).addTo(map);
-
-// http://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer
