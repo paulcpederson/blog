@@ -1,60 +1,111 @@
 ---
-title: Devicons
-date: 2013-08-06
+title: Inline-Block Grid
+date: 2013-12-06
 template: article.jade
-thumbnail: devicons-thumb.jpg
-background: devicons.svg
+thumbnail: inline-block-thumb.jpg
+background: inline-block.svg
 canvas: navy mesh
-spot: green
-description: Rendering three color icons in the browser with a custom web font
+spot: orange
+description: Building a grid system for the web with the power of inline-block.
+featured: true
 ---
 
-At work the other day I was thinking out loud about a strategy for generating full-color icons with a web font. Essentially the idea is to use ```:before``` and ```:after``` pseudo elements to provide a foreground and background to your icon, thusly giving it three colors. If you're a visual learner, it works like this:
+Recently, while working on [a side-project](http://www.pdxroasters.com/), I ran into a problem trying to clear columns of different heights while using a traditional float-based grid system. Upon hearing me complain aloud (a common occurence when I deal with css layout), [another developer](https://github.com/kitajchuk) I was working with at the time showed me an interesting ~~hack~~ solution to the problem which he had learned from a developer he had worked with. After much searching online, I couldn't find any occurence of this being written down, so I decided to put it on the internet for future generations.
 
-![Illustration](before-after.svg)
+### The Problem
 
-People at my work tend to take pipe-dreams very seriously, so it wasn't all that surprising that one of my co-workers, [Nik Wise](http://atelier-wise.aws.af.cm/) was listening to me, and then spent the next ten minutes expertly implementing what I had just imagined.
+The limitation I ran into while using a standard float-based grid is best described visually:
 
-It turns out, that this technique is actually far simpler than I first thought it was going to be, and that the most time consuming part of the workflow is building and color separating the icons. Once you've exported every layer as an .svg file, you just upload them all to icoMoon (or your web font tool of choice), assign them ligatures (so you can remember their names later), and download the bundle.
+![Broken float layout](problem.svg)
 
-After that, you just create ```:before``` and ```:after``` elements and make their content attribute equal to the corresponding icon. The css ends up looking something like this:
+If one of your columns is taller than the others, the next row will start immediately after that column, instead of clearing to the next line.
+
+This can be solved by adding an extra dom element to wrap the columns in each row and giving it ```clear:both```, or it can be solved with nth child selectors (ie. clearing every third item), or it could be solved with javascript plugins like [masonry](http://masonry.desandro.com/), but all of those solutions have their downsides. Either it's complicated, or it's not semantic, or it relies on javascript. Furthermore, as you make your pages responsive, these solutions become even more problematic. All the sudden there are different numbers of columns in the row and you have to change your dom and css for every breakpoint...
+
+### Inline-block to the Rescue!
+
+As it turns out, you can solve this problem by not using floats. Essentially, you give all the columns a display of inline-block and the columns will always wrap onto the next line below the tallest column above them. There is some sort of strange css voodoo to fix inline-block responding to whitespace, but all in all it's actually pretty simple:
 
 ```css
-@font-face {
-  font-family: 'devicons';
-  src:url('fonts/devicons.eot');
-  font-weight: normal;
-  font-style: normal;
-}
-
-.icon-finder {
-  font-family: 'devicons';
-  font-feature-settings:"liga","dlig";
-  text-rendering:optimizeLegibility;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  color: #231F20;
-}
-
-.icon-finder:before{
-  margin-right: -1em;
-  color: #71A0D2;
-  content: "finderback";
-}
-
-.icon-finder:after{
+/* Main wrapper for grid */
+.col-group {
+  font-family: monospace; /* for spacing columns correctly */
+  letter-spacing: -.65em; /* this too */
   margin-left: -1em;
-  color: #E05130;
-  content: "finderfront";
+  margin-right: -1em;
+  text-align: left; /* center or justify for columns in last row */
+  display: block;
+}
+
+/* Individual columns */
+.col {
+  font-family: Serif; /* be sure to reset the font and letter-spacing */
+  letter-spacing: normal;
+  display: inline-block;
+  padding-left: 1em;
+  padding-right: 1em;
+  position: relative;
+  float: none;
+  text-align: left;
+  vertical-align: top; /* align row's columns top or baseline */
+  box-sizing: border-box;
 }
 ```
 
-The above assumes you set up your webfont with the ligatures "finder", "finderback", and "finderfront", each representing one of the three layers of your icon.
+Then you just need to set up some column width classes:
 
-The corresponding html is dead simple:
+```css
+.col1of1   { float: none; }
+.col1of2   { width: 50%; }
+.col1of3   { width: 33.33333%; }
+.col2of3   { width: 66.66666%; }
+.col1of4   { width: 25%; }
+.col3of4   { width: 75%; }
+.col1of5   { width: 20%; }
+.col2of5   { width: 40%; }
+.col3of5   { width: 60%; }
+.col4of5   { width: 80%; }
+.col1of6   { width: 16.6666%; }
+.col5of6   { width: 83.3333%; }
+.col1of12  { width: 8.33333%; }
+.col5of12  { width: 41.6666%; }
+.col7of12  { width: 58.3333%; }
+.col11of12 { width: 91.6666%; }
+```
+
+And then, in your html, you can create a simple, smart, inline-block grid:
 
 ```html
-<h3 class="icon-finder">finder</h3>
+<div class="col-group">
+  <div class="col col1of2">
+    <p>this will take up half</p>
+  </div>
+  <div class="col col1of2">
+    <p>so will this</p>
+  </div>
+  <div class="col col1of4">
+    <p>this is a quarter</p>
+  </div>
+  <div class="col col1of4">
+    <p>and all</p>
+  </div>
+  <div class="col col1of4">
+    <p>of these</p>
+  </div>
+  <div class="col col1of4">
+    <p>as well</p>
+  </div>
+</div>
 ```
 
-You can take a look at [the proof of concept](http://paulcpederson.github.io/devicons/) to see them in action, or look at [the GitHub repo](https://github.com/nikolaswise/devicons) to see how they're implemented. Nik has also written a [terrific write up](https://github.com/nikolaswise/three-color-icons) of the technique that goes into much more detail.
+#### Additional Bonuses
+
+You can easily control how the final row behaves in your grid. If you want it to center the remaining columns, you can use ```text-align: center```. If you want to make them take up the whole row, just use ```text-align: justify```.
+
+You can also control how each column is vertically aligned in the row. If you'd like the columns to be aligned on the baseline, instead of the top, use ```vertical-align: baseline``` on the column class.
+
+If you're using borders and padding, you can also use ```box-sizing: border-box``` to make the box model more straightforward.
+
+Check out [this jsfiddle](http://jsfiddle.net/9U6v5/25/) to see it in action. (Or see the full screen result [here](http://jsfiddle.net/9U6v5/25/show/).)
+
+
