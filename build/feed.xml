@@ -5,9 +5,91 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link></link>
     <description>I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.</description>
-    <pubDate>Thu, 14 Nov 2013 16:00:00 -0800</pubDate>
+    <pubDate>Thu, 05 Dec 2013 16:00:00 -0800</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Inline-Block Grid</title>
+      <link>/articles/inline-block-grid/</link>
+      <pubDate>Thu, 05 Dec 2013 16:00:00 -0800</pubDate>
+      <guid isPermaLink="true">/articles/inline-block-grid/</guid>
+      <author></author>
+      <description>&lt;p&gt;Recently, while working on &lt;a href=&quot;http://www.pdxroasters.com/&quot;&gt;a side-project&lt;/a&gt;, I ran into a problem trying to clear columns of different heights while using a traditional float-based grid system. Upon hearing me complain aloud (a common occurence when I deal with css layout), &lt;a href=&quot;https://github.com/kitajchuk&quot;&gt;another developer&lt;/a&gt; I was working with at the time showed me an interesting &lt;del&gt;hack&lt;/del&gt; solution to the problem which he had learned from a developer he had worked with. After much searching online, I couldn&amp;#39;t find any occurence of this being written down, so I decided to put it on the internet for future generations.&lt;/p&gt;
+&lt;h3&gt;The Problem&lt;/h3&gt;
+&lt;p&gt;The limitation I ran into while using a standard float-based grid is best described visually:&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/articles/inline-block-grid/problem.svg&quot; alt=&quot;Broken float layout&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If one of your columns is taller than the others, the next row will start immediately after that column, instead of clearing to the next line.&lt;/p&gt;
+&lt;p&gt;This can be solved by adding an extra dom element to wrap the columns in each row and giving it &lt;code&gt;clear:both&lt;/code&gt;, or it can be solved with nth child selectors (ie. clearing every third item), or it could be solved with javascript plugins like &lt;a href=&quot;http://masonry.desandro.com/&quot;&gt;masonry&lt;/a&gt;, but all of those solutions have their downsides. Either it‘s complicated, or it’s not semantic, or it relies on javascript. Furthermore, as you make your pages responsive, these solutions become even more problematic. All the sudden there are different numbers of columns in the row and you have to change your dom and css for every breakpoint…&lt;/p&gt;
+&lt;h3&gt;Inline-block to the Rescue!&lt;/h3&gt;
+&lt;p&gt;As it turns out, you can solve this problem by not using floats. Essentially, you give all the columns a display of inline-block and the columns will always wrap onto the next line below the tallest column above them. There is some sort of strange css voodoo to fix inline-block responding to whitespace, but all in all it&amp;#39;s actually pretty simple:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-css&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* Main wrapper for grid */&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col-group&lt;/span&gt; &lt;span class=&quot;rules&quot;&gt;{
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;font-family&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; monospace;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;/* for spacing columns correctly */&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;letter-spacing&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; -.&lt;span class=&quot;number&quot;&gt;65&lt;/span&gt;em;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;/* this too */&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;margin-left&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; -&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;em;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;margin-right&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; -&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;em;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;text-align&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; left;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;/* center or justify for columns in last row */&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; block;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+
+&lt;span class=&quot;comment&quot;&gt;/* Individual columns */&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col&lt;/span&gt; &lt;span class=&quot;rules&quot;&gt;{
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;font-family&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; Serif;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;/* be sure to reset the font and letter-spacing */&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;letter-spacing&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; normal;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;display&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; inline-block;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;padding-left&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;em;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;padding-right&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;em;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;position&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; relative;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;float&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; none;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;text-align&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; left;&lt;/span&gt;&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;vertical-align&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; top;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;/* align row's columns top or baseline */&lt;/span&gt;
+  &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;box-sizing&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; border-box;&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Then you just need to set up some column width classes:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-css&quot;&gt;&lt;span class=&quot;class&quot;&gt;.col1of1&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;float&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; none;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col1of2&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;50&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col1of3&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;33.33333&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col2of3&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;66.66666&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col1of4&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;25&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col3of4&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;75&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col1of5&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;20&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col2of5&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;40&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col3of5&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;60&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col4of5&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;80&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col1of6&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;16.6666&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col5of6&lt;/span&gt;   &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;83.3333&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col1of12&lt;/span&gt;  &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;8.33333&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col5of12&lt;/span&gt;  &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;41.6666&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col7of12&lt;/span&gt;  &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;58.3333&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;
+&lt;span class=&quot;class&quot;&gt;.col11of12&lt;/span&gt; &lt;span class=&quot;rules&quot;&gt;{ &lt;span class=&quot;rule&quot;&gt;&lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;:&lt;span class=&quot;value&quot;&gt; &lt;span class=&quot;number&quot;&gt;91.6666&lt;/span&gt;%;&lt;/span&gt;&lt;/span&gt; &lt;span class=&quot;rule&quot;&gt;}&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;And then, in your html, you can create a simple, smart, inline-block grid:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-html&quot;&gt;&amp;lt;div class=&amp;quot;col-group&amp;quot;&amp;gt;
+  &amp;lt;div class=&amp;quot;col col1of2&amp;quot;&amp;gt;
+    &amp;lt;p&amp;gt;this will take up half&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;col col1of2&amp;quot;&amp;gt;
+    &amp;lt;p&amp;gt;so will this&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;col col1of4&amp;quot;&amp;gt;
+    &amp;lt;p&amp;gt;this is a quarter&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;col col1of4&amp;quot;&amp;gt;
+    &amp;lt;p&amp;gt;and all&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;col col1of4&amp;quot;&amp;gt;
+    &amp;lt;p&amp;gt;of these&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+  &amp;lt;div class=&amp;quot;col col1of4&amp;quot;&amp;gt;
+    &amp;lt;p&amp;gt;as well&amp;lt;/p&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+&lt;h4&gt;Additional Bonuses&lt;/h4&gt;
+&lt;p&gt;You can easily control how the final row behaves in your grid. If you want it to center the remaining columns, you can use &lt;code&gt;text-align: center&lt;/code&gt;. If you want to make them take up the whole row, just use &lt;code&gt;text-align: justify&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;You can also control how each column is vertically aligned in the row. If you&amp;#39;d like the columns to be aligned on the baseline, instead of the top, use &lt;code&gt;vertical-align: baseline&lt;/code&gt; on the column class.&lt;/p&gt;
+&lt;p&gt;If you&amp;#39;re using borders and padding, you can also use &lt;code&gt;box-sizing: border-box&lt;/code&gt; to make the box model more straightforward.&lt;/p&gt;
+&lt;p&gt;Check out &lt;a href=&quot;http://jsfiddle.net/9U6v5/25/&quot;&gt;this jsfiddle&lt;/a&gt; to see it in action. (Or see the full screen result &lt;a href=&quot;http://jsfiddle.net/9U6v5/25/show/&quot;&gt;here&lt;/a&gt;.)&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>USGS Topo Maps</title>
       <link>/articles/usgs-topo-maps/</link>
