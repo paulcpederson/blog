@@ -1,11 +1,10 @@
 ---
-title: USGS Topo Maps
-date: 2013-11-15
+title: Swiss Topo Maps
+date: 2013-12-15
 template: map-post.jade
 thumbnail: usgs-thumb.jpg
-spot: green
-white: true
-description: In 1879 the USGS started mapping the country. The topographic maps they created are beautiful data visualization at its finest.
+spot: cyan
+description: Since 1844 Switzerland has produced some of the most effective and beautiful topographic maps in the world.
 js:
   - leaflet
   - esri-leaflet
@@ -14,20 +13,35 @@ css:
   - leaflet
 ---
 
-The USGS began mapping the country in 1879 and has been the main mapping agency of the United States ever since. The best known USGS maps are the 1:24,000-scale topographic maps, also known as seven point five minute quadrangles. Originally meant to help with mineral exploration, these maps quickly became the defacto standard for trusted topological information in the United States.
+Switzerland has become known for beautiful cartography. It should come as no surprise (seeing that their nation is almost entirely mountainous) that their presentation of relief is especially effective. The vast changes in elevation presented in this relatively small country necessitate huge amounts of work and thought on the part of cartographers.
 
-From 1947 to 1992 the USGS created over 55,000 of these maps for the lower United States and periodically revised them. This is the only uniform map series that covers the entire area of the United States in considerable detail. These maps have been used for decades by people who love the outdoors, land planners, and emergency responders.
+General Guillaume-Henri Dufour founded the Federal Office of Topography in 1838, which published its first map in 1844. After an extensive effort, the entirety of Switzerland had been mapped by 1864. Generally, the office began work on a new map immediately after they had finished the old map. Most of the time the country was using two maps at the same time, some areas having the older map and some areas having the newer map. Below are the three major maps that were completed and their use dates.
 
-The map above is a digitized version of the classic USGS paper maps, which was made into a feature service and hosted on ArcGIS Online.
+### Dufour Map
+![Image of Dufour Map](dufour.jpg)
+<p class="caption">
+  The Dufour map was used from 1844 until 1939.
+</p>
 
-## Modern USGS Maps
+Although the first surveys of Switzerland took place as early as 1809, it wasn't until the Topographic Bureau was formed in 1838 that maps began to be published. The Dufour Map was initially reproduced by intaglio. It was monochromatic until 1908 when a single spot color was added.
 
-A few years ago, with the rise of digital media and advances in GIS software, the USGS started offering these maps digitally. Created in the familiar 7.5-minute quadrangle format like the paper maps, US Topo maps are updated frequently and can now be distributed even further.
+The Dufour Map (named after the first leader of the Office of Topography, General Guillaume-Henri Dufour) was finished in 1864, and a year later, its namesake General retired and a new map was begun.
 
-The National Map data that are used to build these maps are available for public download, allowing the USGS to remain open and giving developers a great asset to work with in terms of spatial data.
+### Siegfried Map
+![Image of Siegfried Map](siegfried.jpg)
+<p class="caption">
+  The Siegfried map was used from 1870 until 1949.
+</p>
 
-## Learn More
+Its publication was begun by the Federal Topographic Bureau under Hermann Siegfried, and continued from 1870 to 1922.
 
-Check out the [USGS website](http://www.usgs.gov/pubprod/maps.html) or watch [this video](http://gallery.usgs.gov/videos/568) to learn more about the USGS and their work with the US Topo maps. To learn more about the Esri provided map service powering the web map, read the [item detail page](http://www.arcgis.com/home/item.html?id=99cd5fbd98934028802b4f797c4b1732) on ArcGIS Online.
+Another significant departure from the Dufour Map was the presence of contours to symbolize the relief (a granularity of 10 metres (33 ft) for the 1:25 000 pages, and 30 metres (98 ft) for the 1:50 000 pages). In addition, three colors were used directly for printing, whereas the Dufour Map was initially monochrome. On the Siegfried Map, the colours used were brown for the contour lines on vegetated terrain, blue for water and contour lines on glaciers, and black for the rest.
 
-<a class="btn green" href="/maps/usgs/">View the Web Map</a>
+### National Maps
+![Image of National Map](national-map.jpg)
+<p class="caption">
+  The National maps were used from 1938 and are still used today.
+</p>
+
+The National Maps of Switzerland are a set of official map series designed, edited and distributed by Swisstopo, the Swiss Federal Office of Topography. Each map series is based on an oblique, conformal, cylindrical projection (Mercator projection), with a Swiss Coordinate system (CH1903 +). All maps are updated in a complete cycle of about six years.
+In 1938, the Federal Office of Topography started issuing new map sheets, which were intended to succeed the old Dufour and Siegfried Maps. They first appeared in 1:50,000 scale, and from 1952 also in 1:25,000 scale. In addition, further generalisations were made in smaller scales. In each scale, the whole of Switzerland was covered. In 1979, with the issuance of the last 1:25,000 scale sheet, the work was completed.
