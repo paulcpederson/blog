@@ -7,8 +7,7 @@ spot: cyan
 description: Since 1844 Switzerland has produced some of the most effective and beautiful topographic maps in the world.
 js:
   - leaflet
-  - esri-leaflet
-  - usgs
+  - swiss
 css:
   - leaflet
 ---
@@ -35,7 +34,7 @@ The Dufour Map (named after the first leader of the Office of Topography, Genera
 
 Its publication was begun by the Federal Topographic Bureau under Hermann Siegfried, and continued from 1870 to 1922.
 
-Another significant departure from the Dufour Map was the presence of contours to symbolize the relief (a granularity of 10 metres (33 ft) for the 1:25 000 pages, and 30 metres (98 ft) for the 1:50 000 pages). In addition, three colors were used directly for printing, whereas the Dufour Map was initially monochrome. On the Siegfried Map, the colours used were brown for the contour lines on vegetated terrain, blue for water and contour lines on glaciers, and black for the rest.
+The Siegfried Map added contour lines to symbolize relief as well as three colors for printing. These color allowed the map to use brown for contour lines on vegetation, blue for contour lines on water and glaciers, and black for lines on everything else.
 
 ### National Maps
 ![Image of National Map](national-map.jpg)
@@ -43,5 +42,4 @@ Another significant departure from the Dufour Map was the presence of contours t
   The National maps were used from 1938 and are still used today.
 </p>
 
-The National Maps of Switzerland are a set of official map series designed, edited and distributed by Swisstopo, the Swiss Federal Office of Topography. Each map series is based on an oblique, conformal, cylindrical projection (Mercator projection), with a Swiss Coordinate system (CH1903 +). All maps are updated in a complete cycle of about six years.
-In 1938, the Federal Office of Topography started issuing new map sheets, which were intended to succeed the old Dufour and Siegfried Maps. They first appeared in 1:50,000 scale, and from 1952 also in 1:25,000 scale. In addition, further generalisations were made in smaller scales. In each scale, the whole of Switzerland was covered. In 1979, with the issuance of the last 1:25,000 scale sheet, the work was completed.
+Made by Swisstopo, each national map is based on the Mercator projection. Introduced in 1938, the maps are constantly being updated so every map receives updates at least once every six years. First, they were 1:50,000 scale. 1:25,000 scale was introduced in 1952. The colors for the National Maps are especially beautiful and communicative. Contour lines are evident, but not overpowering.

@@ -26,16 +26,9 @@
 }
 
 .map .panel.nav {
-  @include respond-to(481px){
-    a {
-      color: $white;
-    }
-    span {
-      color: $white;
-    }
-  }
-  @include respond-to(0, 480px){
-    background-color: $navy;
+  a, span {
+    color: $white;
+    @include text-shadow(0 0 7px rgba(0, 0, 0, 0.8));
   }
 }
 

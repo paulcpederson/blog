@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* - - - - - - - - - - Basic Reset - - - - - - - - - - */
 /* line 2, ../scss/base/_reset.scss */
 html {
@@ -69,7 +70,16 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   clear: both;
 }
 
-/* line 2, ../scss/base/_grid.scss */
+/*
+┌───────────────────────────────────────────────┐
+│ Inline-Block Grid                             │
+├───────────────────────────────────────────────┤
+│ by Paul C Pederson                            │
+├───────────────────────────────────────────────┤
+│ paulcpederson.com/articles/inline-block-grid/ │
+└───────────────────────────────────────────────┘
+*/
+/* line 11, ../scss/base/_grid.scss */
 .col {
   display: block;
   float: left;
@@ -79,57 +89,57 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   box-sizing: border-box;
 }
 
-/* line 9, ../scss/base/_grid.scss */
+/* line 18, ../scss/base/_grid.scss */
 .col1of1 {
   float: none;
 }
 
-/* line 10, ../scss/base/_grid.scss */
+/* line 19, ../scss/base/_grid.scss */
 .col1of2 {
   width: 50%;
 }
 
-/* line 11, ../scss/base/_grid.scss */
+/* line 20, ../scss/base/_grid.scss */
 .col1of3 {
   width: 33.33333%;
 }
 
-/* line 12, ../scss/base/_grid.scss */
+/* line 21, ../scss/base/_grid.scss */
 .col2of3 {
   width: 66.66666%;
 }
 
-/* line 13, ../scss/base/_grid.scss */
+/* line 22, ../scss/base/_grid.scss */
 .col1of4 {
   width: 25%;
 }
 
-/* line 14, ../scss/base/_grid.scss */
+/* line 23, ../scss/base/_grid.scss */
 .col3of4 {
   width: 75%;
 }
 
-/* line 15, ../scss/base/_grid.scss */
+/* line 24, ../scss/base/_grid.scss */
 .col1of5 {
   width: 20%;
 }
 
-/* line 16, ../scss/base/_grid.scss */
+/* line 25, ../scss/base/_grid.scss */
 .col2of5 {
   width: 40%;
 }
 
-/* line 17, ../scss/base/_grid.scss */
+/* line 26, ../scss/base/_grid.scss */
 .col3of5 {
   width: 60%;
 }
 
-/* line 18, ../scss/base/_grid.scss */
+/* line 27, ../scss/base/_grid.scss */
 .col4of5 {
   width: 80%;
 }
 
-/* line 20, ../scss/base/_grid.scss */
+/* line 29, ../scss/base/_grid.scss */
 .col-group {
   font-family: 'Courier New', Monospace;
   letter-spacing: -.65em;
@@ -137,7 +147,7 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   margin-right: -1em;
   text-align: left;
 }
-/* line 26, ../scss/base/_grid.scss */
+/* line 35, ../scss/base/_grid.scss */
 .col-group .col {
   display: inline-block;
   float: none;
@@ -149,68 +159,68 @@ applet, canvas, embed, figure, figcaption, iframe, img, object {
   text-align: left;
   vertical-align: top;
 }
-/* line 37, ../scss/base/_grid.scss */
+/* line 46, ../scss/base/_grid.scss */
 .col-group.no-padding {
   margin-left: 0;
   margin-right: 0;
 }
-/* line 40, ../scss/base/_grid.scss */
+/* line 49, ../scss/base/_grid.scss */
 .col-group.no-padding .col {
   padding-left: 0;
   padding-right: 0;
 }
-/* line 45, ../scss/base/_grid.scss */
+/* line 54, ../scss/base/_grid.scss */
 .col-group.table {
   dispay: table;
 }
-/* line 47, ../scss/base/_grid.scss */
+/* line 56, ../scss/base/_grid.scss */
 .col-group.table .table-cell {
   display: table-cell;
   vertical-align: middle;
 }
 
 @media only screen and (min-width: 0px) and (max-width: 700px) {
-  /* line 55, ../scss/base/_grid.scss */
+  /* line 64, ../scss/base/_grid.scss */
   .col1of2 {
     width: 100%;
   }
 
-  /* line 56, ../scss/base/_grid.scss */
+  /* line 65, ../scss/base/_grid.scss */
   .col1of3 {
     width: 100%;
   }
 
-  /* line 57, ../scss/base/_grid.scss */
+  /* line 66, ../scss/base/_grid.scss */
   .col2of3 {
     width: 100%;
   }
 
-  /* line 58, ../scss/base/_grid.scss */
+  /* line 67, ../scss/base/_grid.scss */
   .col1of4 {
     width: 100%;
   }
 
-  /* line 59, ../scss/base/_grid.scss */
+  /* line 68, ../scss/base/_grid.scss */
   .col3of4 {
     width: 100%;
   }
 
-  /* line 60, ../scss/base/_grid.scss */
+  /* line 69, ../scss/base/_grid.scss */
   .col1of5 {
     width: 100%;
   }
 
-  /* line 61, ../scss/base/_grid.scss */
+  /* line 70, ../scss/base/_grid.scss */
   .col2of5 {
     width: 100%;
   }
 
-  /* line 62, ../scss/base/_grid.scss */
+  /* line 71, ../scss/base/_grid.scss */
   .col3of5 {
     width: 100%;
   }
 
-  /* line 63, ../scss/base/_grid.scss */
+  /* line 72, ../scss/base/_grid.scss */
   .col4of5 {
     width: 100%;
   }
@@ -549,24 +559,13 @@ pre .tex .formula {
   }
 }
 
-@media only screen and (min-width: 481px) {
-  /* line 30, ../scss/base/_layout.scss */
-  .map .panel.nav a {
-    color: white;
-  }
-  /* line 33, ../scss/base/_layout.scss */
-  .map .panel.nav span {
-    color: white;
-  }
-}
-@media only screen and (min-width: 0) and (max-width: 480px) {
-  /* line 28, ../scss/base/_layout.scss */
-  .map .panel.nav {
-    background-color: #002b36;
-  }
+/* line 29, ../scss/base/_layout.scss */
+.map .panel.nav a, .map .panel.nav span {
+  color: white;
+  text-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
 }
 
-/* line 44, ../scss/base/_layout.scss */
+/* line 37, ../scss/base/_layout.scss */
 footer a {
   -webkit-transition: 150ms border-color linear;
   -moz-transition: 150ms border-color linear;
@@ -574,15 +573,15 @@ footer a {
   transition: 150ms border-color linear;
   border-bottom: 2px solid transparent;
 }
-/* line 48, ../scss/base/_layout.scss */
+/* line 41, ../scss/base/_layout.scss */
 footer section.footer-social {
   margin: 0 0 1em 0;
 }
-/* line 50, ../scss/base/_layout.scss */
+/* line 43, ../scss/base/_layout.scss */
 footer section.footer-social a {
   margin-right: 1em;
 }
-/* line 53, ../scss/base/_layout.scss */
+/* line 46, ../scss/base/_layout.scss */
 footer section.footer-social .icon-twitter, footer section.footer-social .icon-github, footer section.footer-social .icon-dribbble, footer section.footer-social .icon-google {
   display: inline-block;
   color: #999999;
@@ -597,74 +596,74 @@ footer section.footer-social .icon-twitter, footer section.footer-social .icon-g
   -o-transition: 150ms opacity linear;
   transition: 150ms opacity linear;
 }
-/* line 63, ../scss/base/_layout.scss */
+/* line 56, ../scss/base/_layout.scss */
 footer section.footer-social .icon-twitter:hover, footer section.footer-social .icon-github:hover, footer section.footer-social .icon-dribbble:hover, footer section.footer-social .icon-google:hover {
   opacity: 1;
   border: none;
 }
-/* line 69, ../scss/base/_layout.scss */
+/* line 62, ../scss/base/_layout.scss */
 footer section.footer-social .icon-github {
   background-image: url("../img/github.svg");
 }
-/* line 74, ../scss/base/_layout.scss */
+/* line 67, ../scss/base/_layout.scss */
 footer section.footer-social .icon-dribbble {
   background-image: url("../img/dribbble.svg");
 }
-/* line 79, ../scss/base/_layout.scss */
+/* line 72, ../scss/base/_layout.scss */
 footer section.footer-social .icon-google {
   background-image: url("../img/google-plus.svg");
 }
 
-/* line 88, ../scss/base/_layout.scss */
+/* line 81, ../scss/base/_layout.scss */
 .panel {
   width: 100%;
   padding: 2em 0;
   background-color: white;
 }
-/* line 92, ../scss/base/_layout.scss */
+/* line 85, ../scss/base/_layout.scss */
 .panel.transparent {
   background-color: transparent;
 }
-/* line 95, ../scss/base/_layout.scss */
+/* line 88, ../scss/base/_layout.scss */
 .panel.white {
   background-color: white;
   color: #666666;
 }
-/* line 99, ../scss/base/_layout.scss */
+/* line 92, ../scss/base/_layout.scss */
 .panel.tan {
   background-color: #002b36;
   color: #666666;
 }
-/* line 103, ../scss/base/_layout.scss */
+/* line 96, ../scss/base/_layout.scss */
 .panel.navy {
   background-color: #002b36;
   color: #999999;
 }
 
-/* line 109, ../scss/base/_layout.scss */
+/* line 102, ../scss/base/_layout.scss */
 .constrain {
   width: 80%;
   max-width: 45em;
   padding: 0 10%;
   margin: 0 auto;
 }
-/* line 114, ../scss/base/_layout.scss */
+/* line 107, ../scss/base/_layout.scss */
 .constrain .full-width {
   width: 100vw;
   height: auto;
 }
 
-/* line 120, ../scss/base/_layout.scss */
+/* line 113, ../scss/base/_layout.scss */
 .feature {
   margin-top: -3em;
 }
 
-/* line 124, ../scss/base/_layout.scss */
+/* line 117, ../scss/base/_layout.scss */
 .right {
   float: right;
 }
 
-/* line 128, ../scss/base/_layout.scss */
+/* line 121, ../scss/base/_layout.scss */
 .left {
   float: left;
 }
@@ -1772,9 +1771,9 @@ article a {
   content: "";
   z-index: 2;
   pointer-events: none;
-  -webkit-box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.2), inset 0 0 200px rgba(0, 0, 0, 0.7);
-  -moz-box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.2), inset 0 0 200px rgba(0, 0, 0, 0.7);
-  box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.2), inset 0 0 200px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.45), inset 0 0 200px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.45), inset 0 0 200px rgba(0, 0, 0, 0.7);
+  box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.45), inset 0 0 200px rgba(0, 0, 0, 0.7);
 }
 /* line 15, ../scss/_map.scss */
 .map-div .leaflet-bar {
@@ -1812,29 +1811,30 @@ article a {
   margin-top: -1px;
   border-bottom: 1px solid white;
 }
+/* line 36, ../scss/_map.scss */
+.map-div .leaflet-bar a.leaflet-disabled {
+  background: transparent;
+  color: rgba(255, 255, 255, 0.2);
+}
+/* line 39, ../scss/_map.scss */
+.map-div .leaflet-bar a.leaflet-disabled:hover {
+  color: rgba(255, 255, 255, 0.2);
+}
 
-/* line 40, ../scss/_map.scss */
+/* line 47, ../scss/_map.scss */
+.touch .hero-map {
+  max-height: 300px;
+}
+
+/* line 51, ../scss/_map.scss */
 .hero-map {
   height: 100%;
   height: 70vh;
 }
-@media only screen and (min-width: 0) and (max-width: 480px) {
-  /* line 40, ../scss/_map.scss */
-  .hero-map {
-    display: none;
-  }
-}
-/* line 46, ../scss/_map.scss */
+/* line 54, ../scss/_map.scss */
 .hero-map .leaflet-top {
   top: 50%;
   margin-top: -50px;
-}
-
-@media only screen and (min-width: 0) and (max-width: 480px) {
-  /* line 53, ../scss/_map.scss */
-  .map .title-wrap {
-    padding-top: 6em;
-  }
 }
 
 /* line 60, ../scss/_map.scss */
