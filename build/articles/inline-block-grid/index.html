@@ -34,102 +34,106 @@
       </div>
     </section>
     <article class="panel white">
-      <section class="constrain content"><p>Recently, while working on <a href="http://www.pdxroasters.com/">a side-project</a>, I ran into a problem trying to clear columns of different heights while using a traditional float-based grid system. Upon hearing me complain aloud (a common occurence when I deal with css layout), <a href="https://github.com/kitajchuk">another developer</a> I was working with at the time showed me an interesting <del>hack</del> solution to the problem which he had learned from a developer he had worked with. After much searching online, I couldn&#39;t find any occurence of this being written down, so I decided to put it on the internet for future generations.</p>
-<h3>The Problem</h3>
+      <section class="constrain content"><p>Recently, while working on <a href="http://www.pdxroasters.com/">a side-project</a>, I ran into a problem trying to clear columns of different heights while using a traditional float-based grid system. Upon hearing me complain aloud (a common occurence when I deal with css layout), <a href="https://github.com/kitajchuk">another developer</a> I was working with at the time showed me an interesting <del>hack</del> solution to the problem which he had learned from a developer he had worked with. After much searching online, I couldn’t find any occurence of this being written down, so I decided to put it on the internet for future generations.</p>
+<h3 id="the-problem">The Problem</h3>
 <p>The limitation I ran into while using a standard float-based grid is best described visually:</p>
 <p><img src="/articles/inline-block-grid/problem.svg" alt="Broken float layout"></p>
 <p>If one of your columns is taller than the others, the next row will start immediately after that column, instead of clearing to the next line.</p>
-<p>This can be solved by adding an extra dom element to wrap the columns in each row and giving it <code>clear:both</code>, or it can be solved with nth child selectors (ie. clearing every third item), or it could be solved with javascript plugins like <a href="http://masonry.desandro.com/">masonry</a>, but all of those solutions have their downsides. Either it‘s complicated, or it’s not semantic, or it relies on javascript. Furthermore, as you make your pages responsive, these solutions become even more problematic. All the sudden there are different numbers of columns in the row and you have to change your dom and css for every breakpoint…</p>
-<h3>Inline-block to the Rescue!</h3>
-<p>As it turns out, you can solve this problem by not using floats. Essentially, you give all the columns a display of inline-block and the columns will always wrap onto the next line below the tallest column above them. There is some sort of strange css voodoo to fix inline-block responding to whitespace, but all in all it&#39;s actually pretty simple:</p>
+<p>This can be solved by adding an extra dom element to wrap the columns in each row and giving it <code>clear:both</code>, or it can be solved with nth child selectors (ie. clearing every third item), or it could be solved with javascript plugins like <a href="http://masonry.desandro.com/">masonry</a>, but all of those solutions have their downsides. Either it’s complicated, or it’s not semantic, or it relies on javascript. Furthermore, as you make your pages responsive, these solutions become even more problematic. All the sudden there are different numbers of columns in the row and you have to change your dom and css for every breakpoint…</p>
+<h3 id="inline-block-to-the-rescue-">Inline-block to the Rescue!</h3>
+<p>As it turns out, you can solve this problem by not using floats. Essentially, you give all the columns a display of inline-block and the columns will always wrap onto the next line below the tallest column above them. There is some sort of strange css voodoo to fix inline-block responding to whitespace, but all in all it’s actually pretty simple:</p>
 <pre><code class="lang-css"><span class="comment">/* Main wrapper for grid */</span>
 <span class="class">.col-group</span> <span class="rules">{
-  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> monospace;</span></span> <span class="comment">/* for spacing columns correctly */</span>
-  <span class="rule"><span class="attribute">letter-spacing</span>:<span class="value"> -.<span class="number">65</span>em;</span></span> <span class="comment">/* this too */</span>
-  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">1</span>em;</span></span>
-  <span class="rule"><span class="attribute">margin-right</span>:<span class="value"> -<span class="number">1</span>em;</span></span>
-  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> left;</span></span> <span class="comment">/* center or justify for columns in last row */</span>
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> block;</span></span>
+  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> monospace</span></span>; <span class="comment">/* for spacing columns correctly */</span>
+  <span class="rule"><span class="attribute">letter-spacing</span>:<span class="value"> -.<span class="number">65</span>em</span></span>; <span class="comment">/* this too */</span>
+  <span class="rule"><span class="attribute">margin-left</span>:<span class="value"> -<span class="number">1</span>em</span></span>;
+  <span class="rule"><span class="attribute">margin-right</span>:<span class="value"> -<span class="number">1</span>em</span></span>;
+  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> left</span></span>; <span class="comment">/* center or justify for columns in last row */</span>
+  <span class="rule"><span class="attribute">display</span>:<span class="value"> block</span></span>;
 <span class="rule">}</span></span>
 
 <span class="comment">/* Individual columns */</span>
 <span class="class">.col</span> <span class="rules">{
-  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> Serif;</span></span> <span class="comment">/* be sure to reset the font and letter-spacing */</span>
-  <span class="rule"><span class="attribute">letter-spacing</span>:<span class="value"> normal;</span></span>
-  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block;</span></span>
-  <span class="rule"><span class="attribute">padding-left</span>:<span class="value"> <span class="number">1</span>em;</span></span>
-  <span class="rule"><span class="attribute">padding-right</span>:<span class="value"> <span class="number">1</span>em;</span></span>
-  <span class="rule"><span class="attribute">position</span>:<span class="value"> relative;</span></span>
-  <span class="rule"><span class="attribute">float</span>:<span class="value"> none;</span></span>
-  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> left;</span></span>
-  <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> top;</span></span> <span class="comment">/* align row's columns top or baseline */</span>
-  <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box;</span></span>
-<span class="rule">}</span></span></code></pre>
+  <span class="rule"><span class="attribute">font-family</span>:<span class="value"> Serif</span></span>; <span class="comment">/* be sure to reset the font and letter-spacing */</span>
+  <span class="rule"><span class="attribute">letter-spacing</span>:<span class="value"> normal</span></span>;
+  <span class="rule"><span class="attribute">display</span>:<span class="value"> inline-block</span></span>;
+  <span class="rule"><span class="attribute">padding-left</span>:<span class="value"> <span class="number">1</span>em</span></span>;
+  <span class="rule"><span class="attribute">padding-right</span>:<span class="value"> <span class="number">1</span>em</span></span>;
+  <span class="rule"><span class="attribute">position</span>:<span class="value"> relative</span></span>;
+  <span class="rule"><span class="attribute">float</span>:<span class="value"> none</span></span>;
+  <span class="rule"><span class="attribute">text-align</span>:<span class="value"> left</span></span>;
+  <span class="rule"><span class="attribute">vertical-align</span>:<span class="value"> top</span></span>; <span class="comment">/* align row's columns top or baseline */</span>
+  <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;
+<span class="rule">}</span></span>
+</code></pre>
 <p>Then you just need to set up some column width classes:</p>
-<pre><code class="lang-css"><span class="class">.col1of1</span>   <span class="rules">{ <span class="rule"><span class="attribute">float</span>:<span class="value"> none;</span></span> <span class="rule">}</span></span>
-<span class="class">.col1of2</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col1of3</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">33.33333</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col2of3</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">66.66666</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col1of4</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">25</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col3of4</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">75</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col1of5</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col2of5</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col3of5</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">60</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col4of5</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">80</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col1of6</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">16.6666</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col5of6</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">83.3333</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col1of12</span>  <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">8.33333</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col5of12</span>  <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">41.6666</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col7of12</span>  <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">58.3333</span>%;</span></span> <span class="rule">}</span></span>
-<span class="class">.col11of12</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">91.6666</span>%;</span></span> <span class="rule">}</span></span></code></pre>
+<pre><code class="lang-css"><span class="class">.col1of1</span>   <span class="rules">{ <span class="rule"><span class="attribute">float</span>:<span class="value"> none</span></span>; <span class="rule">}</span></span>
+<span class="class">.col1of2</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">50</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col1of3</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">33.33333</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col2of3</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">66.66666</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col1of4</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">25</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col3of4</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">75</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col1of5</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">20</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col2of5</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">40</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col3of5</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">60</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col4of5</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">80</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col1of6</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">16.6666</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col5of6</span>   <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">83.3333</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col1of12</span>  <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">8.33333</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col5of12</span>  <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">41.6666</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col7of12</span>  <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">58.3333</span>%</span></span>; <span class="rule">}</span></span>
+<span class="class">.col11of12</span> <span class="rules">{ <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">91.6666</span>%</span></span>; <span class="rule">}</span></span>
+</code></pre>
 <p>And then, in your html, you can create a simple, smart, inline-block grid:</p>
-<pre><code class="lang-html">&lt;div class=&quot;col-group&quot;&gt;
-  &lt;div class=&quot;col col1of2&quot;&gt;
-    &lt;p&gt;this will take up half&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col col1of2&quot;&gt;
-    &lt;p&gt;so will this&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col col1of4&quot;&gt;
-    &lt;p&gt;this is a quarter&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col col1of4&quot;&gt;
-    &lt;p&gt;and all&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col col1of4&quot;&gt;
-    &lt;p&gt;of these&lt;/p&gt;
-  &lt;/div&gt;
-  &lt;div class=&quot;col col1of4&quot;&gt;
-    &lt;p&gt;as well&lt;/p&gt;
-  &lt;/div&gt;
-&lt;/div&gt;</code></pre>
-<h4>Additional Bonuses</h4>
+<pre><code class="lang-html"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col-group"</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col col1of2"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>this will take up half<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col col1of2"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>so will this<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col col1of4"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>this is a quarter<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col col1of4"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>and all<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col col1of4"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>of these<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"col col1of4"</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">p</span>&gt;</span>as well<span class="tag">&lt;/<span class="title">p</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">div</span>&gt;</span>
+</code></pre>
+<h4 id="additional-bonuses">Additional Bonuses</h4>
 <p>You can easily control how the final row behaves in your grid. If you want it to center the remaining columns, you can use <code>text-align: center</code>. If you want to make them take up the whole row, just use <code>text-align: justify</code>.</p>
-<p>You can also control how each column is vertically aligned in the row. If you&#39;d like the columns to be aligned on the baseline, instead of the top, use <code>vertical-align: baseline</code> on the column class.</p>
-<p>If you&#39;re using borders and padding, you can also use <code>box-sizing: border-box</code> to make the box model more straightforward.</p>
+<p>You can also control how each column is vertically aligned in the row. If you’d like the columns to be aligned on the baseline, instead of the top, use <code>vertical-align: baseline</code> on the column class.</p>
+<p>If you’re using borders and padding, you can also use <code>box-sizing: border-box</code> to make the box model more straightforward.</p>
 <p>Check out <a href="http://jsfiddle.net/9U6v5/25/">this jsfiddle</a> to see it in action. (Or see the full screen result <a href="http://jsfiddle.net/9U6v5/25/show/">here</a>.)</p>
 </section>
     </article>
     <div class="bottom-nav">
-      <div class="constrain clearfix"><a href="http://paulcpederson.com/articles/sublime-writer/" class="previous left">
+      <div class="constrain clearfix"><a href="http://paulcpederson.com/articles/swiss-topo-maps/" class="previous left">
           <p class="small">previous article:</p>
-          <p>Sublime Writer</p></a><a href="http://paulcpederson.com/articles/usgs-topo-maps/" class="next right">
+          <p>Swiss Topo Maps</p></a><a href="http://paulcpederson.com/articles/usgs-topo-maps/" class="next right">
           <p class="small">next article:</p>
           <p>USGS Topo Maps</p></a>
       </div>
     </div>
     <footer class="panel navy">
       <div class="constrain">
-        <section><h2>Hi, I&#39;m Paul.</h2>
+        <section><h2 id="hi-i-m-paul-">Hi, I’m Paul.</h2>
 <p>I design and develop digital experiences. I work at a research and development office in Portland, Oregon focused on location-based technologies. You can find me online just about everywhere as @paulcpederson.</p>
 <p>This site was built using <a href="http://nodejs.org/">Node</a>, <a href="https://github.com/jnordberg/wintersmith">Wintersmith</a>, <a href="http://gruntjs.com/">Grunt</a>, and <a href="http://pages.github.com/">GitHub Pages</a>. You can find the source on <a href="https://github.com/paulcpederson/">my github</a>.</p>
 
         </section>
         <section class="copy">
-          <p>&copy; 2013 Paul C Pederson</p>
+          <p>&copy; 2014 Paul C Pederson</p>
         </section>
         <section class="footer-social"><a href="https://twitter.com/paulcpederson" class="icon-twitter"></a><a href="https://github.com/paulcpederson" class="icon-github"></a><a href="https://plus.google.com/117963508642452000116?rel=author" class="icon-google"></a><a href="http://dribbble.com/paulcpederson" class="icon-dribbble"></a></section>
       </div>
     </footer>
+    <script src="http://paulcpederson.com/js/script.js"></script>
   </body>
 </html>
