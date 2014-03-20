@@ -2,8 +2,8 @@
 title: Swiss Topo Maps
 date: 2013-12-15
 template: map-post.jade
-thumbnail: usgs-thumb.jpg
-spot: cyan
+thumbnail: swiss-thumb.jpg
+spot: red
 description: Since 1844 Switzerland has produced some of the most effective and beautiful topographic maps in the world.
 js:
   - leaflet
