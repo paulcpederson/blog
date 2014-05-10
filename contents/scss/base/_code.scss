@@ -6,7 +6,7 @@ code {
   color: $dark-gray;
 }
 
-p code {
+p code, li code {
   padding: 0.35em;
   border-radius: 3px;
   position: relative;
@@ -15,7 +15,7 @@ p code {
   border: 1px solid #EFEFEF;
   color: $gray;
   white-space: nowrap;
-  font-size: 0.75em;
+  font-size: 0.85em;
   margin: 0 4px;
 }
 
@@ -33,6 +33,12 @@ pre {
     width: 100%;
     line-height: 1.25;
     overflow: auto;
+  }
+
+  &.lang-html {
+    .title {
+      font-size: 1em;
+    }
   }
 
   .comment, .template_comment, .diff .header, .doctype, .lisp .string, .javadoc {
