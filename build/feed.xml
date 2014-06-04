@@ -5,9 +5,170 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link></link>
     <description>I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.</description>
-    <pubDate>Sat, 14 Dec 2013 16:00:00 -0800</pubDate>
+    <pubDate>Wed, 23 Apr 2014 17:00:00 -0700</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Make your own Heroku</title>
+      <link>/articles/make-your-own-heroku/</link>
+      <pubDate>Wed, 23 Apr 2014 17:00:00 -0700</pubDate>
+      <guid isPermaLink="true">/articles/make-your-own-heroku/</guid>
+      <author></author>
+      <description>&lt;p&gt;If you’ve ever used &lt;a href=&quot;https://pages.github.com/&quot;&gt;GitHub Pages&lt;/a&gt;, you know how easy and convenient it is to be able to deploy a quick static site by pushing to a remote. Being able to type &lt;code&gt;git push origin gh-pages&lt;/code&gt; and have your site immediately live on a publicly accessible domain is hugely satisfying and you end up experimenting way more, pushing up micro-sites and project pages because it’s easy.&lt;/p&gt;
+&lt;p&gt;GitHub pages does have a limitation, though: there is no concept of a server. While you might not notice that on smaller projects or experiments, it is inevitable that you will run into it eventually. Sometimes you just want a server.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.heroku.com/&quot;&gt;Heroku&lt;/a&gt; enables you to have the concept of a server, with a similar work-flow: make something, then push to a remote with git and it’s on the internet. But Heroku costs money. It’s free at first, but as you scale, it begins to get more expensive fairly quickly. Add a couple more dynos and you’re already up to $70.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Enter Dokku, an open source mini-Heroku.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;With Dokku, you can run your own (albeit slightly less feature-rich) Heroku. With a $5 / month Digital Ocean droplet, this DIY solution is pretty inexpensive and easy to set up. By following &lt;a href=&quot;https://gist.github.com/ngoldman/7287753&quot;&gt;several&lt;/a&gt; &lt;a href=&quot;https://www.digitalocean.com/community/articles/how-to-use-the-digitalocean-dokku-application&quot;&gt;tutorials&lt;/a&gt; written by &lt;a href=&quot;https://twitter.com/ungoldman&quot;&gt;people&lt;/a&gt; &lt;a href=&quot;https://twitter.com/aranasaurus&quot;&gt;smarter&lt;/a&gt; than I am, I was able to set up Dokku to act as my gh-pages and Heroku on a custom domain. Plus I got the feeling of satisfaction that can only come with doing something yourself! Do you want to go to there? Read on, intrepid adventurer!&lt;/p&gt;
+&lt;h2 id=&quot;1-get-a-domain-name&quot;&gt;1. Get a Domain Name&lt;/h2&gt;
+&lt;p&gt;I recommend &lt;a href=&quot;https://www.namecheap.com/&quot;&gt;namecheap&lt;/a&gt; only because I have experience with them and they’re not Godaddy… I registered &lt;a href=&quot;http://app-lab.me/&quot;&gt;app-lab.me&lt;/a&gt; for $8 a year.&lt;/p&gt;
+&lt;h2 id=&quot;2-create-a-digital-ocean-account&quot;&gt;2. Create a Digital Ocean Account&lt;/h2&gt;
+&lt;p&gt;Create an account with Digital Ocean: &lt;a href=&quot;https://cloud.digitalocean.com/registrations/new&quot;&gt;digitalocean.com&lt;/a&gt;. Use the coupon code JEDGAR for $55 free.&lt;/p&gt;
+&lt;h2 id=&quot;3-create-a-droplet&quot;&gt;3. Create a Droplet&lt;/h2&gt;
+&lt;p&gt;Make a &lt;a href=&quot;https://cloud.digitalocean.com/droplets/new&quot;&gt;new droplet&lt;/a&gt; in DigitalOcean. Be sure to name the droplet exactly what your domain is. For example, I named my droplet &lt;code&gt;app-lab.me&lt;/code&gt;. Select the smallest size, and whatever region is closest to you.&lt;/p&gt;
+&lt;p&gt;In the “Select Image” section, click the “Applications” tab and choose the “Dokku-v0.2.1 on Ubuntu 13.04” option.&lt;/p&gt;
+&lt;p&gt;Click “Create Droplet”.&lt;/p&gt;
+&lt;h2 id=&quot;4-configure-the-dns&quot;&gt;4. Configure the DNS&lt;/h2&gt;
+&lt;p&gt;To get your domain to point to your new droplet, you need to change the DNS records. Just go to the page to edit “All Host Records”, in Namecheap that can be found at:  &lt;em&gt; My Account &amp;gt; Manage Domains &amp;gt; Modify Domain &amp;gt; All Host Records&lt;/em&gt;. Use the following host name and subdomain settings:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;HOST NAME&lt;/th&gt;
+&lt;th&gt;IP ADDRESS/URL&lt;/th&gt;
+&lt;th&gt;RECORD TYPE&lt;/th&gt;
+&lt;th&gt;MX PREF&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;your.droplet.ip.address&lt;/td&gt;
+&lt;td&gt;A (Address)&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;www&lt;/td&gt;
+&lt;td&gt;your.domain&lt;/td&gt;
+&lt;td&gt;URL Redirect (301)&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;*&lt;/td&gt;
+&lt;td&gt;your.ip.address.k.thx&lt;/td&gt;
+&lt;td&gt;A (Address)&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;The * entry for subdomains allows you to make any number of apps on different subdomains.&lt;/p&gt;
+&lt;h2 id=&quot;5-generate-an-ssh-key-pair&quot;&gt;5. Generate an SSH Key Pair&lt;/h2&gt;
+&lt;p&gt;I’ll describe what these are in more detail below in the “Set up SSH Keys” section. Don’t worry too much about it right now, just generate a pair like this:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Go into your .ssh directory: &lt;code&gt;cd ~/.ssh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Type: &lt;code&gt;ssh-keygen&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;When prompted, enter a name for the pair (I used app-lab)&lt;/li&gt;
+&lt;li&gt;If you’d like to password protect it enter a password (I left this blank)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After it’s done, you should have two files: {name} and {name}.pub&lt;/p&gt;
+&lt;h2 id=&quot;6-set-up-the-droplet&quot;&gt;6. Set up the Droplet&lt;/h2&gt;
+&lt;p&gt;If you go to the IP address (in the email or listed in Digital Ocean) you should see a screen that has several fields. Add a public ssh key from the previous step (that’s the one that ends in &lt;code&gt;.pub&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Hostname should be your domain name exactly. For me, hostname was “app-lab.me”.&lt;/p&gt;
+&lt;p&gt;Check “virtual host naming” if you’d like your dokku apps to be formatted like &lt;code&gt;app-name.your.domain&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Click “Finish Setup”&lt;/p&gt;
+&lt;h2 id=&quot;7-connect-to-your-droplet&quot;&gt;7. Connect to your Droplet&lt;/h2&gt;
+&lt;p&gt;First, ensure that your domain is pointing at the droplet’s IP Address. Type: &lt;code&gt;dig +short your.domain&lt;/code&gt;. This should respond with the IP Address of your droplet.&lt;/p&gt;
+&lt;p&gt;If that was a success, now you can connect to your droplet with your password. You should have received an email with your IP address and password. Use &lt;code&gt;ssh&lt;/code&gt; to connect to your droplet: &lt;code&gt;ssh root@your.domain&lt;/code&gt; then enter your password and you should be in!&lt;/p&gt;
+&lt;h2 id=&quot;8-set-up-ssh-keys&quot;&gt;8. Set up SSH Keys&lt;/h2&gt;
+&lt;p&gt;To make it so you don’t have to type your password every time you connect to your droplet or push to Dokku, you can set up ssh keys. Basically, there are two files, one that is on your machine, and one that is on the Digital Ocean droplet. The droplet checks to make sure you have the key that matches it’s key, and automatically connects you without a password. We created the keys a few steps back, now let’s use them to connect to our droplet.&lt;/p&gt;
+&lt;h4 id=&quot;make-sure-you-have-the-keys&quot;&gt;Make Sure you Have the Keys&lt;/h4&gt;
+&lt;ul&gt;
+&lt;li&gt;Go into your .ssh directory: &lt;code&gt;cd ~/.ssh&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Ensure your keys you generated previously are still there. You should see them listed if you type &lt;code&gt;ls -l&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;If they aren’t there, generate a new pair (see above).&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&quot;create-a-config-file&quot;&gt;Create a Config File&lt;/h4&gt;
+&lt;p&gt;Create a file named &lt;code&gt;config&lt;/code&gt; inside your &lt;code&gt;.ssh/&lt;/code&gt; directory so your computer knows to use the new ssh keys for your domain. My config looks like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;Host app-lab app-lab.me
+Hostname app-lab.me
+IdentityFile ~/.ssh/app-lab
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Basically, this is how ssh knows to use that particular key for that host. Obviously change &lt;code&gt;app-lab.me&lt;/code&gt; to your domain, and &lt;code&gt;.ssh/app-lab&lt;/code&gt; to whatever you named your ssh keys.&lt;/p&gt;
+&lt;h4 id=&quot;put-the-public-key-on-your-droplet&quot;&gt;Put the Public Key on your Droplet&lt;/h4&gt;
+&lt;p&gt;To upload the public key to your droplet, just type:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;cat ~/.ssh/{name}.pub | ssh root@your.domain &amp;quot;cat &amp;gt;&amp;gt; ~/.ssh/authorized_keys&amp;quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Replacing the &lt;code&gt;{name}&lt;/code&gt; with your key name and &lt;code&gt;your.domain&lt;/code&gt; with your domain name.&lt;/p&gt;
+&lt;h4 id=&quot;connect-without-a-password&quot;&gt;Connect Without a Password&lt;/h4&gt;
+&lt;p&gt;You should now be able to now connect to your droplet without a password like this: &lt;code&gt;ssh root@your.domain&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;If that worked, you can now (optionally) disable password login to your droplet:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Connect to your droplet: &lt;code&gt;ssh root@your.domain&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Open your config: &lt;code&gt;sudo nano /etc/ssh/sshd_config&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Find the &lt;code&gt;PermitRootLogin&lt;/code&gt; line and edit it so it reads: &lt;code&gt;PermitRootLogin without-password&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;Reload your ssh: &lt;code&gt;reload ssh&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&quot;9-deploy-an-app-to-a-subdomain&quot;&gt;9. Deploy an App to a Subdomain&lt;/h2&gt;
+&lt;p&gt;Now you’re all set to deploy apps to Dokku. If you want to deploy a test app, you can use the Node JS Test App:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;clone the repo: &lt;code&gt;git clone git@github.com:heroku/node-js-sample.git&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;cd node-js-sample&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;add dokku as a remote: &lt;code&gt;git remote add dokku dokku@your.domain:test&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;push to dokku: &lt;code&gt;git push dokku master&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After Dokku finishes deploying your app and reports back that it’s finished, your app should be live at test.your.domain. Notice that the subdomain will be whatever you entered after the colon in your remote name. For example, if you want your app to live at apples.your.domain, you could add your remote like:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git remote add dokku dokku@your.domain:apples
+&lt;/code&gt;&lt;/pre&gt;&lt;h2 id=&quot;deploying-an-app-to-the-root-domain&quot;&gt;Deploying an App to the Root Domain&lt;/h2&gt;
+&lt;p&gt;To add an app to the root domain, you just use the domain name when you add the remote. For example, if your domain was chickens.me, you would add your remote like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git remote add dokku dokku@chickens.me:chickens.me
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once you push, the app will be live at chickens.me.&lt;/p&gt;
+&lt;h2 id=&quot;deploying-a-static-app&quot;&gt;Deploying a Static App&lt;/h2&gt;
+&lt;p&gt;Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it’s dead simple. Essentially you just include an empty &lt;code&gt;.nginx&lt;/code&gt; file in the root level of your project, and put all your static content in a &lt;code&gt;www&lt;/code&gt; directory and it will be served on an nginx server automatically. For example, if I had a simple &lt;code&gt;index.html&lt;/code&gt; file and a &lt;code&gt;style.css&lt;/code&gt; file I wanted to serve statically, my project would look something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.nginx
+www
+  - index.html
+  - style.css
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That’s it! You can have as many folders and files inside the &lt;code&gt;www&lt;/code&gt; directory as you need and it will serve it up statically for you.&lt;/p&gt;
+&lt;h2 id=&quot;deploying-an-app-to-another-domain&quot;&gt;Deploying an App to Another Domain&lt;/h2&gt;
+&lt;p&gt;It’s also pretty easy to use another domain and point it to dokku. It works similarly to how you add a project to the root domain (see above).&lt;/p&gt;
+&lt;p&gt;Let’s say you are building a little site for a domain you own, we’ll call it my-special-domain.com, but you set up Dokku on another domain like dokku-domain.com. When you decide to deploy your site, all you need to do is change the DNS records for my-special-domain. Go to the “All Host Records” page for my-special-domain.com (in Namecheap: “My Account &amp;gt; Manage Domains &amp;gt; Modify Domain”) and change the @ and www entries so they read like this:&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;HOST NAME&lt;/th&gt;
+&lt;th&gt;IP ADDRESS/URL&lt;/th&gt;
+&lt;th&gt;RECORD TYPE&lt;/th&gt;
+&lt;th&gt;MX PREF&lt;/th&gt;
+&lt;th&gt;TTL&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;@&lt;/td&gt;
+&lt;td&gt;YOUR.DROPLET.IP.ADDRESS&lt;/td&gt;
+&lt;td&gt;A (Address)&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;WWW&lt;/td&gt;
+&lt;td&gt;YOUR.DOMAIN&lt;/td&gt;
+&lt;td&gt;CNAME&lt;/td&gt;
+&lt;td&gt;n/a&lt;/td&gt;
+&lt;td&gt;60&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;Then when you add your remote, you would add it like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;git remote add dokku dokku@dokku-domain.com:my-special-domain.com
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once the domain is pointing to your droplet’s IP and you’ve pushed to your remote, you should see your app on my-special-domain.com.&lt;/p&gt;
+&lt;h2 id=&quot;final-thoughts-and-credits&quot;&gt;Final Thoughts and Credits&lt;/h2&gt;
+&lt;p&gt;This post is just notes from going through this process myself. I followed my brilliant coworker Nate’s (&lt;a href=&quot;https://twitter.com/ungoldman&quot;&gt;ngoldman&lt;/a&gt;) write-up, which you can read &lt;a href=&quot;https://gist.github.com/ngoldman/7287753&quot;&gt;here&lt;/a&gt;. Since I’m pretty new to all this, there were a couple stumbling blocks for me (especially dealing with ssh keys), so I wanted to put this out there and make it available in case other people had trouble with the same things.&lt;/p&gt;
+&lt;p&gt;If there’s anything that could be improved, or is just totally wrong, tweet at me: &lt;a href=&quot;https://twitter.com/paulcpederson&quot;&gt;@paulcpederson&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Swiss Topo Maps</title>
       <link>/articles/swiss-topo-maps/</link>

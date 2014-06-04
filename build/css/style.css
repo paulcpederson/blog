@@ -403,7 +403,7 @@ code {
 }
 
 /* line 9, ../scss/base/_code.scss */
-p code {
+p code, li code {
   padding: 0.35em;
   border-radius: 3px;
   position: relative;
@@ -412,7 +412,7 @@ p code {
   border: 1px solid #EFEFEF;
   color: #666666;
   white-space: nowrap;
-  font-size: 0.75em;
+  font-size: 0.85em;
   margin: 0 4px;
 }
 
@@ -436,35 +436,39 @@ pre code {
   line-height: 1.25;
   overflow: auto;
 }
-/* line 38, ../scss/base/_code.scss */
+/* line 39, ../scss/base/_code.scss */
+pre.lang-html .title {
+  font-size: 1em;
+}
+/* line 44, ../scss/base/_code.scss */
 pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .lisp .string, pre .javadoc {
   color: #586e75;
 }
-/* line 42, ../scss/base/_code.scss */
+/* line 48, ../scss/base/_code.scss */
 pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .method, pre .addition, pre .css .tag, pre .lisp .title {
   color: #859900;
 }
-/* line 46, ../scss/base/_code.scss */
+/* line 52, ../scss/base/_code.scss */
 pre .number, pre .command, pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula, pre .regexp, pre .hexcolor {
   color: #2aa198;
 }
-/* line 50, ../scss/base/_code.scss */
+/* line 56, ../scss/base/_code.scss */
 pre .title, pre .localvars, pre .function .title, pre .chunk, pre .decorator, pre .builtin, pre .built_in, pre .lisp .title, pre .identifier, pre .title .keymethods, pre .id {
   color: #268bd2;
 }
-/* line 54, ../scss/base/_code.scss */
+/* line 60, ../scss/base/_code.scss */
 pre .attribute, pre .variable, pre .instancevar, pre .lisp .body, pre .smalltalk .number, pre .constant, pre .class .title, pre .parent, pre .haskell .label {
   color: #b58900;
 }
-/* line 58, ../scss/base/_code.scss */
+/* line 64, ../scss/base/_code.scss */
 pre .preprocessor, pre .pi, pre .shebang, pre .symbol, pre .diff .change, pre .special, pre .keymethods, pre .attr_selector, pre .important, pre .subst, pre .cdata {
   color: #cb4b16;
 }
-/* line 62, ../scss/base/_code.scss */
+/* line 68, ../scss/base/_code.scss */
 pre .deletion {
   color: #dc322f;
 }
-/* line 66, ../scss/base/_code.scss */
+/* line 72, ../scss/base/_code.scss */
 pre .tex .formula {
   background: #073642;
 }
@@ -524,6 +528,57 @@ pre .tex .formula {
 .btn.white:hover {
   background-color: white;
   color: #2aa198;
+}
+
+/* line 2, ../scss/base/_tables.scss */
+table {
+  width: 100%;
+  margin-bottom: 1.71429em;
+  font-size: 0.875em;
+  line-height: 1.71429em;
+  background-color: white;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid #e6e6e6;
+  text-align: left;
+}
+/* line 12, ../scss/base/_tables.scss */
+table > thead {
+  background-color: #f6f6f6;
+  border-bottom: 1px solid #e6e6e6;
+}
+/* line 17, ../scss/base/_tables.scss */
+table th, table td {
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  padding: 12px;
+}
+/* line 23, ../scss/base/_tables.scss */
+table p {
+  margin-bottom: 0;
+}
+/* line 27, ../scss/base/_tables.scss */
+table tr {
+  border-bottom: 1px solid #e6e6e6;
+  text-align: left;
+}
+/* line 30, ../scss/base/_tables.scss */
+table tr:last-child {
+  border-bottom: none;
+}
+/* line 35, ../scss/base/_tables.scss */
+table thead, table tfoot, table tr.divider {
+  font-size: 0.9375em;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+/* line 42, ../scss/base/_tables.scss */
+table.striped tr:nth-child(even) {
+  background-color: #fefefe;
+}
+/* line 44, ../scss/base/_tables.scss */
+table.striped tr:nth-child(even) td {
+  background-color: #fefefe;
 }
 
 /* line 2, ../scss/base/_layout.scss */
