@@ -7,7 +7,6 @@ background: inline-block.svg
 canvas: navy mesh
 spot: orange
 description: Building a grid system for the web with the power of inline-block.
-featured: true
 ---
 
 Recently, while working on [a side-project](http://www.pdxroasters.com/), I ran into a problem trying to clear columns of different heights while using a traditional float-based grid system. Upon hearing me complain aloud (a common occurence when I deal with css layout), [another developer](https://github.com/kitajchuk) I was working with at the time showed me an interesting ~~hack~~ solution to the problem which he had learned from a developer he had worked with. After much searching online, I couldn't find any occurence of this being written down, so I decided to put it on the internet for future generations.
