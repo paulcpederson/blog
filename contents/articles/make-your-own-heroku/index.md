@@ -2,10 +2,11 @@
 title: Make your own Heroku
 date: 2014-04-24
 template: article.jade
-thumbnail: inline-block-thumb.jpg
-background: inline-block.svg
+thumbnail: dokku-thumb.jpg
+feature: dokku-feature.png
+background: dokku.jpg
 canvas: navy mesh
-spot: orange
+spot: cyan
 description: Make a cheap, DIY Heroku and GitHub Pages clone with Dokku and DigitalOcean.
 featured: true
 ---
@@ -22,7 +23,7 @@ With Dokku, you can run your own (albeit slightly less feature-rich) Heroku. Wit
 
 ## 1. Get a Domain Name
 
-I recommend [namecheap](https://www.namecheap.com/) only because I have experience with them and they're not Godaddy... I registered [app-lab.me](app-lab.me) for $8 a year.
+I recommend [namecheap](https://www.namecheap.com/) only because I have experience with them and they're not Godaddy... I registered [app-lab.me](http://app-lab.me) for $8 a year.
 
 ## 2. Create a Digital Ocean Account
 
@@ -30,7 +31,7 @@ Create an account with Digital Ocean: [digitalocean.com](https://cloud.digitaloc
 
 ## 3. Create a Droplet
 
-Make a [new droplet](https://cloud.digitalocean.com/droplets/new) in DigitalOcean. Be sure to name the droplet exactly what your domain is. For example, I named my droplet app-lab.me. Select the smallest size, and whatever region is closest to you.
+Make a [new droplet](https://cloud.digitalocean.com/droplets/new) in DigitalOcean. Be sure to name the droplet exactly what your domain is. For example, I named my droplet `app-lab.me`. Select the smallest size, and whatever region is closest to you.
 
 In the "Select Image" section, click the "Applications" tab and choose the "Dokku-v0.2.1 on Ubuntu 13.04" option.
 
@@ -38,7 +39,7 @@ Click "Create Droplet".
 
 ## 4. Configure the DNS
 
-To get your domain to point to your new droplet, you need to change the DNS records. Just go to the page to edit "All Host Records"  (in Namecheap: My Account > Manage Domains > Modify Domain > All Host Records) and use the following host name and subdomain settings:
+To get your domain to point to your new droplet, you need to change the DNS records. Just go to the page to edit "All Host Records", in Namecheap that can be found at:  * My Account > Manage Domains > Modify Domain > All Host Records*. Use the following host name and subdomain settings:
 
 | HOST NAME | IP ADDRESS/URL | RECORD TYPE | MX PREF | TTL |
 | --- | --- | --- | --- | --- |
@@ -61,7 +62,7 @@ After it's done, you should have two files: {name} and {name}.pub
 
 ## 6. Set up the Droplet
 
-If you go to the IP address (in the email or listed in Digital Ocean) you should see a screen that has several fields. Add a public ssh key from the previous step (that's the one that ends in ".pub").
+If you go to the IP address (in the email or listed in Digital Ocean) you should see a screen that has several fields. Add a public ssh key from the previous step (that's the one that ends in `.pub`).
 
 Hostname should be your domain name exactly. For me, hostname was "app-lab.me".
 
@@ -87,7 +88,7 @@ To make it so you don't have to type your password every time you connect to you
 
 #### Create a Config File
 
-Create a config file so your computer knows to use the new ssh keys for your domain. My config looks like this:
+Create a file named `config` inside your `.ssh/` directory so your computer knows to use the new ssh keys for your domain. My config looks like this:
 
 ```
 Host app-lab app-lab.me
@@ -105,7 +106,7 @@ To upload the public key to your droplet, just type:
 cat ~/.ssh/{name}.pub | ssh root@your.domain "cat >> ~/.ssh/authorized_keys"
 ```
 
-Replacing the {name} with your key name and "your.domain" with your domain name.
+Replacing the `{name}` with your key name and `your.domain` with your domain name.
 
 #### Connect Without a Password
 
