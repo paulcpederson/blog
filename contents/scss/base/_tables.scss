@@ -1,0 +1,51 @@
+
+table {
+  width: 100%;
+  @include trailer(1, 14px);
+  @include adjust-font-size-to(14px);
+  background-color: $white;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid mix($lightest-gray, $lighter-gray);
+  text-align: left;
+
+  > thead {
+    background-color: mix($off-white, $lightest-gray);
+    border-bottom: 1px solid mix($lightest-gray, $lighter-gray);
+  }
+
+  th, td {
+    border-left: 1px solid mix($lightest-gray, $lighter-gray);
+    border-right: 1px solid mix($lightest-gray, $lighter-gray);
+    padding: 12px;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  tr {
+    border-bottom: 1px solid mix($lightest-gray, $lighter-gray);
+    text-align: left;
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  thead, tfoot, tr.divider {
+    @include adjust-font-size-to(15px);
+    font-weight: bold;
+  }
+
+  &.striped {
+    tr {
+      &:nth-child(even){
+          background-color: $off-white;
+        td {
+          background-color: $off-white;
+        }
+      }
+    }
+  }
+
+}
