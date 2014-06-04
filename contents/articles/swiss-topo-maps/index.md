@@ -1,15 +1,12 @@
 ---
 title: Swiss Topo Maps
 date: 2013-12-15
-template: map-post.jade
+template: article.jade
 thumbnail: swiss-thumb.jpg
+background: swiss.jpg
+canvas: tan mesh
 spot: red
 description: Since 1844 Switzerland has produced some of the most effective and beautiful topographic maps in the world.
-js:
-  - leaflet
-  - swiss
-css:
-  - leaflet
 ---
 
 Switzerland has become known for beautiful cartography. It should come as no surprise (seeing that their nation is almost entirely mountainous) that their presentation of relief is especially effective. The vast changes in elevation presented in this relatively small country necessitate huge amounts of work and thought on the part of cartographers.
