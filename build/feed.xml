@@ -27,7 +27,7 @@
 &lt;p&gt;Create an account with Digital Ocean: &lt;a href=&quot;https://cloud.digitalocean.com/registrations/new&quot;&gt;digitalocean.com&lt;/a&gt;. Use the coupon code JEDGAR for $55 free.&lt;/p&gt;
 &lt;h2 id=&quot;3-create-a-droplet&quot;&gt;3. Create a Droplet&lt;/h2&gt;
 &lt;p&gt;Make a &lt;a href=&quot;https://cloud.digitalocean.com/droplets/new&quot;&gt;new droplet&lt;/a&gt; in DigitalOcean. Be sure to name the droplet exactly what your domain is. For example, I named my droplet &lt;code&gt;app-lab.me&lt;/code&gt;. Select the smallest size, and whatever region is closest to you.&lt;/p&gt;
-&lt;p&gt;In the “Select Image” section, click the “Applications” tab and choose the “Dokku-v0.2.1 on Ubuntu 13.04” option.&lt;/p&gt;
+&lt;p&gt;In the “Select Image” section, click the “Applications” tab and choose the “Dokku-v0.2.3 on Ubuntu 14.04” option.&lt;/p&gt;
 &lt;p&gt;Click “Create Droplet”.&lt;/p&gt;
 &lt;h2 id=&quot;4-configure-the-dns&quot;&gt;4. Configure the DNS&lt;/h2&gt;
 &lt;p&gt;To get your domain to point to your new droplet, you need to change the DNS records. Just go to the page to edit “All Host Records”, in Namecheap that can be found at:  &lt;em&gt; My Account &amp;gt; Manage Domains &amp;gt; Modify Domain &amp;gt; All Host Records&lt;/em&gt;. Use the following host name and subdomain settings:&lt;/p&gt;
@@ -78,7 +78,7 @@
 &lt;h2 id=&quot;6-set-up-the-droplet&quot;&gt;6. Set up the Droplet&lt;/h2&gt;
 &lt;p&gt;If you go to the IP address (in the email or listed in Digital Ocean) you should see a screen that has several fields. Add a public ssh key from the previous step (that’s the one that ends in &lt;code&gt;.pub&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;Hostname should be your domain name exactly. For me, hostname was “app-lab.me”.&lt;/p&gt;
-&lt;p&gt;Check “virtual host naming” if you’d like your dokku apps to be formatted like &lt;code&gt;app-name.your.domain&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Check “virtual host naming” if you’d like your Dokku apps to be formatted like &lt;code&gt;app-name.your.domain&lt;/code&gt;.&lt;/p&gt;
 &lt;p&gt;Click “Finish Setup”&lt;/p&gt;
 &lt;h2 id=&quot;7-connect-to-your-droplet&quot;&gt;7. Connect to your Droplet&lt;/h2&gt;
 &lt;p&gt;First, ensure that your domain is pointing at the droplet’s IP Address. Type: &lt;code&gt;dig +short your.domain&lt;/code&gt;. This should respond with the IP Address of your droplet.&lt;/p&gt;
@@ -115,8 +115,8 @@ IdentityFile ~/.ssh/app-lab
 &lt;ul&gt;
 &lt;li&gt;clone the repo: &lt;code&gt;git clone git@github.com:heroku/node-js-sample.git&lt;/code&gt;&lt;/li&gt;
 &lt;li&gt;&lt;code&gt;cd node-js-sample&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;add dokku as a remote: &lt;code&gt;git remote add dokku dokku@your.domain:test&lt;/code&gt;&lt;/li&gt;
-&lt;li&gt;push to dokku: &lt;code&gt;git push dokku master&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;add Dokku as a remote: &lt;code&gt;git remote add dokku dokku@your.domain:test&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;push to Dokku: &lt;code&gt;git push dokku master&lt;/code&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;After Dokku finishes deploying your app and reports back that it’s finished, your app should be live at test.your.domain. Notice that the subdomain will be whatever you entered after the colon in your remote name. For example, if you want your app to live at apples.your.domain, you could add your remote like:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git remote add dokku dokku@your.domain:apples
@@ -124,15 +124,8 @@ IdentityFile ~/.ssh/app-lab
 &lt;p&gt;To add an app to the root domain, you just use the domain name when you add the remote. For example, if your domain was chickens.me, you would add your remote like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git remote add dokku dokku@chickens.me:chickens.me
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once you push, the app will be live at chickens.me.&lt;/p&gt;
-&lt;h2 id=&quot;deploying-a-static-app&quot;&gt;Deploying a Static App&lt;/h2&gt;
-&lt;p&gt;Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it’s dead simple. Essentially you just include an empty &lt;code&gt;.nginx&lt;/code&gt; file in the root level of your project, and put all your static content in a &lt;code&gt;www&lt;/code&gt; directory and it will be served on an nginx server automatically. For example, if I had a simple &lt;code&gt;index.html&lt;/code&gt; file and a &lt;code&gt;style.css&lt;/code&gt; file I wanted to serve statically, my project would look something like this:&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;.nginx
-www
-  - index.html
-  - style.css
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That’s it! You can have as many folders and files inside the &lt;code&gt;www&lt;/code&gt; directory as you need and it will serve it up statically for you.&lt;/p&gt;
 &lt;h2 id=&quot;deploying-an-app-to-another-domain&quot;&gt;Deploying an App to Another Domain&lt;/h2&gt;
-&lt;p&gt;It’s also pretty easy to use another domain and point it to dokku. It works similarly to how you add a project to the root domain (see above).&lt;/p&gt;
+&lt;p&gt;It’s also pretty easy to use another domain and point it to Dokku. It works similarly to how you add a project to the root domain (see above).&lt;/p&gt;
 &lt;p&gt;Let’s say you are building a little site for a domain you own, we’ll call it my-special-domain.com, but you set up Dokku on another domain like dokku-domain.com. When you decide to deploy your site, all you need to do is change the DNS records for my-special-domain. Go to the “All Host Records” page for my-special-domain.com (in Namecheap: “My Account &amp;gt; Manage Domains &amp;gt; Modify Domain”) and change the @ and www entries so they read like this:&lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
@@ -164,6 +157,30 @@ www
 &lt;p&gt;Then when you add your remote, you would add it like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;git remote add dokku dokku@dokku-domain.com:my-special-domain.com
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Once the domain is pointing to your droplet’s IP and you’ve pushed to your remote, you should see your app on my-special-domain.com.&lt;/p&gt;
+&lt;h2 id=&quot;deploying-a-static-app-in-a-subfolder&quot;&gt;Deploying a Static App in a Subfolder&lt;/h2&gt;
+&lt;p&gt;Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it’s dead simple. Essentially you just include an empty &lt;code&gt;.nginx&lt;/code&gt; file in the root level of your project, and put all your static content in a &lt;code&gt;www&lt;/code&gt; directory and it will be served on an nginx server automatically. For example, if I had a simple &lt;code&gt;index.html&lt;/code&gt; file and a &lt;code&gt;style.css&lt;/code&gt; file I wanted to serve statically, my project would look something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.nginx
+www
+  - index.html
+  - style.css
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;That’s it! You can have as many folders and files inside the &lt;code&gt;www&lt;/code&gt; directory as you need and it will serve it up statically for you. This is really useful if you use a static site generator to produce a folder of html as you can just set it to build to &lt;code&gt;/www&lt;/code&gt; and your site will automatically work.&lt;/p&gt;
+&lt;h2 id=&quot;deploying-a-static-app-from-the-root-folder&quot;&gt;Deploying a Static App From the Root Folder&lt;/h2&gt;
+&lt;p&gt;If you have no need for a subfolder, you can deploy a static app from the root of your project by adding an empty &lt;code&gt;.htaccess&lt;/code&gt; file. The folder structure would look something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.htaccess
+index.html
+style.css
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Dokku should automagically understand that you’re writing an app that uses Apache and give you a simple static site after you push.&lt;/p&gt;
+&lt;h2 id=&quot;deploying-a-static-app-with-password-protection&quot;&gt;Deploying a Static App with Password Protection&lt;/h2&gt;
+&lt;p&gt;This is a really good reason to use Dokku instead of gh-pages. It is super common to want to keep a project private from the general public and only allow clients, or other developers to see it. It took me forever to figure this out, and when I did I felt really stupid because it is ridiculously easy. Essentially, you deploy a static app exactly as above, but you add a &lt;code&gt;.htpasswd&lt;/code&gt; file to the root of your app and a couple lines to your &lt;code&gt;.htaccess&lt;/code&gt; file. Essentially your &lt;code&gt;.htaccess&lt;/code&gt; file will look something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;AuthUserFile /app/www/.htpasswd
+AuthType Basic
+AuthName &amp;quot;Restricted Access&amp;quot;
+Require valid-user
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Then, you can go to this &lt;a href=&quot;http://www.htaccesstools.com/htpasswd-generator/&quot;&gt;htpasswd generator site&lt;/a&gt;. Enter the username and password and copy the generated entry into a &lt;code&gt;.htpasswd&lt;/code&gt; file, also in the root of your project. Your folder structure will look something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;.htaccess
+.htpasswd
+index.html
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When you push to Dokku, it will use your .htaccess file and require you to login. It will probably save your password, so a computer will only need to log in once.&lt;/p&gt;
 &lt;h2 id=&quot;final-thoughts-and-credits&quot;&gt;Final Thoughts and Credits&lt;/h2&gt;
 &lt;p&gt;This post is just notes from going through this process myself. I followed my brilliant coworker Nate’s (&lt;a href=&quot;https://twitter.com/ungoldman&quot;&gt;ngoldman&lt;/a&gt;) write-up, which you can read &lt;a href=&quot;https://gist.github.com/ngoldman/7287753&quot;&gt;here&lt;/a&gt;. Since I’m pretty new to all this, there were a couple stumbling blocks for me (especially dealing with ssh keys), so I wanted to put this out there and make it available in case other people had trouble with the same things.&lt;/p&gt;
 &lt;p&gt;If there’s anything that could be improved, or is just totally wrong, tweet at me: &lt;a href=&quot;https://twitter.com/paulcpederson&quot;&gt;@paulcpederson&lt;/a&gt;.&lt;/p&gt;

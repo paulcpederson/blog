@@ -33,7 +33,7 @@ Create an account with Digital Ocean: [digitalocean.com](https://cloud.digitaloc
 
 Make a [new droplet](https://cloud.digitalocean.com/droplets/new) in DigitalOcean. Be sure to name the droplet exactly what your domain is. For example, I named my droplet `app-lab.me`. Select the smallest size, and whatever region is closest to you.
 
-In the "Select Image" section, click the "Applications" tab and choose the "Dokku-v0.2.1 on Ubuntu 13.04" option.
+In the "Select Image" section, click the "Applications" tab and choose the "Dokku-v0.2.3 on Ubuntu 14.04" option.
 
 Click "Create Droplet".
 
@@ -66,7 +66,7 @@ If you go to the IP address (in the email or listed in Digital Ocean) you should
 
 Hostname should be your domain name exactly. For me, hostname was "app-lab.me".
 
-Check "virtual host naming" if you'd like your dokku apps to be formatted like `app-name.your.domain`.
+Check "virtual host naming" if you'd like your Dokku apps to be formatted like `app-name.your.domain`.
 
 Click "Finish Setup"
 
@@ -124,8 +124,8 @@ Now you're all set to deploy apps to Dokku. If you want to deploy a test app, yo
 
 - clone the repo: `git clone git@github.com:heroku/node-js-sample.git`
 - `cd node-js-sample`
-- add dokku as a remote: `git remote add dokku dokku@your.domain:test`
-- push to dokku: `git push dokku master`
+- add Dokku as a remote: `git remote add dokku dokku@your.domain:test`
+- push to Dokku: `git push dokku master`
 
 After Dokku finishes deploying your app and reports back that it's finished, your app should be live at test.your.domain. Notice that the subdomain will be whatever you entered after the colon in your remote name. For example, if you want your app to live at apples.your.domain, you could add your remote like:
 
@@ -143,22 +143,9 @@ git remote add dokku dokku@chickens.me:chickens.me
 
 Once you push, the app will be live at chickens.me.
 
-## Deploying a Static App
-
-Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it's dead simple. Essentially you just include an empty `.nginx` file in the root level of your project, and put all your static content in a `www` directory and it will be served on an nginx server automatically. For example, if I had a simple `index.html` file and a `style.css` file I wanted to serve statically, my project would look something like this:
-
-```
-.nginx
-www
-  - index.html
-  - style.css
-```
-
-That's it! You can have as many folders and files inside the `www` directory as you need and it will serve it up statically for you.
-
 ## Deploying an App to Another Domain
 
-It's also pretty easy to use another domain and point it to dokku. It works similarly to how you add a project to the root domain (see above).
+It's also pretty easy to use another domain and point it to Dokku. It works similarly to how you add a project to the root domain (see above).
 
 Let's say you are building a little site for a domain you own, we'll call it my-special-domain.com, but you set up Dokku on another domain like dokku-domain.com. When you decide to deploy your site, all you need to do is change the DNS records for my-special-domain. Go to the "All Host Records" page for my-special-domain.com (in Namecheap: "My Account > Manage Domains > Modify Domain") and change the @ and www entries so they read like this:
 
@@ -174,6 +161,52 @@ git remote add dokku dokku@dokku-domain.com:my-special-domain.com
 ```
 
 Once the domain is pointing to your droplet's IP and you've pushed to your remote, you should see your app on my-special-domain.com.
+
+## Deploying a Static App in a Subfolder
+
+Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it's dead simple. Essentially you just include an empty `.nginx` file in the root level of your project, and put all your static content in a `www` directory and it will be served on an nginx server automatically. For example, if I had a simple `index.html` file and a `style.css` file I wanted to serve statically, my project would look something like this:
+
+```
+.nginx
+www
+  - index.html
+  - style.css
+```
+
+That's it! You can have as many folders and files inside the `www` directory as you need and it will serve it up statically for you. This is really useful if you use a static site generator to produce a folder of html as you can just set it to build to `/www` and your site will automatically work.
+
+## Deploying a Static App From the Root Folder
+
+If you have no need for a subfolder, you can deploy a static app from the root of your project by adding an empty `.htaccess` file. The folder structure would look something like this:
+
+```
+.htaccess
+index.html
+style.css
+```
+
+Dokku should automagically understand that you're writing an app that uses Apache and give you a simple static site after you push.
+
+## Deploying a Static App with Password Protection
+
+This is a really good reason to use Dokku instead of gh-pages. It is super common to want to keep a project private from the general public and only allow clients, or other developers to see it. It took me forever to figure this out, and when I did I felt really stupid because it is ridiculously easy. Essentially, you deploy a static app exactly as above, but you add a `.htpasswd` file to the root of your app and a couple lines to your `.htaccess` file. Essentially your `.htaccess` file will look something like this:
+
+```
+AuthUserFile /app/www/.htpasswd
+AuthType Basic
+AuthName "Restricted Access"
+Require valid-user
+```
+
+Then, you can go to this [htpasswd generator site](http://www.htaccesstools.com/htpasswd-generator/). Enter the username and password and copy the generated entry into a `.htpasswd` file, also in the root of your project. Your folder structure will look something like this:
+
+```
+.htaccess
+.htpasswd
+index.html
+```
+
+When you push to Dokku, it will use your .htaccess file and require you to login. It will probably save your password, so a computer will only need to log in once.
 
 ## Final Thoughts and Credits
 

@@ -47,7 +47,7 @@
 <p>Create an account with Digital Ocean: <a href="https://cloud.digitalocean.com/registrations/new">digitalocean.com</a>. Use the coupon code JEDGAR for $55 free.</p>
 <h2 id="3-create-a-droplet">3. Create a Droplet</h2>
 <p>Make a <a href="https://cloud.digitalocean.com/droplets/new">new droplet</a> in DigitalOcean. Be sure to name the droplet exactly what your domain is. For example, I named my droplet <code>app-lab.me</code>. Select the smallest size, and whatever region is closest to you.</p>
-<p>In the “Select Image” section, click the “Applications” tab and choose the “Dokku-v0.2.1 on Ubuntu 13.04” option.</p>
+<p>In the “Select Image” section, click the “Applications” tab and choose the “Dokku-v0.2.3 on Ubuntu 14.04” option.</p>
 <p>Click “Create Droplet”.</p>
 <h2 id="4-configure-the-dns">4. Configure the DNS</h2>
 <p>To get your domain to point to your new droplet, you need to change the DNS records. Just go to the page to edit “All Host Records”, in Namecheap that can be found at:  <em> My Account &gt; Manage Domains &gt; Modify Domain &gt; All Host Records</em>. Use the following host name and subdomain settings:</p>
@@ -98,7 +98,7 @@
 <h2 id="6-set-up-the-droplet">6. Set up the Droplet</h2>
 <p>If you go to the IP address (in the email or listed in Digital Ocean) you should see a screen that has several fields. Add a public ssh key from the previous step (that’s the one that ends in <code>.pub</code>).</p>
 <p>Hostname should be your domain name exactly. For me, hostname was “app-lab.me”.</p>
-<p>Check “virtual host naming” if you’d like your dokku apps to be formatted like <code>app-name.your.domain</code>.</p>
+<p>Check “virtual host naming” if you’d like your Dokku apps to be formatted like <code>app-name.your.domain</code>.</p>
 <p>Click “Finish Setup”</p>
 <h2 id="7-connect-to-your-droplet">7. Connect to your Droplet</h2>
 <p>First, ensure that your domain is pointing at the droplet’s IP Address. Type: <code>dig +short your.domain</code>. This should respond with the IP Address of your droplet.</p>
@@ -135,8 +135,8 @@ IdentityFile ~/.ssh/app-lab
 <ul>
 <li>clone the repo: <code>git clone git@github.com:heroku/node-js-sample.git</code></li>
 <li><code>cd node-js-sample</code></li>
-<li>add dokku as a remote: <code>git remote add dokku dokku@your.domain:test</code></li>
-<li>push to dokku: <code>git push dokku master</code></li>
+<li>add Dokku as a remote: <code>git remote add dokku dokku@your.domain:test</code></li>
+<li>push to Dokku: <code>git push dokku master</code></li>
 </ul>
 <p>After Dokku finishes deploying your app and reports back that it’s finished, your app should be live at test.your.domain. Notice that the subdomain will be whatever you entered after the colon in your remote name. For example, if you want your app to live at apples.your.domain, you could add your remote like:</p>
 <pre><code>git remote add dokku dokku@your.domain:apples
@@ -144,15 +144,8 @@ IdentityFile ~/.ssh/app-lab
 <p>To add an app to the root domain, you just use the domain name when you add the remote. For example, if your domain was chickens.me, you would add your remote like this:</p>
 <pre><code>git remote add dokku dokku@chickens.me:chickens.me
 </code></pre><p>Once you push, the app will be live at chickens.me.</p>
-<h2 id="deploying-a-static-app">Deploying a Static App</h2>
-<p>Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it’s dead simple. Essentially you just include an empty <code>.nginx</code> file in the root level of your project, and put all your static content in a <code>www</code> directory and it will be served on an nginx server automatically. For example, if I had a simple <code>index.html</code> file and a <code>style.css</code> file I wanted to serve statically, my project would look something like this:</p>
-<pre><code>.nginx
-www
-  - index.html
-  - style.css
-</code></pre><p>That’s it! You can have as many folders and files inside the <code>www</code> directory as you need and it will serve it up statically for you.</p>
 <h2 id="deploying-an-app-to-another-domain">Deploying an App to Another Domain</h2>
-<p>It’s also pretty easy to use another domain and point it to dokku. It works similarly to how you add a project to the root domain (see above).</p>
+<p>It’s also pretty easy to use another domain and point it to Dokku. It works similarly to how you add a project to the root domain (see above).</p>
 <p>Let’s say you are building a little site for a domain you own, we’ll call it my-special-domain.com, but you set up Dokku on another domain like dokku-domain.com. When you decide to deploy your site, all you need to do is change the DNS records for my-special-domain. Go to the “All Host Records” page for my-special-domain.com (in Namecheap: “My Account &gt; Manage Domains &gt; Modify Domain”) and change the @ and www entries so they read like this:</p>
 <table>
 <thead>
@@ -184,6 +177,30 @@ www
 <p>Then when you add your remote, you would add it like this:</p>
 <pre><code>git remote add dokku dokku@dokku-domain.com:my-special-domain.com
 </code></pre><p>Once the domain is pointing to your droplet’s IP and you’ve pushed to your remote, you should see your app on my-special-domain.com.</p>
+<h2 id="deploying-a-static-app-in-a-subfolder">Deploying a Static App in a Subfolder</h2>
+<p>Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it’s dead simple. Essentially you just include an empty <code>.nginx</code> file in the root level of your project, and put all your static content in a <code>www</code> directory and it will be served on an nginx server automatically. For example, if I had a simple <code>index.html</code> file and a <code>style.css</code> file I wanted to serve statically, my project would look something like this:</p>
+<pre><code>.nginx
+www
+  - index.html
+  - style.css
+</code></pre><p>That’s it! You can have as many folders and files inside the <code>www</code> directory as you need and it will serve it up statically for you. This is really useful if you use a static site generator to produce a folder of html as you can just set it to build to <code>/www</code> and your site will automatically work.</p>
+<h2 id="deploying-a-static-app-from-the-root-folder">Deploying a Static App From the Root Folder</h2>
+<p>If you have no need for a subfolder, you can deploy a static app from the root of your project by adding an empty <code>.htaccess</code> file. The folder structure would look something like this:</p>
+<pre><code>.htaccess
+index.html
+style.css
+</code></pre><p>Dokku should automagically understand that you’re writing an app that uses Apache and give you a simple static site after you push.</p>
+<h2 id="deploying-a-static-app-with-password-protection">Deploying a Static App with Password Protection</h2>
+<p>This is a really good reason to use Dokku instead of gh-pages. It is super common to want to keep a project private from the general public and only allow clients, or other developers to see it. It took me forever to figure this out, and when I did I felt really stupid because it is ridiculously easy. Essentially, you deploy a static app exactly as above, but you add a <code>.htpasswd</code> file to the root of your app and a couple lines to your <code>.htaccess</code> file. Essentially your <code>.htaccess</code> file will look something like this:</p>
+<pre><code>AuthUserFile /app/www/.htpasswd
+AuthType Basic
+AuthName &quot;Restricted Access&quot;
+Require valid-user
+</code></pre><p>Then, you can go to this <a href="http://www.htaccesstools.com/htpasswd-generator/">htpasswd generator site</a>. Enter the username and password and copy the generated entry into a <code>.htpasswd</code> file, also in the root of your project. Your folder structure will look something like this:</p>
+<pre><code>.htaccess
+.htpasswd
+index.html
+</code></pre><p>When you push to Dokku, it will use your .htaccess file and require you to login. It will probably save your password, so a computer will only need to log in once.</p>
 <h2 id="final-thoughts-and-credits">Final Thoughts and Credits</h2>
 <p>This post is just notes from going through this process myself. I followed my brilliant coworker Nate’s (<a href="https://twitter.com/ungoldman">ngoldman</a>) write-up, which you can read <a href="https://gist.github.com/ngoldman/7287753">here</a>. Since I’m pretty new to all this, there were a couple stumbling blocks for me (especially dealing with ssh keys), so I wanted to put this out there and make it available in case other people had trouble with the same things.</p>
 <p>If there’s anything that could be improved, or is just totally wrong, tweet at me: <a href="https://twitter.com/paulcpederson">@paulcpederson</a>.</p>
