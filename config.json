@@ -5,6 +5,7 @@
     "description": "I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.",
     "name": "Paul C Pederson"
   },
+  "output": "./www",
   "plugins": [
     "./plugins/paginator.coffee"
   ],
