@@ -3,7 +3,7 @@
 
 ## Tech Stack
 
-Node powered blog using [Wintersmith](https://github.com/jnordberg/wintersmith).
+Node powered blog using [Wintersmith](https://github.com/jnordberg/wintersmith). Hosted on Digital Ocean with Dokku.
 
 ## Topics
 
