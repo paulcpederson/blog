@@ -181,6 +181,12 @@ Require valid-user
 .htpasswd
 index.html
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;When you push to Dokku, it will use your .htaccess file and require you to login. It will probably save your password, so a computer will only need to log in once.&lt;/p&gt;
+&lt;h2 id=&quot;deleting-an-app&quot;&gt;Deleting an App&lt;/h2&gt;
+&lt;p&gt;If you want to remove an app, first, connect with ssh:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;ssh root@your.domain
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;If you set up ssh keys, this should work without a password. Then simply run:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;dokku delete app_name
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Where &lt;code&gt;app_name&lt;/code&gt; is the name of the app you’d like to delete.&lt;/p&gt;
 &lt;h2 id=&quot;final-thoughts-and-credits&quot;&gt;Final Thoughts and Credits&lt;/h2&gt;
 &lt;p&gt;This post is just notes from going through this process myself. I followed my brilliant coworker Nate’s (&lt;a href=&quot;https://twitter.com/ungoldman&quot;&gt;ngoldman&lt;/a&gt;) write-up, which you can read &lt;a href=&quot;https://gist.github.com/ngoldman/7287753&quot;&gt;here&lt;/a&gt;. Since I’m pretty new to all this, there were a couple stumbling blocks for me (especially dealing with ssh keys), so I wanted to put this out there and make it available in case other people had trouble with the same things.&lt;/p&gt;
 &lt;p&gt;If there’s anything that could be improved, or is just totally wrong, tweet at me: &lt;a href=&quot;https://twitter.com/paulcpederson&quot;&gt;@paulcpederson&lt;/a&gt;.&lt;/p&gt;
