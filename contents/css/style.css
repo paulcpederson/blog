@@ -522,7 +522,12 @@ pre .tex .formula {
   color: #2aa198;
 }
 
-/* line 2, ../scss/base/_tables.scss */
+/* line 1, ../scss/base/_tables.scss */
+.overflow-auto {
+  overflow: auto;
+}
+
+/* line 5, ../scss/base/_tables.scss */
 table {
   width: 100%;
   margin-bottom: 1.71429em;
@@ -534,41 +539,41 @@ table {
   border: 1px solid #e6e6e6;
   text-align: left;
 }
-/* line 12, ../scss/base/_tables.scss */
+/* line 15, ../scss/base/_tables.scss */
 table > thead {
   background-color: #f6f6f6;
   border-bottom: 1px solid #e6e6e6;
 }
-/* line 17, ../scss/base/_tables.scss */
+/* line 20, ../scss/base/_tables.scss */
 table th, table td {
   border-left: 1px solid #e6e6e6;
   border-right: 1px solid #e6e6e6;
   padding: 12px;
 }
-/* line 23, ../scss/base/_tables.scss */
+/* line 26, ../scss/base/_tables.scss */
 table p {
   margin-bottom: 0;
 }
-/* line 27, ../scss/base/_tables.scss */
+/* line 30, ../scss/base/_tables.scss */
 table tr {
   border-bottom: 1px solid #e6e6e6;
   text-align: left;
 }
-/* line 30, ../scss/base/_tables.scss */
+/* line 33, ../scss/base/_tables.scss */
 table tr:last-child {
   border-bottom: none;
 }
-/* line 35, ../scss/base/_tables.scss */
+/* line 38, ../scss/base/_tables.scss */
 table thead, table tfoot, table tr.divider {
   font-size: 0.9375em;
   line-height: 1.6em;
   font-weight: bold;
 }
-/* line 42, ../scss/base/_tables.scss */
+/* line 45, ../scss/base/_tables.scss */
 table.striped tr:nth-child(even) {
   background-color: #fefefe;
 }
-/* line 44, ../scss/base/_tables.scss */
+/* line 47, ../scss/base/_tables.scss */
 table.striped tr:nth-child(even) td {
   background-color: #fefefe;
 }

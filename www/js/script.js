@@ -1,11 +1,7 @@
-//Add ready class to body for onload animations
+// Responsive Tables
 document.addEventListener('DOMContentLoaded', function() {
-  document.getElementsByTagName("body")[0].className += ' ready';
+  var tables = document.getElementsByTagName('table');
+  for (var i = 0; i < tables.length; i++) {
+    tables[i].outerHTML = '<div class="overflow-auto">' + tables[i].outerHTML + '</div>';
+  }
 });
-
-// Add touch class to body if touch is detected
-var isTouch = (('ontouchstart' in window) || (navigator.msMaxTouchPoints > 0));
-
-if (isTouch) {
-  document.getElementsByTagName('body')[0].className += ' touch';
-}
