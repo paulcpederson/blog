@@ -33,13 +33,14 @@ pre {
     width: 100%;
     line-height: 1.25;
     overflow: auto;
-  }
-
-  &.lang-html {
-    .title {
-      font-size: 1em;
+    &.lang-html {
+      .title {
+        font-size: 1em;
+      }
     }
   }
+
+
 
   .comment, .template_comment, .diff .header, .doctype, .lisp .string, .javadoc {
     color: $base01;
