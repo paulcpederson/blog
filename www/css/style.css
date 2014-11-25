@@ -280,7 +280,7 @@ body {
 /* line 76, ../scss/base/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "Facit", Arial, Helvetica, sans;
-  line-height: 1em;
+  line-height: 1.25em;
   font-weight: 400;
   font-size: 1.5em;
   margin: 2em 0 1em 0;
@@ -405,19 +405,18 @@ p code, li code {
   background: #F8F8F8;
   border: 1px solid #EFEFEF;
   color: #666666;
-  white-space: nowrap;
   font-size: 0.85em;
   margin: 0 4px;
 }
 
 /* Solarized Dark Theme */
-/* line 23, ../scss/base/_code.scss */
+/* line 22, ../scss/base/_code.scss */
 pre {
   width: 100%;
   background-color: #002b36;
   margin: 2em 0;
 }
-/* line 27, ../scss/base/_code.scss */
+/* line 26, ../scss/base/_code.scss */
 pre code {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
@@ -430,39 +429,39 @@ pre code {
   line-height: 1.25;
   overflow: auto;
 }
-/* line 37, ../scss/base/_code.scss */
+/* line 36, ../scss/base/_code.scss */
 pre code.lang-html .title {
   font-size: 1em;
 }
-/* line 45, ../scss/base/_code.scss */
+/* line 44, ../scss/base/_code.scss */
 pre .comment, pre .template_comment, pre .diff .header, pre .doctype, pre .lisp .string, pre .javadoc {
   color: #586e75;
 }
-/* line 49, ../scss/base/_code.scss */
+/* line 48, ../scss/base/_code.scss */
 pre .keyword, pre .css .rule .keyword, pre .winutils, pre .javascript .title, pre .method, pre .addition, pre .css .tag, pre .lisp .title {
   color: #859900;
 }
-/* line 53, ../scss/base/_code.scss */
+/* line 52, ../scss/base/_code.scss */
 pre .number, pre .command, pre .string, pre .tag .value, pre .phpdoc, pre .tex .formula, pre .regexp, pre .hexcolor {
   color: #2aa198;
 }
-/* line 57, ../scss/base/_code.scss */
+/* line 56, ../scss/base/_code.scss */
 pre .title, pre .localvars, pre .function .title, pre .chunk, pre .decorator, pre .builtin, pre .built_in, pre .lisp .title, pre .identifier, pre .title .keymethods, pre .id {
   color: #268bd2;
 }
-/* line 61, ../scss/base/_code.scss */
+/* line 60, ../scss/base/_code.scss */
 pre .attribute, pre .variable, pre .instancevar, pre .lisp .body, pre .smalltalk .number, pre .constant, pre .class .title, pre .parent, pre .haskell .label {
   color: #b58900;
 }
-/* line 65, ../scss/base/_code.scss */
+/* line 64, ../scss/base/_code.scss */
 pre .preprocessor, pre .pi, pre .shebang, pre .symbol, pre .diff .change, pre .special, pre .keymethods, pre .attr_selector, pre .important, pre .subst, pre .cdata {
   color: #cb4b16;
 }
-/* line 69, ../scss/base/_code.scss */
+/* line 68, ../scss/base/_code.scss */
 pre .deletion {
   color: #dc322f;
 }
-/* line 73, ../scss/base/_code.scss */
+/* line 72, ../scss/base/_code.scss */
 pre .tex .formula {
   background: #073642;
 }
@@ -1774,6 +1773,13 @@ article a {
   .bottom-nav .constrain {
     padding: 0;
     width: 100%;
+  }
+}
+
+@media only screen and (min-width: 0) and (max-width: 700px) {
+  /* line 247, ../scss/_article.scss */
+  .content {
+    font-size: 1rem;
   }
 }
 

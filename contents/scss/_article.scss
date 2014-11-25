@@ -242,3 +242,10 @@ article {
   }
 }
 
+
+// Responsive Styles
+.content {
+  @include respond-to(0, 700px){
+    font-size: 1rem;
+  }
+}
