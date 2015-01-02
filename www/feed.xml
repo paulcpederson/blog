@@ -5,9 +5,102 @@
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link></link>
     <description>I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.</description>
-    <pubDate>Wed, 23 Apr 2014 17:00:00 -0700</pubDate>
+    <pubDate>Thu, 01 Jan 2015 16:00:00 -0800</pubDate>
     <generator>Wintersmith - https://github.com/jnordberg/wintersmith</generator>
     <language>en</language>
+    <item>
+      <title>Automating GitHub Releases with Grunt</title>
+      <link>/articles/automatic-github-releases/</link>
+      <pubDate>Thu, 01 Jan 2015 16:00:00 -0800</pubDate>
+      <guid isPermaLink="true">/articles/automatic-github-releases/</guid>
+      <author></author>
+      <description>&lt;p&gt;If you’ve used GitHub releases you know how great they can be. Essentially you draft a new release on any of your GitHub repositories, choose a specific tag, enter a title and a description, and click a button to create a neat and tidy little package that users can download and use.&lt;/p&gt;
+&lt;p&gt;Recently I realized that creating these releases was one of the only things I was doing by hand, and that seemed inefficient, so I endeavored to solve the problem with Grunt. It was all very easy with Grunt plugins that were already written, but there were a couple gotchas, so I thought I’d write it up for future generations.&lt;/p&gt;
+&lt;h2 id=&quot;grunt-compress&quot;&gt;Grunt Compress&lt;/h2&gt;
+&lt;p&gt;First, you create a zip file that people looking at your
+GitHub release can download using &lt;a href=&quot;https://github.com/gruntjs/grunt-contrib-compress&quot;&gt;grunt-contrib-compress&lt;/a&gt;. This is super straightforward. Install it: &lt;code&gt;npm install --save-dev grunt-contrib-compress&lt;/code&gt;, then load and configure it in &lt;code&gt;Gruntfile.js&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-js&quot;&gt;compress: {
+  main: {
+    options: {
+      archive: &lt;span class=&quot;string&quot;&gt;'name.zip'&lt;/span&gt; &lt;span class=&quot;comment&quot;&gt;// What you want to call your file&lt;/span&gt;
+    },
+    files: [
+      {
+        src: [&lt;span class=&quot;string&quot;&gt;'dist/**'&lt;/span&gt;], &lt;span class=&quot;comment&quot;&gt;// What should be included in the zip&lt;/span&gt;
+        dest: &lt;span class=&quot;string&quot;&gt;'./'&lt;/span&gt;        &lt;span class=&quot;comment&quot;&gt;// Where the zipfile should go&lt;/span&gt;
+      },
+    ]
+  }
+}
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;It’s probably a good idea to add &lt;code&gt;name.zip&lt;/code&gt; (or whatever you end up naming your file) to your &lt;code&gt;.gitignore&lt;/code&gt; so you aren’t tracking checking it into git.&lt;/p&gt;
+&lt;h2 id=&quot;grunt-github-releaser&quot;&gt;Grunt GitHub Releaser&lt;/h2&gt;
+&lt;p&gt;The most important plugin to use was obviously &lt;a href=&quot;https://github.com/dolbyzerr/grunt-github-releaser&quot;&gt;grunt-github-releaser&lt;/a&gt;. I chose this one, but there are a myriad of grunt plugins that handle creating releasing on GitHub and any would probably work. This handles almost all of the heavy-lifting for you in terms of creating a GitHub release. A sample would be something like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-js&quot;&gt;&lt;span class=&quot;string&quot;&gt;'github-release'&lt;/span&gt;: {
+  options: {
+    repository: &lt;span class=&quot;string&quot;&gt;'yourName/repo-name'&lt;/span&gt;,
+    release: {
+      tag_name: &lt;span class=&quot;string&quot;&gt;'v1.0.0'&lt;/span&gt;,
+      name: &lt;span class=&quot;string&quot;&gt;'v1.0.0'&lt;/span&gt;,
+      body: &lt;span class=&quot;string&quot;&gt;'Description of the release'&lt;/span&gt;
+    }
+  },
+  files: {
+    src: [&lt;span class=&quot;string&quot;&gt;'name.zip'&lt;/span&gt;]
+  }
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now what you should be thinking in your head is “I would have to change all of these settings every signle time I create a release!”. Let’s fix that. First, use the version number in your &lt;code&gt;package.json&lt;/code&gt; as your tag and title:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-js&quot;&gt;&lt;span class=&quot;string&quot;&gt;'github-release'&lt;/span&gt;: {
+  options: {
+    repository: &lt;span class=&quot;string&quot;&gt;'yourName/repo-name'&lt;/span&gt;,
+    release: {
+      tag_name: grunt.file.readJSON(&lt;span class=&quot;string&quot;&gt;'package.json'&lt;/span&gt;).version,
+      name: grunt.file.readJSON(&lt;span class=&quot;string&quot;&gt;'package.json'&lt;/span&gt;).version,
+      body: &lt;span class=&quot;string&quot;&gt;'Description of the release'&lt;/span&gt;
+    }
+  },
+  files: {
+    src: [&lt;span class=&quot;string&quot;&gt;'name.zip'&lt;/span&gt;]
+  }
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now all that’s left is the body (description) of the release. I have been just parsing this from my &lt;code&gt;CHANGELOG.md&lt;/code&gt;, but there are numerous ways to handle that.&lt;/p&gt;
+&lt;h2 id=&quot;grunt-prompt&quot;&gt;Grunt Prompt&lt;/h2&gt;
+&lt;p&gt;The final step is to sign in to GitHub with your username and password so you can upload a release. The grunt-github-releaser plugin has an &lt;code&gt;auth&lt;/code&gt; object where you can put your username and password, but that should &lt;strong&gt;terrify&lt;/strong&gt; you because then your password would be in plaintext in a (maybe public) GitHub repo…&lt;/p&gt;
+&lt;p&gt;I solved this problem using &lt;a href=&quot;https://github.com/dylang/grunt-prompt&quot;&gt;grunt-prompt&lt;/a&gt;. This lets us ask for a username and password when the grunt task is run. After you npm install and load the grunt task, configure prompt like this:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-js&quot;&gt;prompt: {
+  target: {
+    options: {
+      questions: [
+        {
+          config: &lt;span class=&quot;string&quot;&gt;'github-release.options.auth.user'&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;// set the user to whatever is typed for this question&lt;/span&gt;
+          type: &lt;span class=&quot;string&quot;&gt;'input'&lt;/span&gt;,
+          message: &lt;span class=&quot;string&quot;&gt;'GitHub username:'&lt;/span&gt;
+        },
+        {
+          config: &lt;span class=&quot;string&quot;&gt;'github-release.options.auth.password'&lt;/span&gt;, &lt;span class=&quot;comment&quot;&gt;// set the password to whatever is typed for this question&lt;/span&gt;
+          type: &lt;span class=&quot;string&quot;&gt;'password'&lt;/span&gt;,
+          message: &lt;span class=&quot;string&quot;&gt;'GitHub password:'&lt;/span&gt;
+        }
+      ]
+    }
+  }
+},
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This will set the values of grunt-github-releaser to be whatever the user enters in the prompt. You could even add a prompt for a release body here if you don’t have a way of getting that yet!&lt;/p&gt;
+&lt;h2 id=&quot;wrapping-up&quot;&gt;Wrapping Up&lt;/h2&gt;
+&lt;p&gt;Now, you would just register a grunt task that runs these plugins in the right order and give it a sensible name like, I don’t know, &lt;code&gt;release&lt;/code&gt;:&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&quot;lang-js&quot;&gt;grunt.registerTask(&lt;span class=&quot;string&quot;&gt;'release'&lt;/span&gt;, [
+  &lt;span class=&quot;string&quot;&gt;'prompt'&lt;/span&gt;,
+  &lt;span class=&quot;string&quot;&gt;'compress'&lt;/span&gt;,
+  &lt;span class=&quot;string&quot;&gt;'github-release'&lt;/span&gt;
+]);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now you can just use &lt;code&gt;grunt release&lt;/code&gt;. Enter your username and password and you’re done!&lt;/p&gt;
+&lt;p&gt;As always, if this makes no sense, is wrong, or could be improved, you should tweet at me: &lt;a href=&quot;https://twitter.com/paulcpederson&quot;&gt;@paulcpederson&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
     <item>
       <title>Make your own Heroku</title>
       <link>/articles/make-your-own-heroku/</link>
