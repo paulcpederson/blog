@@ -10,5 +10,8 @@
     "grunt-contrib-watch": "~0.5.1",
     "grunt-contrib-compass": "~0.4.1"
   },
-  "repository": "none"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paulcpederson/blog.git"
+  }
 }
