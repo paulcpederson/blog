@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
+    <loc>http://paulcpederson.com/articles/npm-run/</loc>
+    <image:image>
+      <image:loc>http://paulcpederson.comnpm-run-thumb.jpg</image:loc>
+    </image:image>
+    <changefreq>monthly</changefreq>
+  </url>
+  <url>
     <loc>http://paulcpederson.com/articles/automatic-github-releases/</loc>
     <image:image>
       <image:loc>http://paulcpederson.comgrunt-release-thumb.jpg</image:loc>
