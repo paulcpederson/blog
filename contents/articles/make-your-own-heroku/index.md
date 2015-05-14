@@ -8,7 +8,6 @@ background: dokku.jpg
 canvas: navy mesh
 spot: cyan
 description: Make a cheap, DIY Heroku and GitHub Pages clone with Dokku and DigitalOcean.
-featured: true
 ---
 
 If you've ever used [GitHub Pages](https://pages.github.com/), you know how easy and convenient it is to be able to deploy a quick static site by pushing to a remote. Being able to type ```git push origin gh-pages``` and have your site immediately live on a publicly accessible domain is hugely satisfying and you end up experimenting way more, pushing up micro-sites and project pages because it's easy.

@@ -2,11 +2,13 @@
 title: Using NPM as a Task Runner
 date: 2015-4-8
 template: article.jade
-background: grunt-release.jpg
-thumbnail: grunt-release-thumb.jpg
+background: npm-run.svg
+thumbnail: npm-run-thumb.jpg
+feature: npm-run-feature.png
 canvas: tan mesh
-spot: green
+spot: red
 description: "Use npm to automate front-end development tasks such as image optimization, Sass compilation, and running a local server."
+featured: true
 ---
 
 It's [no secret](../automatic-github-releases) that I like Grunt. As somebody who was running tasks like minification, image compression, and css preprocessing by hand, Grunt was a breath of fresh air. But like any technology, there was a learning curve. I had to find the right grunt plugins, learn how to configure and run everything, and also update my tasks as Grunt made breaking changes between versions.
@@ -21,7 +23,7 @@ NPM references a file called `package.json`. If you were using Grunt or Gulp, ch
 
 To run a script, just add a command to `scripts` like this:
 
-```json
+```js
 "scripts": {
   "my-script": "ls -l"
 }
@@ -41,7 +43,7 @@ npm run my-script
 
 This will not only run `my-script` but it will also run the `pre` and `post` scripts for that entry if you defined them. So if you had:
 
-```json
+```js
 "scripts": {
   "premy-script": "echo 'about to list files'",
   "my-script": "ls -l",
@@ -69,7 +71,7 @@ It is pretty common now to include a compile or build step for processing JavaSc
 
 Personally, I've fallen in love with [browserify](http://browserify.org/) which basically allows you to write JavaScript in the "node-style" and then compile it so it works in browsers. Why this is so awesome is the subject of another post, but creating some tooling for it is very easy. Just `npm install --save-dev browserify` and add a script to your `package.json` file:
 
-```json
+```js
 "scripts": {
   "js": "browserify -e index.js -d -o bundle.js"
 }
@@ -92,7 +94,7 @@ Using the [node-sass cli](https://github.com/sass/node-sass#command-line-interfa
 So what's a boy to do when an open source tool is missing a feature? Why, [open a pull request](https://github.com/sass/node-sass/pull/838), of course! Once that got merged, adding a Sass task for all your files is really easy. Just `npm install --save-dev node-sass`. Then add a script to `package.json`:
 
 
-```json
+```js
 "scripts": {
   "sass": "node-sass sass/ -o build/css/"
 }
@@ -106,7 +108,7 @@ This was one of the harder tasks to figure out for me. I tried a lot of solution
 
 To solve this problem, I threw together a quick little module that checks if each image is newer. I named the module, wait for it, [imagemin-newer](https://github.com/paulcpederson/imagemin-newer). Now, you can just `npm install --save-dev imagemin-newer` and then add the following:
 
-```json
+```js
 "scripts": {
   "img": "imagemin-newer img/ build/img"
 }
@@ -120,7 +122,7 @@ This will optimize and compress any image (gif, png, svg, jpg) that was added or
 
 First of all *extremely interesting question*. I accomplish this with a module called [rerun-script](https://www.npmjs.com/package/rerun-script). Basically it allows you to *rerun a script* (straight-forward names are the best) whenever files matching a certain pattern change.  The patterns are stored in a `watches` key in your `package.json`. So after you `npm install --save-dev rerun-script` you can add the following to your `package.json`:
 
-```json
+```js
 "watches": {
   "js": "js/**",
   "sass": "sass/**",
@@ -142,7 +144,7 @@ Another thing you often need to do is to run a static server to preview your wor
 
 After you `npm install --save-dev live-server`, you can just create a script to run a server:
 
-```json
+```js
 "scripts": {
   "preview": "live-server"
 }
@@ -156,7 +158,7 @@ It's pretty common to have a couple more tasks like building a static site, runn
 
 Here's what a working set of scripts might look like in a real project:
 
-```json
+```js
  "scripts": {
     "js": "browserify -e js/index.js -d -o build/js/bundle.js",
     "sass": "node-sass sass/ -q -o build/css/",
@@ -177,4 +179,4 @@ Before the `dev` task is run, there is a `predev` task which will make sure ther
 
 Then, it uses [parallelshell](https://github.com/keithamus/parallelshell) to go into the build folder, start up a preview server, and kick off the file watcher. `npm run dev` is all you need now to spin everything up and get started.
 
-Hopefully that was helpful. I know this type of article has been written before, but I feel like most of them don't really go into the things you actually need to know to get going. As always, if anything is just super wrong, tweet angrily at me [@paulcpederson](https://twitter.com/paulcpederson)
+Hopefully that was helpful. I know this type of article has been written before, but I feel like most of them don't really go into the things you actually need to know to get going. As always, if anything is just super wrong, tweet angrily at me: [@paulcpederson](https://twitter.com/paulcpederson).
