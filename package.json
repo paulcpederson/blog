@@ -1,14 +1,29 @@
 {
+  "scripts": {
+    "sass": "node-sass contents/scss/ --include-path node_modules/ -q -o contents/css/",
+    "predev": "npm run sass",
+    "dev": "parallelshell 'wintersmith preview' 'rerun-script'",
+    "build": "wintersmith build"
+  },
+  "watches": {
+    "sass": "contents/scss/**"
+  },
   "dependencies": {
     "moment": "2.x",
     "underscore": "1.4.x",
-    "typogr": "0.5.x"
+    "typogr": "0.5.x",
+    "inline-block-grid": "git://github.com/paulcpederson/inline-block-grid.git",
+    "node-sass": "^3.0.0-beta.7",
+    "scss-utils": "0.0.2"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
+    "grunt-contrib-compass": "~0.4.1",
     "grunt-contrib-jshint": "~0.6.0",
     "grunt-contrib-watch": "~0.5.1",
-    "grunt-contrib-compass": "~0.4.1"
+    "parallelshell": "^1.1.1",
+    "rerun-script": "^0.6.0",
+    "wintersmith": "^2.2.0"
   },
   "repository": {
     "type": "git",
