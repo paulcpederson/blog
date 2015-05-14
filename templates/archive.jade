@@ -23,17 +23,17 @@ block content
     section.constrain
       - var years = _.chain(archive).keys().reverse().value()
       each year, i in years
-        div.col-group.year
-          div.col.col1of5
+        div.block-grid.year
+          div.column-2
             p= year
           - var yearArticles = _.groupBy(archive[year], function(item) { return map[item.date.getUTCMonth()] })
           - var months = Object.keys(yearArticles);
-          div.col.col4of5
-            div.col-group
+          div.column-10
+            div.block-grid
               each month, i in months
                 - var articles = yearArticles[month]
                   each article, i in articles
-                    div.archive.col.col1of2
+                    div.archive.column-6.medium-column-12
                       p.archive-title
                         a(href=article.url)= article.title
                       p.small= moment.utc(article.date).format('M.D.YYYY')
