@@ -44,7 +44,7 @@ label {
 }
 
 input, select, textarea {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   display: block;
   width: 100%;
   outline: none;
@@ -89,7 +89,7 @@ textarea {
 }
 
 select {
-  @include box-sizing(border-box);
+  box-sizing: border-box;
   @include border-radius(3px);
   color: $white;
   background-color: $red;

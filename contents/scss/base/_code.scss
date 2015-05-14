@@ -24,7 +24,7 @@ pre {
   background-color: $base03;
   margin: 2em 0;
   code {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
     display: block;
     padding: 1em;
     background-color: $base03;
