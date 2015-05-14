@@ -4,8 +4,8 @@
 
 table {
   width: 100%;
-  @include trailer(1, 14px);
-  @include adjust-font-size-to(14px);
+  margin-bottom: 2em;
+  font-size: .875rem;
   background-color: $white;
   border-collapse: collapse;
   border-spacing: 0;
@@ -36,7 +36,7 @@ table {
   }
 
   thead, tfoot, tr.divider {
-    @include adjust-font-size-to(15px);
+    font-size: .925rem;
     font-weight: bold;
   }
 

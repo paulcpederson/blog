@@ -19,7 +19,7 @@
     line-height: 1em;
   }
   .hide-mobile {
-    @include respond-to(0, 400px){
+    @include respond-to(0, 400px) {
       display: none;
     }
   }
@@ -28,7 +28,7 @@
 .map .panel.nav {
   a, span {
     color: $white;
-    @include text-shadow(0 0 7px rgba(0, 0, 0, 0.8));
+    text-shadow: 0 0 7px rgba(0, 0, 0, 0.8);
   }
 }
 

@@ -3,7 +3,7 @@
   padding: 1em;
   background-color: transparent;
   color: $white;
-  @include border-radius(3px);
+  border-radius: 3px;
   border: 1px solid $dark-gray;
   text-decoration: none;
   font-family: $button-font;
