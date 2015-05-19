@@ -43,3 +43,18 @@ css:
 - **js:** List of js files needed for post (without js at end)
 - **css:** List of css files specific to post (without css at end)
 
+## Install
+
+```
+npm install
+```
+
+## Development
+
+```
+npm run dev
+```
+
+## License
+
+Words and content are mine (©Paul C Pederson, 2015), but the tech is yours (ISC).
