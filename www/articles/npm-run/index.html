@@ -35,10 +35,10 @@
     </div>
     <article class="panel white">
       <section class="constrain content"><p>It’s <a href="/articles/automatic-github-releases">no secret</a> that I like Grunt. As somebody who was running tasks like minification, image compression, and css preprocessing by hand, Grunt was a breath of fresh air. But like any technology, there was a learning curve. I had to find the right grunt plugins, learn how to configure and run everything, and also update my tasks as Grunt made breaking changes between versions.</p>
-<p>After several months of drinking the Grunt KoolAid while scrolling up and down in a monolithic four hundred line <code>Gruntfile.js</code> I suddenly realized how insane this had all become. There was a lot of boilerplate for something that is really not that complicated. Around that time I read <a href="http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/">this article</a>, which really interested me. Wanting to learn more, I found <a href="http://substack.net/task_automation_with_npm_run">a similar article by substack</a>. I remained hesitant, but thought I’d give it a try as an experiment on my next personal project (best not to subject my coworkers to wild experimentation).</p>
+<p>After several months of drinking the Grunt KoolAid while scrolling up and down in a monolithic four hundred line <code>Gruntfile.js</code> I suddenly realized how insane this had all become. There was a lot of boilerplate for something that is really not that complicated. Around that time I read <a href="http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/">this article</a>, which really interested me. Wanting to learn more, I found <a href="http://substack.net/task_automation_with_npm_run">a similar article by substack</a>. I remained hesitant, but thought I’d give it a try as an experiment on my next personal project.</p>
 <p>About two months later I am still using npm to manage development tasks and I don’t think I’ll go back to grunt, gulp, or whatever broccoli is. There is something really refreshing and eloquent about using a simple list of commands in a JSON file. I now feel like I’ve gotten to the same comfort level using npm scripts as I had with Grunt, but now everything fits on one screen. Below I’ll give a brief intro into how NPM runs commands, after which I’ll dive into my current approach for various common tasks that front-end web development requires.</p>
 <h2 id="how-npm-runs-scripts">How NPM Runs Scripts</h2>
-<p>NPM references a file called <code>package.json</code>. If you were using Grunt or Gulp, chances are you are already familiar with this file. Along with <code>dependencies</code>, <code>devDependencies</code>, and things like <code>repository</code>, <code>version</code>, and <code>name</code> keys, <code>package.json</code> also includes a key called <code>scripts</code>. This is a simple list of scripts you can run with npm where the name of the script is on the left and the corresponding command is on the right. Scripts that are generally used everywhere in Node-Land are <code>start</code> and <code>test</code>, but you can add any number of scripts for your project.</p>
+<p>NPM uses a file called <code>package.json</code> to do pretty much everything. If you were using Grunt or Gulp, chances are you are already familiar with this file. Along with <code>dependencies</code>, <code>devDependencies</code>, and things like <code>repository</code>, <code>version</code>, and <code>name</code> keys, <code>package.json</code> also includes a key called <code>scripts</code>. This is a simple list of scripts you can run with npm. The name of the script goes on the left and the corresponding command goes on the right. Scripts that are generally used everywhere in Node-Land are <code>start</code> and <code>test</code>, but you can add any number of scripts for your project.</p>
 <p>To run a script, just add a command to <code>scripts</code> like this:</p>
 <pre><code class="lang-js"><span class="string">"scripts"</span>: {
   <span class="string">"my-script"</span>: <span class="string">"ls -l"</span>
@@ -56,14 +56,14 @@
 }
 </code></pre>
 <p>You will get the first message printed, then the list of files, and then the last message.</p>
-<p>The last thing to mention about npm scripts is that they have access to everything in <code>node_modules/.bin/</code>. Essentially, module authors can register command line tools with npm by adding a <code>bin</code> key to <code>package.json</code>. That enables people to install the module globally and then use that tool.</p>
+<p>The last thing to mention about npm scripts is that they have access to everything in <code>node_modules/.bin/</code>. Essentially, module authors can register command line tools with npm by adding a <code>bin</code> key to <code>package.json</code>. That enables people to install the module globally and then use that tool from the command line.</p>
 <p>For example, <a href="https://github.com/imagemin/imagemin#cli">imagemin</a> has a cli which you can use to minify images from the command line if you install imagemin globally (specified <a href="https://github.com/imagemin/imagemin/blob/master/package.json#L16">here</a>). If you use imagemin via an npm script <em>you don’t have to install anything globally</em>. NPM automatically adds their bin to <code>node_modules/.bin</code> and makes it available to the command from your script!</p>
 <blockquote>
 <p>You don’t have to install anything globally.</p>
 </blockquote>
 <p>This is amazing because now people that contribute to your project can get everything they need with a simple <code>npm install</code>. That lowers the barrier of entry to contributing to your project, and also lets you tightly control what version of imagemin your project uses if you want to.</p>
 <h2 id="front-end-tasks">Front End Tasks</h2>
-<p>Now that we know the basics of how this might work, let’s just into the different things that are common in front-end tooling. Some of these things were a challenge to set up the first time, and some I had to write myself, but hopefully this can shorten the learning curve for those of you just starting to use npm or inspire you to try it if you’re just curious.</p>
+<p>Now that we know the basics of how this might work, I’ll dive into some common tasks for front-end development. Some of these things were a challenge to set up the first time, and some I had to write myself, but hopefully this can shorten the learning curve for those of you just starting to use npm or inspire you to try it if you’re just curious.</p>
 <h3 id="javascript">JavaScript</h3>
 <p>It is pretty common now to include a compile or build step for processing JavaScript. At the very least, you should probably be minifying your files so they are smaller.</p>
 <p>Personally, I’ve fallen in love with <a href="http://browserify.org/">browserify</a> which basically allows you to write JavaScript in the “node-style” and then compile it so it works in browsers. Why this is so awesome is the subject of another post, but creating some tooling for it is very easy. Just <code>npm install --save-dev browserify</code> and add a script to your <code>package.json</code> file:</p>
@@ -79,14 +79,14 @@
 <li>If you want to minify your JS (and you should!) you can also pipe the output of browserify through <a href="https://www.npmjs.com/package/uglify-js">uglify</a> like this: <code>browserify index.js | uglifyjs &gt; bundle.min.js</code>. (Make sure you <code>npm install --save-dev uglify-js</code> first!)</li>
 </ol>
 <h3 id="css">CSS</h3>
-<p>As far as CSS preprocessors go, I’m a fan of Sass. Up until recently it’s been sort of a pain to install because it relied on Ruby. But thanks to <a href="https://github.com/sass/libsass">LibSass</a> and consequently <a href="https://github.com/sass/node-sass">node-sass</a> it is now <em>very</em> easy to use Sass in a project with Node.js (and it is also crazy fast). The best part of using node-sass is that contributors to your project won’t need Ruby or Sass installed locally. NPM will automatically install everything it needs on <code>npm install</code>.</p>
-<p>Using the <a href="https://github.com/sass/node-sass#command-line-interface">node-sass cli</a> actually proved to be a bit difficult because it didn’t provide a way to compile multiple Sass files. I often have a main CSS file that provides the main styles for everything, and then I’ll break out page-specific styles into their own file so that the main file can be cached but doesn’t include the whole kitchen sink.</p>
+<p>As far as CSS preprocessors go, I’m a fan of Sass. Up until recently it’s been sort of a pain to install because it relied on Ruby. But thanks to <a href="https://github.com/sass/libsass">LibSass</a> and consequently <a href="https://github.com/sass/node-sass">node-sass</a> it is now <em>very</em> easy (and crazy fast) to use Sass in a project with Node.js. The best part of using node-sass is that contributors to your project won’t need Ruby or Sass installed locally. NPM will automatically install everything it needs on <code>npm install</code>.</p>
+<p>Using the <a href="https://github.com/sass/node-sass#command-line-interface">node-sass cli</a> actually proved to be a bit difficult because it didn’t provide a way to compile multiple Sass files. I often have a main CSS file that provides the base styles for everything, and then I’ll break out page-specific styles into their own file so that the main file can be cached but doesn’t include the whole kitchen sink.</p>
 <p>So what’s a boy to do when an open source tool is missing a feature? Why, <a href="https://github.com/sass/node-sass/pull/838">open a pull request</a>, of course! Once that got merged, adding a Sass task for all your files is really easy. Just <code>npm install --save-dev node-sass</code>. Then add a script to <code>package.json</code>:</p>
 <pre><code class="lang-js"><span class="string">"scripts"</span>: {
   <span class="string">"sass"</span>: <span class="string">"node-sass sass/ -o build/css/"</span>
 }
 </code></pre>
-<p>This will compile all of the sass files (that don’t start with an underscore) to the <code>build/css</code> directory.</p>
+<p>This will compile all of the sass files (that don’t start with an underscore) to the <code>build/css/</code> directory.</p>
 <h3 id="images">Images</h3>
 <p>This was one of the harder tasks to figure out for me. I tried a lot of solutions, but in the end I found that <a href="https://github.com/imagemin/imagemin">imagemin</a> was the easiest to use. Again, though, there was a small hiccup: running imagemin on a folder would optimize all the images in that folder regardless of if you had already optimized them or not.</p>
 <p>To solve this problem, I threw together a quick little module that checks if each image is newer. I named the module, wait for it, <a href="https://github.com/paulcpederson/imagemin-newer">imagemin-newer</a>. Now, you can just <code>npm install --save-dev imagemin-newer</code> and then add the following:</p>
@@ -114,7 +114,7 @@
 </code></pre>
 <p>Now you can <code>npm run dev</code> and it will watch each of these folders and run the corresponding task when things change.</p>
 <h3 id="running-a-preview-server">Running a Preview Server</h3>
-<p>Another thing you often need to do is to run a static server to preview your work while in development. The module I’ve been using for this is called <a href="https://www.npmjs.com/package/live-server">live-server</a>. Once you experience automatic CSS reloads without a page refresh it’s sort of hard to go back…</p>
+<p>To run a preview server I’ve been using <a href="https://www.npmjs.com/package/live-server">live-server</a>. Once you experience automatic CSS reloads without a page refresh it’s sort of hard to go back…</p>
 <p>After you <code>npm install --save-dev live-server</code>, you can just create a script to run a server:</p>
 <pre><code class="lang-js"><span class="string">"scripts"</span>: {
   <span class="string">"preview"</span>: <span class="string">"live-server"</span>
@@ -122,7 +122,7 @@
 </code></pre>
 <p>Now if you use <code>npm run preview</code> you’ll have a server running on <code>localhost:8080</code> that will automatically open and then reload whenever anything changes.</p>
 <h3 id="tying-it-all-together">Tying It All Together</h3>
-<p>It’s pretty common to have a couple more tasks like building a static site, running a test quite for your JavaScript, uploading assets to s3, or even deploying your site. But at this point it should be pretty obvious how to go about adding those things.</p>
+<p>It’s pretty common to have a couple more tasks like building a static site, running a test suite for your JavaScript, uploading assets to s3, or even deploying your site. But at this point it should be pretty obvious how to go about adding those things.</p>
 <p>Here’s what a working set of scripts might look like in a real project:</p>
 <pre><code class="lang-js"> <span class="string">"scripts"</span>: {
     <span class="string">"js"</span>: <span class="string">"browserify -e js/index.js -d -o build/js/bundle.js"</span>,
@@ -137,7 +137,7 @@
     <span class="string">"img"</span>: <span class="string">"img/**"</span>
   },
 </code></pre>
-<p>The above creates a javascript bundle and exports that to the build folder. It also compiles sass and optimized images, placing both of the end results in the build folder.</p>
+<p>The above creates a JavaScript bundle and exports that to the build folder. It also compiles sass and optimized images, placing both of the end results in the build folder.</p>
 <p>Before the <code>dev</code> task is run, there is a <code>predev</code> task which will make sure there is a build folder, then run all three of our other tasks in parallel once at the beginning using <a href="https://www.npmjs.com/package/npm-run-all">npm-run-all</a>.</p>
 <p>Then, it uses <a href="https://github.com/keithamus/parallelshell">parallelshell</a> to go into the build folder, start up a preview server, and kick off the file watcher. <code>npm run dev</code> is all you need now to spin everything up and get started.</p>
 <p>Hopefully that was helpful. I know this type of article has been written before, but I feel like most of them don’t really go into the things you actually need to know to get going. As always, if anything is just super wrong, tweet angrily at me: <a href="https://twitter.com/paulcpederson">@paulcpederson</a>.</p>

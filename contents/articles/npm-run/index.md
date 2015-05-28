@@ -13,13 +13,13 @@ featured: true
 
 It's [no secret](../automatic-github-releases) that I like Grunt. As somebody who was running tasks like minification, image compression, and css preprocessing by hand, Grunt was a breath of fresh air. But like any technology, there was a learning curve. I had to find the right grunt plugins, learn how to configure and run everything, and also update my tasks as Grunt made breaking changes between versions.
 
-After several months of drinking the Grunt KoolAid while scrolling up and down in a monolithic four hundred line `Gruntfile.js` I suddenly realized how insane this had all become. There was a lot of boilerplate for something that is really not that complicated. Around that time I read [this article](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/), which really interested me. Wanting to learn more, I found [a similar article by substack](http://substack.net/task_automation_with_npm_run). I remained hesitant, but thought I'd give it a try as an experiment on my next personal project (best not to subject my coworkers to wild experimentation).
+After several months of drinking the Grunt KoolAid while scrolling up and down in a monolithic four hundred line `Gruntfile.js` I suddenly realized how insane this had all become. There was a lot of boilerplate for something that is really not that complicated. Around that time I read [this article](http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/), which really interested me. Wanting to learn more, I found [a similar article by substack](http://substack.net/task_automation_with_npm_run). I remained hesitant, but thought I'd give it a try as an experiment on my next personal project.
 
 About two months later I am still using npm to manage development tasks and I don't think I'll go back to grunt, gulp, or whatever broccoli is. There is something really refreshing and eloquent about using a simple list of commands in a JSON file. I now feel like I've gotten to the same comfort level using npm scripts as I had with Grunt, but now everything fits on one screen. Below I'll give a brief intro into how NPM runs commands, after which I'll dive into my current approach for various common tasks that front-end web development requires.
 
 ## How NPM Runs Scripts
 
-NPM references a file called `package.json`. If you were using Grunt or Gulp, chances are you are already familiar with this file. Along with `dependencies`, `devDependencies`, and things like `repository`, `version`, and `name` keys, `package.json` also includes a key called `scripts`. This is a simple list of scripts you can run with npm where the name of the script is on the left and the corresponding command is on the right. Scripts that are generally used everywhere in Node-Land are `start` and `test`, but you can add any number of scripts for your project.
+NPM uses a file called `package.json` to do pretty much everything. If you were using Grunt or Gulp, chances are you are already familiar with this file. Along with `dependencies`, `devDependencies`, and things like `repository`, `version`, and `name` keys, `package.json` also includes a key called `scripts`. This is a simple list of scripts you can run with npm. The name of the script goes on the left and the corresponding command goes on the right. Scripts that are generally used everywhere in Node-Land are `start` and `test`, but you can add any number of scripts for your project.
 
 To run a script, just add a command to `scripts` like this:
 
@@ -53,7 +53,7 @@ This will not only run `my-script` but it will also run the `pre` and `post` scr
 
 You will get the first message printed, then the list of files, and then the last message.
 
-The last thing to mention about npm scripts is that they have access to everything in `node_modules/.bin/`. Essentially, module authors can register command line tools with npm by adding a `bin` key to `package.json`. That enables people to install the module globally and then use that tool.
+The last thing to mention about npm scripts is that they have access to everything in `node_modules/.bin/`. Essentially, module authors can register command line tools with npm by adding a `bin` key to `package.json`. That enables people to install the module globally and then use that tool from the command line.
 
 For example, [imagemin](https://github.com/imagemin/imagemin#cli) has a cli which you can use to minify images from the command line if you install imagemin globally (specified [here](https://github.com/imagemin/imagemin/blob/master/package.json#L16)). If you use imagemin via an npm script *you don't have to install anything globally*. NPM automatically adds their bin to `node_modules/.bin` and makes it available to the command from your script!
 
@@ -63,7 +63,7 @@ This is amazing because now people that contribute to your project can get every
 
 ## Front End Tasks
 
-Now that we know the basics of how this might work, let's just into the different things that are common in front-end tooling. Some of these things were a challenge to set up the first time, and some I had to write myself, but hopefully this can shorten the learning curve for those of you just starting to use npm or inspire you to try it if you're just curious.
+Now that we know the basics of how this might work, I'll dive into some common tasks for front-end development. Some of these things were a challenge to set up the first time, and some I had to write myself, but hopefully this can shorten the learning curve for those of you just starting to use npm or inspire you to try it if you're just curious.
 
 ### JavaScript
 
@@ -87,9 +87,9 @@ This will start at `index.js` and compile a bundle of browser-ready JavaScript t
 
 ### CSS
 
-As far as CSS preprocessors go, I'm a fan of Sass. Up until recently it's been sort of a pain to install because it relied on Ruby. But thanks to [LibSass](https://github.com/sass/libsass) and consequently [node-sass](https://github.com/sass/node-sass) it is now *very* easy to use Sass in a project with Node.js (and it is also crazy fast). The best part of using node-sass is that contributors to your project won't need Ruby or Sass installed locally. NPM will automatically install everything it needs on `npm install`.
+As far as CSS preprocessors go, I'm a fan of Sass. Up until recently it's been sort of a pain to install because it relied on Ruby. But thanks to [LibSass](https://github.com/sass/libsass) and consequently [node-sass](https://github.com/sass/node-sass) it is now *very* easy (and crazy fast) to use Sass in a project with Node.js. The best part of using node-sass is that contributors to your project won't need Ruby or Sass installed locally. NPM will automatically install everything it needs on `npm install`.
 
-Using the [node-sass cli](https://github.com/sass/node-sass#command-line-interface) actually proved to be a bit difficult because it didn't provide a way to compile multiple Sass files. I often have a main CSS file that provides the main styles for everything, and then I'll break out page-specific styles into their own file so that the main file can be cached but doesn't include the whole kitchen sink.
+Using the [node-sass cli](https://github.com/sass/node-sass#command-line-interface) actually proved to be a bit difficult because it didn't provide a way to compile multiple Sass files. I often have a main CSS file that provides the base styles for everything, and then I'll break out page-specific styles into their own file so that the main file can be cached but doesn't include the whole kitchen sink.
 
 So what's a boy to do when an open source tool is missing a feature? Why, [open a pull request](https://github.com/sass/node-sass/pull/838), of course! Once that got merged, adding a Sass task for all your files is really easy. Just `npm install --save-dev node-sass`. Then add a script to `package.json`:
 
@@ -100,7 +100,7 @@ So what's a boy to do when an open source tool is missing a feature? Why, [open 
 }
 ```
 
-This will compile all of the sass files (that don't start with an underscore) to the `build/css` directory.
+This will compile all of the sass files (that don't start with an underscore) to the `build/css/` directory.
 
 ### Images
 
@@ -140,7 +140,7 @@ Now you can `npm run dev` and it will watch each of these folders and run the co
 
 ### Running a Preview Server
 
-Another thing you often need to do is to run a static server to preview your work while in development. The module I've been using for this is called [live-server](https://www.npmjs.com/package/live-server). Once you experience automatic CSS reloads without a page refresh it's sort of hard to go back...
+To run a preview server I've been using [live-server](https://www.npmjs.com/package/live-server). Once you experience automatic CSS reloads without a page refresh it's sort of hard to go back...
 
 After you `npm install --save-dev live-server`, you can just create a script to run a server:
 
@@ -154,7 +154,7 @@ Now if you use `npm run preview` you'll have a server running on `localhost:8080
 
 ### Tying It All Together
 
-It's pretty common to have a couple more tasks like building a static site, running a test quite for your JavaScript, uploading assets to s3, or even deploying your site. But at this point it should be pretty obvious how to go about adding those things.
+It's pretty common to have a couple more tasks like building a static site, running a test suite for your JavaScript, uploading assets to s3, or even deploying your site. But at this point it should be pretty obvious how to go about adding those things.
 
 Here's what a working set of scripts might look like in a real project:
 
@@ -173,7 +173,7 @@ Here's what a working set of scripts might look like in a real project:
   },
 ```
 
-The above creates a javascript bundle and exports that to the build folder. It also compiles sass and optimized images, placing both of the end results in the build folder.
+The above creates a JavaScript bundle and exports that to the build folder. It also compiles sass and optimized images, placing both of the end results in the build folder.
 
 Before the `dev` task is run, there is a `predev` task which will make sure there is a build folder, then run all three of our other tasks in parallel once at the beginning using [npm-run-all](https://www.npmjs.com/package/npm-run-all).
 
