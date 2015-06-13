@@ -282,7 +282,7 @@ GitHub release can download using &lt;a href=&quot;https://github.com/gruntjs/gr
 &lt;li&gt;When prompted, enter a name for the pair (I used app-lab)&lt;/li&gt;
 &lt;li&gt;If you’d like to password protect it enter a password (I left this blank)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;After it’s done, you should have two files: {name} and {name}.pub&lt;/p&gt;
+&lt;p&gt;After it’s done, you should have two files: &lt;code&gt;{name}&lt;/code&gt; and &lt;code&gt;{name}.pub&lt;/code&gt;&lt;/p&gt;
 &lt;h2 id=&quot;6-set-up-the-droplet&quot;&gt;6. Set up the Droplet&lt;/h2&gt;
 &lt;p&gt;If you go to the IP address (in the email or listed in Digital Ocean) you should see a screen that has several fields. Add a public ssh key from the previous step (that’s the one that ends in &lt;code&gt;.pub&lt;/code&gt;).&lt;/p&gt;
 &lt;p&gt;Hostname should be your domain name exactly. For me, hostname was “app-lab.me”.&lt;/p&gt;

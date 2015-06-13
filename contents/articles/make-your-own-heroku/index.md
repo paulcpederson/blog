@@ -57,7 +57,7 @@ I'll describe what these are in more detail below in the "Set up SSH Keys" secti
 - When prompted, enter a name for the pair (I used app-lab)
 - If you'd like to password protect it enter a password (I left this blank)
 
-After it's done, you should have two files: {name} and {name}.pub
+After it's done, you should have two files: `{name}` and `{name}.pub`
 
 ## 6. Set up the Droplet
 
