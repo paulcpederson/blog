@@ -26,7 +26,7 @@ block hero
           h1.title
             a(href= locals.url + page.url)= page.title
           p.description= page.metadata.description
-          p.date= moment.utc(page.date).format('M.D.YYYY')
+          time(datetime=moment.utc(page.date).format('YYYY-MM-DD')).date= moment.utc(page.date).format('M.D.YYYY')
 
 block content
   if page.metadata.feature
@@ -34,7 +34,7 @@ block content
       h1.title
         a(href= locals.url + page.url)= page.title
       p.description= page.metadata.description
-      p.date= moment.utc(page.date).format('M.D.YYYY')
+      time(datetime=moment.utc(page.date).format('YYYY-MM-DD')).date= moment.utc(page.date).format('M.D.YYYY')
   article.panel.white
     section.constrain.content!= page.html
   div.bottom-nav

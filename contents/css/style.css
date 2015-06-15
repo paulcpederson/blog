@@ -1170,7 +1170,8 @@ body.green {
 
 .date {
   text-align: center;
-  padding-bottom: 3em; }
+  padding-bottom: 3em;
+  display: block; }
 
 .feature-image {
   box-sizing: border-box;
