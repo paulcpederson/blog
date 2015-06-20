@@ -9,12 +9,12 @@
     "sass": "contents/scss/**"
   },
   "dependencies": {
-    "moment": "2.x",
-    "underscore": "1.4.x",
-    "typogr": "0.5.x",
     "inline-block-grid": "git://github.com/paulcpederson/inline-block-grid.git",
-    "node-sass": "^3.0.0-beta.7",
-    "scss-utils": "1.0.0"
+    "moment": "2.x",
+    "node-sass": "^3.2.0",
+    "scss-utils": "1.0.0",
+    "typogr": "0.5.x",
+    "underscore": "1.4.x"
   },
   "devDependencies": {
     "parallelshell": "^1.1.1",
