@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <meta name="description" content="{{ description }}">
+    <title>{{ title }} | Paul C Pederson
+    </title>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.">
+    <link rel="stylesheet" href="{{root}}/css/style.css">
+    {% for stylesheet in css %}
+      <link rel="stylesheet" href="{{root}}/css/{{stylesheet}}.css">
+    {% endfor %}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-41031992-1', 'paulcpederson.com');
+      ga('send', 'pageview');
+    </script>
+  </head>
+  <body class="{{page.spot}}">
+    <header class="panel transparent nav">
+      <nav class="constrain"><a href="/" class="left">Paul C Pederson</a><a href="/archive/" class="right">Archive</a><span class="right hide-mobile">/</span><a href="/" class="right hide-mobile">Blog</a>
+      </nav>
+    </header>
+
+    {{content}}
+
+    <footer class="panel navy">
+      <div class="constrain">
+        <section>
+          {{about partial}}
+        </section>
+        <section class="copy">
+          <p>&copy; 2015 Paul C Pederson</p>
+        </section>
+        <section class="footer-social">
+          <a href="https://twitter.com/paulcpederson" class="icon-twitter"></a>
+          <a href="https://github.com/paulcpederson" class="icon-github"></a>
+          <a href="https://plus.google.com/117963508642452000116?rel=author" class="icon-google"></a>
+          <a href="http://dribbble.com/paulcpederson" class="icon-dribbble"></a>
+        </section>
+      </div>
+    </footer>
+    <script src="/js/script.js"></script>
+    {% for script in js %}
+      <script src="/js/{{script}}.js"></script>
+    {% endfor %}
+  </body>
+</html>
+
+
+
+
+
+
+doctype html
+block vars
+  - var bodyclass = null;
+html(lang='en')
+  head
+    block head
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+      meta(name='viewport', content='width=device-width, height=device-height')
+      block description
+      title
+        block title
+          = locals.name
+      - if (env.mode == 'build'){
+      -   locals.url = locals.build
+      - }
+      link(rel='shortcut icon', href=locals.url + '/img/favicon.ico')
+      link(rel='alternate', href=locals.url + '/feed.xml', type='application/rss+xml', title=locals.description)
+      link(rel='stylesheet', href=locals.url + '/css/style.css')
+      script.
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-41031992-1', 'paulcpederson.com');
+        ga('send', 'pageview');
+
+  body(class=bodyclass)
+    block header
+      header.panel.transparent.nav
+        nav.constrain
+          - if (locals.url == ''){
+            a.left(href="/")= locals.name
+          - } else {
+            a.left(href=locals.url)= locals.name
+          - }
+          a.right(href=locals.url + '/archive/') Archive
+          span.right.hide-mobile /
+          - if (locals.url == ''){
+            a.right.hide-mobile(href="/") Blog
+          - } else {
+            a.right.hide-mobile(href=locals.url) Blog
+          - }
+    block hero
+    block content
+      div.panel.white
+    footer.panel.navy
+      div.constrain
+        block footer
+          section
+            !=contents['about.md'].html
+          section.copy
+            p &copy; #{ new Date().getFullYear() } Paul C Pederson
+          section.footer-social
+            a.icon-twitter(href='https://twitter.com/paulcpederson')
+            a.icon-github(href='https://github.com/paulcpederson')
+            a.icon-google(href='https://plus.google.com/117963508642452000116?rel=author')
+            a.icon-dribbble(href='http://dribbble.com/paulcpederson')
+    block scripts
+      script(src= locals.url + '/js/script.js')
