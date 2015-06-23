@@ -9,6 +9,8 @@ spot: green
 description: "Create a new GitHub release with a zipped folder, custom release message, and user credentials all in a single Grunt command."
 ---
 
+> Edit: I now use [gh-release](https://github.com/ngoldman/gh-release) for this now as it saves your GitHub credentials and you can use it with or without Grunt.
+
 If you've used GitHub releases you know how great they can be. Essentially you draft a new release on any of your GitHub repositories, choose a specific tag, enter a title and a description, and click a button to create a neat and tidy little package that users can download and use.
 
 Recently I realized that creating these releases was one of the only things I was doing by hand, and that seemed inefficient, so I endeavored to solve the problem with Grunt. It was all very easy with Grunt plugins that were already written, but there were a couple gotchas, so I thought I'd write it up for future generations.
