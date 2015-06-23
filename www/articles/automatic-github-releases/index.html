@@ -34,7 +34,10 @@
       </div>
     </section>
     <article class="panel white">
-      <section class="constrain content"><p>If you’ve used GitHub releases you know how great they can be. Essentially you draft a new release on any of your GitHub repositories, choose a specific tag, enter a title and a description, and click a button to create a neat and tidy little package that users can download and use.</p>
+      <section class="constrain content"><blockquote>
+<p>Edit: I now use <a href="https://github.com/ngoldman/gh-release">gh-release</a> for this now as it saves your GitHub credentials and you can use it with or without Grunt.</p>
+</blockquote>
+<p>If you’ve used GitHub releases you know how great they can be. Essentially you draft a new release on any of your GitHub repositories, choose a specific tag, enter a title and a description, and click a button to create a neat and tidy little package that users can download and use.</p>
 <p>Recently I realized that creating these releases was one of the only things I was doing by hand, and that seemed inefficient, so I endeavored to solve the problem with Grunt. It was all very easy with Grunt plugins that were already written, but there were a couple gotchas, so I thought I’d write it up for future generations.</p>
 <h2 id="grunt-compress">Grunt Compress</h2>
 <p>First, you create a zip file that people looking at your
