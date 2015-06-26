@@ -1,4 +1,7 @@
 // Map
+var L = require('leaflet')
+var Esri = require('esri-leaflet')
+
 var map = L.map('map', {
     center: [35.686720682320455, -93.43391418457031],
     //center: [36.314848507137064, -112.81422615051268], grand canyon
@@ -9,6 +12,6 @@ var map = L.map('map', {
     attributionControl: false
 });
 
-L.esri.tiledMapLayer("http://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer", {
+var tiles = new Esri.tiledMapLayer("http://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer", {
   opacity : 1
 }).addTo(map);

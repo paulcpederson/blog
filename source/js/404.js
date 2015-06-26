@@ -1,7 +1,7 @@
-var bg    = document.querySelector('.hero')
+var bg = document.querySelector('.hero')
 var title = document.querySelector('.four-zero-four')
 
-var width  = window.innerWidth
+var width = window.innerWidth
 var height = window.innerHeight
 
 window.addEventListener('mousemove', function(e) {
