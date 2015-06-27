@@ -1,10 +1,11 @@
 ---
 title: USGS Topo Maps
 date: 2013-11-15
-template: map-post.jade
+template: _templates/article.html
 thumbnail: usgs-thumb.jpg
 spot: green
 white: true
+map: usgs
 description: In 1879 the USGS started mapping the country. The topographic maps they created are beautiful data visualization at its finest.
 js:
   - leaflet
