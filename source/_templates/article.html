@@ -1,29 +1,31 @@
-<!-- title in banner -->
-<section style="background-image: url(http://paulcpederson.com/img/pollock.jpg)" class="hero tan mesh">
-  <div class="title-wrap constrain">
-    <h1 class="title"><a href="http://paulcpederson.com/articles/abstract-color/">Abstract Color</a></h1>
-    <p class="description">How to steal colors from the masters of the Abstract Expressionism movement</p>
-    <time datetime="2013-03-22" class="date">3.22.2013</time>
+{% if feature %}
+  <!-- feature image in banner -->
+  <section style="background-image: url(/img/{{background}})" class="hero {{canvas}}">
+    <img src="/img/{{feature}}" class="feature-image">
+  </section>
+  <div class="title-wrap constrain in-article">
+    <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+    <p class="description">{{description}}</p>
+    <time datetime="{{date}}" class="date">{{date}}</time>
   </div>
-</section>
-
-<!-- feature image in banner -->
-<section style="background-image: url(http://paulcpederson.com/img/sublime-writer.jpg)" class="hero navy mesh">
-  <img src="http://paulcpederson.com/img/sublime-writer-feature.png" class="feature-image">
-</section>
-<div class="title-wrap constrain in-article">
-  <h1 class="title"><a href="http://paulcpederson.com/articles/sublime-writer/">Sublime Writer</a></h1>
-  <p class="description">Bringing the beauty and simplicity of iA Writer to Sublime Text 2</p>
-  <time datetime="2012-11-21" class="date">11.21.2012</time>
-</div>
-
-<!-- map in banner -->
-<div id="map" class="map-div hero-map"></div>
-<div class="title-wrap constrain in-article">
-  <h1 class="title"><a href="http://paulcpederson.com/articles/usgs-topo-maps/#article">USGS Topo Maps</a></h1>
-  <p class="description">In 1879 the USGS started mapping the country. The topographic maps they created are beautiful data visualization at its finest.</p>
-  <p class="date">11.15.2013</p>
-</div>
+{% elseif map %}
+  <!-- map in banner -->
+  <div id="{{map}}" class="map-div hero-map"></div>
+  <div class="title-wrap constrain in-article">
+    <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+    <p class="description">{{description}}</p>
+    <time datetime="{{date}}" class="date">{{date}}</time>
+  </div>
+{% else %}
+  <!-- title in banner -->
+  <section style="background-image: url(/img/{{background}})" class="hero {{canvas}}">
+    <div class="title-wrap constrain">
+      <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+      <p class="description">{{description}}</p>
+      <time datetime="{{date}}" class="date">{{date}}</time>
+    </div>
+  </section>
+{% endif %}
 
 <!-- post content -->
 <article class="panel white">
