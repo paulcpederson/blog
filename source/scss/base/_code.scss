@@ -41,35 +41,35 @@ pre {
 
 
 
-  .comment, .template_comment, .diff .header, .doctype, .lisp .string, .javadoc {
+  .hljs-comment, .hljs-template_comment, .hljs-diff .hljs-header, .hljs-doctype, .hljs-lisp .hljs-string, .hljs-javadoc {
     color: $base01;
   }
 
-  .keyword, .css .rule .keyword, .winutils, .javascript .title, .method, .addition, .css .tag, .lisp .title {
+  .hljs-keyword, .hljs-css .hljs-rule .hljs-keyword, .hljs-winutils, .hljs-javascript .hljs-title, .hljs-method, .hljs-addition, .hljs-css .hljs-tag, .hljs-lisp .hljs-title {
     color: $green;
   }
 
-  .number, .command, .string, .tag .value, .phpdoc, .tex .formula, .regexp, .hexcolor {
+  .hljs-number, .hljs-command, .hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .hljs-tex .hljs-formula, .hljs-regexp, .hljs-hexcolor {
     color: $cyan;
   }
 
-  .title, .localvars, .function .title, .chunk, .decorator, .builtin, .built_in, .lisp .title, .identifier, .title .keymethods, .id {
+  .hljs-title, .hljs-localvars, .hljs-function .hljs-title, .hljs-chunk, .hljs-decorator, .hljs-builtin, .hljs-built_in, .hljs-lisp .hljs-title, .hljs-identifier, .hljs-title .hljs-keymethods, .hljs-id {
     color: $blue;
   }
 
-  .attribute, .variable, .instancevar, .lisp .body, .smalltalk .number, .constant, .class .title, .parent, .haskell .label {
+  .hljs-attribute, .hljs-variable, .hljs-instancevar, .hljs-lisp .hljs-body, .hljs-smalltalk .hljs-number, .hljs-constant, .hljs-class .hljs-title, .hljs-parent, .hljs-haskell .hljs-label {
     color: $yellow;
   }
 
-  .preprocessor, .pi, .shebang, .symbol, .diff .change, .special, .keymethods, .attr_selector, .important, .subst, .cdata {
+  .hljs-preprocessor, .hljs-pi, .hljs-shebang, .hljs-symbol, .hljs-diff .hljs-change, .hljs-special, .hljs-keymethods, .hljs-attr_selector, .hljs-important, .hljs-subst, .hljs-cdata {
     color: $orange;
   }
 
-  .deletion {
+  .hljs-deletion {
     color: $red;
   }
 
-  .tex .formula {
+  .hljs-tex .hljs-formula {
     background: $base02;
   }
 }
