@@ -197,7 +197,7 @@ article {
       background-position:  90% center;
       background-repeat: no-repeat;
       text-align: right;
-      @include respond-to(0, 560px){
+      @include respond-to(0, 560px) {
         background-position: 100% center;
         border-top: 1px solid rgba(0,0,0,0.2);
         margin-top: -1px;
@@ -205,7 +205,7 @@ article {
       &:hover {
         padding-right: 10%;
         background-position:  92% center;
-        @include respond-to(0, 560px){
+        @include respond-to(0, 560px) {
           background-position: 100% center;
         }
       }
@@ -216,19 +216,19 @@ article {
       background-position:  10% center;
       background-repeat: no-repeat;
       text-align: left;
-      @include respond-to(0, 560px){
+      @include respond-to(0, 560px) {
         background-position: left center;
       }
       &:hover {
         padding-left: 10%;
         background-position:  8% center;
-        @include respond-to(0, 560px){
+        @include respond-to(0, 560px) {
           background-position: left center;
         }
       }
     }
     &.next, &.previous {
-      @include respond-to(0, 560px){
+      @include respond-to(0, 560px) {
         width: 100%;
         padding-top: 0.5em;
         padding-bottom: 0.5em;
@@ -236,7 +236,7 @@ article {
     }
   }
   .constrain {
-    @include respond-to(0, 700px){
+    @include respond-to(0, 700px) {
       padding: 0;
       width: 100%;
     }
@@ -246,7 +246,7 @@ article {
 
 // Responsive Styles
 .content {
-  @include respond-to(0, 700px){
+  @include respond-to(0, 700px) {
     font-size: 1rem;
   }
 }
