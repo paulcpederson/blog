@@ -6,13 +6,10 @@
     "js:production": "ls www/js/*.js | xargs basename -s .js | xargs -I {} uglifyjs www/js/{}.js -o www/js/{}.min.js",
     "img": "imagemin-newer source/ www/",
     "sass": "node-sass source/scss/ --output-style compressed --include-path node_modules/ -q -o www/css/",
-    "html": "static-site",
+    "html": "static-site -b www -h source/_helpers/*.js -f xml",
     "html:production": "static-site --ENV production",
     "predev": "npm-run-all js img sass html --parallel",
-    "dev": "parallelshell 'cd www && live-server' 'rerun-script'"
-  },
-  "static-site": {
-    "build": "www"
+    "dev": "parallelshell 'cd www && live-server --quiet' 'rerun-script'"
   },
   "browserify": {
     "transform": [
