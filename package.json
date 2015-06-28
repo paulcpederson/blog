@@ -20,7 +20,7 @@
     "js": "source/js/**/*.js",
     "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
     "sass": "source/scss/**",
-    "html": "source/**/*.{html,md}"
+    "html": ["source/**/*.{html,md}", "source/_helpers/**"]
   },
   "dependencies": {
     "inline-block-grid": "git://github.com/paulcpederson/inline-block-grid.git",
