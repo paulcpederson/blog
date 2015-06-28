@@ -9,18 +9,8 @@ module.exports = function (site, cb) {
       return new Date(b.date) - new Date(a.date)
     })
     .map(function (article) {
-      var year = article.date.getFullYear()
-      return {
-        title: article.title,
-        year: year,
-        date: article.date,
-        canvas: article.canvas,
-        description: article.description,
-        spot: article.spot,
-        thumbnail: article.thumbnail,
-        background: article.background,
-        url: article.url
-      }
+      article.year = article.date.getFullYear()
+      return article
     })
   site = site.map(function (page) {
     page.articles = articles
