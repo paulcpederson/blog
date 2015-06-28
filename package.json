@@ -20,10 +20,15 @@
     "js": "source/js/**/*.js",
     "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
     "sass": "source/scss/**",
-    "html": ["source/**/*.{html,md}", "source/_helpers/**"]
+    "html": [
+      "source/**/*.{html,md}",
+      "source/_helpers/**"
+    ]
   },
   "dependencies": {
+    "esri-leaflet": "^1.0.0-rc.8",
     "inline-block-grid": "git://github.com/paulcpederson/inline-block-grid.git",
+    "leaflet": "^0.7.3",
     "node-sass": "^3.2.0",
     "scss-utils": "1.0.0"
   },
