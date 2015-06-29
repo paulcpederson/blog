@@ -1,0 +1,6 @@
+#!/bin/bash
+npm run predev
+git add -f www/
+git commit -m "Deploy"
+git push --force dev static:master
+git reset --hard HEAD~1
