@@ -3,7 +3,7 @@
 
 ## Tech Stack
 
-Node powered blog using [Wintersmith](https://github.com/jnordberg/wintersmith). Hosted on Digital Ocean with Dokku.
+Node powered blog using [Static Site](https://github.com/paulcpederson/static-site). Hosted on Digital Ocean with Dokku.
 
 ## Topics
 
@@ -57,4 +57,4 @@ npm run dev
 
 ## License
 
-Words and content are mine (©Paul C Pederson, 2015), but the tech is yours (ISC).
+Words, content, and design are mine (©Paul C Pederson, 2015), but the tech is yours (ISC).
