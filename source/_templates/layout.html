@@ -8,18 +8,18 @@
     <title>{{title}} | Paul C Pederson</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
     {% if thumbnail %}
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:image" content="http://paulcpederson.com/img/{{thumbnail}}" />
-      <meta property="og:image" content="http://paulcpederson.com/img/{{thumbnail}}" />
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:image" content="http://paulcpederson.com/img/{{thumbnail}}">
+      <meta property="og:image" content="http://paulcpederson.com/img/{{thumbnail}}">
     {% else %}
-      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:card" content="summary">
     {% endif %}
-    <meta name="twitter:site" content="@paulcpederson" />
-    <meta name="twitter:creator" content="@paulcpederson" />
-    <meta name="twitter:title" content="{{title}}" />
-    <meta name="twitter:description" content="{{description}}" />
-    <meta property="og:title" content="{{title}}" />
-    <meta property="og:url" content="http://paulcpederson.com{{url}}" />
+    <meta name="twitter:site" content="@paulcpederson">
+    <meta name="twitter:creator" content="@paulcpederson">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:url" content="http://paulcpederson.com{{url}}">
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.">
     <link rel="stylesheet" href="/css/style.css">
     {% for stylesheet in css %}<link rel="stylesheet" href="/css/{{stylesheet}}.css">{% endfor %}
