@@ -2,5 +2,5 @@
 npm run predev
 git add -f www/
 git commit -m "Deploy"
-git push --force dev static:master
+git push --force dev master
 git reset --hard HEAD~1
