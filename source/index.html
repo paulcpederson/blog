@@ -1,0 +1,54 @@
+---
+title: Home
+description: I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.
+template: _templates/layout.html
+block: page
+changefreq: daily
+---
+
+<!-- banner -->
+<section style="background-image: url(img/{{featuredPost.background}})" class="hero homepage {{featuredPost.canvas}}">
+  <div class="title-wrap constrain">
+    <p class="small">Featured Post:</p>
+    <h2 class="title"><a href="{{featuredPost.url}}">{{featuredPost.title}}</a></h2>
+    <p class="description">{{featuredPost.description}}</p>
+    <a href="{{featuredPost.url}}" class="btn red">Read More »</a>
+  </div>
+</section>
+
+<!-- blog roll -->
+<div class="panel white">
+  <div class="constrain">
+    {% for article in articles %}
+    <div class="col-group blog-roll">
+      <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="thumbnail"></a>
+      <div class="col2of5 col text">
+        <header>
+          <h2><a href="{{article.url}}" class="{{article.spot}}">{{article.title}}</a></h2>
+          <p class="small">
+            <time datetime="{{article.date|date('Y-m-d')}}" class="small">{{article.date|date('Y-m-d')}}</time>
+          </p>
+        </header>
+        <section>
+          <p>{{article.description}}</p>
+          <p class="small"><a href="{{article.url}}" class="{{article.spot}}">Read More »</a></p>
+        </section>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<!-- next, prev -->
+<div class="bottom-nav">
+  <div class="constrain clearfix">
+    <a href="/archive/" class="previous left">
+      <p class="small">view all articles:</p>
+      <p>Archive</p>
+    </a>
+    <a href="{{articles[0].url}}" class="next right">
+      <p class="small">most recent article:</p>
+      <p>{{articles[0].title}}</p>
+    </a>
+  </div>
+</div>

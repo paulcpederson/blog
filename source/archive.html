@@ -1,0 +1,39 @@
+---
+title: Archive
+template: _templates/layout.html
+description: Archive of Blog Articles Written by Paul C Pederson
+spot: cyan
+block: page
+---
+
+<section style="background-image: none;" class="hero short navy">
+  <div class="title-wrap constrain">
+    <h1 class="title">Archive</h1>
+  </div>
+</section>
+
+<div class="panel white">
+  <section class="constrain">
+    {% for year in articles|groupBy('year') %}
+      <div class="block-grid year">
+        <div class="column-2">
+          <p>{{loop.key}}</p>
+        </div>
+        <div class="column-10">
+          <div class="block-grid">
+            {% for article in year|reverse %}
+              <div class="archive column-6 medium-column-12">
+                <p class="archive-title">
+                  <a href="{{article.url}}">{{article.title}}</a>
+                </p>
+                <p class="small">
+                  <time datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.d.Y')}}</time>
+                </p>
+                <p class="archive-description">{{article.description}}</p>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+    {% endfor %}
+  </section>
+</div>

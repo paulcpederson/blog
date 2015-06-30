@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+
+{% block page %}
+  {% if feature %}
+    <!-- feature image in banner -->
+    <section style="background-image: url(/img/{{background}})" class="hero {{canvas}}">
+      <img src="/img/{{feature}}" class="feature-image">
+    </section>
+    <div class="title-wrap constrain in-article">
+      <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+      <p class="description">{{description}}</p>
+      <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.d.Y')}}</time>
+    </div>
+  {% elseif map %}
+    <!-- map in banner -->
+    <div id="{{map}}" class="map-div hero-map"></div>
+    <div class="title-wrap constrain in-article">
+      <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+      <p class="description">{{description}}</p>
+      <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.d.Y')}}</time>
+    </div>
+  {% else %}
+    <!-- title in banner -->
+    <section style="background-image: url(/img/{{background}})" class="hero {{canvas}}">
+      <div class="title-wrap constrain">
+        <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+        <p class="description">{{description}}</p>
+        <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.d.Y')}}</time>
+      </div>
+    </section>
+  {% endif %}
+
+  <!-- post content -->
+  <article class="panel white">
+    <section class="constrain content">
+      {% block content %}{% endblock %}
+    </section>
+  </article>
+
+  <!-- next-prev links for articles -->
+  <div class="bottom-nav">
+    <div class="constrain clearfix">
+      <a href="{{prev.url}}" class="previous left">
+        <p class="small">previous article:</p>
+        <p>{{prev.title}}</p>
+      </a>
+      <a href="{{next.url}}" class="next right">
+        <p class="small">next article:</p>
+        <p>{{next.title}}</p>
+      </a>
+    </div>
+  </div>
+{% endblock %}

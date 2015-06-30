@@ -1,25 +1,48 @@
 {
   "scripts": {
-    "sass": "node-sass contents/scss/ --include-path node_modules/ -q -o contents/css/",
-    "predev": "npm run sass",
-    "dev": "parallelshell 'wintersmith preview' 'rerun-script'",
-    "build": "wintersmith build"
+    "prejs": "mkdir -p www/js",
+    "js": "ls -1 source/js/ | xargs -I $ browserify -d source/js/$ -o www/js/$",
+    "prejs:production": "npm run js",
+    "js:production": "ls www/js/*.js | xargs basename -s .js | xargs -I {} uglifyjs www/js/{}.js -o www/js/{}.min.js",
+    "img": "imagemin-newer source/ www/",
+    "sass": "node-sass source/scss/ --output-style compressed --include-path node_modules/ -q -o www/css/",
+    "html": "static-site -b www -h source/_helpers/*.js -f xml",
+    "html:production": "static-site --ENV production",
+    "cp": "cp -r source/fonts/ www/fonts/ && cp source/img/favicon.ico www/img/favicon.ico",
+    "predev": "npm-run-all js img sass html cp --parallel",
+    "dev": "parallelshell 'cd www && live-server --quiet' 'rerun-script'",
+    "deploy": "bin/deploy"
+  },
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
   },
   "watches": {
-    "sass": "contents/scss/**"
+    "js": "source/js/**/*.js",
+    "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
+    "sass": "source/scss/**",
+    "html": [
+      "source/**/*.{html,md}",
+      "source/_helpers/**"
+    ]
   },
   "dependencies": {
+    "esri-leaflet": "^1.0.0-rc.8",
     "inline-block-grid": "git://github.com/paulcpederson/inline-block-grid.git",
-    "moment": "2.x",
-    "node-sass": "^3.2.0",
-    "scss-utils": "1.0.0",
-    "typogr": "0.5.x",
-    "underscore": "1.4.x"
+    "leaflet": "^0.7.3"
   },
   "devDependencies": {
+    "browserify": "^10.2.4",
+    "imagemin-newer": "^1.0.1",
+    "live-server": "^0.7.1",
+    "node-sass": "^3.2.0",
+    "npm-run-all": "^1.2.6",
     "parallelshell": "^1.1.1",
     "rerun-script": "^0.6.0",
-    "wintersmith": "^2.2.0"
+    "scss-utils": "1.0.0",
+    "static-site": "*",
+    "uglifyjs": "^2.4.10"
   },
   "repository": {
     "type": "git",
