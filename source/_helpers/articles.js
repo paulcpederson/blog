@@ -19,6 +19,7 @@ module.exports = function (site, cb) {
       page.prev = articles[index + 1] || articles[0]
       page.next = articles[index - 1] || articles[articles.length - 1]
     }
+    return page
   })
   cb(null, site)
 }
