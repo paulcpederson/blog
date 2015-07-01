@@ -1,5 +1,6 @@
 #!/bin/bash
 npm run predev
+npm run js:production && npm run html -- --production
 git add -f www/
 git commit -m "Deploy"
 git push --force dev master
