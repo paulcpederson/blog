@@ -9,7 +9,7 @@
     <div class="title-wrap constrain in-article">
       <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
       <p class="description">{{description}}</p>
-      <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.d.Y')}}</time>
+      <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.j.Y')}}</time>
     </div>
   {% elseif map %}
     <!-- map in banner -->
@@ -17,7 +17,7 @@
     <div class="title-wrap constrain in-article">
       <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
       <p class="description">{{description}}</p>
-      <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.d.Y')}}</time>
+      <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.j.Y')}}</time>
     </div>
   {% else %}
     <!-- title in banner -->
@@ -25,7 +25,7 @@
       <div class="title-wrap constrain">
         <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
         <p class="description">{{description}}</p>
-        <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.d.Y')}}</time>
+        <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.j.Y')}}</time>
       </div>
     </section>
   {% endif %}
