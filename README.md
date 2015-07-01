@@ -7,7 +7,7 @@ Node powered blog using [Static Site](https://github.com/paulcpederson/static-si
 
 ## Topics
 
-I'll write about front-end-development, art, design, and maps
+I'll write about front-end-development, art, design, and maps.
 
 ## Frontmatter
 
@@ -16,7 +16,7 @@ I'll write about front-end-development, art, design, and maps
 title: Title of the Post
 date: 2013-11-15
 description: Description of the article
-template: map.jade
+template: _templates/article.html
 thumbnail: thumbnail.jpg
 background: background.jpg
 feature: feature.png
@@ -33,7 +33,7 @@ css:
 
 - **title:** title of the post (not the slug) that will appear in list and archive.
 - **date:** YYYY-MM-DD formatted date
-- **template:** Which type of post it is. Options are ```article.jade``` or ```map.jade```. Thinking about adding a ```simple.jade``` for experiments that don't need a layout.
+- **template:** Which type of post it is. Options are ```_templates/article.html``` or ```_templates/layout.html```.
 - **description:** Description of the article. Recommended 1 sentence.
 - **background:** Image in the background of hero area.
 - **feature:** featured image that goes in the hero area. If provided, title and date will go below hero area in main post.
