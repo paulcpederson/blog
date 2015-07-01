@@ -185,11 +185,14 @@ article {
     background: $cyan;
     color: $white;
     @include transition(all 200ms linear);
-    .small {
-      color: $white;
-    }
     p {
+      color: $white;
       margin: 0.5em 0;
+      white-space: nowrap;
+      overflow-x: hidden;
+      text-overflow: ellipsis;
+      @include transform(translate3d(0, 0, 0));
+      @include transition-prefixed(transform 200ms linear);
     }
     &.next {
       padding: 3em 12% 2.5em 0;
@@ -203,8 +206,10 @@ article {
         margin-top: -1px;
       }
       &:hover {
-        padding-right: 10%;
-        background-position:  92% center;
+        p {
+          @include transform(translate3d(20px, 0, 0))
+        }
+        background-position: 92% center;
         @include respond-to(0, 560px) {
           background-position: 100% center;
         }
@@ -220,7 +225,9 @@ article {
         background-position: left center;
       }
       &:hover {
-        padding-left: 10%;
+        p {
+          @include transform(translate3d(-20px, 0, 0))
+        }
         background-position:  8% center;
         @include respond-to(0, 560px) {
           background-position: left center;
