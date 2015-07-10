@@ -3,18 +3,19 @@
   <channel>
     <title>Paul C Pederson</title>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"></atom:link>
-    <link></link>
+    <link>http://paulcpederson.com</link>
     <description>I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.</description>
-    <pubDate>Tue, 07 Apr 2015 17:00:00 -0700</pubDate>
     <generator>Static Site - https://github.com/paulcpederson/static-site</generator>
     <language>en</language>
-    <item>
-      <title>Using NPM as a Task Runner</title>
-      <link>/articles/npm-run/</link>
-      <pubDate>Tue, 07 Apr 2015 17:00:00 -0700</pubDate>
-      <guid isPermaLink="true">/articles/npm-run/</guid>
-      <author></author>
-      <description> // body of article </description>
-    </item>
+    {% for article in articles %}
+      <item>
+        <title>{{article.title}}</title>
+        <link>{{article.url}}</link>
+        <pubDate>{{article.date|date('D, d M Y 17:00:00 -0700')}}</pubDate>
+        <guid isPermaLink="true">{{article.url}}</guid>
+        <author>Paul C Pederson</author>
+        <description>{{article.description}}</description>
+      </item>
+    {% endfor %}
   </channel>
 </rss>

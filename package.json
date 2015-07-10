@@ -21,7 +21,7 @@
     "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
     "sass": "source/scss/**",
     "html": [
-      "source/**/*.{html,md}",
+      "source/**/*.{html,md,xml}",
       "source/_helpers/**"
     ]
   },
