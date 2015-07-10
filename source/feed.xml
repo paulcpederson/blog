@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Paul C Pederson</title>
-    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <atom:link href="http://paulcpederson.com/feed.xml" rel="self" type="application/rss+xml"></atom:link>
     <link>http://paulcpederson.com</link>
     <description>I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.</description>
     <generator>Static Site - https://github.com/paulcpederson/static-site</generator>
@@ -10,10 +10,10 @@
     {% for article in articles %}
       <item>
         <title>{{article.title}}</title>
-        <link>{{article.url}}</link>
+        <link>http://paulcpederson.com{{article.url}}</link>
         <pubDate>{{article.date|date('D, d M Y 17:00:00 -0700')}}</pubDate>
-        <guid isPermaLink="true">{{article.url}}</guid>
-        <author>Paul C Pederson</author>
+        <guid isPermaLink="true">http://paulcpederson.com{{article.url}}</guid>
+        <author>paul.c.pederson@gmail.com (Paul C Pederson)</author>
         <description>{{article.description}}</description>
       </item>
     {% endfor %}
