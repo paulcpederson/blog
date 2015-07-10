@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Paul C Pederson</title>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"></atom:link>
+    <link></link>
+    <description>I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.</description>
+    <pubDate>Tue, 07 Apr 2015 17:00:00 -0700</pubDate>
+    <generator>Static Site - https://github.com/paulcpederson/static-site</generator>
+    <language>en</language>
+    <item>
+      <title>Using NPM as a Task Runner</title>
+      <link>/articles/npm-run/</link>
+      <pubDate>Tue, 07 Apr 2015 17:00:00 -0700</pubDate>
+      <guid isPermaLink="true">/articles/npm-run/</guid>
+      <author></author>
+      <description> // body of article </description>
+    </item>
+  </channel>
+</rss>
