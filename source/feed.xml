@@ -14,7 +14,9 @@
         <pubDate>{{article.date|date('D, d M Y 17:00:00 -0700')}}</pubDate>
         <guid isPermaLink="true">http://paulcpederson.com{{article.url}}</guid>
         <author>paul.c.pederson@gmail.com (Paul C Pederson)</author>
-        <description>{{article.description}}</description>
+        <description>
+          <![CDATA[{% markdown %}{{article.content}}{% endmarkdown %}]]>
+        </description>
       </item>
     {% endfor %}
   </channel>
