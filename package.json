@@ -9,7 +9,7 @@
     "cp": "cp -r source/fonts/ www/fonts/ && cp source/img/favicon.ico www/img/favicon.ico",
     "predev": "npm-run-all js img sass html cp --parallel",
     "dev": "parallelshell 'cd www && live-server --quiet' 'rerun-script'",
-    "deploy": "bin/deploy"
+    "deploy": "./deploy"
   },
   "browserify": {
     "transform": [
