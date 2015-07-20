@@ -48,7 +48,7 @@ footer {
       color: $light-gray;
       width: 16px;
       height: 16px;
-      background:url('../img/twitter.svg') center center no-repeat  transparent;
+      background: url('../img/twitter.svg') center center no-repeat  transparent;
       background-size: 16px;
       opacity: 0.8;
       border-bottom: none;
@@ -75,7 +75,6 @@ footer {
     }
   }
 }
-
 
 // Reusable Layout Classes
 .panel {
@@ -104,14 +103,6 @@ footer {
   max-width: 45em;
   padding: 0 10%;
   margin: 0 auto;
-  .full-width {
-    width: 100vw;
-    height: auto;
-  }
-}
-
-.feature {
-  margin-top: -3em;
 }
 
 .right {
@@ -120,4 +111,14 @@ footer {
 
 .left {
   float: left;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.full {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
 }
