@@ -89,34 +89,6 @@ h4 { font-size: $header-size * 0.8;}
 h5 { font-size: $header-size * 0.75;}
 h6 { font-size: $header-size * 0.7;}
 
-// spot color classes
-h1, h2, h3, h4, h5, h6, a {
-  &.yellow {
-    color: $yellow;
-  }
-  &.orange {
-    color: $orange;
-  }
-  &.red {
-    color: $red;
-  }
-  &.magenta {
-    color: $magenta;
-  }
-  &.violet {
-    color: $violet;
-  }
-  &.blue {
-    color: $blue;
-  }
-  &.cyan {
-    color: $cyan;
-  }
-  &.green {
-    color: $green;
-  }
-}
-
 blockquote {
   font-family: $header-font;
   text-align: left;
