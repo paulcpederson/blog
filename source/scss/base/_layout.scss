@@ -19,7 +19,7 @@
     line-height: 1em;
   }
   .hide-mobile {
-    @include respond-to(0, 400px) {
+    @include respond-to(400px) {
       display: none;
     }
   }

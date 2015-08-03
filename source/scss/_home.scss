@@ -29,7 +29,7 @@
     margin-left: 55%;
     padding-top: 1em;
     padding-bottom: 1em;
-    @include respond-to(0px, 700px){
+    @include respond-to(700px) {
       margin-left: 0;
     }
   }
@@ -47,7 +47,7 @@
   &:hover {
     @include box-shadow(0 0 20px rgba(0,0,0,0.05));
   }
-  @include respond-to(0px, 700px){
+  @include respond-to(700px) {
     display: block;
     width: 100%;
     height: 200px;
