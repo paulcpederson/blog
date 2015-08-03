@@ -1,14 +1,15 @@
 {
   "scripts": {
     "prejs": "mkdir -p www/js",
-    "js": "ls -1 source/js/ | xargs -I $ browserify -d source/js/$ -o www/js/$",
-    "js:production": "ls www/js/*.js | xargs basename -s .js | xargs -I {} uglifyjs www/js/{}.js -o www/js/{}.min.js",
+    "js": "simplifyify source/js/*.js -d -o www/js/",
+    "js:production": "npm run js -- -m",
+    "js:watch": "npm run js -- -w",
     "img": "imagemin-newer source/ www/",
     "sass": "node-sass source/scss/ --output-style compressed --include-path node_modules/ -q -o www/css/",
     "html": "static-site -b www -h source/_helpers/*.js -f xml",
     "cp": "cp -r source/fonts/ www/fonts/ && cp source/img/favicon.ico www/img/favicon.ico",
     "predev": "npm-run-all js img sass html cp --parallel",
-    "dev": "parallelshell 'cd www && live-server --quiet' 'rerun-script'",
+    "dev": "parallelshell 'cd www && live-server --quiet' 'rerun-script' 'npm run js:watch'",
     "deploy": "./deploy"
   },
   "browserify": {
@@ -17,7 +18,6 @@
     ]
   },
   "watches": {
-    "js": "source/js/**/*.js",
     "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
     "sass": "source/scss/**",
     "html": [
@@ -31,7 +31,6 @@
     "leaflet": "^0.7.3"
   },
   "devDependencies": {
-    "browserify": "^10.2.4",
     "imagemin-newer": "^1.0.1",
     "live-server": "^0.7.1",
     "node-sass": "^3.2.0",
@@ -39,8 +38,8 @@
     "parallelshell": "^1.1.1",
     "rerun-script": "^0.6.0",
     "scss-utils": "1.0.0",
-    "static-site": "*",
-    "uglifyjs": "^2.4.10"
+    "simplifyify": "^1.3.0",
+    "static-site": "^1.0.2"
   },
   "repository": {
     "type": "git",
