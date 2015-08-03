@@ -1,8 +1,7 @@
 {
   "scripts": {
     "prejs": "mkdir -p www/js",
-    "js": "simplifyify source/js/*.js -d -o www/js/",
-    "js:production": "npm run js -- -m",
+    "js": "simplifyify source/js/*.js -d -m -o www/js/",
     "js:watch": "npm run js -- -w",
     "img": "imagemin-newer source/ www/",
     "sass": "node-sass source/scss/ --output-style compressed --include-path node_modules/ -q -o www/css/",
