@@ -3,7 +3,7 @@
 
 ## Tech Stack
 
-Node powered blog using [Static Site](https://github.com/paulcpederson/static-site). Hosted on Digital Ocean with Dokku.
+Node powered blog using [Static Site](https://github.com/paulcpederson/static-site). Hosted with [Surge](https://surge.sh/).
 
 ## Topics
 
@@ -57,16 +57,8 @@ npm run dev
 
 ## Deploy
 
-There are two droplets that can be pushed to. I've named them dokku (production) and dev (development). To deploy to dev, use:
-
 ```
 npm run deploy
-```
-
-To deploy to production, just pass in the production branch name:
-
-```
-npm run deploy -- dokku
 ```
 
 ## License
