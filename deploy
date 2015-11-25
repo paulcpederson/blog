@@ -1,9 +1,0 @@
-#!/bin/bash
-npm run predev
-npm run html -- --production
-git add -f www/
-git commit -m "Deploy"
-REMOTE=$1
-: ${REMOTE:="dev"}
-git push --force $REMOTE master
-git reset --hard HEAD~1

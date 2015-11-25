@@ -9,7 +9,8 @@
     "cp": "cp -r source/fonts/ www/fonts/ && cp source/img/favicon.ico www/img/favicon.ico",
     "predev": "npm-run-all js img sass html cp --parallel",
     "dev": "parallelshell 'cd www && live-server --quiet' 'rerun-script' 'npm run js:watch'",
-    "deploy": "./deploy"
+    "predeploy": "npm-run-all js img sass cp --parallel && npm run html -- --production",
+    "deploy": "surge www/ paulcpederson.com"
   },
   "browserify": {
     "transform": [
@@ -38,7 +39,8 @@
     "rerun-script": "^0.6.0",
     "scss-utils": "1.0.0",
     "simplifyify": "^1.3.0",
-    "static-site": "^1.0.2"
+    "static-site": "^1.0.2",
+    "surge": "^0.17.3"
   },
   "repository": {
     "type": "git",
