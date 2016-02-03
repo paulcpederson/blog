@@ -7,14 +7,21 @@
     "sass": "node-sass source/scss/ --output-style compressed --include-path node_modules/ -q -o www/css/",
     "html": "static-site -b www -h source/_helpers/*.js -f xml",
     "cp": "cp -r source/fonts/ www/fonts/ && cp source/img/favicon.ico www/img/favicon.ico",
-    "predev": "npm-run-all js img sass html cp --parallel",
-    "dev": "parallelshell 'cd www && live-server --quiet' 'rerun-script' 'npm run js:watch'",
-    "predeploy": "npm-run-all js img sass cp --parallel && npm run html -- --production",
+    "prestart": "npm-run-all js img sass html cp --parallel",
+    "start": "parallelshell 'live-server www/' 'rerun-script' 'npm run js:watch'",
+    "predeploy": "npm-run-all js img sass cp --parallel && npm run html -- --PRD",
     "deploy": "surge www/ paulcpederson.com"
   },
   "browserify": {
     "transform": [
-      "babelify"
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ]
+        }
+      ]
     ]
   },
   "watches": {
@@ -31,8 +38,10 @@
     "leaflet": "^0.7.3"
   },
   "devDependencies": {
+    "babel-preset-es2015": "^6.3.13",
+    "babelify": "^7.2.0",
     "imagemin-newer": "^1.0.1",
-    "live-server": "^0.7.1",
+    "live-server": "^0.9.1",
     "node-sass": "^3.2.0",
     "npm-run-all": "^1.2.6",
     "parallelshell": "^1.1.1",
