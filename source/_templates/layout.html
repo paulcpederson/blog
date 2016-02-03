@@ -56,7 +56,9 @@
         </section>
       </div>
     </footer>
-    <script src="/js/script.min.js"></script>
-    {% for script in js %}<script src="/js/{{script}}.min.js"></script>{% endfor %}
+    <script src="/js/script{% if production %}.min{% endif %}.js"></script>
+    {% for script in js %}
+      <script src="/js/{{script}}{% if production %}.min{% endif %}.js"></script>
+    {% endfor %}
   </body>
 </html>
