@@ -52,7 +52,7 @@ npm install
 ## Development
 
 ```
-npm run dev
+npm start
 ```
 
 ## Deploy
