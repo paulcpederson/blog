@@ -12,6 +12,6 @@ var map = L.map('usgs', {
     attributionControl: false
 });
 
-var tiles = new Esri.tiledMapLayer("http://server.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer", {
-  opacity : 1
-}).addTo(map);
+L.esri.tiledMapLayer({
+    url: "//services.arcgisonline.com/ArcGIS/rest/services/USA_Topo_Maps/MapServer"
+  }).addTo(map);
