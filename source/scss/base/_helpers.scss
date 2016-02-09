@@ -3,6 +3,7 @@
 .text-right { text-align: right; }
 .text-size--2 { font-size: 0.8em; }
 .text-size--1 { font-size: 0.9em; }
+.text-size-3 { font-size: 3em; }
 .text-narrow { max-width: 24em; }
 
 .text-subtle {
@@ -31,3 +32,7 @@
 // Positioning
 .l-relative { position: relative; }
 .l-block { display: block; }
+.l-center {
+  margin-left: auto;
+  margin-right: auto;
+}

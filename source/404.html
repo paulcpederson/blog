@@ -4,13 +4,10 @@ description: Code 404 | Page not Found
 template: _templates/layout.html
 block: page
 prettyUrl: false
-js:
-  - 404
-css:
-  - 404
 ---
-<section class="hero short navy">
-  <div class="title-wrap constrain">
-    <h1 class="title four-zero-four">404</h1>
+<section class="hero short navy" style="background-image: url(/img/404.svg)">
+  <div class="title-wrap constrain full">
+    <h1 class="title spot-{{spot}} text-size-3 padding-leader-8 leader-8">404</h1>
+    <p class="description text-narrow trailer-8">I couldn't find that page! I looked really hard, but I just can't find it...</p>
   </div>
 </section>
