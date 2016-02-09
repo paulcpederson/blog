@@ -31,13 +31,13 @@ To run a script, just add a command to `scripts` like this:
 
 Then you can run it with:
 
-```
+```bash
 npm run-script my-script
 ```
 
 Or, in the interest of typing fewer characters, you can just use:
 
-```
+```bash
 npm run my-script
 ```
 

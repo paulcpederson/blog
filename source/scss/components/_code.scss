@@ -48,6 +48,10 @@ pre {
   color: $violet;
 }
 
+.bash {
+  color: $base0;
+}
+
 .hljs-comment, .hljs-template_comment, .hljs-diff .hljs-header, .hljs-doctype, .hljs-lisp .hljs-string, .hljs-javadoc, html {
   color: $base01;
 }
