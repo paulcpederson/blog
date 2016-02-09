@@ -10,9 +10,9 @@ changefreq: daily
 <section style="background-image: url(img/{{featuredPost.background}})" class="hero homepage {{featuredPost.canvas}}">
   <div class="title-wrap constrain padding-leader-6 padding-trailer-5 padding-left-0 padding-right-0">
     <p class="text-size--2 text-subtle">Featured Post:</p>
-    <h2 class="title text-left leader-0 trailer-0"><a href="{{featuredPost.url}}">{{featuredPost.title}}</a></h2>
+    <h2 class="title text-left leader-0 trailer-0"><a href="{{featuredPost.url}}" class="spot-link-{{spot}}">{{featuredPost.title}}</a></h2>
     <p class="description text-left leader-1 trailer-1 margin-left-0 margin-right-0">{{featuredPost.description}}</p>
-    <a href="{{featuredPost.url}}" class="btn red">Read More »</a>
+    <a href="{{featuredPost.url}}" class="btn btn-{{spot}}">Read More »</a>
   </div>
 </section>
 
@@ -24,27 +24,27 @@ changefreq: daily
       <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
       <div class="col2of5 col blog-roll-text">
         <h2 class="leader-1 trailer-1">
-          <a href="{{article.url}}" class="{{article.spot}}">{{article.title}}</a>
+          <a href="{{article.url}}" class="spot-link-{{article.spot}}">{{article.title}}</a>
         </h2>
         <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
         <p class="text-size--2">{{article.description}}</p>
-        <a href="{{article.url}}" class="{{article.spot}} text-size--2">Read More »</a>
+        <a href="{{article.url}}" class="spot-link-{{article.spot}} text-size--2">Read More »</a>
       </div>
     </div>
     {% endfor %}
   </div>
 </div>
 
-<!-- next, prev -->
-<div class="bottom-nav">
-  <div class="constrain clearfix">
-    <a href="/archive/" class="previous left">
-      <p class="small">view all articles:</p>
-      <p>Archive</p>
+<!-- next-prev links for articles -->
+<div class="spot-bg-{{spot}}">
+  <nav class="bottom-nav constrain clearfix">
+    <a href="{{prev.url}}" class="bottom-nav-link bottom-nav-prev">
+      <span class="l-block text-size--2">view all articles:</span>
+      <span class="text-overflow l-block leader-1">Archive</span>
     </a>
-    <a href="{{articles[0].url}}" class="next right">
-      <p class="small">most recent article:</p>
-      <p>{{articles[0].title}}</p>
+    <a href="{{next.url}}" class="bottom-nav-link bottom-nav-next">
+      <span class="l-block text-size--2">most recent article:</span>
+      <span class="text-overflow l-block leader-1">{{articles[0].title}}</span>
     </a>
-  </div>
+  </nav>
 </div>

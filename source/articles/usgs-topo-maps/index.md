@@ -29,4 +29,4 @@ The National Map data that are used to build these maps are available for public
 
 Check out the [USGS website](http://www.usgs.gov/pubprod/maps.html) or watch [this video](http://gallery.usgs.gov/videos/568) to learn more about the USGS and their work with the US Topo maps. To learn more about the Esri provided map service powering the web map, read the [item detail page](http://www.arcgis.com/home/item.html?id=99cd5fbd98934028802b4f797c4b1732) on ArcGIS Online.
 
-<a class="btn green" href="/maps/usgs/">View the Web Map</a>
+[View the Web Map](/maps/usgs/)

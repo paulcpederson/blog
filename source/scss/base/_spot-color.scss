@@ -1,52 +1,3 @@
-
-
-  //   .btn {
-  //     border-color: $color;
-  //     color: $color;
-  //     &:hover, &:focus {
-  //       background-color: $color;
-  //       color: $white;
-  //     }
-  //   }
-
-
-  // article {
-  //   a {
-  //     color: $color;
-  //     &:hover, &:focus {
-  //       border-bottom: 2px solid $color;
-  //     }
-  //     &.btn {
-  //       &:hover {
-  //         border-width: 1px;
-  //       }
-  //     }
-  //   }
-
-  //   blockquote {
-  //     color: $color;
-  //     border-left: 3px solid $color;
-  //   }
-
-  //   a {
-  //     color: $color;
-  //     &:hover, &:focus {
-  //       color: $color;
-  //       border-bottom: 2px solid $color;
-  //     }
-  //   }
-
-// h1, h2, h3, h4, h5, h6, a {
-//   &.yellow  { color: $yellow; }
-//   &.orange  { color: $orange; }
-//   &.red     { color: $red; }
-//   &.magenta { color: $magenta; }
-//   &.violet  { color: $violet; }
-//   &.blue    { color: $blue; }
-//   &.cyan    { color: $cyan; }
-//   &.green   { color: $green; }
-// }
-
 $spot-colors: (
   yellow: $yellow,
   orange: $orange,
@@ -60,16 +11,35 @@ $spot-colors: (
 
 @each $name in map-keys($spot-colors) {
   $color: map-get($spot-colors, $name);
+
   .spot-#{$name} { color: $color; }
   .spot-bg-#{$name} { background-color: $color; }
   .spot-top-#{$name} { border-top: 8px solid $color; }
 
-  .spot-link {
+  .spot-link-#{$name}, .article-#{$name} a {
     color: $color;
     &:hover, &:focus {
       color: $color;
       border-bottom: 2px solid $color;
     }
   }
-}
 
+  .btn-#{$name} {
+    border: 1px solid $color;
+    color: $color;
+    &:hover {
+      background-color: $color;
+    }
+  }
+
+  // Article Styles
+  .article-#{$name} {
+    h1, h2, h3, h4, h5, h6 {
+      color: $color;
+    }
+    blockquote {
+      color: $color;
+      border-left: 3px solid $color;
+    }
+  }
+}

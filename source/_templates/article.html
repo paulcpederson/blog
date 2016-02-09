@@ -7,31 +7,31 @@
       <img src="/img/{{feature}}" class="feature-image">
     </section>
     <div class="title-wrap constrain in-article">
-      <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+      <h1 class="title"><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
       <p class="description">{{description}}</p>
-      <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.j.Y')}}</time>
+      <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
     </div>
   {% elseif map %}
     <!-- map in banner -->
-    <div id="{{map}}" class="map-div hero-map"></div>
+    <div id="{{map}}" class="hero-map map-div"></div>
     <div class="title-wrap constrain in-article">
-      <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+      <h1 class="title"><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
       <p class="description">{{description}}</p>
-      <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.j.Y')}}</time>
+      <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
     </div>
   {% else %}
     <!-- title in banner -->
     <section style="background-image: url(/img/{{background}})" class="hero {{canvas}}">
       <div class="title-wrap constrain">
-        <h1 class="title"><a href="{{url}}">{{title}}</a></h1>
+        <h1 class="title"><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
         <p class="description">{{description}}</p>
-        <time datetime="{{date|date('Y-m-d')}}" class="date">{{date|date('n.j.Y')}}</time>
+        <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
       </div>
     </section>
   {% endif %}
 
   <!-- post content -->
-  <article class="panel white article">
+  <article class="panel white article article-{{spot}}">
     <section class="constrain leader-1 trailer-3">
       {% block content %}{% endblock %}
     </section>

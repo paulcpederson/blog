@@ -27,15 +27,16 @@
     {% for stylesheet in css %}<link rel="stylesheet" href="/css/{{stylesheet}}.css">{% endfor %}
   </head>
 
-  <body class="{{spot || featuredPost.spot}} spot-top-{{spot}}">
+  {% set spot = spot || featuredPost.spot %}
+  <body class="spot-top-{{spot}}">
 
     <!-- Top Navigation -->
     <header class="panel transparent nav">
       <nav class="constrain">
-        <a href="/" class="left">Paul C Pederson</a>
-        <a href="/archive/" class="right">Archive</a>
-        <span class="right hide-mobile">/</span>
-        <a href="/" class="right hide-mobile">Blog</a>
+        <a href="/" class="spot-link-{{spot}} left">Paul C Pederson</a>
+        <a href="/archive/" class="spot-link-{{spot}} right">Archive</a>
+        <span class="spot-{{spot}} right hide-mobile">/</span>
+        <a href="/" class="spot-link-{{spot}} right hide-mobile">Blog</a>
       </nav>
     </header>
 
@@ -45,7 +46,7 @@
     <!-- Footer -->
     <footer class="panel navy">
       <div class="constrain">
-        <section>
+        <section class="article-{{spot}}">
           {% markdown %}{% include "about.md" %}{% endmarkdown %}
         </section>
         <section class="copy">
@@ -70,10 +71,8 @@
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
       ga('create', 'UA-41031992-4', 'auto');
       ga('send', 'pageview');
-
     </script>
 
   </body>

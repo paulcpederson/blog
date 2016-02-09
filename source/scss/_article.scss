@@ -11,7 +11,7 @@
     }
   }
   pre {
-    @include respond-to(700px) {
+    @include respond-to($tablet) {
       margin-left: -12.5%;
       width: 125%;
     }
@@ -59,12 +59,5 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-}
-
-// Responsive Styles
-.content {
-  @include respond-to(700px) {
-    font-size: 1rem;
   }
 }

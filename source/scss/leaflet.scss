@@ -1,1 +1,50 @@
-@import "leaflet/dist/leaflet"
+@import 'config';
+@import 'scss-utils/scss-utils';
+@import "leaflet/dist/leaflet";
+
+.map-div {
+  position: relative;
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    z-index: 2;
+    pointer-events: none;
+    @include box-shadow(inset 0 100px 200px rgba(0, 0, 0, 0.45), inset 0 0 200px rgba(0, 0, 0, 0.7));
+  }
+}
+
+.leaflet-top {
+  top: 50%;
+  margin-top: -60px;
+}
+
+.back-to {
+  color: $white;
+  position: absolute;
+  bottom: 1em;
+  left: 2em;
+  z-index:3;
+  font-size: 1em;
+  &:before {
+    content: "";
+    display: inline-block;
+    background: url(../img/left-arrow.svg) no-repeat center right transparent;
+    background-size: 16px;
+    width: 16px;
+    height: 16px;
+    vertical-align: -3px;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    @include transition(150ms left linear);
+  }
+  &:hover {
+    &:before {
+      left: -24px;
+    }
+  }
+}
