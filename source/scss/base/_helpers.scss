@@ -11,10 +11,55 @@
   color: $light-gray;
 }
 
+.text-center {
+  text-align: center;
+}
+
 .text-overflow {
   white-space: nowrap;
   overflow-x: hidden;
   text-overflow: ellipsis;
+}
+
+// Positioning
+.l-relative { position: relative; }
+.l-block { display: block; }
+.l-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.constrain {
+  width: 80%;
+  max-width: 45em;
+  padding-left: 10%;
+  padding-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+.full {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.hide-mobile {
+  @include respond-to($phone-wide) {
+    display: none;
+  }
 }
 
 // Furniture for spacing
@@ -27,12 +72,4 @@
   .padding-right-#{$n} { padding-right: $n * 1rem; }
   .margin-left-#{$n} { margin-left: $n * 1rem; }
   .margin-right-#{$n} { margin-right: $n * 1rem; }
-}
-
-// Positioning
-.l-relative { position: relative; }
-.l-block { display: block; }
-.l-center {
-  margin-left: auto;
-  margin-right: auto;
 }

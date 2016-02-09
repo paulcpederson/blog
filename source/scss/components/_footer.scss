@@ -1,0 +1,25 @@
+.footer-icon {
+  display: inline-block;
+  color: $light-gray;
+  width: 16px;
+  height: 16px;
+  margin-right: 1em;
+  background: url('../img/twitter.svg') center center no-repeat  transparent;
+  background-size: 16px;
+  opacity: 0.8;
+  border-bottom: none;
+  @include transition(150ms opacity linear);
+  &:hover {
+    opacity: 1;
+    border: none;
+  }
+}
+
+.footer-icon-github   { background-image: url('../img/github.svg'); }
+.footer-icon-dribbble { background-image: url('../img/dribbble.svg'); }
+.footer-icon-google   { background-image: url('../img/google-plus.svg'); }
+
+.footer-link {
+  @include transition(150ms border-color linear);
+  border-bottom: 2px solid transparent;
+}

@@ -1,0 +1,18 @@
+// Top Navigation
+.nav {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 4;
+  pointer-events: none;
+}
+
+.nav-link {
+  pointer-events: auto;
+  text-decoration: none;
+  padding: 0.25em 0;
+  @include transition(150ms border-color linear);
+  border-bottom: 2px solid transparent;
+}

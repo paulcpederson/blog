@@ -39,16 +39,4 @@ table {
     font-size: .925rem;
     font-weight: bold;
   }
-
-  &.striped {
-    tr {
-      &:nth-child(even){
-          background-color: $off-white;
-        td {
-          background-color: $off-white;
-        }
-      }
-    }
-  }
-
 }

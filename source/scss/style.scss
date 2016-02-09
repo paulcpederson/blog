@@ -3,14 +3,15 @@
 @import 'inline-block-grid/grid';
 @import 'base/reset';
 @import 'base/typography';
-@import 'base/layout';
 
 // components
+@import 'components/top-nav';
+@import 'components/footer';
 @import 'components/panels';
 @import 'components/code';
 @import 'components/buttons';
 @import 'components/tables';
-@import 'components/banner';
+@import 'components/hero';
 @import 'components/roll';
 @import 'components/bottom-nav';
 @import 'components/spot-color';
