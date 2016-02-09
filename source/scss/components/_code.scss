@@ -3,17 +3,12 @@
 code {
   font-family: $button-font;
   font-size: 0.85em;
-  color: $dark-gray;
-}
-
-p code, li code {
   padding: 0.35em;
   border-radius: 3px;
   position: relative;
   top: -0.05em;
   background: #F8F8F8;
   border: 1px solid #EFEFEF;
-  color: $gray;
   font-size: 0.85em;
   margin: 0 4px;
 }
@@ -27,47 +22,60 @@ pre {
     box-sizing: border-box;
     display: block;
     padding: 1em;
+    margin: 0;
     background-color: $base03;
-    color: $base0;
+    border: none;
+    top: 0;
     width: 100%;
     line-height: 1.25;
     overflow: auto;
-    &.lang-html {
-      .title {
-        font-size: 1em;
-      }
-    }
   }
+}
 
-  .hljs-comment, .hljs-template_comment, .hljs-diff .hljs-header, .hljs-doctype, .hljs-lisp .hljs-string, .hljs-javadoc {
-    color: $base01;
-  }
+.css .hljs-class {
+  color: $yellow;
+}
 
-  .hljs-keyword, .hljs-css .hljs-rule .hljs-keyword, .hljs-winutils, .hljs-javascript .hljs-title, .hljs-method, .hljs-addition, .hljs-css .hljs-tag, .hljs-lisp .hljs-title {
-    color: $green;
-  }
+.css .hljs-tag {
+  color: $cyan;
+}
 
-  .hljs-number, .hljs-command, .hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .hljs-tex .hljs-formula, .hljs-regexp, .hljs-hexcolor {
-    color: $cyan;
-  }
+.css .hljs-attribute {
+  color: $green;
+}
 
-  .hljs-title, .hljs-localvars, .hljs-function .hljs-title, .hljs-chunk, .hljs-decorator, .hljs-builtin, .hljs-built_in, .hljs-lisp .hljs-title, .hljs-identifier, .hljs-title .hljs-keymethods, .hljs-id {
-    color: $blue;
-  }
+.css .hljs-value {
+  color: $violet;
+}
 
-  .hljs-attribute, .hljs-variable, .hljs-instancevar, .hljs-lisp .hljs-body, .hljs-smalltalk .hljs-number, .hljs-constant, .hljs-class .hljs-title, .hljs-parent, .hljs-haskell .hljs-label {
-    color: $yellow;
-  }
+.hljs-comment, .hljs-template_comment, .hljs-diff .hljs-header, .hljs-doctype, .hljs-lisp .hljs-string, .hljs-javadoc, html {
+  color: $base01;
+}
 
-  .hljs-preprocessor, .hljs-pi, .hljs-shebang, .hljs-symbol, .hljs-diff .hljs-change, .hljs-special, .hljs-keymethods, .hljs-attr_selector, .hljs-important, .hljs-subst, .hljs-cdata {
-    color: $orange;
-  }
+.hljs-keyword, .hljs-css .hljs-rule .hljs-keyword, .hljs-winutils, .hljs-javascript .hljs-title, .hljs-method, .hljs-addition, .hljs-css .hljs-tag, .hljs-lisp .hljs-title {
+  color: $green;
+}
 
-  .hljs-deletion {
-    color: $red;
-  }
+.hljs-number, .hljs-command, .hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .hljs-tex .hljs-formula, .hljs-regexp, .hljs-hexcolor {
+  color: $cyan;
+}
 
-  .hljs-tex .hljs-formula {
-    background: $base02;
-  }
+.hljs-title, .hljs-localvars, .hljs-function .hljs-title, .hljs-chunk, .hljs-decorator, .hljs-builtin, .hljs-built_in, .hljs-lisp .hljs-title, .hljs-identifier, .hljs-title .hljs-keymethods, .hljs-id {
+  color: $blue;
+}
+
+.hljs-attribute, .hljs-variable, .hljs-instancevar, .hljs-lisp .hljs-body, .hljs-smalltalk .hljs-number, .hljs-constant, .hljs-class .hljs-title, .hljs-parent, .hljs-haskell .hljs-label {
+  color: $yellow;
+}
+
+.hljs-preprocessor, .hljs-pi, .hljs-shebang, .hljs-symbol, .hljs-diff .hljs-change, .hljs-special, .hljs-keymethods, .hljs-attr_selector, .hljs-important, .hljs-subst, .hljs-cdata {
+  color: $orange;
+}
+
+.hljs-deletion {
+  color: $red;
+}
+
+.hljs-tex .hljs-formula {
+  background: $base02;
 }

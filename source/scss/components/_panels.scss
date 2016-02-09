@@ -1,0 +1,24 @@
+.panel {
+  width: 100%;
+  padding: 2em 0;
+  background-color: $white;
+}
+
+.panel-transparent {
+  background-color: transparent;
+}
+
+.panel-white {
+  background-color: $white;
+  color: $gray;
+}
+
+.panel-tan {
+  background-color: $base03;
+  color: $gray;
+}
+
+.panel-navy {
+  background-color: $navy;
+  color: $light-gray;
+}
