@@ -3,20 +3,18 @@
 @import 'inline-block-grid/grid';
 @import 'base/reset';
 @import 'base/typography';
-@import 'base/code';
-@import 'base/buttons';
-@import 'base/tables';
 @import 'base/layout';
 
 // components
+@import 'components/code';
+@import 'components/buttons';
+@import 'components/tables';
 @import 'components/banner';
 @import 'components/roll';
 @import 'components/bottom-nav';
+@import 'components/spot-color';
+@import 'components/markdown';
 
-// page specific
-@import 'article';
-@import 'map';
-
-@import 'base/spot-color';
+// helper classes
 @import 'base/helpers';
 
