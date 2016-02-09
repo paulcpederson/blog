@@ -4,7 +4,7 @@ date: 2013-12-06
 template: _templates/article.html
 thumbnail: inline-block-thumb.jpg
 background: inline-block.svg
-canvas: navy mesh
+canvas: navy
 spot: orange
 description: Building a grid system for the web with the power of inline-block.
 ---

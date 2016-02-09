@@ -3,28 +3,28 @@
 {% block page %}
   {% if feature %}
     <!-- feature image in banner -->
-    <section style="background-image: url(/img/{{background}})" class="hero {{canvas}}">
+    <section style="background-image: url(/img/{{background}})" class="hero hero-{{canvas}} hero-mesh">
       <img src="/img/{{feature}}" class="feature-image">
     </section>
-    <div class="title-wrap constrain in-article">
-      <h1 class="title"><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
-      <p class="description">{{description}}</p>
+    <div class="title-wrap text-center constrain padding-leader-2 padding-trailer-1">
+      <h1><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
+      <p class="text-narrow l-center">{{description}}</p>
       <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
     </div>
   {% elseif map %}
     <!-- map in banner -->
     <div id="{{map}}" class="hero-map map-div"></div>
-    <div class="title-wrap constrain in-article">
-      <h1 class="title"><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
-      <p class="description">{{description}}</p>
+    <div class="title-wrap text-center constrain padding-leader-2 padding-trailer-1">
+      <h1><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
+      <p class="text-narrow l-center">{{description}}</p>
       <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
     </div>
   {% else %}
     <!-- title in banner -->
-    <section style="background-image: url(/img/{{background}})" class="hero {{canvas}}">
-      <div class="title-wrap constrain">
-        <h1 class="title"><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
-        <p class="description">{{description}}</p>
+    <section style="background-image: url(/img/{{background}})" class="hero hero-{{canvas}} hero-mesh">
+      <div class="title-wrap text-center constrain">
+        <h1><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
+        <p class="text-narrow l-center">{{description}}</p>
         <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
       </div>
     </section>

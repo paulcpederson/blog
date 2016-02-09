@@ -7,11 +7,11 @@ changefreq: daily
 ---
 
 <!-- banner -->
-<section style="background-image: url(img/{{featuredPost.background}})" class="hero homepage {{featuredPost.canvas}}">
+<section style="background-image: url(img/{{featuredPost.background}})" class="hero hero-{{featuredPost.canvas}} hero-mesh">
   <div class="title-wrap constrain padding-leader-6 padding-trailer-5 padding-left-0 padding-right-0">
     <p class="text-size--2 text-subtle">Featured Post:</p>
-    <h2 class="title text-left leader-0 trailer-0"><a href="{{featuredPost.url}}" class="spot-link-{{spot}}">{{featuredPost.title}}</a></h2>
-    <p class="description text-left leader-1 trailer-1 margin-left-0 margin-right-0">{{featuredPost.description}}</p>
+    <h2 class="text-left leader-0 trailer-0"><a href="{{featuredPost.url}}" class="spot-link-{{spot}}">{{featuredPost.title}}</a></h2>
+    <p class="text-narrow text-left leader-1 trailer-1 margin-left-0 margin-right-0">{{featuredPost.description}}</p>
     <a href="{{featuredPost.url}}" class="btn btn-{{spot}}">Read More »</a>
   </div>
 </section>
@@ -38,11 +38,11 @@ changefreq: daily
 <!-- next-prev links for articles -->
 <div class="spot-bg-{{spot}}">
   <nav class="bottom-nav constrain clearfix">
-    <a href="{{prev.url}}" class="bottom-nav-link bottom-nav-prev">
+    <a href="/archive/" class="bottom-nav-link bottom-nav-prev">
       <span class="l-block text-size--2">view all articles:</span>
       <span class="text-overflow l-block leader-1">Archive</span>
     </a>
-    <a href="{{next.url}}" class="bottom-nav-link bottom-nav-next">
+    <a href="{{articles[0].url}}" class="bottom-nav-link bottom-nav-next">
       <span class="l-block text-size--2">most recent article:</span>
       <span class="text-overflow l-block leader-1">{{articles[0].title}}</span>
     </a>

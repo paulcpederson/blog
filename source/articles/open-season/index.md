@@ -4,7 +4,7 @@ date: 2013-10-19
 template: _templates/article.html
 background: ogden.jpg
 thumbnail: ogden-thumb.jpg
-canvas: tan mesh
+canvas: tan
 spot: red
 description: "Quickly written notes about Max Ogden's talk at Realtime Conf 2013: Open Season - A Plea for Digital Frontiers People"
 ---

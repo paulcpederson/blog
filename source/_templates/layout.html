@@ -33,10 +33,10 @@
     <!-- Top Navigation -->
     <header class="panel panel-transparent nav">
       <nav class="constrain">
-        <a href="/" class="spot-link-{{spot}} left">Paul C Pederson</a>
-        <a href="/archive/" class="spot-link-{{spot}} right">Archive</a>
-        <span class="spot-{{spot}} right hide-mobile">/</span>
-        <a href="/" class="spot-link-{{spot}} right hide-mobile">Blog</a>
+        <a href="/" class="spot-link-{{spot}} nav-link left">Paul C Pederson</a>
+        <a href="/archive/" class="spot-link-{{spot}} nav-link right">Archive</a>
+        <span class="spot-{{spot}} right padding-right-1 padding-left-1 hide-mobile">/</span>
+        <a href="/" class="spot-link-{{spot}} nav-link right hide-mobile">Blog</a>
       </nav>
     </header>
 
@@ -49,15 +49,13 @@
         <section class="article-{{spot}}">
           {% markdown %}{% include "about.md" %}{% endmarkdown %}
         </section>
-        <section class="copy">
-          <p>&copy; 2015 Paul C Pederson</p>
-        </section>
-        <section class="footer-social">
-          <a href="https://twitter.com/paulcpederson" class="icon-twitter"></a>
-          <a href="https://github.com/paulcpederson" class="icon-github"></a>
-          <a href="https://plus.google.com/117963508642452000116?rel=author" class="icon-google"></a>
-          <a href="http://dribbble.com/paulcpederson" class="icon-dribbble"></a>
-        </section>
+        <p>&copy; 2015 Paul C Pederson</p>
+        <nav class="leader-1">
+          <a href="https://twitter.com/paulcpederson" class="footer-icon footer-icon-twitter"></a>
+          <a href="https://github.com/paulcpederson" class="footer-icon footer-icon-github"></a>
+          <a href="https://plus.google.com/117963508642452000116?rel=author" class="footer-icon footer-icon-google"></a>
+          <a href="http://dribbble.com/paulcpederson" class="footer-icon footer-icon-dribbble"></a>
+        </nav>
       </div>
     </footer>
     <script src="/js/script{% if production %}.min{% endif %}.js"></script>

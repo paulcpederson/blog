@@ -4,7 +4,7 @@ date: 2013-08-06
 template: _templates/article.html
 thumbnail: devicons-thumb.jpg
 background: devicons.svg
-canvas: navy mesh
+canvas: navy
 spot: green
 description: Rendering three color icons in the browser with a custom web font
 ---

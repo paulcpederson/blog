@@ -6,7 +6,7 @@ description: Bringing the beauty and simplicity of iA Writer to Sublime Text 2
 background: sublime-writer.jpg
 feature: sublime-writer-feature.png
 thumbnail: sublime-writer-thumb.jpg
-canvas: navy mesh
+canvas: navy
 spot: cyan
 ---
 

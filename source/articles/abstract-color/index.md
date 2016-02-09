@@ -4,7 +4,7 @@ date: 2013-03-22
 template: _templates/article.html
 background: pollock.jpg
 thumbnail: pollock-thumb.jpg
-canvas: tan mesh
+canvas: tan
 spot: yellow
 description: How to steal colors from the masters of the Abstract Expressionism movement
 ---

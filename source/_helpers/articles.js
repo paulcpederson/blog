@@ -16,8 +16,18 @@ module.exports = function (site, cb) {
     page.articles = articles
     if (isArticle(page)) {
       var index = articles.indexOf(page)
-      page.prev = articles[index + 1] || articles[0]
-      page.next = articles[index - 1] || articles[articles.length - 1]
+      var prev = articles[index + 1] || articles[0]
+      var next = articles[index - 1] || articles[articles.length - 1]
+      page.prev = {
+        title: prev.title,
+        date: prev.date,
+        url: prev.url
+      }
+      page.next = {
+        title: next.title,
+        date: next.date,
+        url: next.url
+      }
     }
     return page
   })

@@ -5,7 +5,7 @@ template: _templates/article.html
 background: npm-run.svg
 thumbnail: npm-run-thumb.jpg
 feature: npm-run-feature.png
-canvas: tan mesh
+canvas: tan
 spot: red
 description: "Use npm to automate front-end development tasks such as image optimization, Sass compilation, and running a local server."
 featured: true

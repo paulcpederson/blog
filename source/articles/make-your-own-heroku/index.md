@@ -5,7 +5,7 @@ template: _templates/article.html
 thumbnail: dokku-thumb.jpg
 feature: dokku-feature.png
 background: dokku.jpg
-canvas: navy mesh
+canvas: navy
 spot: cyan
 description: Make a cheap, DIY Heroku and GitHub Pages clone with Dokku and DigitalOcean.
 ---

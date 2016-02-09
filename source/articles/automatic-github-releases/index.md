@@ -4,7 +4,7 @@ date: 2015-1-2
 template: _templates/article.html
 background: grunt-release.jpg
 thumbnail: grunt-release-thumb.jpg
-canvas: navy mesh
+canvas: navy
 spot: green
 description: "Create a new GitHub release with a zipped folder, custom release message, and user credentials all in a single Grunt command."
 ---
