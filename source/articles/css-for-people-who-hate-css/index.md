@@ -177,7 +177,7 @@ Three reasons to do this:
 
 If you want somebody on your development team to really hate you at some point in the future, you should absolutely use inline styles. Inline styles are *rude*. The only thing in CSS land that can override them is an `!important` rule. You've just escalated things to a specificity brawl *immediately*.
 
-But even more than that, you've selfishly made any of your styles from being used elsewhere **and** made the HTML markup look gross. Seriously don't do it.
+But even more than that, you've selfishly prevented any of your styles from being used elsewhere **and** made the HTML markup look gross. Seriously don't do it.
 
 ## 5. Don't Use !important
 
@@ -212,7 +212,7 @@ That's not so bad, right? No, it's not that bad. And for smaller projects you mi
 }
 ```
 
-They mean well, but if you have a button in `top-navigation`, they've inadvertently made that button red-on-red which will gain you zero style points. Then you're going to have to write more CSS to fix it. Instead, I've found it's best to prefix your modifier classes:
+They mean well, but if you have a red button in `top-navigation`, they've inadvertently made that button red-on-red which will gain you zero style points. Then you're going to have to write more CSS to fix it. Instead, I've found it's best to prefix your modifier classes:
 
 ```css
 .btn {
