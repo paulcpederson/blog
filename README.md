@@ -20,7 +20,7 @@ template: _templates/article.html
 thumbnail: thumbnail.jpg
 background: background.jpg
 feature: feature.png
-canvas: navy mesh
+canvas: navy
 spot: green
 js:
   - file1
@@ -31,17 +31,19 @@ css:
 ---
 ```
 
-- **title:** title of the post (not the slug) that will appear in list and archive.
-- **date:** YYYY-MM-DD formatted date
-- **template:** Which type of post it is. Options are ```_templates/article.html``` or ```_templates/layout.html```.
-- **description:** Description of the article. Recommended 1 sentence.
-- **background:** Image in the background of hero area.
-- **feature:** featured image that goes in the hero area. If provided, title and date will go below hero area in main post.
-- **thumbnail:** small image to use on homepage
-- **canvas:** either ```navy``` or ```tan``` for background color, and then ```mesh``` if you want a mesh.
-- **spot:** The spot color for the article. Choose from yellow, orange, red, magenta, violet, blue, cyan, and green.
-- **js:** List of js files needed for post (without js at end)
-- **css:** List of css files specific to post (without css at end)
+| Option | Definition |
+| ------- | ----------------- |
+| `title` | Title of the post |
+| `date` | YYYY-MM-DD formatted date |
+| `template` | Layout file to use `_templates/article.html` or `_templates/layout.html` |
+| `description` | Description of the article. Recommended 1 sentence. |
+| `background` | Image in the background of hero area. |
+| `feature` | Featured image that goes in the hero area. If provided, title and date will go below hero area in main post. |
+| `thumbnail` | Small image to use on homepage. |
+| `canvas` | Either ```navy``` or ```tan``` for background color. |
+| `spot` | The spot color for the article. Choose from yellow, orange, red, magenta, violet, blue, cyan, and green. |
+| `js` | List of js files needed for post (without js at end). |
+| `css` | List of css files specific to post (without css at end). |
 
 ## Install
 
