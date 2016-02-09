@@ -1,17 +1,22 @@
-@import "config";
-@import "scss-utils/scss-utils";
-@import "inline-block-grid/grid";
-@import "base/reset";
-@import "base/spot-color";
-@import "base/typography";
-@import "base/code";
-@import "base/buttons";
-@import "base/tables";
-@import "base/layout";
+@import 'config';
+@import 'scss-utils/scss-utils';
+@import 'inline-block-grid/grid';
+@import 'base/reset';
+@import 'base/typography';
+@import 'base/code';
+@import 'base/buttons';
+@import 'base/tables';
+@import 'base/layout';
 
-//page specific
-@import "home";
-@import "article";
-@import "archive";
-@import "map";
+// components
+@import 'components/banner';
+@import 'components/roll';
+@import 'components/bottom-nav';
+
+// page specific
+@import 'article';
+@import 'map';
+
+@import 'base/spot-color';
+@import 'base/helpers';
 

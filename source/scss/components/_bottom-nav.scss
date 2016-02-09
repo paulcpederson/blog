@@ -1,0 +1,38 @@
+/* Next-Previous Links */
+.bottom-nav {
+  padding: 0;
+}
+
+.bottom-nav-link {
+  width: 50%;
+  box-sizing: border-box;
+  color: $white;
+  padding: 3em;
+  background-repeat: no-repeat;
+  @include transition(all 200ms linear);
+  @include respond-to(560px) {
+    width: 100%;
+  }
+  &:hover {
+    background-color: rgba(0,0,0,.25);
+  }
+}
+
+.bottom-nav-next {
+  float: right;
+  background-image: url(../img/right-arrow.svg);
+  background-position: 95% center;
+  text-align: right;
+  @include respond-to(560px) {
+    border-top: 1px solid rgba(0,0,0,0.2);
+    margin-top: -1px;
+  }
+}
+
+.bottom-nav-prev {
+  float: left;
+  background-image: url(../img/left-arrow.svg);
+  background-position: 5% center;
+  background-repeat: no-repeat;
+  text-align: left;
+}

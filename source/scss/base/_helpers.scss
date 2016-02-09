@@ -1,0 +1,33 @@
+// Basic Type Helpers
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-size--2 { font-size: 0.8em; }
+.text-size--1 { font-size: 0.9em; }
+.text-narrow { max-width: 24em; }
+
+.text-subtle {
+  font-family: $button-font;
+  color: $light-gray;
+}
+
+.text-overflow {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+// Furniture for spacing
+@for $n from 0 through 8 {
+  .leader-#{$n} { margin-top: $n * 1rem; }
+  .trailer-#{$n} { margin-bottom: $n * 1rem; }
+  .padding-leader-#{$n} { padding-top: $n * 1rem; }
+  .padding-trailer-#{$n} { padding-bottom: $n * 1rem; }
+  .padding-left-#{$n} { padding-left: $n * 1rem; }
+  .padding-right-#{$n} { padding-right: $n * 1rem; }
+  .margin-left-#{$n} { margin-left: $n * 1rem; }
+  .margin-right-#{$n} { margin-right: $n * 1rem; }
+}
+
+// Positioning
+.l-relative { position: relative; }
+.l-block { display: block; }

@@ -31,23 +31,23 @@
   {% endif %}
 
   <!-- post content -->
-  <article class="panel white">
-    <section class="constrain content">
+  <article class="panel white article">
+    <section class="constrain leader-1 trailer-3">
       {% block content %}{% endblock %}
     </section>
   </article>
 
   <!-- next-prev links for articles -->
-  <div class="bottom-nav">
-    <div class="constrain clearfix">
-      <a href="{{prev.url}}" class="previous left">
-        <p class="small">previous article:</p>
-        <p>{{prev.title}}</p>
+  <div class="spot-bg-{{spot}}">
+    <nav class="bottom-nav constrain clearfix">
+      <a href="{{prev.url}}" class="bottom-nav-link bottom-nav-prev">
+        <span class="l-block text-size--2">previous article:</span>
+        <span class="text-overflow l-block leader-1">{{prev.title}}</span>
       </a>
-      <a href="{{next.url}}" class="next right">
-        <p class="small">next article:</p>
-        <p>{{next.title}}</p>
+      <a href="{{next.url}}" class="bottom-nav-link bottom-nav-next">
+        <span class="l-block text-size--2">next article:</span>
+        <span class="text-overflow l-block leader-1">{{next.title}}</span>
       </a>
-    </div>
+    </nav>
   </div>
 {% endblock %}

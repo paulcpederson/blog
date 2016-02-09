@@ -27,7 +27,7 @@
     {% for stylesheet in css %}<link rel="stylesheet" href="/css/{{stylesheet}}.css">{% endfor %}
   </head>
 
-  <body class="{{spot || featuredPost.spot}}">
+  <body class="{{spot || featuredPost.spot}} spot-top-{{spot}}">
 
     <!-- Top Navigation -->
     <header class="panel transparent nav">

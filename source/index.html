@@ -8,10 +8,10 @@ changefreq: daily
 
 <!-- banner -->
 <section style="background-image: url(img/{{featuredPost.background}})" class="hero homepage {{featuredPost.canvas}}">
-  <div class="title-wrap constrain">
-    <p class="small">Featured Post:</p>
-    <h2 class="title"><a href="{{featuredPost.url}}">{{featuredPost.title}}</a></h2>
-    <p class="description">{{featuredPost.description}}</p>
+  <div class="title-wrap constrain padding-leader-6 padding-trailer-5 padding-left-0 padding-right-0">
+    <p class="text-size--2 text-subtle">Featured Post:</p>
+    <h2 class="title text-left leader-0 trailer-0"><a href="{{featuredPost.url}}">{{featuredPost.title}}</a></h2>
+    <p class="description text-left leader-1 trailer-1 margin-left-0 margin-right-0">{{featuredPost.description}}</p>
     <a href="{{featuredPost.url}}" class="btn red">Read More »</a>
   </div>
 </section>
@@ -20,19 +20,15 @@ changefreq: daily
 <div class="panel white">
   <div class="constrain">
     {% for article in articles %}
-    <div class="col-group blog-roll">
-      <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="thumbnail"></a>
-      <div class="col2of5 col text">
-        <header>
-          <h2><a href="{{article.url}}" class="{{article.spot}}">{{article.title}}</a></h2>
-          <p class="small">
-            <time datetime="{{article.date|date('Y-m-d')}}" class="small">{{article.date|date('n.j.Y')}}</time>
-          </p>
-        </header>
-        <section>
-          <p>{{article.description}}</p>
-          <p class="small"><a href="{{article.url}}" class="{{article.spot}}">Read More »</a></p>
-        </section>
+    <div class="col-group l-relative leader-3 trailer-3">
+      <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
+      <div class="col2of5 col blog-roll-text">
+        <h2 class="leader-1 trailer-1">
+          <a href="{{article.url}}" class="{{article.spot}}">{{article.title}}</a>
+        </h2>
+        <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
+        <p class="text-size--2">{{article.description}}</p>
+        <a href="{{article.url}}" class="{{article.spot}} text-size--2">Read More »</a>
       </div>
     </div>
     {% endfor %}
