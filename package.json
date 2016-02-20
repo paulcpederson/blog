@@ -1,14 +1,13 @@
 {
   "scripts": {
-    "prejs": "mkdir -p www/js",
-    "js": "simplifyify source/js/*.js -d -m -o www/js/",
-    "js:watch": "npm run js -- -w",
+    "js": "simplifyify source/js/*.js -b -m -d -o www/js/",
+    "sass": "node-sass source/scss/ --output-style compressed --source-map www/css/ -o www/css/ --include-path node_modules/",
+    "postsass": "postcss -u autoprefixer -r www/css/*.css",
     "img": "imagemin-newer source/ www/",
-    "sass": "node-sass source/scss/ --output-style compressed --include-path node_modules/ -q -o www/css/",
     "html": "static-site -b www -h source/_helpers/*.js -f xml",
     "cp": "cp -r source/fonts/ www/fonts/ && cp source/img/favicon.ico www/img/favicon.ico",
-    "prestart": "npm-run-all js img sass html cp --parallel",
-    "start": "parallelshell 'live-server www/' 'rerun-script' 'npm run js:watch'",
+    "prestart": "npm-run-all img sass html cp --parallel",
+    "start": "parallelshell 'live-server www/' 'rerun-script' 'npm run sass -- -w' 'npm run js -- -w'",
     "predeploy": "npm-run-all js img sass cp --parallel && npm run html -- --production",
     "deploy": "surge www/ paulcpederson.com"
   },
@@ -26,7 +25,6 @@
   },
   "watches": {
     "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
-    "sass": "source/scss/**",
     "html": [
       "source/**/*.{html,md,xml}",
       "source/_helpers/**"
@@ -38,6 +36,7 @@
     "leaflet": "^0.7.3"
   },
   "devDependencies": {
+    "autoprefixer": "^6.3.3",
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
     "imagemin-newer": "^1.0.1",
@@ -45,9 +44,9 @@
     "node-sass": "^3.2.0",
     "npm-run-all": "^1.2.6",
     "parallelshell": "^1.1.1",
+    "postcss-cli": "^2.5.1",
     "rerun-script": "^0.6.0",
-    "scss-utils": "1.0.0",
-    "simplifyify": "^1.3.0",
+    "simplifyify": "^2.0.1",
     "static-site": "^1.1.3",
     "surge": "^0.17.3"
   },
