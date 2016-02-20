@@ -41,7 +41,7 @@
   }
   a {
     border-bottom: 2px solid transparent;
-    @include transition(150ms border-color linear);
+    transition: 150ms border-color linear;
   }
 }
 

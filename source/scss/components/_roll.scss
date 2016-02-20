@@ -17,9 +17,9 @@
   right: 50%;
   background-size: cover;
   background-position: center;
-  @include transition(box-shadow 200ms linear);
+  transition: box-shadow 200ms linear;
   &:hover {
-    @include box-shadow(0 0 20px rgba(0,0,0,0.05));
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
   }
   @include respond-to($tablet) {
     display: block;

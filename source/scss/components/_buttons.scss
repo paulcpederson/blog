@@ -9,7 +9,7 @@
   font-family: $button-font;
   font-size: 0.75em;
   cursor: pointer;
-  @include transition(background-color 75ms linear, color 75ms linear);
+  transition: background-color 75ms linear, color 75ms linear;
   &:hover {
     background-color: $dark-gray;
     color: $white;

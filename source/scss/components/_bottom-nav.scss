@@ -9,7 +9,7 @@
   color: $white;
   padding: 3em;
   background-repeat: no-repeat;
-  @include transition(all 200ms linear);
+  transition: all 200ms linear;
   @include respond-to(560px) {
     width: 100%;
   }

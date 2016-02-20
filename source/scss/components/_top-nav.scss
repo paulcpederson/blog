@@ -13,6 +13,6 @@
   pointer-events: auto;
   text-decoration: none;
   padding: 0.25em 0;
-  @include transition(150ms border-color linear);
+  transition: 150ms border-color linear;
   border-bottom: 2px solid transparent;
 }

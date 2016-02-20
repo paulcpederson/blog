@@ -46,8 +46,10 @@
   float: left;
 }
 
-.clearfix {
-  @include clearfix();
+.clearfix:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
 .full {
