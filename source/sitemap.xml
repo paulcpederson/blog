@@ -1,6 +1,10 @@
+---
+collections:
+  articles: /articles/*
+---
 <?xml version="1.0" encoding="utf-8" ?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  {% for article in articles %}
+  {% for article in collections.articles %}
     <url>
       <loc>http://paulcpederson.com{{article.url}}</loc>
       {% if article.thumbnail %}

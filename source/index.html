@@ -4,6 +4,8 @@ description: I'm a web designer and developer living in Portland, OR. I write ab
 template: _templates/layout.html
 block: page
 changefreq: daily
+collections:
+  articles: /articles/*
 ---
 
 <!-- banner -->
@@ -19,7 +21,7 @@ changefreq: daily
 <!-- blog roll -->
 <div class="panel panel-white">
   <div class="constrain">
-    {% for article in articles %}
+    {% for article in collections.articles %}
     <div class="col-group l-relative leader-3 trailer-3">
       <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
       <div class="col2of5 col blog-roll-text">
@@ -42,9 +44,9 @@ changefreq: daily
       <span class="l-block text-size--2">view all articles:</span>
       <span class="text-overflow l-block leader-1">Archive</span>
     </a>
-    <a href="{{articles[0].url}}" class="bottom-nav-link bottom-nav-next">
+    <a href="{{collections.articles[0].url}}" class="bottom-nav-link bottom-nav-next">
       <span class="l-block text-size--2">most recent article:</span>
-      <span class="text-overflow l-block leader-1">{{articles[0].title}}</span>
+      <span class="text-overflow l-block leader-1">{{collections.articles[0].title}}</span>
     </a>
   </nav>
 </div>

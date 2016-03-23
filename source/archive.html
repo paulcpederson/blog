@@ -4,6 +4,8 @@ template: _templates/layout.html
 description: Archive of Blog Articles Written by Paul C Pederson
 spot: cyan
 block: page
+collections:
+  articles: /articles/*
 ---
 
 <section class="hero hero-navy hero-mesh">
@@ -14,7 +16,7 @@ block: page
 
 <div class="panel panel-white">
   <section class="constrain">
-    {% for year in articles|groupBy('year') %}
+    {% for year in collections.articles|groupBy('year') %}
       <div class="block-grid leader-2 trailer-2 margin-left-0 margin-right-0">
         <div class="column-2">
           <p>{{loop.key}}</p>
