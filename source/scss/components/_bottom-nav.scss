@@ -1,20 +1,25 @@
 /* Next-Previous Links */
 .bottom-nav {
   padding: 0;
+  display: flex;
+  @include respond-to(560px) {
+    flex-direction: column;
+  }
 }
 
 .bottom-nav-link {
+  flex: 1 1 auto;
   width: 50%;
   box-sizing: border-box;
   color: $white;
   padding: 3em;
   background-repeat: no-repeat;
   transition: all 200ms linear;
-  @include respond-to(560px) {
-    width: 100%;
-  }
   &:hover {
     background-color: rgba(0,0,0,.25);
+  }
+  @include respond-to(560px) {
+    width: 100%;
   }
 }
 
