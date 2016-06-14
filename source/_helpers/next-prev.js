@@ -2,6 +2,10 @@ function isArticle (page) {
   return page.url.indexOf('/articles/') > -1
 }
 
+function notIndex (page) {
+  return page.url !== '/articles/'
+}
+
 function byDate (a, b) {
   if (a.date && b.date) {
     return new Date(b.date) - new Date(a.date)
@@ -22,6 +26,7 @@ function addNextPrev (page, i, arr) {
 
 module.exports = function (site, cb) {
   var articles = site.filter(isArticle)
+    .filter(notIndex)
     .sort(byDate)
     .map(addYear)
     .map(addNextPrev)
