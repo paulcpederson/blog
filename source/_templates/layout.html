@@ -9,10 +9,11 @@
     <title>{{title}} | Paul C Pederson</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
     <link rel="alternate" type="application/rss+xml" title="Paul C Pederson Feed" href="http://paulcpederson.com/feed.xml" />
-    {% if thumbnail %}
+    {% set card_image = twitter_image || thumbnail %}
+    {% if card_image %}
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:image" content="http://paulcpederson.com/img/{{thumbnail}}">
-      <meta property="og:image" content="http://paulcpederson.com/img/{{thumbnail}}">
+      <meta name="twitter:image" content="http://paulcpederson.com/img/{{card_image}}">
+      <meta property="og:image" content="http://paulcpederson.com/img/{{card_image}}">
     {% else %}
       <meta name="twitter:card" content="summary">
     {% endif %}
