@@ -17,7 +17,8 @@ title: Title of the Post
 date: 2013-11-15
 description: Description of the article
 template: _templates/article.html
-thumbnail: thumbnail.jpg
+thumbnail: thumbnail.svg
+twitter_image: thumbnail.jpg
 background: background.jpg
 feature: feature.png
 canvas: navy
@@ -40,6 +41,7 @@ css:
 | `background` | Image in the background of hero area. |
 | `feature` | Featured image that goes in the hero area. If provided, title and date will go below hero area in main post. |
 | `thumbnail` | Small image to use on homepage. |
+| `twitter_image` | Twitter cards can't render svg, so export a jpg for large summary cards |
 | `canvas` | Either ```navy``` or ```tan``` for background color. |
 | `spot` | The spot color for the article. Choose from yellow, orange, red, magenta, violet, blue, cyan, and green. |
 | `js` | List of js files needed for post (without js at end). |
