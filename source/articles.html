@@ -21,7 +21,7 @@ collections:
 <!-- blog roll -->
 <div class="panel panel-white">
   <div class="constrain">
-    <h1 class="spot-{{spot}}">Latest Articles <a href="/archive/" class="right btn btn-{{spot}}">View All »</a></h1>
+    <h1 class="spot-{{collections.articles[0].spot}}">Latest Articles <a href="/archive/" class="right btn btn-{{collections.articles[0].spot}}">View All »</a></h1>
     {% for article in collections.articles %}
     <div class="col-group l-relative leader-3 trailer-3">
       <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
