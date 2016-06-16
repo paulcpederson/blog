@@ -15,3 +15,11 @@
     color: $white;
   }
 }
+
+.btn-white {
+  border-color: white;
+  &:hover {
+    background-color: white;
+    color: $blue;
+  }
+}

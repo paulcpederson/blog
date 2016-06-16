@@ -4,35 +4,83 @@ description: I'm a web designer and developer living in Portland, OR. I write ab
 template: _templates/layout.html
 block: page
 changefreq: daily
+spot: blue
 collections:
   articles: /articles/*
 ---
 
 <!-- banner -->
-<section style="background-image: url(img/{{featuredPost.background}})" class="hero hero-{{featuredPost.canvas}} hero-mesh">
-  <div class="title-wrap constrain padding-leader-6 padding-trailer-5 padding-left-0 padding-right-0">
-    <p class="text-size--2 text-subtle">Featured Post:</p>
-    <h2 class="text-left leader-0 trailer-0"><a href="{{featuredPost.url}}" class="spot-link-{{spot}}">{{featuredPost.title}}</a></h2>
-    <p class="text-narrow text-left leader-1 trailer-1 margin-left-0 margin-right-0">{{featuredPost.description}}</p>
-    <a href="{{featuredPost.url}}" class="btn btn-{{spot}}">Read More »</a>
+<section class="hero hero-navy hero-mesh hero-fullscreen">
+  <div class="title-wrap constrain padding-leader-6 padding-trailer-2 padding-left-0 padding-right-0">
+    <h1>Hi. I'm Paul.</h1>
+    <p class="text-size--1 text-narrow text-left leader-1 trailer-1 margin-left-0 margin-right-0">
+      I design and develop digital experiences. As a developer, I'm mainly on the front end. CSS, Sass, JS, HTML, and Markdown are all languages I use every day. The chart below summarizes time spent by file extension over the past year.
+    </p>
+    <ul class="trailer-0">
+      <li class="chart-swatch chart-swatch-blue">CSS + Sass</li>
+      <li class="chart-swatch chart-swatch-cyan">JavaScript</li>
+      <li class="chart-swatch chart-swatch-violet">Markdown</li>
+      <li class="chart-swatch chart-swatch-magenta">HTML</li>
+    </ul>
+  </div>
+  <div class="chart-banner">
+    {% include "./img/charts/fileType.svg" %}
   </div>
 </section>
+
+<!-- projects -->
+
+<div class="panel panel-blue padding-trailer-0">
+
+    <h1 class="margin-left-4 spot-blue">Work <a href="/work/" class="right btn btn-blue margin-right-4">View All »</a></h1>
+  <div class="flex">
+    <a href="http://soundfinder.io" class="flex-1 work-item work-item-sound-finder">
+      <div class="work-item-text">
+        <h4>Soundfinder.io</h4>
+        <p>Sound finder allows you to find your kindred musical spirits. Search for SoundCloud users that have the same taste as you.</p>
+      </div>
+    </a>
+    <a href="http://soundfinder.io" class="flex-1 work-item work-item-donut-js">
+      <div class="work-item-text">
+        <h4>Donut.js</h4>
+        <p>Branding and web design for a Portland JavaScript meetup. Procedurally generated sprinkles!</p>
+      </div>
+    </a>
+  </div>
+  <div class="flex">
+    <a href="http://soundfinder.io" class="flex-1 work-item work-item-clacite-web">
+      <div class="work-item-text">
+        <h4>Calcite Web</h4>
+        <p>Internal CSS Framework for all Esri and ArcGIS domains. Sort of like our own personal bootstrap.</p>
+      </div>
+    </a>
+    <a href="http://soundfinder.io" class="flex-1 work-item work-item-pdx-roasters">
+      <div class="work-item-text">
+        <h4>PDX Roasters</h4>
+        <p>Comprehensive list of all the coffee roasters in Portland, OR.</p>
+      </div>
+    </a>
+  </div>
+</div>
 
 <!-- blog roll -->
 <div class="panel panel-white">
   <div class="constrain">
+    <h1 class="spot-blue">Latest Articles <a href="/articles/" class="right btn btn-blue">View All »</a></h1>
     {% for article in collections.articles %}
-    <div class="col-group l-relative leader-3 trailer-3">
-      <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
-      <div class="col2of5 col blog-roll-text">
-        <h2 class="leader-1 trailer-1">
-          <a href="{{article.url}}" class="spot-link-{{article.spot}}">{{article.title}}</a>
-        </h2>
-        <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
-        <p class="text-size--2">{{article.description}}</p>
-        <a href="{{article.url}}" class="spot-link-{{article.spot}} text-size--2">Read More »</a>
+    {% if loop.index < 4 %}
+      <div class="col-group l-relative leader-3 trailer-3">
+        <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
+        <div class="col2of5 col blog-roll-text">
+          <h2 class="leader-1 trailer-1">
+            <a href="{{article.url}}" class="spot-link-{{article.spot}}">{{article.title}}</a>
+          </h2>
+          <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
+          <p class="text-size--2">{{article.description}}</p>
+          <a href="{{article.url}}" class="spot-link-{{article.spot}} text-size--2">Read More »</a>
+        </div>
       </div>
-    </div>
+    {% endif %}
     {% endfor %}
   </div>
 </div>

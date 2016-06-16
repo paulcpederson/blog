@@ -1,0 +1,42 @@
+.work-item {
+  display: inline-block;
+  background-color: transparent;
+  color: $white;
+  padding: 4rem;
+  transition: all 150ms linear;
+  position: relative;
+  overflow: hidden;
+  background-size: cover;
+  background-blend-mode: multiply;
+}
+
+.work-item:hover {
+  background-color: transparent;
+}
+
+.work-item-text {
+  color: $lightest-gray;
+  transition: all 150ms linear;
+}
+
+.work-item:hover .work-item-text {
+  opacity: 1;
+}
+
+.work-item-sound-finder {
+  background-image: url('../img/soundfinder.png');
+  background-color: $blue;
+}
+
+.work-item-donut-js {
+  background-image: url();
+  background-color: $cyan;
+}
+.work-item-clacite-web {
+  background-image: url();
+  background-color: $violet;
+}
+.work-item-pdx-roasters {
+  background-image: url();
+  background-color: $magenta;
+}
