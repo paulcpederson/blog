@@ -1,0 +1,64 @@
+$ct-series-colors: (
+  $blue,
+  $cyan,
+  $violet,
+  $magenta,
+  $yellow,
+  $green,
+  $red,
+  $orange,
+  #f05b4f,
+  #dda458,
+  #eacf7d,
+  #86797d,
+  #b2c326,
+  #6188e2,
+  #a748ca
+);
+
+@import "node_modules/chartist/dist/scss/chartist.scss";
+
+.ct-line {
+  stroke-width: 3px;
+}
+
+.ct-label {
+  color: $base0;
+  font-family: "Inconsolata","Courier New",courier,monospace;
+  line-height: 3;
+  text-align: center;
+}
+
+.chart-banner {
+  height: 40vh;
+  max-width: 1147px;
+  margin: -8vh auto 0 auto;
+  padding-bottom: 4rem;
+  position: relative;
+  z-index: 2;
+}
+
+.chart-banner svg {
+  margin-left: -25px;
+}
+
+.chart-swatch {
+  list-style-type: none;
+  display: inline-block;
+  margin-left: 0;
+  margin-right: 1.25rem;
+}
+
+.chart-swatch:before {
+  content: "•";
+  padding-right: .5rem;
+}
+
+.chart-swatch-blue:before    { color: $blue; }
+.chart-swatch-cyan:before    { color: $cyan; }
+.chart-swatch-violet:before  { color: $violet; }
+.chart-swatch-magenta:before { color: $magenta; }
+.chart-swatch-yellow:before  { color: $yellow; }
+.chart-swatch-green:before   { color: $green; }
+.chart-swatch-red:before     { color: $red; }
+.chart-swatch-orange:before  { color: $orange; }
