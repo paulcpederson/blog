@@ -7,6 +7,12 @@
   flex: 1;
 }
 
+@media screen and (max-width: $phone-wide) {
+  .phone-flex-column {
+    flex-direction: column;
+  }
+}
+
 // Basic Type Helpers
 .text-left { text-align: left; }
 .text-right { text-align: right; }
