@@ -26,7 +26,7 @@
   "watches": {
     "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
     "html": [
-      "source/**/*.{html,md,xml}",
+      "source/**/*.{html,md,xml,svg}",
       "source/_helpers/**"
     ]
   },
