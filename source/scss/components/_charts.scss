@@ -22,23 +22,38 @@ $ct-series-colors: (
   stroke-width: 3px;
 }
 
+@media screen and (min-width: 1080px) {
+  .ct-line {
+    stroke-width: 2px;
+  }
+}
+
 .ct-label {
   color: $base0;
   font-family: "Inconsolata","Courier New",courier,monospace;
   line-height: 3;
   text-align: center;
+  margin-left: -24px;
+}
+
+.ct-labels foreignobject:nth-child(odd) {
+  display: none;
 }
 
 .chart-banner {
-  max-width: 1300px;
-  margin: -4rem auto 0 auto;
+  width: 110%;
+  margin: -12vw 0 0 -5%;
   padding-bottom: 4rem;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
-.chart-banner svg {
-  margin-left: -25px;
+@media screen and (min-width: 1680px) {
+  .chart-banner {
+    width: 100%;
+    max-width: 1680px;
+    margin: -4vw auto 0 auto;
+  }
 }
 
 .chart-swatch {
