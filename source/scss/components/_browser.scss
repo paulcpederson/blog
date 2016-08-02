@@ -1,0 +1,33 @@
+.browser {
+  border: 1px solid $lighter-gray;
+  border-radius: 4px;
+  position: relative;
+  padding-top: 2rem;
+  display: block;
+  flex: 2 1 70%;
+}
+
+.browser-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.browser:before {
+  content: "○ ○ ○";
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 1.25;
+  text-indent: .5rem;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 2rem;
+  border-bottom: 1px solid $lighter-gray;
+  color: $lighter-gray;
+}
+
+.archive {
+  flex: 1 0 30%;
+}

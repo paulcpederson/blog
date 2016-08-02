@@ -7,6 +7,11 @@
   flex: 1;
 }
 
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
 @media screen and (max-width: $phone-wide) {
   .phone-flex-column {
     flex-direction: column;
@@ -70,7 +75,12 @@
 .full {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.full-short {
+  min-height: 90vh;
 }
 
 .hide-mobile {
