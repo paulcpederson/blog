@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block page %}
+
+  <section class="hero hero-{{canvas}} hero-mesh">
+    <div class="feature-image">
+      <a href="{{site}}" class="browser" data-site="{{site}}">
+        <img class="browser-image" src="/img/{{feature}}" alt="{{project.title}} Screenshot">
+      </a>
+    </div>
+  </section>
+  <div class="title-wrap text-center constrain padding-leader-2 padding-trailer-1">
+    <h1><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
+    <p class="text-narrow l-center">{{description}}</p>
+    <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
+  </div>
+
+  <!-- post content -->
+  <article class="panel panel-white article article-{{spot}}">
+    <section class="constrain leader-1 trailer-3">
+      {% block content %}{% endblock %}
+    </section>
+  </article>
+
+  <!-- next-prev links for work -->
+  <div class="spot-bg-{{spot}}">
+    <nav class="bottom-nav constrain clearfix">
+      <a href="{{prev.url}}" class="bottom-nav-link bottom-nav-prev">
+        <span class="l-block text-size--2">previous article:</span>
+        <span class="l-block leader-1">{{prev.title}}</span>
+      </a>
+      <a href="{{next.url}}" class="bottom-nav-link bottom-nav-next">
+        <span class="l-block text-size--2">next article:</span>
+        <span class="l-block leader-1">{{next.title}}</span>
+      </a>
+    </nav>
+  </div>
+{% endblock %}

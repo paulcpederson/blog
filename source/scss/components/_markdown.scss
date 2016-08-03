@@ -35,8 +35,8 @@
     max-width: 20em;
     margin: 2em 0 2em -12.5%;
   }
-  .full {
-    max-width: 125%;
+  .full-width {
+    width: 125%;
     margin: 2em 0 2em -12.5%;
   }
   a {
@@ -48,12 +48,9 @@
 .video-wrap {
   position: relative;
   padding-bottom: 56.25%;
-  padding-top: 3em;
-  margin-bottom: 3em;
-  margin-top: 3em;
   height: 0;
   overflow: hidden;
-  iframe, object, embed {
+  iframe, object, embed, video {
     position: absolute;
     top: 0;
     left: 0;

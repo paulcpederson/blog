@@ -2,8 +2,10 @@
 title: Work
 template: _templates/layout.html
 description: Client, Open Source, and Personal Projects
-spot: cyan
+spot: blue
 block: page
+collections:
+  work: /work/*
 ---
 
 <section class="hero hero-navy hero-mesh">
@@ -12,30 +14,19 @@ block: page
   </div>
 </section>
 
-<div class="panel panel-white">
-
-  <div class="flex flex-center full full-short padding-left-2 padding-right-2">
-    <a href="#" class="browser">
-      <img class="browser-image" src="../img/sound-finder-browser.png" alt="">
+{% for project in collections.work %}
+  <div class="flex flex-center padding-left-2 padding-right-2 padding-leader-4 padding-trailer-4">
+    <a href="{{project.url}}" class="browser" data-site="{{project.site}}">
+      <img class="browser-image" src="../img/{{project.feature}}" alt="{{project.title}} Screenshot">
     </a>
     <div class="archive padding-left-2">
-      <h3><a href="http://soundfinder.io">Soundfinder</a></h3>
-      <p class="text-subtle text-size--2"><time datetime="2014">2015 (in progress)</time></p>
-      <p class="text-subtle text-size--2">Sound finder allows you to find your kindred musical spirits. Search for SoundCloud users that have the same taste as you.</p>
+      <h3><a href="{{project.url}}" class="spot-{{project.spot}}">{{project.title}}</a></h3>
+      <time class="text-size--2 text-subtle" datetime="{{project.date|date('Y-m-d')}}">{{project.date|date('Y')}}</time>
+      <p class="text-subtle text-size--3">{{project.description}}</p>
+      <a href="{{project.site}}" class="btn btn-{{project.spot}}">View the Site</a>
     </div>
   </div>
-
-  <div class="flex flex-center full full-short padding-left-2 padding-right-2">
-    <div class="archive padding-right-2">
-      <h3><a href="http://soundfinder.io">Soundfinder</a></h3>
-      <p class="text-subtle text-size--2"><time datetime="2014">2015 (in progress)</time></p>
-      <p class="text-subtle text-size--2">Sound finder allows you to find your kindred musical spirits. Search for SoundCloud users that have the same taste as you.</p>
-    </div>
-    <a href="#" class="browser">
-      <img class="browser-image" src="../img/sound-finder-browser.png" alt="">
-    </a>
-  </div>
-
+{% endfor %}
 
 
   <section class="constrain">
@@ -155,4 +146,3 @@ block: page
       </div>
     </div>
   </section>
-</div>

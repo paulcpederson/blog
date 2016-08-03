@@ -21,6 +21,7 @@
 // Basic Type Helpers
 .text-left { text-align: left; }
 .text-right { text-align: right; }
+.text-size--3 { font-size: 0.75em; }
 .text-size--2 { font-size: 0.8em; }
 .text-size--1 { font-size: 0.9em; }
 .text-size-3 { font-size: 3em; }
@@ -28,6 +29,8 @@
 
 .text-subtle {
   font-family: $button-font;
+  font-weight: 300;
+  letter-spacing: -.03em;
   color: $light-gray;
 }
 

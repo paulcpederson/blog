@@ -2,6 +2,7 @@
 code {
   font-family: $button-font;
   font-size: 0.85em;
+  font-weight: 300;
   padding: 0.35em;
   border-radius: 3px;
   position: relative;
@@ -17,6 +18,7 @@ pre {
   width: 100%;
   background-color: $base03;
   margin: 2em 0;
+  color: $base1;
   code {
     box-sizing: border-box;
     display: block;
