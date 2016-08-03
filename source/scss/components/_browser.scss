@@ -3,12 +3,13 @@
   border-radius: 4px;
   position: relative;
   padding-top: 2rem;
-  display: block;
-  flex: 2 1 70%;
+  display: inline-block;
+  width: auto;
+  background-color: $white;
 }
 
 .browser-image {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   display: block;
 }
@@ -28,6 +29,19 @@
   color: $lighter-gray;
 }
 
+.browser:after {
+  content: attr(data-site);
+  position: absolute;
+  font-size: .85rem;
+  font-family: $button-font;
+  font-weight: 300;
+  line-height: 2.3;
+  color: $lighter-gray;
+  left: 5rem;
+  top: 0;
+}
+
 .archive {
   flex: 1 0 30%;
+  max-width: 30em;
 }
