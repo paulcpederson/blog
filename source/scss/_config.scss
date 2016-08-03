@@ -1,43 +1,44 @@
 // UI Colors
-$white:          #ffffff !default;
-$off-white:      #fefefe !default;
-$lightest-gray:  #efefef !default;
-$lighter-gray:   #dddddd !default;
-$light-gray:     #999999 !default;
-$gray:           #666666 !default;
-$dark-gray:      #30302F !default;
-$darker-gray:    #242323 !default;
-$darkest-gray:   #222222 !default;
+$white:          #ffffff;
+$off-white:      #fefefe;
+$lightest-gray:  #efefef;
+$lighter-gray:   #dddddd;
+$light-gray:     #999999;
+$gray:           #666666;
+$dark-gray:      #30302F;
+$darker-gray:    #242323;
+$darkest-gray:   #222222;
 
 // Solarized colors
-$base03:    #002b36 !default;
-$base02:    #073642 !default;
-$base01:    #586e75 !default;
-$base00:    #657b83 !default;
-$base0:     #839496 !default;
-$base1:     #93a1a1 !default;
-$base2:     #eee8d5 !default;
-$base3:     #fdf6e3 !default;
-$yellow:    #b58900 !default;
-$orange:    #cb4b16 !default;
-$red:       #dc322f !default;
-$magenta:   #d33682 !default;
-$violet:    #6c71c4 !default;
-$blue:      #268bd2 !default;
-$cyan:      #2aa198 !default;
-$green:     #859900 !default;
+$base03:    #002b36;
+$base02:    #073642;
+$base01:    #586e75;
+$base00:    #657b83;
+$base0:     #839496;
+$base1:     #93a1a1;
+$base2:     #eee8d5;
+$base3:     #fdf6e3;
+$yellow:    #b58900;
+$orange:    #cb4b16;
+$red:       #dc322f;
+$magenta:   #d33682;
+$violet:    #6c71c4;
+$blue:      #268bd2;
+$cyan:      #2aa198;
+$green:     #859900;
 
 $tan: $base3;
 $navy: $base03;
 
 // Font Families
-$body-font:      "Karla", Arial, Helvetica, sans !default;
-$header-font:    "Facit", Arial, Helvetica, sans !default;
-$button-font:    "Inconsolata", "Courier New", courier, monospace !default;
+$body-font:      "Karla", Arial, Helvetica, sans;
+$header-font:    "Facit", Arial, Helvetica, sans;
+$button-font:    "Source Code Pro", "Courier New", courier, monospace;
 
 // Font Weights
-$body-weight:    400 !default;
-$header-weight:  400 !default;
+$body-weight:    400;
+$header-weight:  400;
+$button-weight:  300;
 
 // Font Colors
 $body-color:     $gray;
@@ -48,12 +49,12 @@ $body-size:      1.125em;
 $header-size:    1.5em;
 
 // Breakpoints
-$phone:        300px !default;
-$phone-wide:   480px !default;
-$tablet:       720px !default;
-$tablet-wide:  1080px !default;
-$desktop:      1280px !default;
-$desktop-wide: 1920px !default;
+$phone:        300px;
+$phone-wide:   480px;
+$tablet:       720px;
+$tablet-wide:  1080px;
+$desktop:      1280px;
+$desktop-wide: 1920px;
 
 // Grid Settings
 $font-reset:   $body-font;
