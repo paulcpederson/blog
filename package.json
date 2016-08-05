@@ -5,10 +5,7 @@
     "postsass": "postcss -u autoprefixer -r www/css/*.css",
     "img": "imagemin-newer source/ www/",
     "html": "static-site -b www -h source/_helpers/*.js -f xml",
-    "copy:ico": "copyfiles -u 1 'source/img/favicon.ico' www/",
-    "copy:fonts": "copyfiles -u 1 'source/fonts/*' www/",
-    "copy:video": "copyfiles -u 1 'source/**/*.mp4' www/",
-    "copy": "npm-run-series copy:ico copy:fonts copy:video",
+    "copy": "copyfiles -u 1 'source/**/*.{ico,mp4,woff,woff2}' www/",
     "prestart": "npm-run-series img sass html copy",
     "start": "parallelshell 'live-server www/' 'rerun-script' 'npm run sass -- -w' 'npm run js -- -w'",
     "predeploy": "npm-run-series js img sass cp && npm run html -- --production",
@@ -27,6 +24,7 @@
     ]
   },
   "watches": {
+    "copy": "source/**/*.{ico,mp4,woff,woff2}",
     "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
     "html": [
       "source/**/*.{html,md,xml,svg}",

@@ -3,7 +3,7 @@ title: Sound Finder
 date: 2016-08-15
 template: _templates/work.html
 feature: sound-finder-browser.png
-canvas: navy
+canvas: gray
 spot: blue
 site: 'http://soundfinder.io'
 description: Sound finder allows you to find your kindred musical spirits. Search for SoundCloud users that have the same taste as you.
@@ -11,9 +11,9 @@ description: Sound finder allows you to find your kindred musical spirits. Searc
 
 ## Origins
 
-This project started out as a personal project/experiment. I have favorited (liked) a ridiculous amount of tracks on SoundCloud. While reading the SoundCloud REST API documentation (because, yes, that is fun to me) I noticed that the response that comes back for a track includes all of the users that favorited that track.
+This project started out as a personal project/experiment. I started finding new music on SoundCloud by looking at all the people that liked a good track and seeing what else they liked. Doing this through the SoundCloud UI worked, but there were a lot of misses and it took quite a long time. While reading the SoundCloud REST API documentation (because, yes, that is fun to me) I noticed that the response that comes back for a track includes all of the users that favorited that track.
 
-This gave me the thought that I could probably find new music by searching through the favorites of other SoundCloud users that were similar to me. It turnes out you can, and this very naïve recommendation engine actually works quite well. It actually mirrors the way I find music in real life, ie. talking to friends who I know like good music about what they're listening to lately.
+This gave me the thought that I could probably build my own UI that would help me find new music by searching through the favorites of other SoundCloud users that were similar to me. It turns out that this very naïve recommendation engine actually works quite well. It mirrors the way I find music in real life, ie. talking to friends who like good music about what they're listening to lately.
 
 One thing lead to another and now it's a full blown website with a player, a music visualizer, and a UI.
 
@@ -23,12 +23,12 @@ I got to explore some really fun APIs that I hadn't used before. Below is a summ
 
 ### Canvas
 
-I've been wanting to dig into the Canvas API for a while now, but I've been intimidated by it. Turns out it's increadibly easy to get started. You just get a context (although it seems like `2d` is your only option right now) and start drawing paths. It's basically a vector drawing program driven from JavaScript. You just tell the context you're beggining a path, and then move and draw lines, filling when you're done.
+I've been wanting to dig into the Canvas API for a while now, but I've been intimidated by it. Turns out it's incredibly easy to get started. You just get a context (although it seems like `2d` is your only option right now) and start drawing paths. It's basically a vector drawing program driven from JavaScript. You just tell the context you're beginning a path, and then move and draw lines, filling when you're done.
 
 <div class="full-width">
   <div class="video-wrap">
-    <video class="video" poster="//assets.hoverstat.es/uploads/website_videos/5270/ee165464-5928-4074-a8f1-594573b63fa5_full_poster.png" loop="" muted="" autoplay="true">
-      <source src="sound-finder-loading.mp4" type="video/mp4">
+    <video loop muted autoplay>
+      <source src="loading.mp4" type="video/mp4">
     </video>
   </div>
 </div>
@@ -70,7 +70,7 @@ Animation effects are always a thin line between engaging and distracting, but I
 
 ## Conclusion
 
-As it's a side project, I'm always sort of working on it and changing things, and there is still a lot to do (I'm looking at you *browser testing*). In developer parlance I suppose you'd refer to that as Yak shaving, but I have had quite a lot of fun and it's always nice jto have an excuse to play around with technology you've never used before and grow as a developer.
+As it's a side project, I'm always sort of working on it and changing things, and there is still a lot to do (I'm looking at you *browser testing*). In developer parlance I suppose you'd refer to that as Yak shaving, but I have had quite a lot of fun and it's always nice to have an excuse to play around with technology you've never used before and grow as a developer.
 
 As always, hit me up on Twitter with your thoughts, corrections, and salutations @paulcpederson.
 
