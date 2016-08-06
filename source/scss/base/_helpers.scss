@@ -12,6 +12,12 @@
   justify-content: center;
 }
 
+@media screen and (max-width: $tablet) {
+  .tablet-flex-column {
+    flex-direction: column;
+  }
+}
+
 @media screen and (max-width: $phone-wide) {
   .phone-flex-column {
     flex-direction: column;

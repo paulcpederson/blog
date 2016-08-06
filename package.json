@@ -25,7 +25,10 @@
   },
   "watches": {
     "copy": "source/**/*.{ico,mp4,woff,woff2}",
-    "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
+    "img": [
+      "source/**/*.{jpg,jpeg,png,svg,gif}",
+      "source/img/**"
+    ],
     "html": [
       "source/**/*.{html,md,xml,svg}",
       "source/_helpers/**"

@@ -70,4 +70,4 @@ Creating individual views for all of the roasters was very simple.
 
 ## Conclusion
 
-We've had a lot of positive response from people who say they use the site all the time. It's become a very useful tool for people who are are a part of the Portland coffee world. If you're into coffee, check it out!
+We've had a lot of positive response from people who say they use the site all the time. It's become a very useful tool for people who are are a part of the Portland coffee world. If you're into coffee, [check it out](http://www.pdxroasters.com/)!
