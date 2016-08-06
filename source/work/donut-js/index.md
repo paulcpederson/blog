@@ -28,7 +28,7 @@ From there I developed the logo itself. I knew I wanted to use a donut with spri
 
 The color palette is built off white on a very strong electric blue. There are a handful of grays, and then all the supplemental colors are generated from the sprinkles.
 
-I wanted to embrace the pastels that are often used for sprinkles, because you don't often see tech industry branding use pastels, so it's different and fun.
+I wanted to embrace the pastels that are often used for sprinkles, because you don't usually see tech industry branding use pastels, so it's different and fun.
 
 ![Mikado type specimen](handgloves.svg)
 <p class="caption">If that doesn't look chunky and fun I don't know what does.</p>

@@ -38,7 +38,7 @@ Turns out, if you use `requestAnimationFrame` and clear the canvas every frame, 
 
 ### Audio
 
-This was another API that was sort of on my bucket list. I've always loved sound visualization. In fact the project that got me thinking about development and interactive art as a career was [Magnetosphere](http://roberthodgin.com/portfolio/work/magnetosphere/), a project by [Robert Hodgin](http://roberthodgin.com/) (AKA Flight404). Apple later asked him to turn it into what is now the iTunes visualizer (<kbd>command + V</kbd>). ProTip™: Did you know you can interact with the iTunes visualizer? Press <kbd>m</kbd> to change the skin and <kbd>+</kbd> or <kbd>-</kbd> to add and subtract particles.
+This was another API that was sort of on my bucket list. I've always loved sound visualization. In fact the project that got me thinking about development and interactive art as a career was [Magnetosphere](http://roberthodgin.com/portfolio/work/magnetosphere/), a project by [Robert Hodgin](http://roberthodgin.com/) (AKA Flight404). Apple later asked him to turn it into what is now the iTunes visualizer (<kbd>command + V</kbd>). Did you know you can interact with the iTunes visualizer? Press <kbd>m</kbd> to change the skin and <kbd>+</kbd> or <kbd>-</kbd> to add and subtract particles.
 
 In any case, it turns out that building your own audio player in 2016 is *extremely* easy. You literally just add an `audio` element to the page and set its `src` attribute to the track you want to play. From JavaScript you have access to track info, pause, play, etc.
 
@@ -46,9 +46,9 @@ So that's pretty cool, but what's *really* cool is that using `AudioContext`'s `
 
 ### ES6/2015
 
-I also used Babel to build the site with newer JavaScript goodies. I think the best part of the whole spec IMO is modules. Creating a clean API and separation between your modules is really nice. I was doing this with Browserify and CommonJS modules before, but it's really nice to have it in the spec.
+I also used Babel to build the site with newer JavaScript goodies. I think one of the best additions to JavaScript in ES6 is a native module syntax. Creating a clean API and loose coupling in your code is really nice. I was doing this with Browserify and CommonJS modules before, but once it's implemented and widely supported natively it will simplify things a great deal.
 
-Arrow functions are also a really nice feature for cleaning up some code. I am really partial to using `map`, `filter`, and `reduce`, so arrow functions really clean up things and make it super clear. Here's an example from the project:
+Arrow functions are another useful feature for cleaning up some code. I am really partial to using `map`, `filter`, and `reduce`, so arrow functions can really help. Here's an example from the project:
 
 ```javascript
 let rankedUsers = Object.keys(users)

@@ -10,6 +10,15 @@
       max-width: 100%;
     }
   }
+  .browser {
+    width: 125%;
+    margin: 1em 0 0.5em -12.5%;
+  }
+  .browser-image {
+    margin: 0;
+    max-width: 100%;
+    position: static;
+  }
   pre {
     @include respond-to($tablet) {
       margin-left: -12.5%;
