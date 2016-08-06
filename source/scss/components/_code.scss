@@ -1,15 +1,15 @@
 /* code styling */
-code {
+code, kbd {
   font-family: $button-font;
   font-size: 0.85em;
   font-weight: 300;
-  padding: 0.35em;
+  padding: .125em 0.35em;
   border-radius: 3px;
   position: relative;
   top: -0.05em;
   background: #F8F8F8;
   border: 1px solid #EFEFEF;
-  font-size: 0.85em;
+  font-size: 0.8em;
   margin: 0 4px;
 }
 
