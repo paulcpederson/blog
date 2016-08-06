@@ -1,11 +1,11 @@
 var byDate = require('./lib/byDate.js')
 
-function isArticle (page) {
-  return page.url.indexOf('/articles/') > -1
+function isWork (page) {
+  return page.url.indexOf('/work/') > -1
 }
 
 function notIndex (page) {
-  return page.url !== '/articles/'
+  return page.url !== '/work/'
 }
 
 function addYear (page) {
@@ -19,7 +19,7 @@ function addNextPrev (page, i, arr) {
 }
 
 module.exports = function (site, cb) {
-  var articles = site.filter(isArticle)
+  var work = site.filter(isWork)
     .filter(notIndex)
     .sort(byDate)
     .map(addYear)
