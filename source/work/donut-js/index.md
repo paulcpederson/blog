@@ -94,13 +94,13 @@ I was able to do all of this with no dependencies in eighty lines of code, which
 
 This was a really fun project to work on, and if you're in Portland and like JavaScript, make sure you [buy some tickets](http://donutjs.club/tickets/). I think it turned out well, and so do these people!
 <div class="block-grid">
-<div class="column-4">
+<div class="column-4 medium-column-12">
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">omg the <a href="https://twitter.com/donutjs_pdx">@donutjs_pdx</a> name tags and stickers!! 🍩🍩🍩 <a href="https://t.co/xvsiuI3JBL">pic.twitter.com/xvsiuI3JBL</a></p>&mdash; sailor mercury (@sailorhg) <a href="https://twitter.com/sailorhg/status/737817945120768001">June 1, 2016</a></blockquote>
 </div>
-<div class="column-4">
+<div class="column-4 medium-column-12">
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">🍩 Portland&#39;s <a href="https://twitter.com/donutjs_pdx">@donutjs_pdx</a> looks superb, and they have a real cute website, too! <a href="https://t.co/OWcSQQetj4">https://t.co/OWcSQQetj4</a></p>&mdash; Rachel Simone Weil (@partytimeHXLNT) <a href="https://twitter.com/partytimeHXLNT/status/761320770937028608">August 4, 2016</a></blockquote>
 </div>
-<div class="column-4">
+<div class="column-4 medium-column-12">
   <blockquote class="twitter-tweet" data-lang="en"><p lang="en" dir="ltr">Had a good time (and donut) at <a href="https://twitter.com/donutjs_pdx">@donutjs_pdx</a> 🍩✨🍩✨🍩✨🍩 <a href="https://t.co/HYcnK2P1qF">pic.twitter.com/HYcnK2P1qF</a></p>&mdash; sean (@seanahern) <a href="https://twitter.com/seanahern/status/748010464689414145">June 29, 2016</a></blockquote>
 </div>
 

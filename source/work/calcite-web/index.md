@@ -18,6 +18,11 @@ I was tasked with developing a CSS framework that could codify these design deci
 
 ## Design
 
+<div class="browser" data-site="esri.github.io/examples/">
+  <img class="browser-image" src="design.png" alt="Screenshot of examples documentation">
+</div>
+<p class="caption">Design documentation</p>
+
 Esri had a very lengthy brand style guide (we're talking ninety-seven pages) which defined everything from letterheads to email signatures. Conceptually, this framework would need to be an extension of those ideas.
 
 A great deal of work had also recently gone into redesigning [ArcGIS Pro](http://www.esri.com/en/software/arcgis-pro), Esri's relatively new desktop GIS offering. They had developed an extensive set of guidelines for icons, color, and interface concepts. They called these design ideas "Calcite".
@@ -26,15 +31,24 @@ Our design would have to be consistent with both of these documents, while also 
 
 ### Type
 
+![Avenir specimen](handgloves.svg)
+<p class="caption">Avenir's geometric shapes and rational design make it feel very modern.</p>
+
 Esri has been using Avenir since way before it was cool. The clean look of Avenir is very modern, so there was no need to throw out Avenir.
 
 We selected Avenir Next, which is an update of Avenir by Frutiger himself (with help from Kobayashi) that is specifically meant for screen use. This also added support for Cyrillic characters, which meant much less gymnastics for eastern European localization.
 
 ### Color
 
+![Color Palette](palette.svg)
+<p class="caption">Spot colors are derives from lights and darks off of Esri's key brand colors.</p>
+
 The palette is all about grayscale with pops of color throughout. The most common color for active states is the main blue spot color. Patterns are constructed to be as neutral as possible, so that the patterns and components of the framework work well regardless of the color scheme of the app they sit inside of.
 
 ### Grid
+
+![Grid diagram](grid.svg)
+<p class="caption">Columns shift depending on screen size automatically.</p>
 
 The grid is a unique part of this project. It starts as a twenty-four column grid, but as the screen size changes, column size changes as well. It's pretty common for grid systems to just snap to full width around tablet size and call it a day. The way that the Calcite Web grid works is a bit more sophisticated.
 
@@ -42,7 +56,7 @@ Instead of changing how large columns are, we actually change the number of colu
 
 ## Development
 
-I also worked to develop the entire framework. There is quite a bit about it that was very engaging.
+I also worked to develop the entire framework. There is quite a bit about it that was very engaging from a development perspective.
 
 ### Sass
 
@@ -61,4 +75,6 @@ This was the first project I worked on that was seeking WCAG level AA certificat
 ## Conclusion
 
 Use of Calcite Web at Esri continues to grow. Each month more sites are completed and we move toward a more user-friendly web presence. I've received a huge amount of positive feedback from other teams, and also from customers directly. While it probably won't ever be "done" as it is a living styleguide, I like where we've arrived, and I enjoy using the framework myself, which is a good sign.
+
+[View the documentation](http://esri.github.io/calcite-web)
 
