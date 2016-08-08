@@ -60,7 +60,7 @@ I also worked to develop the entire framework. There is quite a bit about it tha
 
 ### Sass
 
-The styles are all built in Sass. I love Sass. I'm a node-sass contributer, and I've used sass for almost four years now. The relatively new addition of LibSass removed the Ruby dependency and made it way faster. Variables, imports, and mixins are the features I use the most. Sass enabled us to create a framework that could be configured by the developer to generate only the CSS the needed as well, which is really cool.
+The styles are all built in Sass. I love Sass. I'm a node-sass contributor, and I've used sass for almost four years now. The relatively new addition of LibSass removed the Ruby dependency and made it way faster. Variables, imports, and mixins are the features I use the most. Sass enabled us to create a framework that could be configured by the developer to generate only the CSS the needed as well, which is really cool.
 
 ### Universal Everything
 
