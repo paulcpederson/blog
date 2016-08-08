@@ -4,6 +4,7 @@ date: 2015-02-15
 template: _templates/work.html
 feature: pdx-roasters.png
 thumbnail: pdx-thumb.svg
+twitter_image: pdx-roasters-twitter.png
 canvas: gray
 spot: blue
 site: 'http://www.pdxroasters.com/'

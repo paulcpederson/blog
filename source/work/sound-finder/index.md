@@ -3,6 +3,7 @@ title: Sound Finder
 date: 2016-08-15
 template: _templates/work.html
 feature: sound-finder-browser.png
+twitter_image: sound-finder-twitter.png
 thumbnail: sound-finder.svg
 canvas: gray
 spot: blue

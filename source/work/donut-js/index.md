@@ -4,6 +4,7 @@ date: 2016-03-04
 template: _templates/work.html
 feature: donut-js.png
 thumbnail: donut-thumb.svg
+twitter_image: donut-js-twitter.png
 canvas: gray
 spot: blue
 site: 'http://donutjs.club/'
