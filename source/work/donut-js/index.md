@@ -17,7 +17,7 @@ I actually found this project on Twitter. Somebody I follow retweeted the organi
 
 ## Branding
 
-![Donut.js Brand](banner.jpg)
+![Donut.js Brand](banner.svg)
 <p class="caption">Finished Logo + Logotype</p>
 
 The brand is entirely built around a flat, clean, vector illustration style. Chunky, fun, modern, and pretty wacky was the goal. Started with the logotype, I felt like a cursive, retro baseball script worked well. This adds a bit of humanity to the brand. Using a geometric sans or a grotesk would have made it feel sterile. Remember, this is about real people getting together in real life to eat real donuts!
