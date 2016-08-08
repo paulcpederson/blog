@@ -3,6 +3,7 @@ title: 'Donut.js'
 date: 2016-03-04
 template: _templates/work.html
 feature: donut-js.png
+thumbnail: donut-thumb.svg
 canvas: gray
 spot: blue
 site: 'http://donutjs.club/'

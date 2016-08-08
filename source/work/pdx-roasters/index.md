@@ -3,6 +3,7 @@ title: PDX Roasters
 date: 2015-02-15
 template: _templates/work.html
 feature: pdx-roasters.png
+thumbnail: pdx-thumb.svg
 canvas: gray
 spot: blue
 site: 'http://www.pdxroasters.com/'

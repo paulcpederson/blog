@@ -1,5 +1,6 @@
 .work-items {
   background: $blue;
+  flex-wrap: wrap;
 }
 
 .work-item {
@@ -11,6 +12,8 @@
   position: relative;
   background-size: cover;
   background-position: center;
+  min-width: 50%;
+  box-sizing: border-box;
 }
 
 .work-item-text {
@@ -37,34 +40,4 @@
 
 .work-item:hover:before {
   opacity: .4;
-}
-
-.work-item-sound-finder {
-  background-image: url('../img/sound-finder.svg');
-}
-
-.work-item-sound-finder:before {
-
-}
-
-.work-item-donut-js {
-  background-image: url('../img/donut-thumb.svg');
-}
-
-.work-item-donut-js:before {
-
-}
-.work-item-clacite-web {
-  background-image: url('../img/calcite-web.svg');
-}
-
-.work-item-clacite-web:before {
-
-}
-.work-item-pdx-roasters {
-  background-image: url('../img/pdx-thumb.svg');
-}
-
-.work-item-pdx-roasters:before {
-
 }
