@@ -60,13 +60,13 @@ I also worked to develop the entire framework. There is quite a bit about it tha
 
 ### Sass
 
-The styles are all built in Sass. I love Sass. I'm a node-sass contributor, and I've used sass for almost four years now. The relatively new addition of LibSass removed the Ruby dependency and made it way faster. Variables, imports, and mixins are the features I use the most. Sass enabled us to create a framework that could be configured by the developer to generate only the CSS the needed as well, which is really cool.
+The styles are all built in Sass. I love Sass. I'm a node-sass contributor, and I've used sass for almost four years now. The relatively new addition of LibSass removed the Ruby dependency and made it way faster. Variables, imports, and mixins are the features I use the most. Sass enabled us to create a framework that could be configured by the developer to generate only the CSS they needed as well, which is really cool.
 
 ### Universal Everything
 
 The main goal of Calcite Web was to be as tooling/framework/language agnostic as possible. To that end, it's available as a Gem, an npm module, on a CDN, and downloadable via GitHub releases.
 
-The JavaScript declares itself as using UMD. That means AMD, CommonJS, and even people who just throw things right on the `window` can use it in the way they're used to.
+The JavaScript declares itself using UMD. That means AMD, CommonJS, and even people who just throw things right on the `window` can use it in whatever way they're used to.
 
 ### Accessibility
 
