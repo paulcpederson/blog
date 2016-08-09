@@ -44,10 +44,22 @@
   min-height: 80vh;
 }
 
+.hero-lab:after {
+  content: '';
+  position:absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  background-color: $navy;
+  opacity: .9;
+}
+
 .title-wrap {
   position: relative;
   display: block;
-  z-index: 2;
+  z-index: 3;
   box-sizing: border-box;
   padding: 8em 1em 4em 1em;
 }

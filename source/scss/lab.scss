@@ -1,0 +1,14 @@
+@import "_config";
+@import 'components/lab';
+
+body {
+  height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+body.is-active {
+  height: auto;
+  position: static;
+  overflow: auto;
+}

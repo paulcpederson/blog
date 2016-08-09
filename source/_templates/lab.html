@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+
+{% block page %}
+  <section style="background-image: url(/img/{{thumbnail}})" class="hero hero-navy hero-mesh hero-lab">
+    <div class="title-wrap constrain padding-leader-6 padding-trailer-5 padding-left-0 padding-right-0">
+      <p class="text-size--2 text-subtle padding-leader-4">Currently Viewing:</p>
+      <h1 class="text-left leader-0 trailer-0 spot-{{spot}}">{{title}}</h1>
+      <p class="text-narrow text-left leader-1 trailer-1 margin-left-0 margin-right-0">{{description}}</p>
+      <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}} text-left trailer-0">{{date|date('n.j.Y')}}</time>
+    </div>
+  </section>
+
+
+  <div class="panel panel-white">
+    <div class="constrain">
+      <h2 class="spot-{{spot}}">More Lab Experiments <a href="/lab/" class="right btn btn-{{spot}}">View All »</a></h1>
+      {% for lab in collections.labs %}
+      <div class="col-group l-relative leader-3 trailer-3">
+        <a style="background-image: url(/img/{{lab.thumbnail}})" href="{{lab.url}}" class="blog-roll-thumbnail"></a>
+        <div class="col2of5 col blog-roll-text">
+          <h2 class="leader-1 trailer-1">
+            <a href="{{lab.url}}" class="spot-link-{{lab.spot}}">{{lab.title}}</a>
+          </h2>
+          <time class="text-size--2 text-subtle" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('n.j.Y')}}</time>
+          <p class="text-size--2">{{lab.description}}</p>
+          <a href="{{lab.url}}" class="spot-link-{{lab.spot}} text-size--2">Launch Experiment »</a>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <div class="lab js-lab">
+    <button class="lab-thumbnail js-lab-thumbnail">Back</button>
+    <button class="lab-info js-lab-toggle">?</button>
+    {% block content %}{% endblock %}
+  </div>
+{% endblock %}
