@@ -5,7 +5,7 @@
     "postsass": "postcss -u autoprefixer -r www/css/*.css",
     "img": "imagemin-newer source/ www/",
     "html": "static-site -b www -h source/_helpers/*.js -f xml",
-    "copy": "copyfiles -u 1 'source/**/*.{ico,mp4,woff,woff2}' www/",
+    "copy": "copyfiles -u 1 'source/**/*.{ico,mp4,mp3,woff,woff2}' www/",
     "prestart": "npm-run-series img sass html copy",
     "start": "parallelshell 'live-server www/' 'rerun-script' 'npm run sass -- -w' 'npm run js -- -w'",
     "predeploy": "npm-run-series js img sass copy && npm run html -- --production",
