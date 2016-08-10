@@ -32,7 +32,18 @@
 
   <div class="lab js-lab">
     <button class="lab-thumbnail js-lab-thumbnail">Back</button>
-    <button class="lab-info js-lab-toggle">?</button>
+    <button class="lab-info js-lab-toggle">
+      <svg width="24px" height="24px" viewBox="0 0 24 24">
+        <g>
+          <path fill="#FFFFFF" d="M18.599,8H5.401c-0.553,0-1-0.448-1-1c0-0.552,0.447-1,1-1h13.197c0.553,0,1,0.448,1,1
+            C19.599,7.552,19.151,8,18.599,8z"/>
+          <path fill="#FFFFFF" d="M18.599,13H5.401c-0.553,0-1-0.448-1-1c0-0.553,0.447-1,1-1h13.197c0.553,0,1,0.447,1,1
+            C19.599,12.552,19.151,13,18.599,13z"/>
+          <path fill="#FFFFFF" d="M18.599,18H5.401c-0.553,0-1-0.447-1-1c0-0.552,0.447-1,1-1h13.197c0.553,0,1,0.448,1,1
+            C19.599,17.553,19.151,18,18.599,18z"/>
+        </g>
+      </svg>
+    </button>
     {% block content %}{% endblock %}
   </div>
 {% endblock %}

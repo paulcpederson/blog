@@ -31,6 +31,10 @@
   font-size: 18px;
 }
 
+.lab-info svg {
+  margin-top: 6px;
+}
+
 .lab-info:hover, .lab-info:focus {
   background-color: $cyan;
 }
