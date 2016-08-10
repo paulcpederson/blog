@@ -1,43 +1,48 @@
 /* - - - - - - - - - Basic Typography - - - - - - - */
 @font-face {
     font-family: 'Facit';
-    src: url('../fonts/facit-regular-webfont.woff') format('woff');
+    src: url('../fonts/facit-regular-webfont.woff2') format('woff2'),
+         url('../fonts/facit-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Source Code Pro';
-    src: url('../fonts/source-code-pro.woff') format('woff'),
-         url('../fonts/source-code-pro.woff2') format('woff2');
+    src: url('../fonts/source-code-pro.woff2') format('woff2'),
+         url('../fonts/source-code-pro.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Karla';
-    src: url('../fonts/karla-bold-webfont.woff') format('woff');
+    src: url('../fonts/karla-bold-webfont.woff2') format('woff2'),
+         url('../fonts/karla-bold-webfont.woff') format('woff');
     font-weight: bold;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Karla';
-    src: url('../fonts/karla-bolditalic-webfont.woff') format('woff');
+    src: url('../fonts/karla-bolditalic-webfont.woff2') format('woff2'),
+         url('../fonts/karla-bolditalic-webfont.woff') format('woff');
     font-weight: bold;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Karla';
-    src: url('../fonts/karla-italic-webfont.woff') format('woff');
+    src: url('../fonts/karla-italic-webfont.woff2') format('woff2'),
+         url('../fonts/karla-italic-webfont.woff') format('woff');
     font-weight: normal;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Karla';
-    src: url('../fonts/karla-regular-webfont.woff') format('woff');
+    src: url('../fonts/karla-regular-webfont.woff2') format('woff2'),
+         url('../fonts/karla-regular-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
