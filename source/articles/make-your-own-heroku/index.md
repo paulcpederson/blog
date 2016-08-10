@@ -163,6 +163,8 @@ Once the domain is pointing to your droplet's IP and you've pushed to your remot
 
 ## Deploying a Static App in a Subfolder
 
+> Note: in newer versions of Dokku this is no longer how you do this. View Dokku's [static site test fixture](https://github.com/dokku/dokku/tree/master/tests/apps/static) for an example of how it works now.
+
 Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it's dead simple. Essentially you just include an empty `.nginx` file in the root level of your project, and put all your static content in a `www` directory and it will be served on an nginx server automatically. For example, if I had a simple `index.html` file and a `style.css` file I wanted to serve statically, my project would look something like this:
 
 ```
