@@ -30,7 +30,7 @@ $ct-series-colors: (
 
 .ct-label {
   color: $base0;
-  font-family: "Inconsolata","Courier New",courier,monospace;
+  font-family: $button-font;
   line-height: 3;
   text-align: center;
   margin-left: -24px;

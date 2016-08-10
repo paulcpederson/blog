@@ -4,7 +4,7 @@ description: I'm a web designer and developer living in Portland, OR. I write ab
 template: _templates/layout.html
 block: page
 changefreq: daily
-spot: blue
+spot: violet
 collections:
   articles: /articles/*
   work: /work/*
@@ -32,7 +32,7 @@ collections:
 <!-- projects -->
 
 <div class="panel panel-navy padding-trailer-0">
-  <h1 class="margin-left-3 spot-blue">Work <a href="/work/" class="right btn btn-blue margin-right-3">View All »</a></h1>
+  <h1 class="margin-left-3 spot-{{spot}}">Work <a href="/work/" class="right btn btn-{{spot}} margin-right-3">View All »</a></h1>
   <div class="flex phone-flex-column work-items">
   {% for project in collections.work %}
   {% if loop.index < 5 %}
@@ -46,7 +46,7 @@ collections:
 <!-- blog roll -->
 <div class="panel panel-white">
   <div class="constrain">
-    <h1 class="spot-blue">Latest Articles <a href="/articles/" class="right btn btn-blue">View All »</a></h1>
+    <h1 class="spot-{{spot}}">Latest Articles <a href="/articles/" class="right btn btn-{{spot}}">View All »</a></h1>
     {% for article in collections.articles %}
     {% if loop.index < 4 %}
       <div class="col-group l-relative leader-3 trailer-3">

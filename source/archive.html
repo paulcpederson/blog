@@ -2,7 +2,7 @@
 title: Archive
 template: _templates/layout.html
 description: Archive of Blog Articles Written by Paul C Pederson
-spot: cyan
+spot: orange
 block: page
 collections:
   articles: /articles/*
@@ -26,7 +26,7 @@ collections:
             {% for article in year|reverse %}
               <div class="trailer-2 column-6 medium-column-12">
                 <p class="trailer-0">
-                  <a href="{{article.url}}">{{article.title}}</a>
+                  <a href="{{article.url}}" class="spot-link-{{spot}}">{{article.title}}</a>
                 </p>
                 <p class="small">
                   <time datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.d.Y')}}</time>
