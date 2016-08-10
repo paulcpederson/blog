@@ -4,20 +4,18 @@
   width: 16px;
   height: 16px;
   margin-right: 1em;
-  background: url('../img/twitter.svg') center center no-repeat  transparent;
-  background-size: 16px;
   opacity: 0.8;
   border-bottom: none;
   transition: 150ms opacity linear;
+  svg {
+    width: 16px;
+    height: 16px;
+  }
   &:hover {
     opacity: 1;
     border: none;
   }
 }
-
-.footer-icon-github   { background-image: url('../img/github.svg'); }
-.footer-icon-dribbble { background-image: url('../img/dribbble.svg'); }
-.footer-icon-google   { background-image: url('../img/google-plus.svg'); }
 
 .footer-link {
   transition: 150ms border-color linear;
