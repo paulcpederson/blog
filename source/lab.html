@@ -1,0 +1,37 @@
+---
+title: Lab
+template: _templates/layout.html
+description: Client, Open Source, and Personal Projects
+twitter_image: blobs-thumbnail.png
+spot: blue
+block: page
+collections:
+  labs: /lab/*
+---
+
+<section style="background-image: url(/img/{{collections.labs[0].thumbnail}})" class="hero hero-navy hero-mesh hero-lab">
+  <div class="title-wrap constrain padding-leader-6 padding-trailer-5 padding-left-0 padding-right-0">
+    <h1 class="text-left leader-0 trailer-0 spot-{{collections.labs[0].spot}}">Lab</h1>
+    <p class="text-narrow text-left leader-1 trailer-1 margin-left-0 margin-right-0">Experiments and crazy ideas, hastily coded. It's sort of like my own personal Codepen.</p>
+    <p class="text-narrow text-left leader-1 trailer-1 margin-left-0 margin-right-0">Beware, these experiments haven't been browser tested, and may rely on technology that isn't supported by every browser yet.</p>
+  </div>
+</section>
+
+
+<div class="panel panel-white">
+  <div class="constrain">
+    {% for lab in collections.labs %}
+    <div class="col-group l-relative leader-3 trailer-3">
+      <a style="background-image: url(/img/{{lab.thumbnail}})" href="{{lab.url}}" class="blog-roll-thumbnail"></a>
+      <div class="col2of5 col blog-roll-text">
+        <h2 class="leader-1 trailer-1">
+          <a href="{{lab.url}}" class="spot-link-{{lab.spot}}">{{lab.title}}</a>
+        </h2>
+        <time class="text-size--2 text-subtle" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('n.j.Y')}}</time>
+        <p class="text-size--2">{{lab.description}}</p>
+        <a href="{{lab.url}}" class="spot-link-{{lab.spot}} text-size--2">Launch Experiment »</a>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
