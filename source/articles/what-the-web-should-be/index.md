@@ -3,11 +3,13 @@ title: What the Web Should Be
 date: 2016-6-14
 template: _templates/article.html
 description: What is important when building for the web? Here's five things I think are critical.
+background: web.svg
 thumbnail: web-thumb.svg
 twitter_image: web-thumb.jpg
 feature: web-thumb.svg
 canvas: tan
 spot: orange
+featured: true
 ---
 
 After designing and developing web experiences for about 6 years my views on what is important have evolved. People naturally change and grow over time, and I'm no exception. In addition to natural personal growth, working on the web is inherently dynamic and quick to evolve. Tools change, best practices change, teams change. Most of it happens slowly, like the proverbial frog in the gradually heated pot. Every once in a while it's good to take stock of what you believe, and outline what is important to you in your work.

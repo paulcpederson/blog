@@ -8,7 +8,6 @@ twitter_image: css-thumb.jpg
 canvas: navy
 spot: blue
 description: "CSS can quickly become an unmanageable nightmare of important rules and overly-specific selectors, don't let it."
-featured: true
 ---
 
 Over my career as a designer & developer for the web, I've worked with some ridiculously intelligent developers. These are people who write databases for fun, people who can easily hash out the finer points of a complicated REST API and *then implement it that day*. These are people who are solving ridiculously challenging problems with beautiful algorithms. They're writing in seriously hardcore languages like C. They're managing to work inside of insanely complicated legacy enterprise Java codebases to implement new features. These are people that earned *and use* a computer science degree. In short, these are people that are *way smarter than I am*.

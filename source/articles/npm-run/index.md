@@ -8,7 +8,6 @@ feature: npm-run-feature.png
 canvas: tan
 spot: red
 description: "Use npm to automate front-end development tasks such as image optimization, Sass compilation, and running a local server."
-featured: true
 ---
 
 It's [no secret](../automatic-github-releases) that I like Grunt. As somebody who was running tasks like minification, image compression, and css preprocessing by hand, Grunt was a breath of fresh air. But like any technology, there was a learning curve. I had to find the right grunt plugins, learn how to configure and run everything, and also update my tasks as Grunt made breaking changes between versions.
