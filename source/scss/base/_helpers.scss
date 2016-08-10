@@ -68,6 +68,14 @@
   margin-right: auto;
 }
 
+@media screen and (max-width: $tablet) {
+  .constrain {
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+}
+
 .right {
   float: right;
 }

@@ -50,6 +50,12 @@ body {
   line-height: $body-size * 1.5;
 }
 
+@media screen and (max-width: $tablet) {
+  body {
+    font-size: $body-size * .95;
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font;
   line-height: 1.25em;
