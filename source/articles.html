@@ -14,14 +14,14 @@ collections:
     <p class="text-size--2 text-subtle">Featured Post:</p>
     <h2 class="text-left leader-0 trailer-0"><a href="{{featuredPost.url}}" class="spot-link-{{spot}}">{{featuredPost.title}}</a></h2>
     <p class="text-narrow text-left leader-1 trailer-1 margin-left-0 margin-right-0">{{featuredPost.description}}</p>
-    <a href="{{featuredPost.url}}" class="btn btn-{{spot}}">Read More »</a>
+    <a href="{{featuredPost.url}}" class="btn btn-{{spot}}">Read More</a>
   </div>
 </section>
 
 <!-- blog roll -->
 <div class="panel panel-white">
   <div class="constrain">
-    <h1 class="spot-{{collections.articles[0].spot}}">Latest Articles <a href="/archive/" class="right btn btn-{{collections.articles[0].spot}}">View All »</a></h1>
+    <h1 class="spot-{{collections.articles[0].spot}}">Latest Articles <a href="/archive/" class="right btn btn-{{collections.articles[0].spot}}">View All</a></h1>
     {% for article in collections.articles %}
     <div class="col-group l-relative leader-3 trailer-3">
       <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
@@ -31,7 +31,7 @@ collections:
         </h2>
         <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
         <p class="text-size--2">{{article.description}}</p>
-        <a href="{{article.url}}" class="spot-link-{{article.spot}} text-size--2">Read More »</a>
+        <a href="{{article.url}}" class="spot-link-{{article.spot}} text-size--2">Read More</a>
       </div>
     </div>
     {% endfor %}
