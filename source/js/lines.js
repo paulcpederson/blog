@@ -13,19 +13,26 @@ window.onresize = () => {
   height = canvas.height = window.innerHeight
   origin = {x: width / 2, y: height / 2}
 }
-
+const deltas = [-2, -1, 1, 2]
 class Point {
   constructor () {
     this.x = Math.floor(Math.random() * (width + 1))
     this.y = Math.floor(Math.random() * (height + 1))
-    this.angle = Math.PI * 2 * Math.random()
-    this.vx = (1.3 + Math.random() * .3) * Math.cos(this.angle)
-    this.vy = (1.3 + Math.random() * .3) * Math.sin(this.angle)
+    this.dx = deltas[Math.floor(Math.random() * deltas.length)]
+    this.dy = deltas[Math.floor(Math.random() * deltas.length)]
   }
 
   update () {
-    this.x += this.vx
-    this.y += this.vy
+    if (this.x + this.dx > width - 2 || this.x + this.dx < 2) {
+      this.dx = -this.dx
+    }
+
+    if (this.y + this.dy > height - 2 || this.y + this.dy < 2) {
+      this.dy = -this.dy
+    }
+
+    this.x += this.dx
+    this.y += this.dy
   }
 }
 
@@ -33,6 +40,8 @@ let points = []
 for (let i = 0; i < 50; i++) {
   points.push(new Point())
 }
+
+console.log(points)
 
 loop()
 
