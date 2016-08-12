@@ -17,6 +17,7 @@
   right:0;
   bottom:0;
   left:0;
+  z-index: 1;
   display: block;
   background-image: url(../img/navy-mesh.gif);
   background-color: transparent;
@@ -53,7 +54,8 @@
   left: 0;
   display: block;
   background-color: $navy;
-  opacity: .9;
+  opacity: .7;
+  z-index: 0;
 }
 
 .title-wrap {

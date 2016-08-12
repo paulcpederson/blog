@@ -41,7 +41,13 @@ for (let i = 0; i < 50; i++) {
   points.push(new Point())
 }
 
-console.log(points)
+let blues = [
+  '#268BD2',
+  '#237FBF',
+  '#1F73AD',
+  '#1C679C',
+  '#185987'
+]
 
 loop()
 
@@ -52,27 +58,31 @@ function loop () {
 
   for (let i = triangles.length; i; ) {
     context.beginPath()
-    --i;
+    i--
     context.moveTo(points[triangles[i]].x, points[triangles[i]].y)
-    --i;
+    i--
     context.lineTo(points[triangles[i]].x, points[triangles[i]].y)
-    --i;
+    i--
     context.lineTo(points[triangles[i]].x, points[triangles[i]].y)
     context.closePath()
-    context.stroke()
+
     // logic to determine direction of triangle/shading
     // context.fillStyle = colors[Math.floor(Math.random() * colors.length)]
     // context.fill()
+    context.fillStyle = palette.base02
+    context.strokeStyle = palette.green
+    context.stroke()
+    context.fill()
   }
 
   for (let i = 0; i < points.length; i++) {
-    let p = points[i]
-    context.fillStyle = palette.base1
-    context.beginPath()
-    context.arc(p.x, p.y, 2, 0, Math.PI * 2, false)
-    context.closePath()
-    context.fill()
-    p.update()
+    // let p = points[i]
+    // context.fillStyle = palette.base00
+    // context.beginPath()
+    // context.arc(p.x, p.y, 2, 0, Math.PI * 2, false)
+    // context.closePath()
+    // context.fill()
+    points[i].update()
   }
 
   requestAnimationFrame(loop)
