@@ -1,6 +1,7 @@
 import palette from './lib/palette'
 import delaunay from 'delaunay-fast'
 
+const colors = Object.keys(palette).map(key => palette[key])
 const canvas = document.querySelector('.js-blob-canvas')
 const context = canvas.getContext('2d')
 
@@ -13,64 +14,57 @@ window.onresize = () => {
   origin = {x: width / 2, y: height / 2}
 }
 
-let dots = []
+class Point {
+  constructor () {
+    this.x = Math.floor(Math.random() * (width + 1))
+    this.y = Math.floor(Math.random() * (height + 1))
+    this.angle = Math.PI * 2 * Math.random()
+    this.vx = (1.3 + Math.random() * .3) * Math.cos(this.angle)
+    this.vy = (1.3 + Math.random() * .3) * Math.sin(this.angle)
+  }
+
+  update () {
+    this.x += this.vx
+    this.y += this.vy
+  }
+}
+
+let points = []
 for (let i = 0; i < 50; i++) {
-  dots.push([Math.floor(Math.random() * (width + 1)), Math.floor(Math.random() * (height + 1))])
+  points.push(new Point())
 }
 
-let triangles = delaunay.triangulate(dots)
+loop()
 
-for (let i = triangles.length; i; ) {
-  context.beginPath();
-  console.log(i)
-  --i; context.moveTo(dots[triangles[i]][0], dots[triangles[i]][1]);
-  console.log(i)
-  --i; context.lineTo(dots[triangles[i]][0], dots[triangles[i]][1]);
-  console.log(i)
-  --i; context.lineTo(dots[triangles[i]][0], dots[triangles[i]][1]);
-  context.closePath();
-  context.stroke();
+function loop () {
+  context.clearRect(0, 0, width, height)
+
+  let triangles = delaunay.triangulate(points.map(p => [p.x, p.y]))
+
+  for (let i = triangles.length; i; ) {
+    context.beginPath()
+    --i;
+    context.moveTo(points[triangles[i]].x, points[triangles[i]].y)
+    --i;
+    context.lineTo(points[triangles[i]].x, points[triangles[i]].y)
+    --i;
+    context.lineTo(points[triangles[i]].x, points[triangles[i]].y)
+    context.closePath()
+    context.stroke()
+    // logic to determine direction of triangle/shading
+    // context.fillStyle = colors[Math.floor(Math.random() * colors.length)]
+    // context.fill()
+  }
+
+  for (let i = 0; i < points.length; i++) {
+    let p = points[i]
+    context.fillStyle = palette.base1
+    context.beginPath()
+    context.arc(p.x, p.y, 2, 0, Math.PI * 2, false)
+    context.closePath()
+    context.fill()
+    p.update()
+  }
+
+  requestAnimationFrame(loop)
 }
-
-
-// loop()
-
-// function loop () {
-//   context.clearRect(0, 0, width, height)
-
-//   // draw dots
-//   for (let i = 0; i < dots.length; i++) {
-//     let d = dots[i]
-//     context.fillStyle = palette.base1
-//     context.beginPath()
-//     context.arc(d.x, d.y, 2, 0, Math.PI * 2, false)
-//     context.closePath(d.x, d.y, 2, 0, Math.PI * 2, false)
-//     context.fill()
-//   }
-
-//   // generate all possible lines
-//   for (let i = 0; i < dots.length; i++) {
-//     let lines = []
-//     for (let j = i + 1; j < dots.length; j++) {
-
-//     }
-//       context.beginPath()
-//       context.strokeStyle = palette.base02
-//       context.moveTo(dots[i].x, dots[i].y)
-//       context.lineTo(dots[j].x, dots[j].y)
-//       context.closePath()
-//       context.stroke()
-//   }
-
-//   // draw dots
-//   for (let i = 0; i < dots.length; i++) {
-//     let d = dots[i]
-//     context.fillStyle = palette.base1
-//     context.beginPath()
-//     context.arc(d.x, d.y, 2, 0, Math.PI * 2, false)
-//     context.closePath(d.x, d.y, 2, 0, Math.PI * 2, false)
-//     context.fill()
-//   }
-
-//   requestAnimationFrame(loop)
-// }
