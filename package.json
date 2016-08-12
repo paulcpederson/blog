@@ -45,6 +45,7 @@
     "babelify": "^7.2.0",
     "chartist": "^0.9.7",
     "copyfiles": "^1.0.0",
+    "delaunay-fast": "^1.0.1",
     "imagemin-newer": "^1.0.1",
     "live-server": "^0.9.1",
     "node-sass": "^3.2.0",
