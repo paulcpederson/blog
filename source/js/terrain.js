@@ -11,10 +11,30 @@ window.onresize = () => {
   height = canvas.height = window.innerHeight
 }
 
+function distance (a, b) {
+  var dx = a[0] - b[0]
+  var dy = a[1] - b[1]
+  return Math.sqrt(dx * dx + dy * dy) // pythagoras!
+}
+
+const deltas = [-2, -1, 1, 2]
+
 class Vertex {
   constructor (x, y) {
     this.x = x
     this.y = y
+    this.originX = x
+    this.originY = y
+    this.dx = deltas[Math.floor(Math.random() * deltas.length)]
+    this.dy = deltas[Math.floor(Math.random() * deltas.length)]
+  }
+  update () {
+    if (distance([this.x, this.y], [this.originX, this.originY]) > 20) {
+      this.dx = -this.dx
+      this.dy = -this.dy
+    }
+    this.x = this.x - this.dx
+    this.y = this.y - this.dy
   }
 }
 
@@ -84,6 +104,12 @@ function loop () {
       context.beginPath()
       context.arc(v.x, v.y, 2, 0, Math.PI * 2, false)
       context.fill()
+    })
+  })
+
+  vertices.forEach(row => {
+    row.forEach(v => {
+      v.update()
     })
   })
 
