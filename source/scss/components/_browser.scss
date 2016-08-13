@@ -42,7 +42,15 @@
   top: 0;
 }
 
-.archive {
+.browser-description {
   flex: 1 0 30%;
   max-width: 30em;
+  margin-left: 2rem;
+}
+
+@media screen and (max-width: $tablet) {
+  .browser-description {
+    flex: auto;
+    margin-left: 0;
+  }
 }
