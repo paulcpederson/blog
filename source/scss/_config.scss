@@ -33,12 +33,12 @@ $navy: $base03;
 // Font Families
 $body-font:      "Karla", Arial, Helvetica, sans;
 $header-font:    "Facit", Arial, Helvetica, sans;
-$button-font:    "Source Code Pro", "Courier New", courier, monospace;
+$button-font:    Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // Font Weights
 $body-weight:    400;
 $header-weight:  400;
-$button-weight:  300;
+$button-weight:  400;
 
 // Font Colors
 $body-color:     $gray;
