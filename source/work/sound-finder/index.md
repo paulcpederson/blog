@@ -52,7 +52,7 @@ I also used Babel to build the site with newer JavaScript goodies. I think one o
 
 Arrow functions are another useful feature for cleaning up some code. I am really partial to using `map`, `filter`, and `reduce`, so arrow functions can really help. Here's an example from the project:
 
-```js
+```
 let rankedUsers = Object.keys(users)
   .sort((a, b) => users[b].similarity - users[a].similarity)
   .filter(id => users[id].permalink !== username)

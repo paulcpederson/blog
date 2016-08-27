@@ -33,61 +33,73 @@ pre {
   }
 }
 
-.css .hljs-class {
-  color: $yellow;
-}
-
-.css .hljs-tag {
-  color: $cyan;
-}
-
-.css .hljs-attribute {
-  color: $green;
-}
-
-.css .hljs-value {
-  color: $violet;
-}
-
-.css .hljs-rule .hljs-keyword,
-.css .hljs-tag {
-  color: $green;
-}
-
-.bash {
+.css, .js, .bash, .html, .yaml {
+  background: $base03;
   color: $base0;
 }
 
-.hljs-comment {
+.hljs-comment,
+.hljs-quote,
+.hljs-tag {
   color: $base01;
 }
 
 .hljs-keyword,
-.hljs-method {
+.hljs-selector-tag,
+.hljs-addition {
   color: $green;
 }
 
 .hljs-number,
-.hljs-command,
 .hljs-string,
-.hljs-tag .hljs-value,
-.hljs-hexcolor {
+.hljs-meta .hljs-meta-string,
+.hljs-literal,
+.hljs-doctag,
+.hljs-regexp,
+.hljs-selector-id {
   color: $cyan;
 }
 
-.hljs-params {
-  color: $base0;
-}
-
 .hljs-title,
-.hljs-function .hljs-title, .hljs-decorator, .hljs-builtin, .hljs-built_in, .hljs-identifier, .hljs-title .hljs-keymethods, .hljs-id {
+.hljs-section,
+.hljs-name,
+.hljs-selector-class {
   color: $blue;
 }
 
-.hljs-attribute, .hljs-variable, .hljs-instancevar, .hljs-lisp .hljs-body, .hljs-smalltalk .hljs-number, .hljs-constant, .hljs-class .hljs-title, .hljs-parent, .hljs-haskell .hljs-label {
+.hljs-attribute,
+.hljs-attr,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-class .hljs-title,
+.hljs-type {
   color: $yellow;
 }
 
-.hljs-preprocessor, .hljs-pi, .hljs-shebang, .hljs-symbol, .hljs-diff .hljs-change, .hljs-special, .hljs-keymethods, .hljs-attr_selector, .hljs-important, .hljs-subst, .hljs-cdata {
+.hljs-symbol,
+.hljs-bullet,
+.hljs-subst,
+.hljs-meta,
+.hljs-meta .hljs-keyword,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-link {
   color: $orange;
+}
+
+.hljs-built_in,
+.hljs-deletion {
+  color: $red;
+}
+
+.hljs-formula {
+  background: $base02;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
 }

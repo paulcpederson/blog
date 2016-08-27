@@ -23,7 +23,7 @@ NPM is where you can put *anything*. No dependency hell. Any number of people ca
 
 Publishing small modules that have version numbers is important. It helps to distribute maintenance and responsibility. Everybody owns their own chunk. If you have a feature you want in another module, just write your own module with that feature and depend on the original module. In that way, you become the owner of that module.
 
-```bash
+```yaml
 $ npm install
 $ npm start
 $ npm test
@@ -57,4 +57,4 @@ People should bravely leave their silos and go help the fight of the frontier. W
 
 Check out the slides [here](http://maxogden.github.io/slides/realtimeconf/#/1) or watch the video:
 
-<div class="video-wrap"><iframe src="//player.vimeo.com/video/77376239?title=0&amp;byline=0&amp;portrait=0" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div>
+<div class="video-wrap"><iframe src="//player.vimeo.com/video/77376239?title=0&amp;byline=0&amp;portrait=0"></iframe></div>

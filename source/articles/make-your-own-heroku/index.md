@@ -89,7 +89,7 @@ To make it so you don't have to type your password every time you connect to you
 
 Create a file named `config` inside your `.ssh/` directory so your computer knows to use the new ssh keys for your domain. My config looks like this:
 
-```
+```yaml
 Host app-lab app-lab.me
 Hostname app-lab.me
 IdentityFile ~/.ssh/app-lab
@@ -101,7 +101,7 @@ Basically, this is how ssh knows to use that particular key for that host. Obvio
 
 To upload the public key to your droplet, just type:
 
-```
+```bash
 cat ~/.ssh/{name}.pub | ssh root@your.domain "cat >> ~/.ssh/authorized_keys"
 ```
 
@@ -128,7 +128,7 @@ Now you're all set to deploy apps to Dokku. If you want to deploy a test app, yo
 
 After Dokku finishes deploying your app and reports back that it's finished, your app should be live at test.your.domain. Notice that the subdomain will be whatever you entered after the colon in your remote name. For example, if you want your app to live at apples.your.domain, you could add your remote like:
 
-```
+```bash
 git remote add dokku dokku@your.domain:apples
 ```
 
@@ -136,7 +136,7 @@ git remote add dokku dokku@your.domain:apples
 
 To add an app to the root domain, you just use the domain name when you add the remote. For example, if your domain was chickens.me, you would add your remote like this:
 
-```
+```bash
 git remote add dokku dokku@chickens.me:chickens.me
 ```
 
@@ -155,7 +155,7 @@ Let's say you are building a little site for a domain you own, we'll call it my-
 
 Then when you add your remote, you would add it like this:
 
-```
+```bash
 git remote add dokku dokku@dokku-domain.com:my-special-domain.com
 ```
 
@@ -167,7 +167,7 @@ Once the domain is pointing to your droplet's IP and you've pushed to your remot
 
 Deploying a static app actually took a bit of hunting around to find, but once I figured it out, it's dead simple. Essentially you just include an empty `.nginx` file in the root level of your project, and put all your static content in a `www` directory and it will be served on an nginx server automatically. For example, if I had a simple `index.html` file and a `style.css` file I wanted to serve statically, my project would look something like this:
 
-```
+```yaml
 .nginx
 www
   - index.html
@@ -180,7 +180,7 @@ That's it! You can have as many folders and files inside the `www` directory as 
 
 If you have no need for a subfolder, you can deploy a static app from the root of your project by adding an empty `.htaccess` file. The folder structure would look something like this:
 
-```
+```bash
 .htaccess
 index.html
 style.css
@@ -192,7 +192,7 @@ Dokku should automagically understand that you're writing an app that uses Apach
 
 This is a really good reason to use Dokku instead of gh-pages. It is super common to want to keep a project private from the general public and only allow clients, or other developers to see it. It took me forever to figure this out, and when I did I felt really stupid because it is ridiculously easy. Essentially, you deploy a static app exactly as above, but you add a `.htpasswd` file to the root of your app and a couple lines to your `.htaccess` file. Essentially your `.htaccess` file will look something like this:
 
-```
+```bash
 AuthUserFile /app/www/.htpasswd
 AuthType Basic
 AuthName "Restricted Access"
@@ -201,7 +201,7 @@ Require valid-user
 
 Then, you can go to this [htpasswd generator site](http://www.htaccesstools.com/htpasswd-generator/). Enter the username and password and copy the generated entry into a `.htpasswd` file, also in the root of your project. Your folder structure will look something like this:
 
-```
+```bash
 .htaccess
 .htpasswd
 index.html
@@ -213,13 +213,13 @@ When you push to Dokku, it will use your .htaccess file and require you to login
 
 If you want to remove an app, first, connect with ssh:
 
-```
+```bash
 ssh root@your.domain
 ```
 
 If you set up ssh keys, this should work without a password. Then simply run:
 
-```
+```bash
 dokku delete app_name
 ```
 
