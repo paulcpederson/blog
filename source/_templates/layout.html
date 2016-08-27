@@ -73,6 +73,11 @@
       <script src="/js/{{script}}{% if production %}.min{% endif %}.js"></script>
     {% endfor %}
 
+    {% if !production %}
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.8.2/html-inspector.js"></script>
+      <script> HTMLInspector.inspect() </script>
+    {% endif %}
+
     {% if twitter %}
       <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
     {% endif %}
