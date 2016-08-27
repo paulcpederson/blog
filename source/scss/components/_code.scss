@@ -49,23 +49,38 @@ pre {
   color: $violet;
 }
 
+.css .hljs-rule .hljs-keyword,
+.css .hljs-tag {
+  color: $green;
+}
+
 .bash {
   color: $base0;
 }
 
-.hljs-comment, .hljs-template_comment, .hljs-diff .hljs-header, .hljs-doctype, .hljs-lisp .hljs-string, .hljs-javadoc, html {
+.hljs-comment {
   color: $base01;
 }
 
-.hljs-keyword, .hljs-css .hljs-rule .hljs-keyword, .hljs-winutils, .hljs-javascript .hljs-title, .hljs-method, .hljs-addition, .hljs-css .hljs-tag, .hljs-lisp .hljs-title {
+.hljs-keyword,
+.hljs-method {
   color: $green;
 }
 
-.hljs-number, .hljs-command, .hljs-string, .hljs-tag .hljs-value, .hljs-phpdoc, .hljs-tex .hljs-formula, .hljs-regexp, .hljs-hexcolor {
+.hljs-number,
+.hljs-command,
+.hljs-string,
+.hljs-tag .hljs-value,
+.hljs-hexcolor {
   color: $cyan;
 }
 
-.hljs-title, .hljs-localvars, .hljs-function .hljs-title, .hljs-chunk, .hljs-decorator, .hljs-builtin, .hljs-built_in, .hljs-lisp .hljs-title, .hljs-identifier, .hljs-title .hljs-keymethods, .hljs-id {
+.hljs-params {
+  color: $base0;
+}
+
+.hljs-title,
+.hljs-function .hljs-title, .hljs-decorator, .hljs-builtin, .hljs-built_in, .hljs-identifier, .hljs-title .hljs-keymethods, .hljs-id {
   color: $blue;
 }
 
@@ -75,12 +90,4 @@ pre {
 
 .hljs-preprocessor, .hljs-pi, .hljs-shebang, .hljs-symbol, .hljs-diff .hljs-change, .hljs-special, .hljs-keymethods, .hljs-attr_selector, .hljs-important, .hljs-subst, .hljs-cdata {
   color: $orange;
-}
-
-.hljs-deletion {
-  color: $red;
-}
-
-.hljs-tex .hljs-formula {
-  background: $base02;
 }

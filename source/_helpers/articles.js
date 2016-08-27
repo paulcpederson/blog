@@ -9,7 +9,8 @@ function notIndex (page) {
 }
 
 function addYear (page) {
-  page.year = page.date.getFullYear()
+  var date = new Date(page.date)
+  page.year = date.getFullYear()
   return page
 }
 

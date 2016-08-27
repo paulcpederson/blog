@@ -50,9 +50,9 @@ collections:
     <h1 class="spot-{{spot}}">Latest Articles <a href="/articles/" class="right btn btn-{{spot}}">View All</a></h1>
     {% for article in collections.articles %}
     {% if loop.index < 4 %}
-      <div class="col-group l-relative leader-3 trailer-3">
+      <div class="l-relative leader-3 trailer-3">
         <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
-        <div class="col2of5 col blog-roll-text">
+        <div class="blog-roll-text">
           <h2 class="leader-1 trailer-1">
             <a href="{{article.url}}" class="spot-link-{{article.spot}}">{{article.title}}</a>
           </h2>
