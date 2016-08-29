@@ -8,7 +8,7 @@ thumbnail: web-thumb.svg
 twitter_image: web-thumb.jpg
 feature: web-thumb.svg
 canvas: tan
-spot: orange
+spot: red
 featured: true
 ---
 

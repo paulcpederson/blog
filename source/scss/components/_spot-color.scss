@@ -9,13 +9,27 @@ $spot-colors: (
   'green': $green
 );
 
+$dark-spot-colors: (
+  'yellow': $yellow-dark,
+  'orange': $orange-dark,
+  'red': $red-dark,
+  'magenta': $magenta-dark,
+  'violet': $violet-dark,
+  'blue': $blue-dark,
+  'cyan': $cyan-dark,
+  'green': $green-dark
+);
+
 @each $name in map-keys($spot-colors) {
   $color: map-get($spot-colors, $name);
+  $dark-color: map-get($dark-spot-colors, $name);
   .spot-#{$name} { color: $color; }
-  .spot-bg-#{$name} { background-color: $color; }
+  .spot-dark-#{$name} { color: $dark-color; }
+  .spot-bg-#{$name} { background-color: $dark-color; }
   .spot-top-#{$name} { border-top: 8px solid $color; }
+  .spot-top-dark-#{$name} { border-top: 8px solid $dark-color; }
 
-  .spot-link-#{$name}, .article-#{$name} a {
+  .spot-link-#{$name} {
     color: $color;
     &:hover, &:focus {
       color: $color;
@@ -23,22 +37,38 @@ $spot-colors: (
     }
   }
 
+  .spot-link-dark-#{$name}, .article-#{$name} a {
+    color: $dark-color;
+    &:hover, &:focus {
+      color: $dark-color;
+      border-bottom: 2px solid $dark-color;
+    }
+  }
+
   .btn-#{$name} {
     border: 1px solid $color;
     color: $color;
     &:hover {
-      background-color: $color;
+      background-color: $dark-color;
+    }
+  }
+
+  .btn-dark-#{$name} {
+    border: 1px solid $dark-color;
+    color: $dark-color;
+    &:hover {
+      background-color: $dark-color;
     }
   }
 
   // Article Styles
   .article-#{$name} {
     h1, h2, h3, h4, h5, h6 {
-      color: $color;
+      color: $dark-color;
     }
     blockquote {
-      color: $color;
-      border-left: 3px solid $color;
+      color: $dark-color;
+      border-left: 3px solid $dark-color;
     }
   }
 }

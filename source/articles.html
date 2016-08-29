@@ -4,7 +4,7 @@ description: Articles about art, maps, design, and the internet written by Paul 
 template: _templates/layout.html
 block: page
 changefreq: daily
-spot: orange
+spot: red
 collections:
   articles: /articles/*
 ---
@@ -19,17 +19,17 @@ collections:
 <!-- blog roll -->
 <div class="panel panel-white">
   <div class="constrain">
-    <h1 class="spot-{{spot}}">Latest Articles <a href="/archive/" class="right btn btn-{{spot}}">View Archive</a></h1>
+    <h1 class="spot-dark-{{spot}}">Latest Articles <a href="/archive/" class="right btn btn-dark-{{spot}}">View Archive</a></h1>
     {% for article in collections.articles %}
     <div class="l-relative leader-3 trailer-3">
       <a style="background-image: url(/img/{{article.thumbnail}})" href="{{article.url}}" class="blog-roll-thumbnail"></a>
       <div class="blog-roll-text">
         <h2 class="leader-1 trailer-1">
-          <a href="{{article.url}}" class="spot-link-{{article.spot}}">{{article.title}}</a>
+          <a href="{{article.url}}" class="spot-link-dark-{{article.spot}}">{{article.title}}</a>
         </h2>
         <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
         <p class="text-size--2">{{article.description}}</p>
-        <a href="{{article.url}}" class="spot-link-{{article.spot}} text-size--2">Read More</a>
+        <a href="{{article.url}}" class="spot-link-dark-{{article.spot}} text-size--2">Read More</a>
       </div>
     </div>
     {% endfor %}
