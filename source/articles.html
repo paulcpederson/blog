@@ -19,9 +19,12 @@ collections:
 <!-- blog roll -->
 <div class="panel panel-white">
   <div class="constrain">
-    <h2 class="spot-dark-{{spot}}">Latest Articles <a href="/archive/" class="right btn btn-dark-{{spot}}">View All</a></h2>
+    <div class="clearfix leader-2">
+      <h2 class="spot-dark-{{spot}} left inline-block leader-half">Latest Articles</h2>
+      <a href="/articles/" class="right btn btn-dark-{{spot}}">View All Articles</a>
+    </div>
     {% for article in collections.articles %}
-      <div class="l-relative leader-3 trailer-3">
+      <div class="l-relative leader-2 trailer-4">
         <a href="{{article.url}}" class="blog-roll-thumbnail spot-border-hover-{{article.spot}}">
           <img class="blog-roll-thumbnail-img" src="/img/{{article.thumbnail}}" alt="{{article.title}}">
         </a>
@@ -31,7 +34,6 @@ collections:
           </h2>
           <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
           <p class="text-size--2">{{article.description}}</p>
-          <a href="{{article.url}}" class="spot-link-dark-{{article.spot}} text-size--2">Read More</a>
         </div>
       </div>
     {% endfor %}

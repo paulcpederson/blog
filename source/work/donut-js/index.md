@@ -55,13 +55,13 @@ Somebody suggested that it would be fun to have procedurally generated sprinkles
 
 <div class="full-width">
   <div class="video-wrap">
-    <video loop muted autoplay id="sprinkles">
+    <video loop muted autoplay aria-label="falling sprinkles">
       <source src="sprinkles.mp4" type="video/mp4">
       <track src="caption.vtt" kind="captions" srclang="en" label="English" default></track>
     </video>
   </div>
 </div>
-<label class="caption" for="sprinkles">Falling sprinkles!!!!!</label>
+<p class="caption">Falling sprinkles!!!!!</p>
 
 The most challenging aspect of sprinkles falling from the sky was getting the rotation working. It turns out the way to rotate something on a canvas is not to rotate the item, but rather, to translate the drawing context to the center point you'd like to rotate on and rotate the entire canvas, restoring when you're done.
 

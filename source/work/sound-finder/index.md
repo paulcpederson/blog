@@ -29,13 +29,13 @@ I've been wanting to dig into the Canvas API for a while now, but I've been inti
 
 <div class="full-width">
   <div class="video-wrap">
-    <video loop muted autoplay id="loading">
+    <video loop muted autoplay id="loading" aria-label="loading animation">
       <source src="loading.mp4" type="video/mp4">
       <track src="caption.vtt" kind="captions" srclang="en" label="English" default></track>
     </video>
   </div>
 </div>
-<label class="caption" for="loading">Loading indicator created with canvas</label>
+<p class="caption leader-3">Loading indicator created with canvas</p>
 
 Turns out, if you use `requestAnimationFrame` and clear the canvas every frame, it works really well as a sort of poor man's animation library. It's quite low-level drawing the individual lines and shapes (at least more low level than it used to be back in the Flash days), but the math is sort of a fun mental challenge, and you can create some really cool effects.
 
