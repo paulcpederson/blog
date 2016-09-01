@@ -11,7 +11,7 @@
     width: 16px;
     height: 16px;
   }
-  &:hover {
+  &:hover, &:focus {
     opacity: 1;
     border: none;
   }

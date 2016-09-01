@@ -24,9 +24,11 @@ playPause.addEventListener('click', (e) => {
   if (player.paused) {
     player.play()
     playPause.classList.add('playing')
+    player.setAttribute('aria-label', 'pause')
   } else {
     playPause.classList.remove('playing')
     player.pause()
+    player.setAttribute('aria-label', 'play')
   }
 })
 

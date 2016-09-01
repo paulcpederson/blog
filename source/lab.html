@@ -20,14 +20,16 @@ collections:
   <div class="constrain">
     {% for lab in collections.labs %}
     <div class="l-relative leader-3 trailer-3">
-      <a style="background-image: url(/img/{{lab.thumbnail}})" href="{{lab.url}}" class="blog-roll-thumbnail"></a>
+      <a href="{{lab.url}}" class="blog-roll-thumbnail spot-border-hover-{{lab.spot}}">
+        <img class="blog-roll-thumbnail-img" src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
+      </a>
       <div class="blog-roll-text">
         <h2 class="leader-1 trailer-1">
-          <a href="{{lab.url}}" class="spot-link-{{lab.spot}}">{{lab.title}}</a>
+          <a href="{{lab.url}}" class="spot-link-dark-{{lab.spot}}">{{lab.title}}</a>
         </h2>
         <time class="text-size--2 text-subtle" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('n.j.Y')}}</time>
         <p class="text-size--2">{{lab.description}}</p>
-        <a href="{{lab.url}}" class="spot-link-{{lab.spot}} text-size--2">Launch Experiment »</a>
+        <a href="{{lab.url}}" class="spot-link-dark-{{lab.spot}} text-size--2">Launch Experiment »</a>
       </div>
     </div>
     {% endfor %}

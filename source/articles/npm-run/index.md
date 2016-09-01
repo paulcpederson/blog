@@ -54,7 +54,7 @@ You will get the first message printed, then the list of files, and then the las
 
 The last thing to mention about npm scripts is that they have access to everything in `node_modules/.bin/`. Essentially, module authors can register command line tools with npm by adding a `bin` key to `package.json`. That enables people to install the module globally and then use that tool from the command line.
 
-For example, [imagemin](https://github.com/imagemin/imagemin#cli) has a cli which you can use to minify images from the command line if you install imagemin globally (specified [here](https://github.com/imagemin/imagemin/blob/master/package.json#L16)). If you use imagemin via an npm script *you don't have to install anything globally*. NPM automatically adds their bin to `node_modules/.bin` and makes it available to the command from your script!
+For example, [imagemin](https://github.com/imagemin/imagemin#cli) has a cli which you can use to minify images from the command line if you [install imagemin globally](https://github.com/imagemin/imagemin/blob/master/package.json#L16). If you use imagemin via an npm script *you don't have to install anything globally*. NPM automatically adds their bin to `node_modules/.bin` and makes it available to the command from your script!
 
 > You don't have to install anything globally.
 

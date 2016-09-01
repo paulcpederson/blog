@@ -55,6 +55,6 @@ Ogden then showed a great chart that diagrammed all the components needed to hav
 
 People should bravely leave their silos and go help the fight of the frontier. Work together to make everything more transparent and open.
 
-Check out the slides [here](http://maxogden.github.io/slides/realtimeconf/#/1) or watch the video:
+Check out [the slides](http://maxogden.github.io/slides/realtimeconf/#/1) or watch the video:
 
 <div class="video-wrap"><iframe src="//player.vimeo.com/video/77376239?title=0&amp;byline=0&amp;portrait=0"></iframe></div>

@@ -13,17 +13,19 @@
 
   <div class="panel panel-white">
     <div class="constrain">
-      <h2 class="spot-{{spot}}">More Experiments <a href="/lab/" class="right btn btn-{{spot}}">View All</a></h2>
+      <h2 class="spot-dark-{{spot}}">More Experiments <a href="/lab/" class="right btn btn-dark-{{spot}}">View All</a></h2>
       {% for lab in collections.labs %}
-      <div class="col-group l-relative leader-3 trailer-3">
-        <a style="background-image: url(/img/{{lab.thumbnail}})" href="{{lab.url}}" class="blog-roll-thumbnail"></a>
-        <div class="col2of5 col blog-roll-text">
+      <div class="l-relative leader-3 trailer-3">
+        <a href="{{lab.url}}" class="blog-roll-thumbnail spot-border-hover-{{lab.spot}}">
+          <img class="blog-roll-thumbnail-img" src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
+        </a>
+        <div class="blog-roll-text">
           <h2 class="leader-1 trailer-1">
-            <a href="{{lab.url}}" class="spot-link-{{lab.spot}}">{{lab.title}}</a>
+            <a href="{{lab.url}}" class="spot-link-dark-{{lab.spot}}">{{lab.title}}</a>
           </h2>
           <time class="text-size--2 text-subtle" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('n.j.Y')}}</time>
           <p class="text-size--2">{{lab.description}}</p>
-          <a href="{{lab.url}}" class="spot-link-{{lab.spot}} text-size--2">Launch Experiment »</a>
+          <a href="{{lab.url}}" class="spot-link-dark-{{lab.spot}} text-size--2">Launch Experiment »</a>
         </div>
       </div>
       {% endfor %}
@@ -31,8 +33,8 @@
   </div>
 
   <div class="lab js-lab">
-    <button class="lab-thumbnail js-lab-thumbnail">Back</button>
-    <button class="lab-info js-lab-toggle spot-bg-{{spot}}">{% include "../img/menu.svg" %}</button>
+    <button class="lab-thumbnail js-lab-thumbnail" aria-label="back to experiment">Back</button>
+    <button class="lab-info js-lab-toggle spot-bg-{{spot}}" aria-label="about experiment">{% include "../img/menu.svg" %}</button>
     {% block content %}{% endblock %}
   </div>
 {% endblock %}

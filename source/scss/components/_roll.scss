@@ -17,8 +17,9 @@
   right: 50%;
   background-size: cover;
   background-position: center;
-  transition: box-shadow 200ms linear;
+  transition: box-shadow 200ms linear, border 200ms linear;
   overflow: hidden;
+  border: 2px solid transparent;
   &:hover {
     box-shadow: 0 0 20px rgba(0,0,0,0.05);
   }

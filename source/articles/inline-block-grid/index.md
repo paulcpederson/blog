@@ -105,6 +105,6 @@ You can also control how each column is vertically aligned in the row. If you'd 
 
 If you're using borders and padding, you can also use ```box-sizing: border-box``` to make the box model more straightforward.
 
-Check out [this jsfiddle](http://jsfiddle.net/9U6v5/25/) to see it in action. (Or see the full screen result [here](http://jsfiddle.net/9U6v5/25/show/).)
+Check out [this jsfiddle](http://jsfiddle.net/9U6v5/25/) to see it in action. (Or see the [full screen result](http://jsfiddle.net/9U6v5/25/show/).)
 
 

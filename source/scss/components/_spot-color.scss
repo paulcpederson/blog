@@ -28,7 +28,8 @@ $dark-spot-colors: (
   .spot-bg-#{$name} { background-color: $dark-color; }
   .spot-top-#{$name} { border-top: 8px solid $color; }
   .spot-top-dark-#{$name} { border-top: 8px solid $dark-color; }
-
+  .spot-border-hover-#{$name}:hover,
+  .spot-border-hover-#{$name}:focus { border-color: $dark-color; }
   .spot-link-#{$name} {
     color: $color;
     &:hover, &:focus {
@@ -48,7 +49,8 @@ $dark-spot-colors: (
   .btn-#{$name} {
     border: 1px solid $color;
     color: $color;
-    &:hover {
+    &:hover, &:focus {
+      color: $white;
       background-color: $dark-color;
     }
   }
@@ -56,7 +58,8 @@ $dark-spot-colors: (
   .btn-dark-#{$name} {
     border: 1px solid $dark-color;
     color: $dark-color;
-    &:hover {
+    &:hover, &:focus {
+      color: $white;
       background-color: $dark-color;
     }
   }

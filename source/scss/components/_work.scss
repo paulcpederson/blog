@@ -21,7 +21,7 @@
   z-index: 2;
 }
 
-.work-item:hover .work-item-text {
+.work-item:hover .work-item-text, .work-item:focus .work-item-text {
   opacity: 1;
 }
 
@@ -38,6 +38,6 @@
   transition: opacity 200ms linear;
 }
 
-.work-item:hover:before {
+.work-item:hover:before, .work-item:focus:before {
   opacity: .4;
 }
