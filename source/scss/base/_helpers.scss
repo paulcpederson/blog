@@ -109,6 +109,8 @@
 }
 
 // Furniture for spacing
+.leader-half { margin-top: .5rem; }
+
 @for $n from 0 through 8 {
   .leader-#{$n} { margin-top: $n * 1rem; }
   .trailer-#{$n} { margin-bottom: $n * 1rem; }

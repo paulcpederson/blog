@@ -31,7 +31,11 @@ collections:
 
 <!-- projects -->
 <div class="panel panel-navy padding-trailer-0">
-  <h2 class="margin-left-3 spot-{{spot}}">Work <a href="/work/" class="right btn btn-{{spot}} margin-right-3">View All</a></h2>
+  <div class="clearfix">
+    <h2 class="margin-left-3 spot-{{spot}} left inline-block leader-half">Work</h2>
+    <a href="/work/" class="right btn btn-{{spot}} margin-right-3">View All</a>
+  </div>
+
   <div class="flex phone-flex-column work-items">
   {% for project in collections.work %}
   {% if loop.index < 5 %}
@@ -46,10 +50,13 @@ collections:
 <!-- blog roll -->
 <div class="panel panel-white">
   <div class="constrain">
-    <h2 class="spot-dark-{{spot}}">Latest Articles <a href="/articles/" class="right btn btn-dark-{{spot}}">View All</a></h2>
+    <div class="clearfix leader-1">
+      <h2 class="spot-dark-{{spot}} left inline-block leader-half">Latest Articles</h2>
+      <a href="/articles/" class="right btn btn-dark-{{spot}}">View All Articles</a>
+    </div>
     {% for article in collections.articles %}
     {% if loop.index < 4 %}
-      <div class="l-relative leader-3 trailer-3">
+      <div class="l-relative leader-2 trailer-4">
         <a href="{{article.url}}" class="blog-roll-thumbnail spot-border-hover-{{article.spot}}">
           <img class="blog-roll-thumbnail-img" src="/img/{{article.thumbnail}}" alt="{{article.title}}">
         </a>
@@ -59,7 +66,6 @@ collections:
           </h2>
           <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
           <p class="text-size--2">{{article.description}}</p>
-          <a href="{{article.url}}" class="spot-link-dark-{{article.spot}} text-size--2">Read More</a>
         </div>
       </div>
     {% endif %}
