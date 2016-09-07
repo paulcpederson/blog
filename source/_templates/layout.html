@@ -28,7 +28,7 @@
     {% for stylesheet in css %}<link rel="stylesheet" href="/css/{{stylesheet}}.css">{% endfor %}
   </head>
 
-  <body>
+  <body class="padding-trailer-3">
     <!-- Top Navigation -->
     <header class="constrain-wide leader-2 trailer-1">
       <nav>
@@ -44,23 +44,6 @@
     <!-- Content for Each Page -->
     {% block page %}{% endblock %}
 
-    <!-- Footer -->
-    <footer>
-      <nav class="constrain-wide padding-leader-4 trailer-2">
-        <a href="https://twitter.com/paulcpederson" class="link-plain" aria-label="twitter">
-          {% include "../img/twitter.svg" %}
-        </a>
-        <a href="https://github.com/paulcpederson" class="link-plain margin-left-1" aria-label="github">
-          {% include "../img/github.svg" %}
-        </a>
-        <a href="https://plus.google.com/117963508642452000116?rel=author" class="link-plain margin-left-1" aria-label="google plus">
-          {% include "../img/google-plus.svg" %}
-        </a>
-        <a href="http://dribbble.com/paulcpederson" class="link-plain margin-left-1" aria-label="dribbble">
-          {% include "../img/dribbble.svg" %}
-        </a>
-      </nav>
-    </footer>
     <script src="/js/script{% if production %}.min{% endif %}.js"></script>
     {% for script in js %}
       <script src="/js/{{script}}{% if production %}.min{% endif %}.js"></script>
