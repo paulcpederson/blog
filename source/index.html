@@ -16,11 +16,11 @@ collections:
 </section>
 
 <!-- projects -->
-<div class="constrain-wide padding-leader-1">
+<div class="constrain-wide bg-white padding-leader-1">
   <h2 class="trailer-0">
     <a href="/work/" class="link-plain">Work</a>
   </h2>
-  <div class="flex card-container">
+  <div class="flex card-container align-top">
   {% for project in collections.work %}
   {% if loop.index < 4 %}
   <a href="{{project.url}}" class="flex-1 link-plain card trailer-2">
@@ -34,13 +34,12 @@ collections:
 </div>
 
 <!-- blog roll -->
-
-<div class="constrain-wide">
+<div class="constrain-wide bg-white">
   <h2><a href="/articles/" class="link-plain">Articles</a></h2>
   {% for article in collections.articles %}
   {% if loop.index < 4 %}
   <div class="flex leader-2 constrain">
-    <time class="time" datetime="{{article.date|date('Y-m-d')}}">
+    <time datetime="{{article.date|date('Y-m-d')}}">
       <span class="time-month">{{article.date|date('F')}}</span>
       <span class="time-day">{{article.date|date('d')}}</span>
       <span class="time-year">{{article.date|date('Y')}}</span>
