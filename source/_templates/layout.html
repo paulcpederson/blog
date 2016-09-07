@@ -28,23 +28,15 @@
     {% for stylesheet in css %}<link rel="stylesheet" href="/css/{{stylesheet}}.css">{% endfor %}
   </head>
 
-  {% set dark = "" %}
-  {% if canvas == "tan" %}
-    {% set dark = "-dark" %}
-  {% endif %}
-  {% if canvas == "gray" %}
-    {% set dark = "-dark" %}
-  {% endif %}
-
-  <body class="spot-top{{dark}}-{{spot}}">
+  <body>
     <!-- Top Navigation -->
-    <header class="panel panel-transparent nav">
-      <nav class="constrain">
-        <a href="/" class="spot-link{{dark}}-{{spot}} nav-link">Paul C Pederson</a>
-        <div class="l-inline-block right">
-          <a href="/articles/" class="spot-link{{dark}}-{{spot}} nav-link">Articles</a>
-          <a href="/work/" class="spot-link{{dark}}-{{spot}} nav-link margin-left-1">Work</a>
-          <a href="/lab/" class="spot-link{{dark}}-{{spot}} nav-link margin-left-1">Lab</a>
+    <header class="constrain-wide leader-2">
+      <nav>
+        <a href="/" class="nav-link">{% include "../img/logo.svg" %}</a>
+        <div class="right leader-1">
+          <a href="/articles/" class="nav-link">Articles</a>
+          <a href="/work/" class="nav-link margin-left-2">Work</a>
+          <a href="/lab/" class="nav-link margin-left-2">Lab</a>
         </div>
       </nav>
     </header>
@@ -53,33 +45,21 @@
     {% block page %}{% endblock %}
 
     <!-- Footer -->
-    <footer class="panel panel-navy">
-      <div class="constrain">
-        <section>
-          <h2 class="spot-{{spot}}">Hi, I'm Paul.</h2>
-
-          <p>I design and develop digital experiences. I work at a research and development office in Portland, Oregon focused on location-based technologies. For employment information, view my <a class="spot-link-{{spot}}" href="/cv/">cv</a>.</p>
-
-          <p>This site was built using <a class="spot-link-{{spot}}" href="https://github.com/paulcpederson/static-site">Static Site</a>, and is hosted with <a class="spot-link-{{spot}}" href="https://surge.sh/">Surge</a>. You can find the source on <a class="spot-link-{{spot}}" href="https://github.com/paulcpederson/">my GitHub</a>.</p>
-
-          <p>If you'd like to stay up to date, subscribe to the <a class="spot-link-{{spot}}" href="/feed.xml">RSS Feed</a>, or <a class="spot-link-{{spot}}" href="https://twitter.com/paulcpederson">follow me on Twitter</a>. You can find me online just about everywhere as @paulcpederson.</p>
-        </section>
-        <p>&copy; 2015 Paul C Pederson</p>
-        <nav class="leader-1">
-          <a href="https://twitter.com/paulcpederson" class="footer-icon" aria-label="twitter">
-            {% include "../img/twitter.svg" %}
-          </a>
-          <a href="https://github.com/paulcpederson" class="footer-icon" aria-label="github">
-            {% include "../img/github.svg" %}
-          </a>
-          <a href="https://plus.google.com/117963508642452000116?rel=author" class="footer-icon" aria-label="google plus">
-            {% include "../img/google-plus.svg" %}
-          </a>
-          <a href="http://dribbble.com/paulcpederson" class="footer-icon" aria-label="dribbble">
-            {% include "../img/dribbble.svg" %}
-          </a>
-        </nav>
-      </div>
+    <footer>
+      <nav class="constrain-wide leader-2 trailer-2">
+        <a href="https://twitter.com/paulcpederson" class="margin-left-1" aria-label="twitter">
+          {% include "../img/twitter.svg" %}
+        </a>
+        <a href="https://github.com/paulcpederson" class="margin-left-1" aria-label="github">
+          {% include "../img/github.svg" %}
+        </a>
+        <a href="https://plus.google.com/117963508642452000116?rel=author" class="margin-left-1" aria-label="google plus">
+          {% include "../img/google-plus.svg" %}
+        </a>
+        <a href="http://dribbble.com/paulcpederson" class="margin-left-1" aria-label="dribbble">
+          {% include "../img/dribbble.svg" %}
+        </a>
+      </nav>
     </footer>
     <script src="/js/script{% if production %}.min{% endif %}.js"></script>
     {% for script in js %}
