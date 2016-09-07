@@ -12,7 +12,7 @@ collections:
 
 <!-- banner -->
 <section class="constrain-wide padding-leader-1 leader-3 trailer-4">
-  <h1>Paul C Pederson &mdash; Digital product designer and front-end developer.</h1>
+  <h1 class="font-size-3 constrain-narrow">Paul C Pederson &mdash; Digital product designer and front-end developer.</h1>
   <nav>
     <a href="https://twitter.com/paulcpederson" class="link-plain" aria-label="twitter">
       {% include "./img/twitter.svg" %}
@@ -28,7 +28,7 @@ collections:
 
 <!-- projects -->
 <div class="constrain-wide bg-white padding-leader-1">
-  <h2 class="trailer-0">
+  <h2 class="trailer-0 font-size-2">
     <a href="/work/" class="link-plain">Work</a>
   </h2>
   <div class="flex card-container align-top">
@@ -36,8 +36,8 @@ collections:
   {% if loop.index < 4 %}
   <a href="{{project.url}}" class="flex-1 link-plain card trailer-2">
     <img src="/img/{{project.thumbnail}}" alt="{{project.title}}">
-    <h3 class="leader-1">{{project.title}}</h3>
-    <p class="font-size--1 trailer-0">{{project.description}}</p>
+    <h3 class="leader-1 font-size-0">{{project.title}}</h3>
+    <p class="trailer-0 font-size--1">{{project.description}}</p>
   </a>
   {% endif %}
   {% endfor %}
@@ -46,17 +46,17 @@ collections:
 
 <!-- blog roll -->
 <div class="constrain-wide bg-white">
-  <h2><a href="/articles/" class="link-plain">Articles</a></h2>
+  <h2 class="font-size-2"><a href="/articles/" class="link-plain">Articles</a></h2>
   {% for article in collections.articles %}
   {% if loop.index < 4 %}
-  <div class="flex trailer-2 constrain">
+  <div class="flex trailer-2 constrain-narrow">
     <time datetime="{{article.date|date('Y-m-d')}}" class="padding-leader-half">
       <span class="time-month">{{article.date|date('F')}}</span>
       <span class="time-day">{{article.date|date('d')}}</span>
       <span class="time-year">{{article.date|date('Y')}}</span>
     </time>
     <div class="margin-left-1 flex-1">
-      <h3 class="leader-1 padding-leader-half trailer-0"><a href="{{article.url}}">{{article.title}}</a></h3>
+      <h3 class="leader-1 padding-leader-half trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
       <p class="font-size--1 leader-0">{{article.description}}</p>
     </div>
   </div>
