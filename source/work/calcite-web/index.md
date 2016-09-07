@@ -8,7 +8,7 @@ twitter_image: calcite-web-twitter.png
 canvas: gray
 spot: blue
 site: 'http://esri.github.io/calcite-web/'
-description: A Responsive HTML, CSS, and JS Framework for Esri
+description: Responsive CSS Framework and Design Pattern Library for Esri
 ---
 
 ## Origins
