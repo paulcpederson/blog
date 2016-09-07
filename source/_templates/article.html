@@ -1,17 +1,7 @@
 {% extends 'layout.html' %}
 
 {% block page %}
-  {% if feature %}
-    <!-- feature image in banner -->
-    <section style="background-image: url(/img/{{background}})" class="hero hero-{{canvas}} hero-mesh">
-      <img src="/img/{{feature}}" class="feature-image" alt="{{title}}">
-    </section>
-    <div class="text-center constrain padding-leader-2 padding-trailer-1">
-      <h1><a href="{{url}}" class="spot-link-dark-{{spot}}">{{title}}</a></h1>
-      <p class="text-narrow l-center">{{description}}</p>
-      <time datetime="{{date|date('Y-m-d')}}" class="date spot-dark-{{spot}}">{{date|date('n.j.Y')}}</time>
-    </div>
-  {% elseif map %}
+  {% if map %}
     <!-- map in banner -->
     <div id="{{map}}" class="hero-map map-div"></div>
     <div class="title-wrap text-center constrain padding-leader-2 padding-trailer-1">
@@ -20,34 +10,16 @@
       <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
     </div>
   {% else %}
-    <!-- title in banner -->
-    <section style="background-image: url(/img/{{background}})" class="hero hero-{{canvas}} hero-mesh">
-      <div class="title-wrap text-center constrain">
-        <h1><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
-        <p class="text-narrow l-center">{{description}}</p>
-        <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
-      </div>
-    </section>
+  <div class="constrain-wide">
+    <h1>{{title}}</h1>
+    <time datetime="{{date|date('Y-m-d')}}">{{date|date('n.j.Y')}}</time>
+  </div>
   {% endif %}
 
   <!-- post content -->
-  <article class="panel panel-white article article-{{spot}}">
-    <section class="constrain leader-1 trailer-3">
+  <article class="article constrain-wide">
+    <section class="leader-1 trailer-3 constrain">
       {% block content %}{% endblock %}
     </section>
   </article>
-
-  <!-- next-prev links for articles -->
-  <div class="spot-bg-{{spot}}">
-    <nav class="bottom-nav constrain clearfix">
-      <a href="{{prev.url}}" class="bottom-nav-link bottom-nav-prev">
-        <span class="l-block text-size--2">previous article:</span>
-        <span class="l-block leader-1">{{prev.title}}</span>
-      </a>
-      <a href="{{next.url}}" class="bottom-nav-link bottom-nav-next">
-        <span class="l-block text-size--2">next article:</span>
-        <span class="l-block leader-1">{{next.title}}</span>
-      </a>
-    </nav>
-  </div>
 {% endblock %}

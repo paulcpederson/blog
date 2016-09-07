@@ -11,8 +11,8 @@ collections:
 ---
 
 <!-- banner -->
-<section class="constrain-wide leader-6 trailer-6">
-  <h1>Paul C Pederson &mdash; Interactive designer and front-end developer.</h1>
+<section class="constrain-wide padding-leader-1 leader-3 trailer-4">
+  <h1>Paul C Pederson &mdash; Digital product designer and front-end developer.</h1>
 </section>
 
 <!-- projects -->
@@ -34,42 +34,22 @@ collections:
 </div>
 
 <!-- blog roll -->
-<div class="panel panel-white">
-  <div class="constrain">
-    <div class="clearfix leader-1">
-      <h2 class="spot-dark-{{spot}} left inline-block leader-half">
-        <a href="/articles/">Articles</a>
-      </h2>
-    </div>
-    {% for article in collections.articles %}
-    {% if loop.index < 4 %}
-      <div>
-        <a href="{{article.url}}">
-          <img src="/img/{{article.thumbnail}}" alt="{{article.title}}">
-        </a>
-        <div class="blog-roll-text">
-          <h2 class="leader-1 trailer-1">
-            <a href="{{article.url}}" class="spot-link-dark-{{article.spot}}">{{article.title}}</a>
-          </h2>
-          <time class="text-size--2 text-subtle" datetime="{{article.date|date('Y-m-d')}}">{{article.date|date('n.j.Y')}}</time>
-          <p class="text-size--2">{{article.description}}</p>
-        </div>
-      </div>
-    {% endif %}
-    {% endfor %}
-  </div>
-</div>
 
-<!-- next-prev links for articles -->
-<div class="spot-bg-{{spot}}">
-  <nav class="bottom-nav constrain clearfix">
-    <a href="/archive/" class="bottom-nav-link bottom-nav-prev">
-      <span class="l-block text-size--2">view all articles:</span>
-      <span class="l-block leader-1">Archive</span>
-    </a>
-    <a href="{{collections.articles[0].url}}" class="bottom-nav-link bottom-nav-next">
-      <span class="l-block text-size--2">most recent article:</span>
-      <span class="l-block leader-1">{{collections.articles[0].title}}</span>
-    </a>
-  </nav>
+<div class="constrain-wide">
+  <h2><a href="/articles/" class="link-plain">Articles</a></h2>
+  {% for article in collections.articles %}
+  {% if loop.index < 4 %}
+  <div class="flex leader-2 constrain">
+    <time class="time" datetime="{{article.date|date('Y-m-d')}}">
+      <span class="time-month">{{article.date|date('F')}}</span>
+      <span class="time-day">{{article.date|date('d')}}</span>
+      <span class="time-year">{{article.date|date('Y')}}</span>
+    </time>
+    <div class="margin-left-1 flex-1">
+      <h3 class="leader-0 trailer-0"><a href="{{article.url}}">{{article.title}}</a></h3>
+      <p class="font-size--1 leader-0">{{article.description}}</p>
+    </div>
+  </div>
+  {% endif %}
+  {% endfor %}
 </div>

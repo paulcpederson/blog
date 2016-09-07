@@ -12,6 +12,8 @@ html {
                sans-serif; /* Everything else */ /* 1 */
     font-weight: 400;
     color: #333;
+    line-height: 1.55;
+    font-size: calc(1em + .25vw);
 }
 
 body {
@@ -26,13 +28,8 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1rem;
 }
 
-.constrain {
-  width: 80%;
-  max-width: 45em;
-  padding-left: 10%;
-  padding-right: 10%;
-  margin-left: auto;
-  margin-right: auto;
+strong {
+  font-weight: 600;
 }
 
 .constrain-wide {
@@ -41,10 +38,15 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: auto;
 }
 
+.constrain {
+  max-width: 45rem;
+}
+
 .right {
   float: right;
 }
 
+.leader-0 { margin-top: 0; }
 .leader-1 { margin-top: 1rem; }
 .leader-2 { margin-top: 2rem; }
 .leader-3 { margin-top: 3rem; }
@@ -77,10 +79,12 @@ h1, h2, h3, h4, h5, h6 {
 .margin-left-1 { margin-left: 1rem; }
 .margin-left-2 { margin-left: 2rem; }
 
+.font-size--1 { font-size: .875rem; }
+
 .nav-link {
   color: #666;
-  padding-top: .25rem;
-  display: inline-block;
+  line-height: 40px;
+  font-size: 16px;
 }
 
 .nav-link.is-active {
@@ -105,6 +109,7 @@ a:hover, a:focus {
 .flex {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 
 .flex-1 {
@@ -146,14 +151,25 @@ a:hover, a:focus {
   opacity: .4;
 }
 
-.font-size--1 { font-size: .875rem; }
+.time-month, .time-year {
+  display: block;
+  line-height: 1.25;
+  font-size: .875rem;
+}
+
+.time-day {
+  display: block;
+  font-size: calc(1em + 5vw);
+  line-height: .85;
+  min-width: 1.5em;
+}
 
 img {
   max-width: 100%;
 }
-// @import 'config';
+@import 'config';
 // @import 'inline-block-grid/grid.scss';
-// @import 'base/mixins';
+@import 'base/mixins';
 // @import 'base/reset';
 // @import 'base/typography';
 
@@ -161,14 +177,14 @@ img {
 // @import 'components/top-nav';
 // @import 'components/footer';
 // @import 'components/panels';
-// @import 'components/code';
+@import 'components/code';
 // @import 'components/buttons';
 // @import 'components/tables';
 // @import 'components/hero';
 // @import 'components/roll';
 // @import 'components/bottom-nav';
 // @import 'components/spot-color';
-// @import 'components/markdown';
+@import 'components/markdown';
 // @import 'components/charts';
 // @import 'components/work';
 // @import 'components/browser';
