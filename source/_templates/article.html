@@ -11,7 +11,10 @@
       <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
     </div>
   {% else %}
-  <div class="hero" style="background-image: url('/img/{{background}}')">
+  <div class="hero">
+    <div class="hero-background">
+      <img class="hero-background-image" src="/img/{{background}}" alt="{{title}}">
+    </div>
     <div class="constrain-wide hero-text">
       <h1>{{title}}</h1>
       <time datetime="{{date|date('Y-m-d')}}">{{date|date('n.j.Y')}}</time>

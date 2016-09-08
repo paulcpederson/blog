@@ -9,99 +9,93 @@ collections:
   work: /work/*
 ---
 
-<section class="hero hero-navy hero-mesh">
-  <div class="title-wrap constrain">
-    <h1 class="spot-{{spot}} text-center">Work</h1>
-  </div>
-</section>
-
-{% for project in collections.work %}
-  <div class="flex flex-center tablet-flex-column padding-left-2 padding-right-2 padding-leader-4 padding-trailer-2">
-    <a href="{{project.url}}" class="browser" data-site="{{project.site}}">
-      <img class="browser-image" src="../img/{{project.feature}}" alt="{{project.title}} Screenshot">
-    </a>
-    <div class="browser-description">
-      <h3><a href="{{project.url}}" class="spot-{{project.spot}}">{{project.title}}</a></h3>
-      <time class="text-size--2 text-subtle" datetime="{{project.date|date('Y-m-d')}}">{{project.date|date('Y')}}</time>
-      <p class="text-size--1 leader-0">{{project.description}}</p>
+<div class="constrain-wide leader-6 padding-leader-4">
+  <h1 class="padding-trailer-2">Work</h1>
+  {% for project in collections.work %}
+  <div class="constrain flex flex-center trailer-4">
+    <div class="flex-1">
+      <img class="flex-1" src="../img/{{project.feature}}" alt="{{project.title}} Screenshot">
+    </div>
+    <div class="flex-1 margin-left-2">
+      <h3 class="leader-1"><a href="{{project.url}}" class="font-size-1">{{project.title}}</a></h3>
+      <time class="font-size--2" datetime="{{project.date|date('Y-m-d')}}">{{project.date|date('Y')}}</time>
+      <p class="font-size--1">{{project.description}}</p>
     </div>
   </div>
-{% endfor %}
+  {% endfor %}
+</div>
 
 
 
-<div class="constrain article-blue">
-  <h2>More Projects</h2>
-  <div class="block-grid">
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://developers.arcgis.com/en/">ArcGIS for Developers</a></h3>
-      <p class="text-size--2 text-subtle"><time datetime="2014">2013-2015</time></p>
-      <p class="text-size--1">Created a home for Developers that use all ArcGIS products. This includes developer tools, marketing pages, documentation pages, site architecture, UX, UI, front end development, and some server side work.</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://www.fetcheyewear.com/">Fetch Eyewear</a></h3>
-      <p class="text-size--2 text-subtle"><time datetime="2014">2013</time></p>
-      <p class="text-size--1">Full ecommerce site design, branding, digital strategy, content strategy, and front end development.</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="http://housewares.kaiusaltd.com/">Kai Knives</a></h3>
-      <p class="text-size--2 text-subtle"><time datetime="2014">2013</time></p>
-      <p class="text-size--1">Had the pleasure of assisting <a href="http://jordansowers.com/">Jordan Sowers</a> with multiple ecommerce sites for Kai Knives. Sites included for <a href="http://housewares.kaiusaltd.com/">Kai</a>, <a href="http://kershaw.kaiusaltd.com/">Kershaw</a>, <a href="http://shun.kaiusaltd.com/">Shun</a>, and <a href="http://zt.kaiusaltd.com/">ZT</a>. My work was mainly in typography, digital strategy, UI, and UX during the initial design phase.</p>
-    </div>
+<div class="constrain-wide">
+  <h2 class="font-size-1 leader-5">More Projects</h2>
+  <div class="constrain-narrow">
+    <h3 class="font-size-0"><a href="https://developers.arcgis.com/en/">ArcGIS for Developers</a></h3>
+    <p class="font-size--2 trailer-0"><time datetime="2014">2013-2015</time></p>
+    <p class="font-size--1">Created a home for Developers that use all ArcGIS products. This includes developer tools, marketing pages, documentation pages, site architecture, UX, UI, front end development, and some server side work.</p>
+
+    <h3 class="font-size-0"><a href="https://www.fetcheyewear.com/">Fetch Eyewear</a></h3>
+    <p class="font-size--2 trailer-0"><time datetime="2014">2013</time></p>
+    <p class="font-size--1">Full ecommerce site design, branding, digital strategy, content strategy, and front end development.</p>
+
+    <h3 class="font-size-0"><a href="http://housewares.kaiusaltd.com/">Kai Knives</a></h3>
+    <p class="font-size--2 trailer-0"><time datetime="2014">2013</time></p>
+    <p class="font-size--1">Had the pleasure of assisting <a href="http://jordansowers.com/">Jordan Sowers</a> with multiple ecommerce sites for Kai Knives. Sites included for <a href="http://housewares.kaiusaltd.com/">Kai</a>, <a href="http://kershaw.kaiusaltd.com/">Kershaw</a>, <a href="http://shun.kaiusaltd.com/">Shun</a>, and <a href="http://zt.kaiusaltd.com/">ZT</a>. My work was mainly in typography, digital strategy, UI, and UX during the initial design phase.</p>
   </div>
 </div>
 
-<div class="constrain article-blue">
-  <h2>Open Source</h2>
-  <div class="block-grid">
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/static-site/">static-site</a></h3>
-      <p class="text-size--1">A simple static site generator</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/imagemin-newer/">imagemin-newer</a></h3>
-      <p class="text-size--1">Minify images when they need it</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/scss-utils/">scss-utils</a></h3>
-      <p class="text-size--1">Basic sass utilities and mixins</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/gh-release-assets/">gh-release-assets</a></h3>
-      <p class="text-size--1">Upload assets to a GitHub release</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/focusin/">focusin</a></h3>
-      <p class="text-size--1">Focusin/focusout polyfill for Firefox</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/inline-block-grid/">inline-block-grid</a></h3>
-      <p class="text-size--1">Simple SASS grid implemented with <code>display:inline-block</code></p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/stderr/">stderr</a></h3>
-      <p class="text-size--1">Flash an OS notification when a process writes to stderr</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/angular-dimple/">angular-dimple</a></h3>
-      <p class="text-size--1">Angular Dimple is a series of Angular directives that help you create graphs and visualizations based on Dimple.js and d3. It's designed to create graphs as simply as possible from flat JSON data</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/unignored/">unignored</a></h3>
-      <p class="text-size--1">Check what files in an npm project will be published</p>
-    </div>
-    <div class="column-6 medium-column-12">
-      <h3><a href="https://github.com/paulcpederson/">contributions</a></h3>
-      <p class="text-size--1">
-        I've also contributed to the following open source projects:
-        <ul>
-          <li><a href="https://github.com/sass/node-sass">node-sass</a></li>
-          <li><a href="https://github.com/ngoldman/module-init">module-init</a></li>
-          <li><a href="https://github.com/ngoldman/gh-release">gh-release</a></li>
-          <li><a href="https://github.com/BigstickCarpet/simplifyify">simplifyify</a></li>
-          <li><a href="https://github.com/wilmoore/rerun-script">rerun-script</a></li>
-        </ul>
-      </p>
+<div class="constrain-wide padding-leader-1">
+  <h2 class="font-size-1">Open Source</h2>
+  <div class="flex">
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/static-site/">static-site</a></h3>
+        <p class="font-size--1">A simple static site generator</p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/imagemin-newer/">imagemin-newer</a></h3>
+        <p class="font-size--1">Minify images when they need it</p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/scss-utils/">scss-utils</a></h3>
+        <p class="font-size--1">Basic sass utilities and mixins</p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/gh-release-assets/">gh-release-assets</a></h3>
+        <p class="font-size--1">Upload assets to a GitHub release</p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/focusin/">focusin</a></h3>
+        <p class="font-size--1">Focusin/focusout polyfill for Firefox</p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/inline-block-grid/">inline-block-grid</a></h3>
+        <p class="font-size--1">Simple SASS grid implemented with <code>display:inline-block</code></p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/stderr/">stderr</a></h3>
+        <p class="font-size--1">Flash an OS notification when a process writes to stderr</p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/angular-dimple/">angular-dimple</a></h3>
+        <p class="font-size--1">Angular directives that create graphs with Dimple.js and d3.</p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/unignored/">unignored</a></h3>
+        <p class="font-size--1">Check what files in an npm project will be published</p>
+      </div>
+      <div class="flex-1 text-min padding-right-1 block-1of4">
+        <h3 class="font-size-0"><a href="https://github.com/paulcpederson/">contributions</a></h3>
+        <p class="font-size--1">
+          I've also contributed to the following open source projects:
+          <ul class="font-size--1 leader-0">
+            <li><a href="https://github.com/sass/node-sass">node-sass</a></li>
+            <li><a href="https://github.com/ngoldman/module-init">module-init</a></li>
+            <li><a href="https://github.com/ngoldman/gh-release">gh-release</a></li>
+            <li><a href="https://github.com/BigstickCarpet/simplifyify">simplifyify</a></li>
+            <li><a href="https://github.com/wilmoore/rerun-script">rerun-script</a></li>
+          </ul>
+        </p>
+      </div>
     </div>
   </div>
 </div>
