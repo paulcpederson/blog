@@ -16,10 +16,10 @@ $font-size-2:   1.44rem;
 $font-size-1:   1.2rem;
 $font-size-0:   1rem;
 $font-size--1:  .833rem;
+$font-size--2:  .69rem;
 
 html {
     font-family: -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
-               'avenir next', avenir, /* MacOS and iOS */
                'Segoe UI', /* Windows */
                'lucida grande', /* Older MacOS */
                'helvetica neue', helvetica, /* Older MacOS */
@@ -72,10 +72,23 @@ hr {
   border-top: 1px solid $lighter-gray;
 }
 
+p {
+  margin: .25rem 0 1.25rem 0;
+}
+
+ul, ol {
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: .5rem;
+}
+
 .constrain-wide {
   width: 92%;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 4%;
+  margin-right: 4%;
 }
 
 .constrain {
@@ -127,14 +140,92 @@ hr {
 
 .bg-white { background-color: white; }
 
+
+.nav {
+  position: absolute;
+  top: 0;
+  z-index: 3;
+}
+
+.logo svg {
+  stroke: #666;
+  transition: all 100ms linear;
+}
+
+.logo:hover svg, .logo:focus svg {
+  stroke: #333;
+}
+
 .nav-link {
   color: #666;
   line-height: 40px;
   font-size: $font-size-0;
+  transition: color 100ms linear;
 }
 
-.nav-link.is-active {
+.nav-link.is-active,
+.nav-link:hover,
+.nav-link:focus {
   color: #222;
+}
+
+.dark .nav-link {
+  color: #ccc;
+}
+
+.dark .nav-link.is-active,
+.dark .nav-link:hover,
+.dark .nav-link:focus {
+  color: #fff;
+}
+
+.dark .logo svg {
+  stroke: #ccc;
+}
+
+.hero {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
+  position: relative;
+  padding-top: calc(4rem + 20vh);
+  padding-bottom: 10vh;
+  color: $white;
+  background-color: #333;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.hero:before {
+  content: '';
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index: 1;
+  display: block;
+  background-color: rgba(0,0,0,.75);
+}
+
+.hero:after {
+  content: '';
+  position:absolute;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index: 1;
+  display: block;
+  background-image: url(../img/black-mesh.gif);
+  background-color: transparent;
+  background-repeat: repeat;
+  background-position:top left;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 2;
 }
 
 a {

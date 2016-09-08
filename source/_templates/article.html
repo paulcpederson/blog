@@ -1,4 +1,5 @@
 {% extends 'layout.html' %}
+{% set dark = 'dark' %}
 
 {% block page %}
   {% if map %}
@@ -10,15 +11,17 @@
       <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
     </div>
   {% else %}
-  <div class="constrain-wide">
-    <h1>{{title}}</h1>
-    <time datetime="{{date|date('Y-m-d')}}">{{date|date('n.j.Y')}}</time>
+  <div class="hero" style="background-image: url('/img/{{background}}')">
+    <div class="constrain-wide hero-text">
+      <h1>{{title}}</h1>
+      <time datetime="{{date|date('Y-m-d')}}">{{date|date('n.j.Y')}}</time>
+    </div>
   </div>
   {% endif %}
 
   <!-- post content -->
   <article class="article constrain-wide">
-    <section class="leader-1 trailer-3 constrain">
+    <section class="leader-3 trailer-3 constrain">
       {% block content %}{% endblock %}
     </section>
   </article>

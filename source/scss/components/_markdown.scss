@@ -3,6 +3,7 @@
   img {
     max-width: calc(100% + 8vw);
     margin: 1em 0 0 -4vw;
+    padding-top: 1em;
     display: block;
     height: auto;
     position: relative;
@@ -41,8 +42,8 @@
     margin: 2em 0 2em -4vw;
     color: $red;
     border-left: 2px solid $red;
-    padding-left: 1em;
-    font-size: 1.5rem;
+    padding-left: 2vw;
+    font-size: $font-size-1;
     line-height: 1.25;
   }
   .full-width {

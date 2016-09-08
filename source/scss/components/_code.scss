@@ -17,15 +17,14 @@ $s-green:     #829603;
 
 code, kbd {
   font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  font-size: 0.7em;
   font-weight: 300;
-  padding: .175em 0.35em;
+  padding: .25em 0.5em;
   border-radius: 3px;
   position: relative;
   top: -0.05em;
   background: #F8F8F8;
   border: 1px solid #EFEFEF;
-  font-size: 0.8em;
+  font-size: $font-size--2;
   margin: 0 4px;
 }
 
@@ -36,6 +35,7 @@ pre {
   margin: 2em 0;
   color: $base1;
   code {
+    font-size: $font-size--1;
     box-sizing: border-box;
     display: block;
     padding: 1em;
