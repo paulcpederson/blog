@@ -6,7 +6,7 @@ feature: pdx-roasters.png
 thumbnail: pdx-thumb.svg
 twitter_image: pdx-roasters-twitter.png
 canvas: gray
-spot: blue
+spot: orange
 site: 'http://www.pdxroasters.com/'
 description: Design and development for a Portland coffee roaster app.
 ---

@@ -12,23 +12,25 @@ collections:
 <div class="constrain-wide leader-6 padding-leader-4">
   <h1 class="padding-trailer-2">Work</h1>
   {% for project in collections.work %}
-  <div class="constrain flex flex-center trailer-4">
-    <div class="flex-1">
-      <img class="flex-1" src="../img/{{project.feature}}" alt="{{project.title}} Screenshot">
+
+  <a href="{{project.url}}" class="link-plain project flex align-top leader-4 trailer-4">
+    <div class="flex-1 project-text bg-{{project.spot}}">
+      <h3 class="leader-1">{{project.title}}</h3>
+      <time class="font-size--2 l-block" datetime="{{project.date|date('Y-m-d')}}">{{project.date|date('Y')}}</time>
+      <p class="text-light">{{project.description}}</p>
     </div>
-    <div class="flex-1 margin-left-2">
-      <h3 class="leader-1"><a href="{{project.url}}" class="font-size-1">{{project.title}}</a></h3>
-      <time class="font-size--2" datetime="{{project.date|date('Y-m-d')}}">{{project.date|date('Y')}}</time>
-      <p class="font-size--1">{{project.description}}</p>
+    <div class="browser flex-2" data-site="{{project.site}}">
+      <img class="browser-image" src="../img/{{project.feature}}" alt="{{project.title}} Screenshot">
     </div>
-  </div>
+  </a>
+
   {% endfor %}
 </div>
 
 
 
 <div class="constrain-wide">
-  <h2 class="font-size-1 leader-5">More Projects</h2>
+  <h2 class="font-size-2 leader-5">More Projects</h2>
   <div class="constrain-narrow">
     <h3 class="font-size-0"><a href="https://developers.arcgis.com/en/">ArcGIS for Developers</a></h3>
     <p class="font-size--2 trailer-0"><time datetime="2014">2013-2015</time></p>
@@ -45,7 +47,7 @@ collections:
 </div>
 
 <div class="constrain-wide padding-leader-1">
-  <h2 class="font-size-1">Open Source</h2>
+  <h2 class="font-size-2">Open Source</h2>
   <div class="flex">
       <div class="flex-1 text-min padding-right-1 block-1of4">
         <h3 class="font-size-0"><a href="https://github.com/paulcpederson/static-site/">static-site</a></h3>

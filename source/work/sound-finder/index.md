@@ -8,7 +8,7 @@ thumbnail: sound-finder.svg
 canvas: gray
 spot: blue
 site: 'http://soundfinder.io'
-description: Sound finder allows you to find your kindred musical spirits. Search for SoundCloud users that have the same taste as you.
+description: Sound Finder allows you to find SoundCloud users that have the same taste as you.
 ---
 
 ## Origins

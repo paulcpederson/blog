@@ -6,7 +6,7 @@ feature: donut-js.png
 thumbnail: donut-thumb.svg
 twitter_image: donut-js-twitter.png
 canvas: gray
-spot: blue
+spot: pink
 site: 'http://donutjs.club/'
 description: Branding, design, and development for a super fun Portland JavaScript meetup. Donuts!
 ---

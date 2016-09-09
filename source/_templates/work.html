@@ -2,38 +2,27 @@
 
 {% block page %}
 
-  <section class="hero hero-{{canvas}}">
-    <div class="feature-image">
-      <a href="{{site}}" class="browser" data-site="{{site}}">
-        <img class="browser-image" src="/img/{{feature}}" alt="{{project.title}} Screenshot">
-      </a>
-    </div>
-  </section>
-  <div class="title-wrap text-center constrain padding-leader-2 padding-trailer-1">
-    <h1 class="spot-dark-{{spot}}">{{title}}</h1>
-    <p class="text-narrow l-center">{{description}}</p>
-    <time datetime="{{date|date('Y-m-d')}}" class="l-block spot-dark-{{spot}} trailer-2">{{date|date('n.j.Y')}}</time>
-    <a href="{{site}}" class="btn btn-dark-{{spot}}">View Site</a>
+  <div class="constrain-wide leader-6 padding-leader-3 padding-trailer-4 padding-left-2 bg-{{spot}}">
+    <h1 class="leader-6">{{title}}</h1>
+    <p>
+      <time datetime="{{date|date('Y-m-d')}}">{{date|date('Y')}}</time> &mdash;
+      <a href="{{site}}" class="nav-link">View Site</a>
+    </p>
+  </div>
+
+  <div class="constrain-wide trailer-4 leader--4 flex flex-center">
+    <p class="flex-1 margin-left-2 margin-right-2 leader-4 padding-leader-1 font-size-2 text-light constrain-narrow">{{description}}</p>
+    <a href="{{site}}" class="browser flex-2 margin-right-2" data-site="{{site}}">
+      <img class="browser-image l-block" src="/img/{{feature}}" alt="{{project.title}} Screenshot">
+    </a>
   </div>
 
   <!-- post content -->
-  <article class="panel panel-white article article-{{spot}}">
-    <section class="constrain leader-1 trailer-3">
-      {% block content %}{% endblock %}
-    </section>
+  <article class="article">
+    <div class="constrain-wide">
+      <section class="leader-3 trailer-3 constrain margin-auto">
+        {% block content %}{% endblock %}
+      </section>
+    </div>
   </article>
-
-  <!-- next-prev links for work -->
-  <div class="spot-bg-{{spot}}">
-    <nav class="bottom-nav constrain clearfix">
-      <a href="{{prev.url}}" class="bottom-nav-link bottom-nav-prev">
-        <span class="l-block text-size--2">previous:</span>
-        <span class="l-block leader-1">{{prev.title}}</span>
-      </a>
-      <a href="{{next.url}}" class="bottom-nav-link bottom-nav-next">
-        <span class="l-block text-size--2">next:</span>
-        <span class="l-block leader-1">{{next.title}}</span>
-      </a>
-    </nav>
-  </div>
 {% endblock %}

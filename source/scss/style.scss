@@ -8,6 +8,7 @@ $dark-gray:      #30302F;
 $darker-gray:    #242323;
 $darkest-gray:   #222222;
 $red:            #D2430F;
+$blue:           #0e6fc4;
 
 // Type scale (Minor Third)
 $font-size-4:   2.07rem;
@@ -17,6 +18,8 @@ $font-size-1:   1.2rem;
 $font-size-0:   1rem;
 $font-size--1:  .833rem;
 $font-size--2:  .69rem;
+
+$monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
 
 html {
     font-family: -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
@@ -86,7 +89,57 @@ li {
   margin-bottom: .5rem;
 }
 
+address {
+  font-style: normal;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  outline: none;
+  text-decoration: underline;
+}
+.link-plain { color: #333; }
+.link-plain:hover {text-decoration: none; }
+
+.text-center { text-align: center; }
+.text-min { min-width: 15rem; }
+.text-light {
+  font-weight: 300;
+  color: #444;
+}
+
+.block-1of4 {
+  max-width: 25%;
+  box-sizing: border-box;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.align-top {
+  align-items: flex-start;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-center {
+  align-items: center;
+}
+
 .constrain-wide {
+  box-sizing: border-box;
   width: 92%;
   margin-left: 4%;
   margin-right: 4%;
@@ -100,10 +153,25 @@ li {
   max-width: 35rem;
 }
 
-.right {
-  float: right;
+.margin-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.clearfix:after {
+  content: "";
+  width: 100%;
+  display: table;
+  clear: all;
+}
+
+.right { float: right; }
+.left { float: left; }
+
+.l-block { display: block; }
+
+.leader--4 { margin-top: -4rem; }
+.leader--1 { margin-top: -1rem; }
 .leader-0 { margin-top: 0; }
 .leader-1 { margin-top: 1rem; }
 .leader-2 { margin-top: 2rem; }
@@ -136,13 +204,27 @@ li {
 .padding-trailer-5 { padding-bottom: 5rem; }
 .padding-trailer-6 { padding-bottom: 6rem; }
 
+
+.margin-right-1 { margin-right: 1rem; }
+.margin-right-2 { margin-right: 2rem; }
 .margin-left-1 { margin-left: 1rem; }
 .margin-left-2 { margin-left: 2rem; }
 
+.padding-left-1 { padding-left: 1rem; }
+.padding-left-2 { padding-left: 2rem; }
+
 .padding-right-1 { padding-right: 1rem; }
 
-.bg-white { background-color: white; }
+.bg-white {
+  z-index: 3;
+  position: relative;
+  background-color: white;
+}
 
+.bg-blue { background-color: #f4f9fb; }
+.bg-pink { background-color: #fdf2f5; }
+.bg-green { background-color: #f1f9f2; }
+.bg-orange {background-color: #faf5ef; }
 
 .nav {
   position: absolute;
@@ -247,8 +329,6 @@ li {
 }
 
 .hero {
-  -webkit-filter: grayscale(1);
-  filter: grayscale(1);
   position: relative;
   padding-top: calc(4rem + 20vh);
   padding-bottom: 10vh;
@@ -288,9 +368,11 @@ li {
 }
 
 .hero-background {
+  -webkit-filter: grayscale(1);
+  filter: grayscale(1);
   width: 100%;
   height: calc(13rem + 30vh);
-  position: fixed;
+  position: absolute;
   top: 0;
 }
 
@@ -303,43 +385,6 @@ li {
 .hero-text {
   position: relative;
   z-index: 2;
-}
-
-a {
-  color: $red;
-  text-decoration: none;
-}
-
-a:hover, a:focus {
-  outline: none;
-  text-decoration: underline;
-}
-
-.link-plain { color: #333; }
-.link-plain:hover {text-decoration: none; }
-
-.text-center { text-align: center; }
-.text-min { min-width: 15rem; }
-.block-1of4 {
-  max-width: 25%;
-  box-sizing: border-box;
-}
-
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.align-top {
-  align-items: flex-start;
-}
-
-.flex-1 {
-  flex: 1;
-}
-
-.flex-center {
-  align-items: center;
 }
 
 .card-container {
@@ -395,6 +440,7 @@ a:hover, a:focus {
 img {
   max-width: 100%;
 }
+
 // @import 'inline-block-grid/grid.scss';
 // @import 'base/mixins';
 // @import 'base/reset';
@@ -414,8 +460,27 @@ img {
 @import 'components/markdown';
 // @import 'components/charts';
 // @import 'components/work';
-// @import 'components/browser';
+@import 'components/browser';
 
 // // helper classes
 // @import 'base/helpers';
+.project-text {
+  padding: 2rem 8rem 2rem 2rem;
+  margin-top: 3rem;
+  margin-right: -7rem;
+  transition: all 200ms ease-out;
+  transform: translate3d(0, 0, 0);
+}
 
+.project:hover .project-text {
+  transform: translate3d(-2vw, 0, 0);
+}
+
+.project .browser {
+  transition: all 200ms ease-out;
+  transform: scale(1);
+}
+
+.project:hover .browser {
+  transform: scale(1.025);
+}

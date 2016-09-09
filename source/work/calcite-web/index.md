@@ -6,7 +6,7 @@ feature: calcite-web.png
 thumbnail: calcite-web.svg
 twitter_image: calcite-web-twitter.png
 canvas: gray
-spot: blue
+spot: green
 site: 'http://esri.github.io/calcite-web/'
 description: Responsive CSS Framework and Design Pattern Library for Esri
 ---

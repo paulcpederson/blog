@@ -33,24 +33,11 @@
 .browser:after {
   content: attr(data-site);
   position: absolute;
-  font-size: .85rem;
-  font-family: $button-font;
+  font-size: $font-size--2;
+  font-family: $monospace;
   font-weight: 300;
-  line-height: 2.3;
+  line-height: 3;
   color: $lighter-gray;
   left: 5rem;
   top: 0;
-}
-
-.browser-description {
-  flex: 1 0 30%;
-  max-width: 30em;
-  margin-left: 2rem;
-}
-
-@media screen and (max-width: $tablet) {
-  .browser-description {
-    flex: auto;
-    margin-left: 0;
-  }
 }
