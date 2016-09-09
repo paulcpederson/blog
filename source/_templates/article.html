@@ -1,31 +1,31 @@
 {% extends 'layout.html' %}
-{% set dark = 'dark' %}
 
 {% block page %}
-  {% if map %}
-    <!-- map in banner -->
-    <div id="{{map}}" class="hero-map map-div"></div>
-    <div class="title-wrap text-center constrain padding-leader-2 padding-trailer-1">
-      <h1><a href="{{url}}" class="spot-link-{{spot}}">{{title}}</a></h1>
-      <p class="text-narrow l-center">{{description}}</p>
-      <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}}">{{date|date('n.j.Y')}}</time>
-    </div>
-  {% else %}
-  <div class="hero">
-    <div class="hero-background">
-      <img class="hero-background-image" src="/img/{{background}}" alt="{{title}}">
-    </div>
-    <div class="constrain-wide hero-text">
-      <h1>{{title}}</h1>
-      <time datetime="{{date|date('Y-m-d')}}">{{date|date('n.j.Y')}}</time>
-    </div>
+  <div class="constrain-wide leader-6 padding-leader-3 padding-trailer-4 padding-left-2 bg-{{spot}}">
+    <h1 class="leader-6">{{title}}</h1>
+    <p>
+      <time datetime="{{date|date('Y-m-d')}}">{{date|date('m.d.Y')}}</time>
+    </p>
   </div>
+  {% if feature %}
+    {% set photo = feature %}
+  {% else %}
+    {% set photo = thumbnail %}
   {% endif %}
 
+  <div class="constrain-wide trailer-4 leader--4 flex flex-center">
+    <p class="flex-1 margin-left-2 margin-right-2 leader-4 padding-leader-1 font-size-2 text-light constrain-narrow">{{description}}</p>
+    <div class="flex-2 margin-right-2">
+      <img src="/img/{{photo}}" alt="{{title}}">
+    </div>
+  </div>
+
   <!-- post content -->
-  <article class="article constrain-wide">
-    <section class="leader-3 trailer-3 constrain">
-      {% block content %}{% endblock %}
-    </section>
+  <article class="article">
+    <div class="constrain-wide">
+      <section class="leader-3 trailer-3 constrain margin-auto">
+        {% block content %}{% endblock %}
+      </section>
+    </div>
   </article>
 {% endblock %}

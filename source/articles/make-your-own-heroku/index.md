@@ -3,7 +3,6 @@ title: Make your own Heroku
 date: 2014-04-24
 template: _templates/article.html
 thumbnail: dokku-thumb.jpg
-feature: dokku-feature.png
 background: dokku.jpg
 canvas: navy
 spot: cyan

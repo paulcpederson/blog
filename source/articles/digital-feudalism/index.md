@@ -3,7 +3,7 @@ title: Digital Feudalism
 date: 2013-10-18
 template: _templates/article.html
 background: balkan.jpg
-thumbnail: balkan-thumb.jpg
+thumbnail: balkan-thumb.png
 canvas: navy
 spot: blue
 description: "Hasty notes on Aral Balkan's terrific talk at Realtime Conf 2013 regarding data ownership and the open source experience"
