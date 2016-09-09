@@ -455,7 +455,7 @@ img {
 // @import 'components/panels';
 @import 'components/code';
 // @import 'components/buttons';
-// @import 'components/tables';
+@import 'components/tables';
 // @import 'components/hero';
 // @import 'components/roll';
 // @import 'components/bottom-nav';
@@ -482,6 +482,7 @@ img {
 .project .browser {
   transition: all 200ms ease-out;
   transform: scale(1);
+  box-shadow: 0 0 24px rgba(0,0,0,.05);
 }
 
 .project:hover .browser {
