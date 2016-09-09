@@ -9,28 +9,24 @@ collections:
   labs: /lab/*
 ---
 
-<section style="background-image: url(/img/{{collections.labs[0].thumbnail}})" class="hero hero-navy hero-mesh hero-lab">
-  <div class="title-wrap constrain">
-    <h1 class="spot-{{spot}} text-center">Lab</h1>
-  </div>
-</section>
 
+<div class="constrain-wide leader-6 padding-leader-4">
+  <h1 class="trailer-2">Lab</h1>
 
-<div class="panel panel-white">
-  <div class="constrain">
     {% for lab in collections.labs %}
-    <div class="l-relative leader-3 trailer-3">
-      <a href="{{lab.url}}" class="blog-roll-thumbnail spot-border-hover-{{lab.spot}}">
-        <img class="blog-roll-thumbnail-img" src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
-      </a>
-      <div class="blog-roll-text">
-        <h2 class="leader-1 trailer-1">
-          <a href="{{lab.url}}" class="spot-link-dark-{{lab.spot}}">{{lab.title}}</a>
-        </h2>
-        <time class="text-size--2 text-subtle" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('n.j.Y')}}</time>
-        <p class="text-size--2">{{lab.description}}</p>
+
+    <a href="{{lab.url}}" class="link-plain lab-roll flex align-top leader-4 trailer-4">
+      <div class="flex-1">
+        <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
       </div>
-    </div>
+      <div class="lab-roll-text flex-1 bg-{{lab.spot}}">
+        <h2 class="leader-1 font-size-1">{{lab.title}}</h2>
+        <time class="font-size--2 l-block" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('Y')}}</time>
+        <p class="text-light font-size--1">{{lab.description}}</p>
+      </div>
+    </a>
+
     {% endfor %}
+
   </div>
 </div>

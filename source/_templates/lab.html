@@ -1,39 +1,34 @@
 {% extends 'layout.html' %}
-{% set dark = 'dark' %}
 
 {% block page %}
-  <div class="hero">
-    <div class="hero-background">
-      <img class="hero-background-image" src="/img/{{thumbnail}}" alt="{{title}}">
-    </div>
-    <div class="constrain-wide hero-text">
-      <div class="constrain-narrow">
-        <p class="font-size--2 trailer-0">Currently playing with:</p>
-        <h1 class="leader-1">{{title}}</h1>
-        <p class="font-size--1">{{description}}</p>
-        <time datetime="{{date|date('Y-m-d')}}">{{date|date('n.j.Y')}}</time>
-      </div>
-    </div>
+  <div class="constrain-wide leader-6 padding-leader-3 padding-trailer-4 padding-left-2 bg-{{spot}}">
+    <p class="leader-6 font-size--2">Currently playing with:</p>
+    <h1 class="leader-0">{{title}}</h1>
+    <p>
+      <time datetime="{{date|date('Y-m-d')}}" class="font-size--1">{{date|date('m.d.Y')}}</time>
+    </p>
   </div>
 
-  <div class="panel panel-white">
-    <div class="constrain">
-      <h2 class="spot-dark-{{spot}}">More Experiments <a href="/lab/" class="right btn btn-dark-{{spot}}">View All</a></h2>
-      {% for lab in collections.labs %}
-      <div class="l-relative leader-3 trailer-3">
-        <a href="{{lab.url}}" class="blog-roll-thumbnail spot-border-hover-{{lab.spot}}">
-          <img class="blog-roll-thumbnail-img" src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
-        </a>
-        <div class="blog-roll-text">
-          <h2 class="leader-1 trailer-1">
-            <a href="{{lab.url}}" class="spot-link-dark-{{lab.spot}}">{{lab.title}}</a>
-          </h2>
-          <time class="text-size--2 text-subtle" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('n.j.Y')}}</time>
-          <p class="text-size--2">{{lab.description}}</p>
-        </div>
+  <div class="constrain-wide trailer-4 leader--4">
+    <p class="bg-white flex-1 margin-left-1 margin-right-2 padding-leader-1 padding-left-1 font-size-2 text-light constrain-narrow">{{description}}</p>
+  </div>
+
+  <div class="constrain-wide">
+    <h2 class="trailer-1 font-size-2"><a href="/lab/" class="link-plain">More Experiments</a></h2>
+    {% for lab in collections.labs %}
+
+    <a href="{{lab.url}}" class="link-plain lab-roll flex align-top leader-2 trailer-6">
+      <div class="flex-1">
+        <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
       </div>
-      {% endfor %}
-    </div>
+      <div class="lab-roll-text flex-1 bg-{{lab.spot}}">
+        <h3 class="leader-1 font-size-1">{{lab.title}}</h3>
+        <time class="font-size--2 l-block" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('Y')}}</time>
+        <p class="text-light font-size--1">{{lab.description}}</p>
+      </div>
+    </a>
+
+    {% endfor %}
   </div>
 
   <div class="lab js-lab">
