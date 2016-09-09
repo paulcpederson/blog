@@ -1,15 +1,20 @@
 {% extends 'layout.html' %}
+{% set dark = 'dark' %}
 
 {% block page %}
-  <section style="background-image: url(/img/{{thumbnail}})" class="hero hero-navy hero-mesh hero-lab">
-    <div class="title-wrap constrain padding-leader-6 padding-trailer-5 padding-left-0 padding-right-0">
-      <p class="text-size--2 text-subtle padding-leader-4">Currently Viewing:</p>
-      <h1 class="text-left leader-0 trailer-0 spot-{{spot}}">{{title}}</h1>
-      <p class="text-narrow text-left leader-1 trailer-1 margin-left-0 margin-right-0">{{description}}</p>
-      <time datetime="{{date|date('Y-m-d')}}" class="date spot-{{spot}} text-left trailer-0">{{date|date('n.j.Y')}}</time>
+  <div class="hero">
+    <div class="hero-background">
+      <img class="hero-background-image" src="/img/{{thumbnail}}" alt="{{title}}">
     </div>
-  </section>
-
+    <div class="constrain-wide hero-text">
+      <div class="constrain-narrow">
+        <p class="font-size--2 trailer-0">Currently playing with:</p>
+        <h1 class="leader-1">{{title}}</h1>
+        <p class="font-size--1">{{description}}</p>
+        <time datetime="{{date|date('Y-m-d')}}">{{date|date('n.j.Y')}}</time>
+      </div>
+    </div>
+  </div>
 
   <div class="panel panel-white">
     <div class="constrain">
