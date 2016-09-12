@@ -4,9 +4,8 @@ date: 2015-4-8
 template: _templates/article.html
 background: npm-run.svg
 thumbnail: npm-run-thumb.jpg
-feature: npm-run-feature.png
 canvas: tan
-spot: red
+spot: blue
 description: "Use npm to automate front-end development tasks such as image optimization, Sass compilation, and running a local server."
 ---
 
