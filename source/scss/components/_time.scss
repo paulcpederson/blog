@@ -1,0 +1,14 @@
+.time-month, .time-year {
+  display: block;
+  font-size: .875rem;
+  line-height: 1rem;
+}
+
+.time-day {
+  display: block;
+  font-size: calc(1em + 5vw);
+  line-height: 0.575;
+  margin: .5rem 0 .75rem 0;
+  vertical-align: text-top;
+  min-width: calc(.875rem * 6);
+}

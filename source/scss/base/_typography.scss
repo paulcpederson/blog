@@ -1,112 +1,37 @@
-/* - - - - - - - - - Basic Typography - - - - - - - */
-@font-face {
-    font-family: 'Facit';
-    src: url('../fonts/facit-regular-webfont.woff2') format('woff2'),
-         url('../fonts/facit-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Karla';
-    src: url('../fonts/karla-bold-webfont.woff2') format('woff2'),
-         url('../fonts/karla-bold-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Karla';
-    src: url('../fonts/karla-bolditalic-webfont.woff2') format('woff2'),
-         url('../fonts/karla-bolditalic-webfont.woff') format('woff');
-    font-weight: bold;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Karla';
-    src: url('../fonts/karla-italic-webfont.woff2') format('woff2'),
-         url('../fonts/karla-italic-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: italic;
-}
-
-@font-face {
-    font-family: 'Karla';
-    src: url('../fonts/karla-regular-webfont.woff2') format('woff2'),
-         url('../fonts/karla-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-body {
-  font-family: $body-font;
-  color: $body-color;
-  font-weight: $body-weight;
-  font-size: $body-size;
-  line-height: $body-size * 1.5;
-}
-
-@media screen and (max-width: $tablet) {
-  body {
-    font-size: $body-size * .95;
-  }
+html {
+    font-family: -apple-system, BlinkMacSystemFont, /* MacOS and iOS */
+               'Segoe UI', /* Windows */
+               'lucida grande', /* Older MacOS */
+               'helvetica neue', helvetica, /* Older MacOS */
+               'Fira Sans', /* Firefox OS */
+               roboto, noto, /* Google stuff */
+               'Droid Sans', /* Old Google stuff */
+               cantarell, oxygen, ubuntu, /* Linux stuff */
+               'franklin gothic medium', 'century gothic', /* Windows stuff */
+               sans-serif; /* Everything else */ /* 1 */
+    font-weight: 400;
+    color: #333;
+    line-height: 1.55;
+    font-size: calc(1em + .25vw);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: $header-font;
-  line-height: 1.25em;
-  font-weight: $header-weight;
-  font-size: $header-size;
-  margin: 2em 0 1em 0;
-  text-transform: none;
+  font-weight: 400;
+  padding: 0;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+  line-height: 1.25;
 }
 
-h1 { font-size: $header-size;}
-h2 { font-size: $header-size * 0.9;}
-h3 { font-size: $header-size * 0.85;}
-h4 { font-size: $header-size * 0.8;}
-h5 { font-size: $header-size * 0.75;}
-h6 { font-size: $header-size * 0.7;}
+h1 { font-size: $font-size-4; }
+h2 { font-size: $font-size-3; }
+h3 { font-size: $font-size-2; }
+h4 { font-size: $font-size-1; }
+h5 { font-size: $font-size-0; }
+h6 { font-size: $font-size--1; }
 
-h1 {
-  line-height: 1.75;
-}
-
-blockquote {
-  font-family: $header-font;
-  text-align: left;
-  font-size: 1.25em;
-  line-height: 2em;
-  padding: 0 2em;
-}
-
-p, address {
-  line-height: 1.75em;
-  margin: 1em 0;
-}
-
-a {
-  text-decoration: none;
-  color: $cyan;
-}
-
-ul {
-  margin: 2em 0;
-  li {
-    font-size: 0.85em;
-    line-height: 2em;
-    margin-left: 1.5em;
-  }
-}
-
-ol {
-  padding-left: 2em;
-  li {
-    line-height: 1.75em;
-    margin-bottom: .75em;
-    margin-left: -1em;
-  }
+strong {
+  font-weight: 600;
 }
 
 hr {
@@ -115,6 +40,29 @@ hr {
   border-top: 1px solid $lighter-gray;
 }
 
-small {
-  font-size: $body-size * 0.75;
+p {
+  margin: .25rem 0 1.25rem 0;
+}
+
+ul, ol {
+  margin: 2rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: .5rem;
+}
+
+address {
+  font-style: normal;
+}
+
+a {
+  color: $blue;
+  text-decoration: none;
+}
+
+a:hover, a:focus {
+  outline: none;
+  text-decoration: underline;
 }

@@ -1,25 +1,42 @@
-// Top Navigation
+
 .nav {
-  display: block;
   position: absolute;
   top: 0;
-  right: 0;
-  left: 0;
-  z-index: 4;
-  pointer-events: none;
+  z-index: 3;
+}
+
+.logo svg {
+  stroke: #666;
+  transition: all 100ms linear;
+}
+
+.logo:hover svg, .logo:focus svg {
+  stroke: #333;
 }
 
 .nav-link {
-  pointer-events: auto;
-  text-decoration: none;
-  padding: 0.25em 0;
-  transition: 150ms border-color linear;
-  border-bottom: 2px solid transparent;
+  color: #666;
+  line-height: 40px;
+  font-size: $font-size-0;
+  transition: color 100ms linear;
 }
 
-@media screen and (max-width: $phone-wide) {
-  .nav-link {
-    padding: .25em 0;
-    font-size: .9em;
-  }
+.nav-link.is-active,
+.nav-link:hover,
+.nav-link:focus {
+  color: #222;
+}
+
+.dark .nav-link {
+  color: #ccc;
+}
+
+.dark .nav-link.is-active,
+.dark .nav-link:hover,
+.dark .nav-link:focus {
+  color: #fff;
+}
+
+.dark .logo svg {
+  stroke: #ccc;
 }

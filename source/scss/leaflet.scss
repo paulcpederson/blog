@@ -1,4 +1,3 @@
-@import 'config';
 @import "leaflet/dist/leaflet";
 
 .map-div {
@@ -22,7 +21,7 @@
 }
 
 .back-to {
-  color: $white;
+  color: #fff;
   position: absolute;
   bottom: 1em;
   left: 2em;

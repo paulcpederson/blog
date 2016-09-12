@@ -1,38 +1,32 @@
-/* Blog Roll Thumbnail View */
-.blog-roll-text {
-  margin-left: 55%;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  @include respond-to($tablet) {
-    margin-left: 0;
-  }
+.project-text {
+  padding: 2rem 8rem 2rem 2rem;
+  margin-top: 3rem;
+  margin-right: -7rem;
+  transition: all 200ms ease-out;
+  transform: translate3d(0, 0, 0);
 }
 
-.blog-roll-thumbnail {
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 50%;
-  background-size: cover;
-  background-position: center;
-  transition: box-shadow 200ms linear, border 200ms linear;
-  overflow: hidden;
-  border: 2px solid transparent;
-  &:hover {
-    box-shadow: 0 0 20px rgba(0,0,0,0.05);
-  }
-  @include respond-to($tablet) {
-    display: block;
-    width: 100%;
-    height: 200px;
-    position: relative;
-  }
+.project:hover .project-text {
+  transform: translate3d(-2vw, 0, 0);
 }
 
-.blog-roll-thumbnail-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+.project .browser {
+  transition: all 200ms ease-out;
+  transform: scale(1);
+  box-shadow: 0 0 24px rgba(0,0,0,.05);
+}
+
+.project:hover .browser {
+  transform: scale(1.025);
+}
+
+.lab-roll-text {
+  margin-top: 4rem;
+  padding: 2rem 1rem 1rem 1rem;
+  transform: translate3d(-8vw, 0, 0) scale(1);
+  transition: all 150ms ease-out;
+}
+
+.lab-roll:hover .lab-roll-text {
+  transform: translate3d(-8vw, 0, 0) scale(1.025);
 }

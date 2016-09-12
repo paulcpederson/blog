@@ -1,0 +1,35 @@
+
+.card-container {
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+
+.card {
+  margin: 2rem 1rem;
+  min-width: 16rem;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  transition: all 200ms linear;
+}
+
+.card:before {
+  content: "View Project →";
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  padding-top: 23%;
+  color: #000;
+  text-align: center;
+  transition: all 200ms linear;
+}
+
+.card:hover:before {
+  opacity: 1;
+}
+
+.card:hover img {
+  opacity: .3;
+}
