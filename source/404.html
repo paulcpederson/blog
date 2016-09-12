@@ -4,10 +4,13 @@ description: Code 404 | Page not Found
 template: _templates/layout.html
 block: page
 prettyUrl: false
+css:
+  - lab/blobs
+js:
+  - dots
 ---
-<section class="hero hero-navy" style="background-image: url(/img/404.svg)">
-  <div class="title-wrap constrain full text-center">
-    <h1 class="spot-{{spot}} text-size-3 leader-8">404</h1>
-    <p class="l-center text-narrow trailer-8">I couldn't find that page! I looked really hard, but I just can't find it...</p>
-  </div>
+<section class="constrain-wide leader-6 trailer-4 above">
+  <h1 class="padding-leader-5">404</h1>
+  <p class="constrain-narrow">I couldn't find that page! I looked really hard, but I just can't find it...</p>
 </section>
+<canvas class="js-blob-canvas fullscreen"></canvas>

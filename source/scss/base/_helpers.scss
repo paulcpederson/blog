@@ -133,3 +133,16 @@
 .bg-red { background-color: #fdf2f5; }
 .bg-yellow { background-color: #faf5ef; }
 .bg-magenta { background-color: #faeff9; }
+
+.fullscreen {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.above {
+  position: relative;
+  z-index: 2;
+}
