@@ -1,0 +1,33 @@
+.fade-in-up {
+  animation-name: fade-in-up;
+  animation-duration: 300ms;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translate3d(0,10px,0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
+}
+
+.no-fade {
+  animation-name: none;
+}
+
+.fade-out {
+  animation-name: fade-out;
+  animation-duration: 300ms;
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

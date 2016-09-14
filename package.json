@@ -36,6 +36,7 @@
     ]
   },
   "dependencies": {
+    "barba.js": "^1.0.0",
     "esri-leaflet": "^1.0.0-rc.8",
     "inline-block-grid": "git://github.com/paulcpederson/inline-block-grid.git",
     "leaflet": "^0.7.3",

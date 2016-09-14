@@ -42,7 +42,11 @@
     </header>
 
     <!-- Content for Each Page -->
-    {% block page %}{% endblock %}
+    <div id="barba-wrapper">
+      <div class="barba-container fade-in-up {{animation}}">
+        {% block page %}{% endblock %}
+      </div>
+    </div>
 
     <script src="/js/script{% if production %}.min{% endif %}.js"></script>
     {% for script in js %}
