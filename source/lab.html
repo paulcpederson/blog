@@ -11,15 +11,15 @@ collections:
 
 
 <div class="constrain-wide leader-6 padding-leader-4">
-  <h1 class="trailer-2">Lab</h1>
+  <h1 class="trailer-2 fade delay-1">Lab</h1>
 
     {% for lab in collections.labs %}
 
     <a href="{{lab.url}}" class="link-plain lab-roll flex align-top leader-4 trailer-4 no-barba">
-      <div class="flex-1">
+      <div class="flex-1 fade delay-{{loop.index + 1}}">
         <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
       </div>
-      <div class="lab-roll-text flex-1 bg-{{lab.spot}}">
+      <div class="lab-roll-text flex-1 bg-{{lab.spot}} fade delay-{{loop.index + 2}}">
         <h2 class="leader-1 font-size-1">{{lab.title}}</h2>
         <time class="font-size--2 l-block" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('Y')}}</time>
         <p class="text-light font-size--1">{{lab.description}}</p>

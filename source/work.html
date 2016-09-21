@@ -11,7 +11,25 @@ collections:
 
 <div class="constrain-wide leader-6 padding-leader-4">
   <h1 class="padding-trailer-2">Work</h1>
-  {% for project in collections.work %}
+
+  <div class="flex phone-flex-column">
+    <a href="{{collections.work[0].url}}" class="flex-2 padding-right-2 phone-padding-right-0 project link-plain fade delay-1">
+      <img src="../img/{{collections.work[0].feature}}" alt="{{collections.work[0].title}}" class="project-img">
+      <p class="text-light constrain-narrow leader-1">{{collections.work[0].description}}</p>
+    </a>
+    <div class="flex-1">
+      <a href="{{collections.work[1].url}}" class="project link-plain fade delay-2">
+        <img src="../img/{{collections.work[1].thumbnail}}" alt="{{collections.work[1].title}}" class="project-img">
+        <p class="text-light constrain-narrow leader-1 trailer-4">{{collections.work[1].description}}</p>
+      </a>
+      <a href="{{collections.work[2].url}}" class="project link-plain fade delay-3">
+        <img src="../img/{{collections.work[2].thumbnail}}" alt="{{collections.work[2].title}}" class="project-img">
+        <p class="text-light constrain-narrow leader-1">{{collections.work[2].description}}</p>
+      </a>
+    </div>
+  </div>
+
+<!--   {% for project in collections.work %}
 
   <a href="{{project.url}}" class="link-plain project flex align-top leader-4 trailer-4">
     <div class="flex-1 project-text bg-{{project.spot}}">
@@ -24,12 +42,14 @@ collections:
     </div>
   </a>
 
-  {% endfor %}
+  {% endfor %} -->
+
+
 </div>
 
 
 
-<div class="constrain-wide">
+<div class="constrain-wide fade delay-4">
   <h2 class="font-size-2 leader-5">More Projects</h2>
   <div class="constrain-narrow">
     <h3 class="font-size-0"><a href="https://developers.arcgis.com/en/">ArcGIS for Developers</a></h3>
@@ -46,7 +66,7 @@ collections:
   </div>
 </div>
 
-<div class="constrain-wide padding-leader-1">
+<div class="constrain-wide padding-leader-1 fade delay-5">
   <h2 class="font-size-2">Open Source</h2>
   <div class="flex">
       <div class="flex-1 text-min padding-right-1 block-1of4">

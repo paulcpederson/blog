@@ -12,9 +12,9 @@ collections:
 <!-- blog roll -->
 
 <div class="constrain-wide leader-6 padding-leader-4">
-  <h1 class="trailer-2">Articles</h1>
+  <h1 class="trailer-2 fade delay-1">Articles</h1>
   {% for article in collections.articles %}
-  <div class="flex constrain-narrow trailer-2">
+  <div class="flex constrain-narrow trailer-2 fade delay-{{loop.index + 1}}">
     <time datetime="{{article.date|date('Y-m-d')}}" class="padding-leader-half">
       <span class="time-month">{{article.date|date('F')}}</span>
       <span class="time-day">{{article.date|date('d')}}</span>

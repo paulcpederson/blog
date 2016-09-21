@@ -2,7 +2,7 @@
 
 {% block page %}
 
-  <div class="constrain-wide leader-6 padding-leader-3 padding-trailer-4 padding-left-2 bg-{{spot}}">
+  <div class="fade delay-1 constrain-wide leader-6 padding-leader-3 padding-trailer-4 padding-left-2 bg-{{spot}}">
     <h1 class="leader-6">{{title}}</h1>
     <p>
       <time datetime="{{date|date('Y-m-d')}}">{{date|date('Y')}}</time> &mdash;
@@ -11,14 +11,14 @@
   </div>
 
   <div class="constrain-wide trailer-4 leader--4 flex flex-center">
-    <p class="flex-1 margin-left-2 margin-right-2 leader-4 padding-leader-1 font-size-2 text-light constrain-narrow">{{description}}</p>
-    <a href="{{site}}" class="browser flex-2 margin-right-2" data-site="{{site}}">
+    <p class="fade delay-3 flex-1 margin-left-2 margin-right-2 leader-4 padding-leader-1 font-size-2 text-light constrain-narrow">{{description}}</p>
+    <a href="{{site}}" class="browser flex-2 margin-right-2 fade delay-2" data-site="{{site}}">
       <img class="browser-image l-block" src="/img/{{feature}}" alt="{{project.title}} Screenshot">
     </a>
   </div>
 
   <!-- post content -->
-  <article class="article">
+  <article class="article fade delay-4">
     <div class="constrain-wide">
       <section class="leader-3 trailer-3 constrain margin-auto">
         {% block content %}{% endblock %}

@@ -11,7 +11,7 @@ collections:
 ---
 
 <!-- banner -->
-<section class="constrain-wide padding-leader-2 leader-6 trailer-4">
+<section class="fade delay-1 constrain-wide padding-leader-2 leader-6 trailer-4">
   <h1 class="font-size-3 constrain-narrow">Paul C Pederson &mdash; Digital product designer &amp;&nbsp;front-end developer.</h1>
   <nav>
     <a href="/cv/" class="tooltip link-plain" aria-label="cv">
@@ -30,7 +30,7 @@ collections:
 </section>
 
 <!-- projects -->
-<div class="bg-white">
+<div class="bg-white fade delay-2">
   <div class="constrain-wide padding-leader-1">
     <h2 class="trailer-0 font-size-2">
       <a href="/work/" class="link-plain">Work</a>
@@ -38,7 +38,7 @@ collections:
     <div class="flex card-container align-top">
     {% for project in collections.work %}
     {% if loop.index < 4 %}
-    <a href="{{project.url}}" class="flex-1 link-plain card trailer-2">
+    <a href="{{project.url}}" class="flex-1 link-plain card trailer-2 fade delay-{{loop.index + 2}}">
       <img src="/img/{{project.thumbnail}}" alt="{{project.title}}">
       <h3 class="leader-1 font-size-0">{{project.title}}</h3>
       <p class="trailer-0 font-size--1">{{project.description}}</p>
@@ -49,7 +49,7 @@ collections:
   </div>
 
   <!-- blog roll -->
-  <div class="constrain-wide">
+  <div class="constrain-wide fade delay-6">
     <h2 class="font-size-2"><a href="/articles/" class="link-plain">Articles</a></h2>
     {% for article in collections.articles %}
     {% if loop.index < 4 %}

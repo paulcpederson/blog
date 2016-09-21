@@ -1,23 +1,16 @@
-.project-text {
-  padding: 2rem 8rem 2rem 2rem;
-  margin-top: 3rem;
-  margin-right: -7rem;
-  transition: all 200ms ease-out;
-  transform: translate3d(0, 0, 0);
+.project {
+  display: block;
 }
 
-.project:hover .project-text {
-  transform: translate3d(-2vw, 0, 0);
-}
-
-.project .browser {
-  transition: all 200ms ease-out;
+.project-img {
+  box-shadow: 0 0 30px 0 rgba(0,0,0,0);
   transform: scale(1);
-  box-shadow: 0 0 24px rgba(0,0,0,.05);
+  transition: all 100ms linear;
 }
 
-.project:hover .browser {
-  transform: scale(1.025);
+.project:hover .project-img {
+  transform: scale(1.005);
+  box-shadow: 0 0 30px 0 rgba(0,0,0,.1);
 }
 
 .lab-roll-text {
