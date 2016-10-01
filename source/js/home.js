@@ -1,27 +1,3 @@
-import * as barba from 'barba.js'
-
-var FadeTransition = barba.BaseTransition.extend({
-  start: function() {
-    this.oldContainer.classList.add('hide')
-    window.scrollTo(0, 0)
-    this.newContainerLoading.then(this.done.bind(this))
-  }
-});
-
-/**
- * Next step, you have to tell Barba to use the new Transition
- */
-
-barba.Pjax.getTransition = function() {
-  return FadeTransition;
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-  if (window.history.pushState) {
-    barba.Pjax.start()
-  }
-})
-
 let canvas = document.querySelector('.js-home-canvas')
 let context = canvas.getContext('2d')
 let width = canvas.width = window.innerWidth

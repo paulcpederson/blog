@@ -13,10 +13,10 @@
     {% set photo = thumbnail %}
   {% endif %}
 
-  <div class="constrain-wide trailer-4 leader--4 flex flex-center">
-    <p class="fade delay-3 flex-1 margin-left-2 margin-right-2 leader-4 padding-leader-1 font-size-2 text-light constrain-narrow">{{description}}</p>
-    <div class="flex-2 margin-right-2 fade delay-2">
-      <img src="/img/{{photo}}" alt="{{title}}">
+  <div class="constrain-wide trailer-4 leader--4 flex flex-center phone-flex-column">
+    <p class="fade delay-3 flex-1 margin-left-2 margin-right-2 leader-4 padding-leader-1 trailer-3 font-size-2 text-light constrain-narrow">{{description}}</p>
+    <div class="flex-2 bg-dotted fade delay-2 margin-right-2 margin-left-2">
+      <img src="/img/{{photo}}" alt="{{title}}" class="l-block margin-auto full-width offset">
     </div>
   </div>
 

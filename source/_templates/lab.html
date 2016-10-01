@@ -9,27 +9,23 @@
       <time datetime="{{date|date('Y-m-d')}}" class="font-size--1">{{date|date('m.d.Y')}}</time>
     </p>
   </div>
-
-  <div class="constrain-wide trailer-4 leader--4">
-    <p class="bg-white flex-1 margin-left-1 margin-right-2 padding-leader-1 padding-left-1 font-size-2 text-light constrain-narrow">{{description}}</p>
+  <div class="clearfix">
+    <div class="constrain-wide leader--4 bg-dotted block-1of3 margin-auto">
+      <p class="bg-white trailer-0 padding-left-1 padding-right-1 padding-leader-1 padding-trailer-1 font-size-2 text-light constrain-narrow offset">{{description}}</p>
+    </div>
   </div>
 
   <div class="constrain-wide">
-    <h2 class="trailer-1 font-size-2"><a href="/lab/" class="link-plain">More Experiments</a></h2>
+    <h2 class="trailer-1 font-size-2 leader-0"><a href="/lab/" class="link-plain">More Experiments</a></h2>
+    <div class="flex card-container">
     {% for lab in collections.labs %}
-
-    <a href="{{lab.url}}" class="link-plain lab-roll flex align-top leader-2 trailer-6 no-barba">
-      <div class="flex-1">
-        <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
-      </div>
-      <div class="lab-roll-text flex-1 bg-{{lab.spot}}">
-        <h3 class="leader-1 font-size-1">{{lab.title}}</h3>
-        <time class="font-size--2 l-block" datetime="{{lab.date|date('Y-m-d')}}">{{lab.date|date('Y')}}</time>
-        <p class="text-light font-size--1">{{lab.description}}</p>
-      </div>
+    <a href="{{lab.url}}" class="no-barba flex-1 block-1of4 card link-plain">
+      <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}" class="">
+      <h2 class="font-size-0">{{lab.title}}</h2>
+      <p class="font-size--1 constrain-narrow">{{lab.description}}</p>
     </a>
-
     {% endfor %}
+    </div>
   </div>
 
   <div class="lab js-lab">

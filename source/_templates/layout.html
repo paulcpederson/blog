@@ -43,9 +43,10 @@
 
     <!-- Content for Each Page -->
     <div id="barba-wrapper">
-      <div class="barba-container ready">
+      <div class="barba-container ready above">
         {% block page %}{% endblock %}
       </div>
+      <canvas class="js-home-canvas home-canvas"></canvas>
     </div>
 
     <script src="/js/script{% if production %}.min{% endif %}.js"></script>
