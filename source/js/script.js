@@ -1,5 +1,7 @@
 import * as barba from 'barba.js'
 
+barba.Prefetch.init();
+
 barba.Pjax.getTransition = barba.BaseTransition.extend({
   start: function() {
     this.oldContainer.classList.add('hide')
