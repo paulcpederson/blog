@@ -14,7 +14,7 @@ collections:
   <h1 class="trailer-2 fade delay-1">Lab</h1>
   <div class="flex card-container">
     {% for lab in collections.labs %}
-    <a href="{{lab.url}}" class="no-barba flex-1 block-1of4 card link-plain fade delay-{{loop.index + 2}}">
+    <a href="{{lab.url}}" class="no-barba card link-plain fade delay-{{loop.index + 2}}">
       <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
       <h2 class="font-size-0">{{lab.title}}</h2>
       <p class="font-size--1 constrain-narrow">{{lab.description}}</p>

@@ -12,18 +12,18 @@ collections:
 <!-- blog roll -->
 
 <div class="constrain-wide leader-6 padding-leader-4">
-  <h1 class="trailer-2 fade delay-1">Articles</h1>
+  <h1 class="trailer-3 fade delay-1">Articles</h1>
   {% for article in collections.articles %}
-  <div class="flex constrain-narrow trailer-2 fade delay-{{loop.index + 1}}">
-    <time datetime="{{article.date|date('Y-m-d')}}" class="padding-leader-half">
-      <span class="time-month">{{article.date|date('F')}}</span>
-      <span class="time-day">{{article.date|date('d')}}</span>
-      <span class="time-year">{{article.date|date('Y')}}</span>
-    </time>
-    <div class="margin-left-1 flex-1">
-      <h2 class="leader-1 padding-leader-half trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h2>
-      <p class="font-size--1">{{article.description}}</p>
+    <div class="flex flex-no-wrap trailer-2 constrain-narrow fade delay-{{loop.index + 1}}">
+      <time datetime="{{article.date|date('Y-m-d')}}" class="flex-0">
+        <span class="time-month">{{article.date|date('F')}}</span>
+        <span class="time-day">{{article.date|date('d')}}</span>
+        <span class="time-year">{{article.date|date('Y')}}</span>
+      </time>
+      <div class="margin-left-1 flex-1">
+        <h3 class="leader-half trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
+        <p class="font-size--1">{{article.description}}</p>
+      </div>
     </div>
-  </div>
   {% endfor %}
 </div>

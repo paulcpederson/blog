@@ -19,8 +19,8 @@
     <h2 class="trailer-1 font-size-2 leader-0"><a href="/lab/" class="link-plain">More Experiments</a></h2>
     <div class="flex card-container">
     {% for lab in collections.labs %}
-    <a href="{{lab.url}}" class="no-barba flex-1 block-1of4 card link-plain">
-      <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}" class="">
+    <a href="{{lab.url}}" class="no-barba card link-plain fade delay-{{loop.index + 2}}">
+      <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
       <h2 class="font-size-0">{{lab.title}}</h2>
       <p class="font-size--1 constrain-narrow">{{lab.description}}</p>
     </a>

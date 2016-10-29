@@ -40,7 +40,7 @@ collections:
       <div class="flex card-container align-top">
       {% for project in collections.work %}
       {% if loop.index < 4 %}
-      <a href="{{project.url}}" class="flex-1 link-plain card trailer-2 fade delay-{{loop.index + 2}}">
+      <a href="{{project.url}}" class="card link-plain trailer-2 fade delay-{{loop.index + 2}}">
         <img src="/img/{{project.thumbnail}}" alt="{{project.title}}">
         <h3 class="leader-1 font-size-0">{{project.title}}</h3>
         <p class="trailer-0 font-size--1">{{project.description}}</p>
@@ -55,14 +55,14 @@ collections:
       <h2 class="font-size-2"><a href="/articles/" class="link-plain">Articles</a></h2>
       {% for article in collections.articles %}
       {% if loop.index < 4 %}
-      <div class="flex trailer-2 constrain-narrow">
-        <time datetime="{{article.date|date('Y-m-d')}}" class="padding-leader-half">
+      <div class="flex flex-no-wrap trailer-2 constrain-narrow">
+        <time datetime="{{article.date|date('Y-m-d')}}" class="flex-0">
           <span class="time-month">{{article.date|date('F')}}</span>
           <span class="time-day">{{article.date|date('d')}}</span>
           <span class="time-year">{{article.date|date('Y')}}</span>
         </time>
         <div class="margin-left-1 flex-1">
-          <h3 class="leader-1 padding-leader-half trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
+          <h3 class="leader-half trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
           <p class="font-size--1">{{article.description}}</p>
         </div>
       </div>
