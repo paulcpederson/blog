@@ -1,5 +1,28 @@
 import * as THREE from 'three'
 
+const player = document.querySelector('.js-player')
+
+const playPause = document.querySelector('.js-play-pause')
+playPause.addEventListener('click', (e) => {
+  if (player.paused) {
+    player.play()
+    playPause.classList.add('playing')
+    player.setAttribute('aria-label', 'pause')
+  } else {
+    playPause.classList.remove('playing')
+    player.pause()
+    player.setAttribute('aria-label', 'play')
+  }
+})
+
+let audioContext = new (window.AudioContext || window.webkitAudioContext)
+let source = audioContext.createMediaElementSource(player)
+let analyser = audioContext.createAnalyser()
+analyser.fftSize = 128
+let d = new Uint8Array(analyser.frequencyBinCount)
+source.connect(analyser)
+analyser.connect(audioContext.destination)
+
 var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 1, 10000)
 camera.position.z = 1000
 
@@ -46,10 +69,11 @@ function animate () {
 
   // TODO: set programatically based on spectrum analysis
   var distance = 1 + (Math.random() * .25)
+  analyser.getByteFrequencyData(d)
 
   geo.vertices = geo.vertices.map((v, i) => {
     var newPos = new THREE.Vector3()
-    newPos.addVectors(center, v.multiplyScalar(distance))
+    newPos.addVectors(center, v.multiplyScalar(1 + (d[Math.floor(64 * i / 42)] / 255 * .65)))
     return newPos
   })
 

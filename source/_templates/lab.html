@@ -28,7 +28,7 @@
     </div>
   </div>
 
-  <div class="lab js-lab">
+  <div class="lab js-lab {{labClass}}">
     <button class="lab-thumbnail js-lab-thumbnail" aria-label="back to experiment">Back</button>
     <button class="lab-info js-lab-toggle spot-bg-{{spot}}" aria-label="about experiment">{% include "../img/menu.svg" %}</button>
     {% block content %}{% endblock %}

@@ -1,10 +1,11 @@
 ---
 title: Low-Poly
-date: 2016-10-16
+date: 2016-11-5
 template: _templates/lab.html
-thumbnail: delaunay-thumb.png
-spot: yellow
+thumbnail: low-poly-thumb.png
+spot: red
 description: A low-polygon count WebGL object expands and contracts based on music.
+labClass: lab-mint
 css:
   - lab
   - lab/blobs
@@ -14,3 +15,19 @@ js:
 collections:
   labs: /lab/*
 ---
+
+<button class="play-pause js-play-pause playing play-pause-white" aria-label="pause">
+  <svg width="24" height="24">
+    <g class="btn-pause">
+      <rect x="6" y="3" fill="#ef7654" width="4" height="18"/>
+      <rect x="14" y="3" fill="#ef7654" width="4" height="18"/>
+    </g>
+    <polygon class="btn-play" fill="#ef7654" points="4,2.763 20,12.001 4,21.237 "/>
+  </svg>
+</button>
+
+<p class="player-credits low-poly-credits">
+  <a href="https://weval.bandcamp.com/track/the-battle">The Battle</a> by <a href="https://weval.bandcamp.com/album/weval">Weval</a>.
+</p>
+
+<audio src="the-battle.mp3" class="js-player" preload autobuffer autoplay loop></audio>
