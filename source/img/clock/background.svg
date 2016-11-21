@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="background" class="clock clock-background js-clock-background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="476px" height="476px" viewBox="0 0 476 476" enable-background="new 0 0 476 476" xml:space="preserve">
+  <circle fill="none" stroke="#C1C1C1" stroke-miterlimit="10" cx="238" cy="238" r="238"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="40.79" y1="238" x2="14.507" y2="238"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="461.493" y1="238" x2="435.211" y2="238"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="238.001" y1="435.212" x2="238" y2="461.493"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="238" y1="14.508" x2="238.001" y2="40.79"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="67.21" y1="336.605" x2="44.45" y2="349.746"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="431.551" y1="126.253" x2="408.789" y2="139.395"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="336.605" y1="408.79" x2="349.746" y2="431.551"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="126.253" y1="44.45" x2="139.396" y2="67.21"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="67.21" y1="139.395" x2="44.45" y2="126.253"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="431.551" y1="349.746" x2="408.789" y2="336.605"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="139.395" y1="408.792" x2="126.253" y2="431.551"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="349.746" y1="44.45" x2="336.605" y2="67.211"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="40.79" y1="238" x2="14.507" y2="238"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="461.493" y1="238" x2="435.211" y2="238"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="238.001" y1="435.212" x2="238" y2="461.493"/>
+  <line fill="none" stroke="#000209" stroke-width="2" stroke-miterlimit="10" x1="237.999" y1="14.508" x2="238.001" y2="40.79"/>
+</svg>

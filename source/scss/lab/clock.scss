@@ -1,0 +1,14 @@
+@import "../_config.scss";
+
+.clock-container {
+  position: relative;
+  width: 476px;
+  height: 476px;
+}
+
+.clock {
+  position: absolute;
+  top: 0;
+  left: 0;
+  max-width: 100%;
+}
