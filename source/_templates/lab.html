@@ -21,7 +21,7 @@
     {% for lab in collections.labs %}
     <a href="{{lab.url}}" class="no-barba card link-plain fade delay-{{loop.index + 2}}">
       <img src="/img/{{lab.thumbnail}}" alt="{{lab.title}}">
-      <h2 class="font-size-0">{{lab.title}}</h2>
+      <h2 class="font-size-0 leader-1">{{lab.title}}</h2>
       <p class="font-size--1 constrain-narrow">{{lab.description}}</p>
     </a>
     {% endfor %}
