@@ -1,14 +1,15 @@
 {
   "scripts": {
-    "js": "simplifyify source/js/*.js -b -m -d -o www/js/",
+    "js": "simplifyify source/js/*.js -b -d -w -o www/js/",
+    "js:production": "simplifyify source/js/*.js -b -m -o www/js/",
     "sass": "node-sass source/scss/ --output-style compressed --source-map www/css/ -o www/css/ --include-path node_modules/",
     "postsass": "postcss -u autoprefixer -r www/css/*.css",
     "img": "imagemin-newer source/ www/",
     "html": "static-site -b www -h source/_helpers/*.js -f xml",
     "copy": "copyfiles -u 1 'source/**/*.{ico,mp4,mp3,woff,woff2,vtt}' www/",
     "prestart": "npm-run-series img sass html copy",
-    "start": "parallelshell 'live-server www/ --port=7777 --no-browser' 'rerun-script' 'npm run sass -- -w' 'npm run js -- -w'",
-    "predeploy": "npm-run-series js img sass copy && npm run html -- --production",
+    "start": "parallelshell 'live-server www/ --port=7777 --no-browser' 'rerun-script' 'npm run sass -- -w' 'npm run js'",
+    "predeploy": "npm-run-series js:production img sass copy && npm run html -- --production",
     "deploy": "surge www/ paulcpederson.com",
     "test": "a11y 'www/**/*.html'"
   },
@@ -26,10 +27,7 @@
   },
   "watches": {
     "copy": "source/**/*.{ico,mp4,woff,woff2}",
-    "img": [
-      "source/**/*.{jpg,jpeg,png,svg,gif}",
-      "source/img/**"
-    ],
+    "img": "source/**/*.{jpg,jpeg,png,svg,gif}",
     "html": [
       "source/**/*.{html,md,xml,svg}",
       "source/_helpers/**"
