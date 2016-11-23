@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<svg version="1.1" id="minute" class="clock clock-minute js-minute-hand" xmlns="http://www.w3.org/2000/svg"
+<svg version="1.1" id="minute" class="clock clock-minute" xmlns="http://www.w3.org/2000/svg"
      xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="476px" height="476px"
      viewBox="0 0 476 476" enable-background="new 0 0 476 476" xml:space="preserve">
   <line fill="none" stroke="#000209" stroke-width="7" stroke-miterlimit="10" x1="237.999" y1="251.246" x2="237.999" y2="51.246"/>

@@ -2,7 +2,7 @@
 
 .clock-container {
   position: relative;
-  width: 476px;
+  width: 80%;
   height: 476px;
 }
 
@@ -10,7 +10,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  max-width: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .clock-hour   { animation: rotate linear 60 * 60 * 12s infinite; }
@@ -18,6 +19,5 @@
 .clock-second { animation: rotate 60s infinite steps(60); }
 
 @keyframes rotate {
-  0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }

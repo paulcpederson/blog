@@ -1,11 +1,10 @@
 ---
 title: Clock
-date: 2016-11-20
+date: 2016-11-23
 template: _templates/lab.html
-thumbnail: low-poly-thumb.png
+thumbnail: clock-thumb.png
 spot: red
-description: Lightweight, miminal clock drawn using canvas
-labClass: lab-mint
+description: Lightweight, miminal clock created with SVG and CSS
 css:
   - lab
   - lab/clock
@@ -18,8 +17,8 @@ collections:
 <div class="fullscreen-canvas bg-white flex flex-center flex-justify-center">
   <div class="clock-container">
     {% include "../../img/clock/background.svg" %}
-    {% include "../../img/clock/second.svg" %}
-    {% include "../../img/clock/minute.svg" %}
-    {% include "../../img/clock/hour.svg" %}
+    <div class="clock js-second">{% include "../../img/clock/second.svg" %}</div>
+    <div class="clock js-minute">{% include "../../img/clock/minute.svg" %}</div>
+    <div class="clock js-hour">{% include "../../img/clock/hour.svg" %}</div>
   </div>
 </div>
