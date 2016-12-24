@@ -52,7 +52,7 @@
     "imagemin-newer": "^1.0.1",
     "live-server": "^0.9.1",
     "node-sass": "^3.2.0",
-    "npm-run-all": "^1.2.6",
+    "npm-run-series": "^1.0.0",
     "parallelshell": "^1.1.1",
     "postcss-cli": "^2.5.1",
     "rerun-script": "^0.6.0",
