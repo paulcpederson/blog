@@ -6,8 +6,15 @@
   stroke-opacity: 0.2;
 }
 
-.graph-svg {
+.nodes circle {
+  cursor: pointer;
+}
+
+.graph-background {
   background-color: #141003;
+}
+
+.graph-svg {
   width: 100vw;
   height: 100vh;
 }
@@ -15,11 +22,42 @@
 .artist-name {
   position: absolute;
   z-index: 10;
-  visibility: hidden;
   color: white;
   padding: .6rem .5rem .5rem;
   line-height: 1;
   font-size: $font-size--2;
   text-align: center;
+  pointer-events: none;
   background: rgba(20,16,3,0.8);
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  transform-origin: top left;
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
+.artist-name:before {
+  content: "";
+  left: -6px;
+  top: 50%;
+  margin-top: -6px;
+  margin-left: -6px;
+  position: absolute;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border: 6px solid transparent;
+  border-right-color: rgba(20,16,3,0.8);
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
+.artist-name.is-active, .artist-name.is-active:before {
+  opacity: 1;
+}
+
+.search {
+  z-index: 11;
+  position: absolute;
 }
