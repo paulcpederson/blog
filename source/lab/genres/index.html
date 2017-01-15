@@ -1,0 +1,21 @@
+---
+title: Music Graph Network
+date: 2017-01-15
+template: _templates/lab.html
+thumbnail: genre-thumb.jpg
+spot: blue
+description: Force-directed graph network of all the artists in my iTunes library connected via genre
+css:
+  - lab
+  - lab/genres
+js:
+  - lab
+  - genres
+collections:
+  labs: /lab/*
+---
+
+<svg class="fullscreen graph-svg js-container-svg"></svg>
+<div class="artist-name js-tooltip">TEST</div>
+
+<script src="https://d3js.org/d3.v4.js"></script>

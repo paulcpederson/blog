@@ -1,0 +1,25 @@
+@import '../_config';
+
+.links line {
+  stroke: $blue;
+  stroke-width: 1px;
+  stroke-opacity: 0.2;
+}
+
+.graph-svg {
+  background-color: #141003;
+  width: 100vw;
+  height: 100vh;
+}
+
+.artist-name {
+  position: absolute;
+  z-index: 10;
+  visibility: hidden;
+  color: white;
+  padding: .6rem .5rem .5rem;
+  line-height: 1;
+  font-size: $font-size--2;
+  text-align: center;
+  background: rgba(20,16,3,0.8);
+}
