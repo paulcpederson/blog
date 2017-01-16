@@ -184,7 +184,7 @@ function showInfo (d) {
   $info.innerHTML = `
     <div class="artist">
       <img src="https://lastfm-img2.akamaized.net/i/u/avatar170s/620abf38efaf498298196e3e06e6286a.jpg" class="artist-thumb" alt="${d.name}">
-      <h2 class="text-center text-light font-size-1 leader-half trailer-0">${d.name}</h2>
+      <h2 class="artist-title">${d.name}</h2>
     </div>
     <div class="padding-left-1 padding-right-1 trailer-half">
       <h4 class="leader-1 trailer-half font-size-0 text-light">Tagged</h4>

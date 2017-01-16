@@ -159,6 +159,16 @@
   display: block;
 }
 
+.artist-title {
+  position: relative;
+  color: white;
+  text-align: center;
+  color: #444;
+  font-weight: 300;
+  font-size: 1.2rem;
+  margin: .5rem 0 0 0;
+}
+
 .artist-thumb--small {
   display: inline-block;
   margin-right: 12px;
