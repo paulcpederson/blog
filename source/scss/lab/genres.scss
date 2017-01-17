@@ -17,51 +17,13 @@
   height: 100vh;
 }
 
-.artist-name {
-  position: absolute;
-  z-index: 10;
-  color: white;
-  padding: .6rem .5rem .5rem;
-  line-height: 1;
-  font-size: $font-size--2;
-  text-align: center;
-  pointer-events: none;
-  background: rgba(20,16,3,0.8);
-  -webkit-transform-origin: top left;
-  -moz-transform-origin: top left;
-  transform-origin: top left;
-  opacity: 0;
-  transition: opacity 150ms linear;
-}
-
-.artist-name:before {
-  content: "";
-  left: -6px;
-  top: 50%;
-  margin-top: -6px;
-  margin-left: -6px;
-  position: absolute;
-  pointer-events: none;
-  width: 0;
-  height: 0;
-  pointer-events: none;
-  border: 6px solid transparent;
-  border-right-color: rgba(20,16,3,0.8);
-  opacity: 0;
-  transition: opacity 150ms linear;
-}
-
-.artist-name.is-active, .artist-name.is-active:before {
-  opacity: 1;
-}
-
 .search {
   z-index: 11;
   position: absolute;
-  width: calc(100% - 2em);
+  width: calc(100% - 86px);
   max-width: 320px;
-  left: 1em;
-  top: 1em;
+  left: 14px;
+  top: 14px;
   background-color: white;
   border-radius: 4px;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
@@ -114,7 +76,7 @@
   display: block;
   border-top: 1px solid #dddddd;
   color: #333;
-  transition: background-color 150ms linear;
+  transition: background-color 50ms linear;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -136,7 +98,7 @@
   box-sizing: border-box;
   display: none;
   font-size: .85rem;
-  max-height: calc(100vh - 5.25em);
+  max-height: calc(100vh - 4.5em);
   overflow-y: auto;
 }
 
@@ -176,6 +138,44 @@
   height: 48px;
   border-radius: 0;
   vertical-align: middle;
+}
+
+.artist-name {
+  position: absolute;
+  z-index: 10;
+  color: white;
+  padding: .6rem .5rem .5rem;
+  line-height: 1;
+  font-size: $font-size--2;
+  text-align: center;
+  pointer-events: none;
+  background: rgba(20,16,3,0.8);
+  -webkit-transform-origin: top left;
+  -moz-transform-origin: top left;
+  transform-origin: top left;
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
+.artist-name:before {
+  content: "";
+  left: -6px;
+  top: 50%;
+  margin-top: -6px;
+  margin-left: -6px;
+  position: absolute;
+  pointer-events: none;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+  border: 6px solid transparent;
+  border-right-color: rgba(20,16,3,0.8);
+  opacity: 0;
+  transition: opacity 150ms linear;
+}
+
+.artist-name.is-active, .artist-name.is-active:before {
+  opacity: 1;
 }
 
 .genre {

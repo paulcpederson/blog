@@ -1144,7 +1144,7 @@ export default {
     genres: ["ambient", "drone", "psychedelic", "experimental", "post-rock", "electronic"]
   }, {
     name: "Wilco",
-    genres: ["alt-country", "indie", "rock", "indie rock", "alternative", "wilco-2005-recording live at the vic theatre cd1"]
+    genres: ["alt-country", "indie", "rock", "indie rock", "alternative"]
   }, {
     name: "Wild Nothing",
     genres: ["dream pop", "shoegaze", "indie", "indie pop", "poptron", "lo-fi"]
