@@ -19,8 +19,6 @@ let state = {
   scale: 1
 }
 
-let img = 'https://lastfm-img2.akamaized.net/i/u/avatar170s/620abf38efaf498298196e3e06e6286a.jpg' // TODO remove
-
 /**
  * Set Up Simulation
  */
@@ -208,7 +206,7 @@ function showResults (term) {
     $suggestions.innerHTML = music.artists
       .filter(artist => artist.name.toLowerCase().indexOf(term) > -1)
       .slice(0, 5)
-      .map(artist => `<a href="#" class="search-result" data-name="${artist.name}"><img src="${img}" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}</a>`)
+      .map(artist => `<a href="#" class="search-result" data-name="${artist.name}"><img src="${artist.img}" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}</a>`)
       .join('')
     $search.classList.add('is-searching')
   }
@@ -247,7 +245,7 @@ function select (d) {
       return `
         <li class="similar__artist">
           <a href="#" class="similar__artist__link" data-name="${artist.name}">
-            <img src="${img}" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}
+            <img src="${artist.img}" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}
           </a>
         </li>`
     })
@@ -255,7 +253,7 @@ function select (d) {
 
   $info.innerHTML = `
     <div class="artist">
-      <img src="https://lastfm-img2.akamaized.net/i/u/avatar170s/620abf38efaf498298196e3e06e6286a.jpg" class="artist-thumb" alt="${d.name}">
+      <img src="${d.img}" class="artist-thumb" alt="${d.name}">
       <h2 class="artist-title">${d.name}</h2>
     </div>
     <div class="padding-left-1 padding-right-1 trailer-half">
