@@ -69,13 +69,15 @@ simulation.on('tick', ticked)
 /**
  * Event Handlers
  */
+
+// if you pressed the down arrow, focus the first list item
 function checkDownKey (e) {
-  // if you pressed the down arrow, focus the first list item
   if (e.keyCode === 40) {
     document.querySelector('.search-result').focus()
   }
 }
 
+// up and down arrows in list view change focus
 function checkDownUpKey (e) {
   let suggestions = Array.prototype.slice.call(document.querySelectorAll('.search-result'))
   let last = suggestions.length - 1
@@ -99,10 +101,6 @@ function nodeClick (d) {
 }
 
 function searchInput (e) {
-  // quick up/down arrow list selection
-  if (e.keyCode === 40 || e.keyCode === 38) {
-    console.log(true)
-  }
   let searchTerm = e.target.value.toLowerCase()
   showResults(searchTerm)
 }
@@ -206,7 +204,7 @@ function showResults (term) {
     $suggestions.innerHTML = music.artists
       .filter(artist => artist.name.toLowerCase().indexOf(term) > -1)
       .slice(0, 5)
-      .map(artist => `<a href="#" class="search-result" data-name="${artist.name}"><img src="${artist.img}" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}</a>`)
+      .map(artist => `<a href="#" class="search-result" data-name="${artist.name}"><img src="/img/artist-images/${artist.id}.jpg" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}</a>`)
       .join('')
     $search.classList.add('is-searching')
   }
@@ -245,7 +243,7 @@ function select (d) {
       return `
         <li class="similar__artist">
           <a href="#" class="similar__artist__link" data-name="${artist.name}">
-            <img src="${artist.img}" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}
+            <img src="/img/artist-images/${artist.id}.jpg" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}
           </a>
         </li>`
     })
@@ -253,7 +251,7 @@ function select (d) {
 
   $info.innerHTML = `
     <div class="artist">
-      <img src="${d.img}" class="artist-thumb" alt="${d.name}">
+      <img src="/img/artist-images/${d.id}.jpg" class="artist-thumb" alt="${d.name}">
       <h2 class="artist-title">${d.name}</h2>
     </div>
     <div class="padding-left-1 padding-right-1 trailer-half">
