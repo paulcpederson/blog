@@ -1,101 +1,111 @@
 ---
 title: CV
-template: _templates/layout.html
 description: Curriculum Vitae
 spot: cyan
 block: page
+layout: false
 ---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, height=device-height">
+    <meta name="author" content="Paul C Pederson">
+    <meta name="description" content="{{ description }}">
+    <title>CV | Paul C Pederson</title>
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="alternate" type="application/rss+xml" title="Paul C Pederson Feed" href="http://paulcpederson.com/feed.xml" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content="http://paulcpederson.com/img/{{card_image}}">
+    <meta property="og:image" content="http://paulcpederson.com/img/{{card_image}}">
+    <meta name="twitter:site" content="@paulcpederson">
+    <meta name="twitter:creator" content="@paulcpederson">
+    <meta name="twitter:title" content="{{title}}">
+    <meta name="twitter:description" content="{{description}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:url" content="http://paulcpederson.com{{url}}">
+    <link href="https://plus.google.com/+PaulCPederson" rel="publisher">
+    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.">
+    <link rel="stylesheet" href="/css/cv.css">
+  </head>
 
-<div class="constrain-wide leader-6 padding-leader-2">
-  <h1>Curriculum Vitae</h1>
-  <section class="constrain-narrow">
-
-    <h2>Contact</h2>
-
-    <h3 class="font-size-1 leader-2">Paul C Pederson</h3>
-    <address class="font-size--1">
-      <a href="mailto:paul.c.pederson@gmail.com">paul.c.pederson@gmail.com</a>
-      <span class="l-block">Portland, OR</span>
-      <em>Please inquire for more detailed contact information.</em>
-    </address>
-
-    <div class="block-grid">
-      <div class="column-3 medium-column-12">
-        <h2>Skills</h2>
+  <body class="cv-background">
+    <div class="cv-wrapper">
+      <div class="avatar flex">
+        <div>
+          <img src="/img/profile-large.png" alt="Profile Photo of Paul C Pederson" class="avatar-img">
+        </div>
+        <div class="flex-1">
+          <h1 class="avatar-title">Paul C Pederson</h1>
+          <p class="avatar-subtitle">Designer + Developer</p>
+        </div>
       </div>
-      <div class="column-9 medium-column-12 article">
-        <h3 class="font-size-1 leader-2">Development</h3>
-        <ul class="font-size--1">
-          <li><strong>Languages</strong> &mdash; HTML, CSS, JavaScript, Sass, JSON, GeoJSON, YAML, Markdown, Ruby</li>
-          <li><strong>JS Frameworks</strong> &mdash; Angular (1.x), Dojo, jQuery, Backbone, vanilla JavaScript</li>
-          <li><strong>JS Libraries</strong> &mdash; ArcGIS API for JavaScript, Leaflet, Canvas, Google Analytics, NVD3, Dimple, Google Maps JavaScript API</li>
-          <li><strong>Content Management Systems</strong> &mdash; Expression Engine, Wordpress, (some) Django</li>
-        </ul>
-        <h3 class="font-size-1 leader-2">Design</h3>
-        <ul class="font-size--1">
-          <li><strong>UX</strong> &mdash; Wireframing, Information Architecture, prototyping</li>
-          <li><strong>UI</strong> &mdash; Adobe Illustrator, Adobe Photoshop, in-browser design, living styleguides</li>
-          <li><strong>Brand</strong> &mdash; Identity design, typography, color theory</li>
-        </ul>
+
+      <p class="main-statement">
+        A versatile and driven product designer fuses a background in visual design with expertise in front-end development to deliver beautiful and intuitive user experiences.
+      </p>
+
+      <div class="flex">
+        <div class="flex-2 padding-right-3">
+          <h2 class="section-heading">Experience</h2>
+          <h3 class="entry-heading entry-heading--first">Product Designer - Esri</h3>
+          <p class="entry-text">Product design, information architecture, wireframing, prototyping, font-end web development, user testing, and strategy for Esri’s flagship web product. Additionally created a company-wide design framework.</p>
+          <p class="entry-subtext">November 2013 - Present</p>
+
+          <h3 class="entry-heading">Designer - Adpearance</h3>
+          <p class="entry-text">Web design, e-commerce design, digital strategy, branding, A/B testing, and font-end web development for a growing digital marketing company. Made clients happy with beautiful designs that dramatically increased conversion metrics.</p>
+          <p class="entry-subtext">November 2011 - November 2013</p>
+
+          <h3 class="entry-heading">Designer - EMU Marketing</h3>
+          <p class="entry-text">Web design, poster design, event branding, and signage for the University of Oregon's student-run design office.</p>
+          <p class="entry-subtext">November 2009 - November 2011</p>
+        </div>
+
+        <div class="flex-1">
+          <h2 class="section-heading">Education</h3>
+          <p class="entry-text">Bachelor of Arts, Digital Art University of Oregon </p>
+          <p class="entry-subtext">September 2007 - June 2012</p>
+
+          <h2 class="section-heading">Core Skills</h3>
+          <ul class="skills">
+            <li class="skills-text entry-text">UX Design</li>
+            <li class="skills-text entry-text">UI Design</li>
+            <li class="skills-text entry-text">Product Design </li>
+            <li class="skills-text entry-text">Front-End Development </li>
+            <li class="skills-text entry-text">Information Architecture </li>
+            <li class="skills-text entry-text">User Testing</li>
+          </ul>
+        </div>
       </div>
+
+      <div class="flex">
+        <div class="flex-1">
+          <p class="entry-text">paul.c.pederson@gmail.com </p>
+          <p class="entry-subtext entry-subtext--all-caps">Email</p>
+        </div>
+        <div class="flex-1">
+          <p class="entry-text">paulcpederson.com</p>
+          <p class="entry-subtext entry-subtext--all-caps">Website</p>
+        </div>
+        <div class="flex-1">
+          <p class="entry-text">1 971-201-8370</p>
+          <p class="entry-subtext entry-subtext--all-caps">Phone</p>
+          <img src="/img/avatar.png" alt="Profile Photo of Paul C Pederson" class="avatar-img avatar-img--small right">
+        </div>
+      </div>
+
     </div>
 
+    <!-- Google Analytics -->
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-41031992-4', 'auto');
+      ga('send', 'pageview');
+    </script>
 
-    <div class="block-grid">
-      <div class="column-3 medium-column-12">
-        <h2>Experience</h2>
-      </div>
-      <div class="column-9 medium-column-12 article">
-        <h3 class="font-size-1 leader-2">Esri</h3>
-        <p class="clearfix">
-          <em class="left">Developer + Designer</em>
-          <em class="right">Nov 2013 &mdash; Present</em>
-        </p>
-        <ul class="font-size--1">
-          <li><strong>ArcGIS for Developers</strong> &mdash; Designed and built a completely new web product for developers (developers.arcgis.com) including marketing, authentication, app registration, documentation, and usage analytics</li>
-          <li><strong>Calcite Web</strong> &mdash; Built a branded styleguide and CSS Framework for use by all Esri web teams</li>
-          <li><strong>ArcGIS Online</strong> &mdash; Spearheading the development effort to redesign ArcGIS Online (ongoing)</li>
-        </ul>
-
-        <h3 class="font-size-1 leader-2">Adpearance</h3>
-        <p class="clearfix">
-          <em class="left">Developer + Designer</em>
-          <em class="right">Nov 2011 &mdash; Nov 2013</em>
-        </p>
-        <ul class="font-size--1">
-          <li><strong>Fetch Eyewear</strong> &mdash; Full ecommerce site design, branding, digital strategy, content strategy, front end development, and extensive templating in Expression Engine (PHP CMS).</li>
-          <li><strong>Landing Pages</strong> &mdash; Built several new landing page templates using Adpearance's in-house PHP landing page engine. Increased the conversion rate by 30% over the existing designs.</li>
-          <li><strong>KAI Knives</strong> &mdash; Helped with initial typography, creative strategy, and design for KAI Knives and all of it's subsidiaries (Kershaw, ZT, Shun).</li>
-        </ul>
-
-        <h3 class="font-size-1 leader-2">EMU Marketing</h3>
-        <p class="clearfix">
-          <em class="left">Designer + Developer</em>
-          <em class="right">2009 &mdash; 2011</em>
-        </p>
-        <ul class="font-size--1">
-          <li>Web Design, poster design, event branding, and signage for the University of Oregon's student-run design office</li>
-        </ul>
-
-      </div>
-    </div>
-
-    <div class="block-grid">
-      <div class="column-3 medium-column-12">
-        <h2>Education</h2>
-      </div>
-      <div class="column-9 medium-column-12 article">
-        <h3 class="font-size-1 leader-2">University of Oregon</h3>
-        <p class="clearfix">
-          <em class="left">Bachelor of Arts Degree in Digital Arts</em>
-          <em class="right">Spring 2012</em>
-        </p>
-        <ul class="font-size--1">
-          <li>Graduated with honors (cum laude)</li>
-          <li>Deans List, Fall 2009</li>
-          <li>Presidential Scholar</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-</div>
+  </body>
+</html>
