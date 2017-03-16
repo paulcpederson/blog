@@ -33,20 +33,23 @@ layout: false
   <body class="cv-background">
     <div class="cv-wrapper">
       <div class="avatar flex">
-        <div>
+        <div class="margin-right-1">
           <img src="/img/profile-large.png" alt="Profile Photo of Paul C Pederson" class="avatar-img">
         </div>
         <div class="flex-1">
           <h1 class="avatar-title">Paul C Pederson</h1>
           <p class="avatar-subtitle">Designer + Developer</p>
         </div>
+        <div>
+          <a href="/resume.pdf" class="download">{% include "./img/cv.svg" %}Download PDF</a>
+        </div>
       </div>
 
-      <p class="main-statement">
+      <p class="main-statement leader-3">
         A versatile and driven product designer fuses a background in visual design with expertise in front-end development to deliver beautiful and intuitive user experiences.
       </p>
 
-      <div class="flex">
+      <div class="flex phone-flex-column">
         <div class="flex-2 padding-right-3">
           <h2 class="section-heading">Experience</h2>
           <h3 class="entry-heading entry-heading--first">Product Designer - Esri</h3>
@@ -63,35 +66,39 @@ layout: false
         </div>
 
         <div class="flex-1">
-          <h2 class="section-heading">Education</h3>
+          <h2 class="section-heading">Education</h2>
           <p class="entry-text">Bachelor of Arts, Digital Art University of Oregon </p>
           <p class="entry-subtext">September 2007 - June 2012</p>
 
-          <h2 class="section-heading">Core Skills</h3>
-          <ul class="skills">
-            <li class="skills-text entry-text">UX Design</li>
-            <li class="skills-text entry-text">UI Design</li>
-            <li class="skills-text entry-text">Product Design </li>
-            <li class="skills-text entry-text">Front-End Development </li>
-            <li class="skills-text entry-text">Information Architecture </li>
-            <li class="skills-text entry-text">User Testing</li>
-          </ul>
+          <div class="leader-3">
+            <h2 class="section-heading">Core Skills</h2>
+            <ul class="skills">
+              <li class="skills-text entry-text">UX Design</li>
+              <li class="skills-text entry-text">UI Design</li>
+              <li class="skills-text entry-text">Product Design </li>
+              <li class="skills-text entry-text">Front-End Development </li>
+              <li class="skills-text entry-text">Information Architecture </li>
+              <li class="skills-text entry-text">User Testing</li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <div class="flex">
-        <div class="flex-1">
-          <p class="entry-text">paul.c.pederson@gmail.com </p>
-          <p class="entry-subtext entry-subtext--all-caps">Email</p>
+      <div class="flex phone-flex-column leader-2">
+        <div class="trailer-half flex-1">
+          <p class="details-text">paul.c.pederson@gmail.com </p>
+          <p class="details-subtext details-subtext--all-caps">Email</p>
         </div>
-        <div class="flex-1">
-          <p class="entry-text">paulcpederson.com</p>
-          <p class="entry-subtext entry-subtext--all-caps">Website</p>
+        <div class="trailer-half flex-1">
+          <p class="details-text">paulcpederson.com</p>
+          <p class="details-subtext details-subtext--all-caps">Website</p>
         </div>
-        <div class="flex-1">
-          <p class="entry-text">1 971-201-8370</p>
-          <p class="entry-subtext entry-subtext--all-caps">Phone</p>
-          <img src="/img/avatar.png" alt="Profile Photo of Paul C Pederson" class="avatar-img avatar-img--small right">
+        <div class="clearfix flex-1">
+          <div class="inline-block left">
+            <p class="details-text">1 971-201-8370</p>
+            <p class="details-subtext details-subtext--all-caps">Phone</p>
+          </div>
+          <img src="/img/profile-large.png" alt="Profile Photo of Paul C Pederson" class="avatar-img avatar-img--small right">
         </div>
       </div>
 
