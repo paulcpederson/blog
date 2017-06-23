@@ -1,0 +1,32 @@
+---
+title: Particles
+date: 2017-06-12
+template: _templates/lab.html
+thumbnail: low-poly-thumb.png
+spot: red
+description: Particles move in a spherical configuration reacting to music
+labClass: lab
+css:
+  - lab
+  - lab/blobs
+js:
+  - lab
+  - particles
+collections:
+  labs: /lab/*
+---
+
+<p class="player-credits">
+  <button class="play-pause play-pause-inline js-play-pause playing" aria-label="pause">
+    <svg width="24" height="24">
+      <g class="btn-pause">
+        <rect x="6" y="3" fill="#0e6fc4" width="4" height="18"/>
+        <rect x="14" y="3" fill="#0e6fc4" width="4" height="18"/>
+      </g>
+      <polygon class="btn-play" fill="#0e6fc4" points="6,2.763 22,12.001 6,21.237 "/>
+    </svg>
+  </button>
+  <a href="http://www.tychomusic.com/">Tycho</a> — <a href="https://soundcloud.com/tycho/tycho-division-heathered-pearls-remix">Division (Heathered Pearls Remix)</a>
+</p>
+
+<audio src="love-invaders.m4a" class="js-player" preload autoplay loop></audio>

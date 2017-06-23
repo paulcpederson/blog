@@ -42,6 +42,17 @@
   z-index: 20;
 }
 
+.play-pause-inline {
+  position: static;
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 12px;
+  vertical-align: -6px;
+  padding: 12px 12px 10px 13px;
+  border-radius: 36px;
+  border: 1px solid $blue;
+}
+
 .play-pause .btn-pause { display: none; }
 .play-pause .btn-play { display: block; }
 
