@@ -67,7 +67,6 @@ function animate () {
   rotation.x += 0.01
   rotation.y += 0.02
 
-  // TODO: set programatically based on spectrum analysis
   var distance = 1 + (Math.random() * .25)
   analyser.getByteFrequencyData(d)
 
