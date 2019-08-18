@@ -1,3 +1,1 @@
-<svg width="40px" height="40px" viewBox="0 0 40 40" xml:space="preserve">
-  <polygon fill="none" stroke-width="3" stroke-miterlimit="10" points="37.125,3 3,3 3,37.125 25.559,37.125 37.125,25.559 "/>
-</svg>
+<svg width="40" height="40" viewBox="0 0 40 40"><path fill="none" d="M37.125 3H3v34.125h22.559l11.566-11.566z"/></svg>
