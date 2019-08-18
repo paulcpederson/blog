@@ -1,9 +1,10 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/ee3de9d0-f9c3-4e74-aae7-91962b669860/deploy-status)](https://app.netlify.com/sites/vibrant-jang-9c3641/deploys)
 
 # Blog
 
 ## Tech Stack
 
-Node powered blog using [Static Site](https://github.com/paulcpederson/static-site). Hosted with [Surge](https://surge.sh/).
+Node powered blog using [Static Site](https://github.com/paulcpederson/static-site). Hosted with [Netlify](https://www.netlify.com/).
 
 ## Topics
 
@@ -61,10 +62,8 @@ npm start
 
 ## Deploy
 
-```
-npm run deploy
-```
+Deployments occur automatically based on the `master` branch via [continuous deployment](https://www.netlify.com/docs/continuous-deployment/).
 
 ## License
 
-Words, content, and design are mine (©Paul C Pederson, 2015), but the tech is yours (ISC).
+Words, content, and design are mine (©Paul C Pederson, 2019), but the tech is yours (ISC).
