@@ -12,8 +12,7 @@
     "serve": "live-server www/ --port=7777 --no-browser",
     "prestart": "run-s img sass html copy",
     "start": "run-p serve js:watch rerun sass:watch",
-    "predeploy": "run-s js img sass copy && npm run html -- --production",
-    "deploy": "surge www/ paulcpederson.com",
+    "build": "run-s js img sass copy && npm run html -- --production",
     "test": "a11y 'www/**/*.html'"
   },
   "browserify": {
@@ -49,7 +48,6 @@
     "autoprefixer": "^6.3.3",
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
-    "chartist": "^0.9.7",
     "copyfiles": "^1.0.0",
     "delaunay-fast": "^1.0.1",
     "imagemin-newer": "^1.0.1",
@@ -59,8 +57,7 @@
     "postcss-cli": "^2.5.1",
     "rerun-script": "^0.6.0",
     "simplifyify": "^2.0.1",
-    "static-site": "^1.3.1",
-    "surge": "^0.17.3"
+    "static-site": "^1.3.1"
   },
   "repository": {
     "type": "git",
