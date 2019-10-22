@@ -19,6 +19,7 @@
 .lab-info {
   width: 48px;
   height: 48px;
+  background-color: $base03;
   color: $white;
   position: absolute;
   padding: 0;
@@ -37,6 +38,7 @@
 
 .lab-info svg {
   margin-top: 6px;
+  fill: currentColor;
 }
 
 .lab-info:hover, .lab-info:focus {
