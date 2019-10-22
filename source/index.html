@@ -40,10 +40,10 @@ collections:
       <div class="flex card-container align-top">
       {% for project in collections.work %}
       {% if loop.index < 4 %}
-      <a href="{{project.url}}" class="card link-plain trailer-2 fade delay-{{loop.index + 2}}">
-        <img src="/img/{{project.thumbnail}}" alt="{{project.title}}">
-        <h3 class="leader-1 font-size-0">{{project.title}}</h3>
-        <p class="trailer-0 font-size--1">{{project.description}}</p>
+      <a href="{{project.url}}" class="card project link-plain trailer-2 fade delay-{{loop.index + 2}}">
+        <img src="/img/{{project.thumbnail}}" alt="{{project.title}}" class="project-img">
+        <h3 class="leader-1 font-size-0 trailer-0">{{project.title}}</h3>
+        <p class="trailer-0 font-size--1 text-light">{{project.description}}</p>
       </a>
       {% endif %}
       {% endfor %}
@@ -62,7 +62,7 @@ collections:
           <span class="time-year">{{article.date|date('Y')}}</span>
         </time>
         <div class="margin-left-1 flex-1">
-          <h3 class="leader-half trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
+          <h3 class="leader-0 trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
           <p class="font-size--1">{{article.description}}</p>
         </div>
       </div>

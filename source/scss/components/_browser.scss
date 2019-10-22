@@ -19,9 +19,9 @@
 .browser:before {
   content: "○ ○ ○";
   display: block;
-  font-size: 1.5rem;
+  font-size: 15px;
   font-weight: bold;
-  line-height: 1.25;
+  line-height: 2.5;
   text-indent: .5rem;
   width: 100%;
   position: absolute;
@@ -34,11 +34,11 @@
 .browser:after {
   content: attr(data-site);
   position: absolute;
-  font-size: $font-size--2;
+  font-size: 12px;
   font-family: $monospace;
   font-weight: 300;
-  line-height: 3;
-  color: $lighter-gray;
-  left: 5rem;
+  line-height: 3.2;
+  color: #ddd;
+  left: 72px;
   top: 0;
 }
