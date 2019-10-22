@@ -8,12 +8,12 @@
     <meta name="description" content="{{ description }}">
     <title>{{title}} | Paul C Pederson</title>
     <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="alternate" type="application/rss+xml" title="Paul C Pederson Feed" href="http://paulcpederson.com/feed.xml" />
+    <link rel="alternate" type="application/rss+xml" title="Paul C Pederson Feed" href="https://paulcpederson.com/feed.xml" />
     {% set card_image = twitter_image || thumbnail %}
     {% if card_image %}
       <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:image" content="http://paulcpederson.com/img/{{card_image}}">
-      <meta property="og:image" content="http://paulcpederson.com/img/{{card_image}}">
+      <meta name="twitter:image" content="https://paulcpederson.com/img/{{card_image}}">
+      <meta property="og:image" content="https://paulcpederson.com/img/{{card_image}}">
     {% else %}
       <meta name="twitter:card" content="summary">
     {% endif %}
@@ -22,7 +22,7 @@
     <meta name="twitter:title" content="{{title}}">
     <meta name="twitter:description" content="{{description}}">
     <meta property="og:title" content="{{title}}">
-    <meta property="og:url" content="http://paulcpederson.com{{url}}">
+    <meta property="og:url" content="https://paulcpederson.com{{url}}">
     <link href="https://plus.google.com/+PaulCPederson" rel="publisher">
     <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.">
     <link rel="stylesheet" href="/css/style.css">
@@ -60,7 +60,7 @@
     {% endfor %}
 
     {% if !production %}
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.8.2/html-inspector.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.8.2/html-inspector.js"></script>
       <script> HTMLInspector.inspect() </script>
     {% endif %}
 
@@ -75,7 +75,7 @@
         m=f.getElementsByTagName('script')[0];
         o.async=1; o.src=t; o.id='fathom-script';
         m.parentNode.insertBefore(o,m)
-        })(document, window, '//cdn.usefathom.com/tracker.js', 'fathom');
+        })(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
         fathom('set', 'siteId', 'IXNRMAJT');
         fathom('trackPageview');
       </script>
