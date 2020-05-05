@@ -2,19 +2,18 @@
 title: Stencil Icons
 date: 2020-05-05
 template: _templates/article.html
-background: css.svg
-thumbnail: storybook-thumb.svg
-twitter_image: storybook-thumb.jpg
+thumbnail: icon-thumb.svg
+twitter_image: icon-thumb.png
 canvas: navy
 spot: green
-description: Implementing SVG icons for a design system with a Stencil.js Web Component
+description: How we created a stencil-based web component for displaying SVG icons
 ---
 
-In the last ten years, developers have been on a quest to find the best way to implement icons in a digital product. We've wandered through low fidelity gifs, elaborately Photoshopped png sprites, icon fonts (remember those?), SVG sprites, and finally inline SVGs. Recently I've been helping out with the DX for my company's the extensive icon library. The solution we've come to
+In the last ten years, developers have been on a quest to find the best way to implement icons in a digital product. We've wandered through low fidelity gifs, elaborately Photoshopped png sprites, icon fonts (remember those?), SVG sprites, and finally inline SVGs. Recently I've been helping out with the DX for my company's extensive icon library. The solution we've developed is the next step in my icon journey.
 
 ## What's the problem with inline SVG?
 
-A while back it became clear that icon fonts and svg sprites were less than ideal. At the time of writing the icon system I'm working with has 1,512 different glyphs available as part of the icon set. This is a ludicrous amount of data to try to load in one file. For that reason, most teams moved to an inline-icon approach. Basically, you simply add markup to your html file and an SVG appears:
+A while back it became clear that icon fonts and svg sprites were less than ideal. At the time of writing the icon system I'm working with has 1,512 different glyphs available as part of the icon set. This is a ludicrous amount of data to try to load in one file. For that reason, most teams have moved to an inline-icon approach. Basically, you add SVG markup directly to your HTML file and lo, an icon appears:
 
 ```html
 <svg width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
@@ -22,27 +21,27 @@ A while back it became clear that icon fonts and svg sprites were less than idea
 </svg>
 ```
 
-There's a [great 2016 blog post](https://github.blog/2016-02-22-delivering-octicons-with-svg/) by GitHub outlining why you would go that route. In the post, they give a peek at the Rails helper they use:
+There's [a great 2016 blog post](https://github.blog/2016-02-22-delivering-octicons-with-svg/) by GitHub outlining why you would go that route. In the post, they give a peek at the Rails helper they use:
 
-```
+```rb
 <%= octicon(:symbol => "plus") %>
 ```
 
-This is great! The client doesn't need to load any icons and the developer doesn't need to remember the icon markup or path data. However, for my use case, there are a few downsides with this approach. Namely, when you work with dozens of teams using every tech stack imaginable, there is no one "Rails helper" for folks to use. You would have to make: an Angular directive, an Ember component, a React Component, a Rails helper, etc. The front-end technologies would need to be very careful that the full weight of all the icons didn't end up in their bundle, otherwise you'd have a megabyte of icons you weren't using. Because of all these challenges, many teams were coming up with their own ad hoc implementations and "making it work" for their framework of choice.
+This is great! The client doesn't need to load any icons and the developer doesn't need to remember the icon markup or path data. But how do you do this when you work with dozens of teams using every tech stack imaginable? When there isn't one single "Rails helper" for folks to use, things become much more complicated. You would have to make: an Angular directive, an Ember component, a React Component, a Rails helper, and probably dozens of other "helpers" to cover all your bases.
 
-But wouldn't it be better if everybody could use the same helper with any framework and have it just work?
+Wouldn't it be better if everybody could use one helper and have it just work?
 
 ## Enter Stencil.js
 
-Stencil is a "framework" for building web components. It doesn't have a runtime, _per se_, but rather includes some polyfills and a loader which intelligently loads your generated web components on-demand at runtime. Essentially it makes building web components feel more like using a modern framework like React.
+Stencil is a "framework" for building web components. It doesn't have a runtime, _per se_, but rather includes some polyfills and a loader which intelligently load your web components on-demand at runtime. Essentially it makes building web components feel more like using a modern framework like React.
 
-We were using Stencil for our new design system, and many of the the components needed... icons! Another dev prototyped an icon component. It didn't work in IE11, but it did enable any project, regardless of their technology to render icons with a custom html tag. I managed to shuffle some things around and got it working for all browsers, and we've now been using this approach quite happily for sometime!
+We were using Stencil for our new design system, and many of the the components needed... icons! Another dev prototyped an icon component with path data I'd added to our shared icons library. It didn't work in IE11, but it did enable any project, regardless of their technology to render icons with a custom html tag. I managed to shuffle some things around and got it working for IE11 plus, and we've now been using this approach quite happily for sometime!
 
 Below I'll go over how this home-rolled solution worked for us in the hopes it may be helpful to other folks. _**Note**: the code below is a simplified version of what we use and is mostly pseudo-code, but it should give you an idea of how the basic approach works. If you do try this, let me know if I have misspellings or bugs and I can try to correct them._
 
 ## Getting the icon data
 
-The first step in this process is getting the actual path data for all the icons in your icon library. For most single-color icon sets, the path with be a single string (`"M6 12.892v1.011c-2.564-..."`). If your icons are uniform in construction, you don't need to store the width or viewbox data. Literally all you need is a string with the paths. In order to have this be accessible via the client, I've elected to save these paths as JSON. Earlier versions we used actual js imports, but this wasn't viable in older browsers. JSON works well, though, and is very lightweight as no extraneous data or syntax needs to be stored in the file.
+The first step in this process is getting the actual path data for all the icons in your icon library. For most single-color icon sets, the path will be a single string (`"M6 12.892v1.011c-2.564-..."`). If your icons are uniform in construction, you don't need to store the width or viewbox data. Literally all you need is a string with the path. In order to have this be accessible via the client, I've elected to save these paths as JSON. In earlier versions we used actual JS imports, but this wasn't viable in older browsers. JSON works well, though, and is very lightweight as no extraneous data or syntax needs to be stored in the file.
 
 Below is a simplified version of our node script (we have more complexity like multiple sizes, name standarization, variant icons, etc):
 
@@ -55,11 +54,11 @@ const path = require('path');
 const util = require('util');
 const svgson = util.promisify(require('svgson'));
 
-// first, get a list of all of your icons in the folder
+// first, get a list of all of your icons in the source folder
 glob('icons/*.svg')
   // next, read their files, using svgson to parse
   .then(filePaths => Promise.all(filePaths.map((fileName) => {
-    return new Promise(function(resolve) {
+    return new Promise((resolve) => {
       fs.readFile(fileName, 'utf-8').then((svg) => {
         svgson(svg, {}, (contents) => {
           resolve({file: fileName, contents});
@@ -84,11 +83,11 @@ glob('icons/*.svg')
 
 Now after you install the devDependencies needed in the above file, and run this JS as a node script, it will go find all your icons and create a JSON file for each one! You could run this manually, or before start/build with [npm scripts](../npm-run/).
 
-## Writing an icon component
+## Creating the component
 
-Now that we have the icon data, we need to create a web component that will render that data. The important part here, is that we only want to make the request for an icon once. If we render 500 icons but they are all an edit pencil, only one request should be sent to `pencil.json`. We'll do this by creating a request utility and sharing it between all of our web component instances. In your stencil components folder you should have:
+Now that we have the icon data, we need to create a web component that will render that data. The important part here is that we only want to make the request for an icon once. If we render 500 icons but they are all an edit pencil, only one request should be sent to `pencil.json`. We'll do this by creating a request utility and sharing it between all of our web component instances. In your stencil components folder you should have:
 
-```
+```js
 library-name-icon/
   assets/
   utils.ts
@@ -129,7 +128,7 @@ As you can see, first this checks the cache object to see if we already have the
 
 Next, we need to write a component! Inside your tsx file, use something like this:
 
-```
+```js
 import { Build, Component, Element, h, Host, Prop, State, Watch } from "@stencil/core";
 import { fetchIcon } from "./utils";
 
