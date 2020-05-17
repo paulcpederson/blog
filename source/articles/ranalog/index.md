@@ -129,9 +129,9 @@ document.querySelector('link[rel="stylesheet"]').removeAttribute('disabled')
 
 I don't know how meaningful this change was in my app, but it's intuitive that deferring non-critical CSS to later in the loading process would help your first paint time.
 
-## Deploying with netlify
+## Deploying with Netlify
 
-Once you've ticked all the PWA boxes (use the "audits" tab in the Chrome Web Inspector for help), you are ready to deploy. My favorite way to do this lately for SPAs is to use their "Deploy from GitHub" feature. [This article](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) has a good step by step walk through. Basically you tell netlify where your repo is and what build command you want to run, and anytime you push to master your site will re-deploy automatically.
+Once you've ticked all the PWA boxes (use the "audits" tab in the Chrome Web Inspector for help), you are ready to deploy. My favorite way to do this lately for SPAs is to use their "Deploy from GitHub" feature. [This article](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/) has a good step by step walk through. Basically you tell Netlify where your repo is and what build command you want to run, and anytime you push to master your site will re-deploy automatically.
 
 For the command, I added a couple more scripts to the `package.json`:
 
@@ -142,7 +142,7 @@ For the command, I added a couple more scripts to the `package.json`:
 }
 ```
 
-Then tell netlify you'd like to use `npm run deploy` as your build command.
+Then tell Netlify you'd like to use `npm run deploy` as your build command.
 
 ### HTTPS
 
@@ -152,6 +152,6 @@ Just bask in how short this [medium article](https://medium.com/@m_nakamura145/e
 
 ## Wrap up
 
-In the end, I learned a lot and built myself a very useful app. You can check out the finished product at [ranalog.club](https://ranalog.club/) (_⚠️ warning: could have NSFW posts!_). I've been happily browsing a few times a day for the past several months! There were definitely some hurdles, but things like parcel and netlify made the process a whole lot easier.
+In the end, I learned a lot and built myself a very useful app. You can check out the finished product at [ranalog.club](https://ranalog.club/) (_⚠️ warning: could have NSFW posts!_). I've been happily browsing a few times a day for the past several months! There were definitely some hurdles, but things like parcel and Netlify made the process a whole lot easier.
 
 As always, feel free to reach out to me on twitter [@paulcpederson](https://twitter.com/paulcpederson) with questions or comments!

@@ -18,13 +18,17 @@
   color: #666;
   line-height: 40px;
   font-size: $font-size-0;
-  transition: color 100ms linear;
+  transition: all 100ms linear;
+  padding: .5rem 0;
+  border-bottom: 2px solid transparent;
 }
 
-.nav-link.is-active,
 .nav-link:hover,
-.nav-link:focus {
+.nav-link:focus,
+.nav-link.is-active {
   color: #222;
+  text-decoration: none;
+  border-bottom-color: $blue;
 }
 
 .dark .nav-link {

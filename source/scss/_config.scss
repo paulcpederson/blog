@@ -7,7 +7,7 @@ $gray:           #666666;
 $dark-gray:      #30302F;
 $darker-gray:    #242323;
 $darkest-gray:   #222222;
-$blue:           #0e6fc4;
+$blue:           #1879BF;
 
 // Type scale (Minor Third)
 $font-size-4:   2.07rem;
@@ -18,7 +18,7 @@ $font-size-0:   1rem;
 $font-size--1:  .875rem;
 $font-size--2:  .775rem;
 
-$monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+$monospace: "Roboto Mono", Menlo, Monaco, Consolas, "Courier New", monospace;
 
 // Solarized (for lab experiments)
 $base1:     #A1ACAF;  // emphasized text color
@@ -26,6 +26,8 @@ $base0:     #919EA1;  // main text color
 $base01:    #79929A;  // comments
 $base02:    #003a44;  // background highlights
 $base03:    #002b36;  // background
+
+$box-shadow: 0 6px 8px rgba(0,0,0,.03), 0 1px 2px rgba(0,0,0,.1);
 
 
 

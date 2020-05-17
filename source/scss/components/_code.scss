@@ -1,127 +1,120 @@
-/* solarized code styling */
-$base1:     #A1ACAF;  // emphasized text color
-$base0:     #919EA1;  // main text color
-$base01:    #79929A;  // comments
-$base02:    #003a44;  // background highlights
-$base03:    #002b36;  // background
+// Ayu light theme
+$accent: #FF9940;
+$bg: #FAFAFA;
+$fg: #6C7680;
+$ui: #959DA6;
+$tag: #55B4D4;
+$func: #F2AE49;
+$entity: #399EE6;
+$string: #86B300;
+$regexp: #4CBF99;
+$markup: #F07171;
+$keyword: #FA8D3E;
+$special: #E6BA7E;
+$comment: #ABB0B6;
+$constant: #A37ACC;
+$operator: #ED9366;
+$error: #F51818;
 
-$s-yellow:    #b38600;
-$s-orange:    #cf5b29;
-$s-red:       #ff4a47;
-$s-magenta:   #fa429b;
-$s-violet:    #8185df;
-$s-blue:      #2e93dc;
-$s-cyan:      #2a9d94;
-$s-green:     #829603;
-
+$added: #99BF4D;
+$modified: #709ECC;
+$removed: #F27983;
 
 code, kbd {
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: $monospace;
   font-weight: 300;
   padding: .25em 0.5em;
   border-radius: 3px;
   position: relative;
   top: -0.05em;
-  background: #F8F8F8;
-  border: 1px solid #EFEFEF;
+  background: $bg;
+  box-shadow: $box-shadow;
   font-size: $font-size--2;
   margin: 0 4px;
 }
 
-/* Solarized Dark Theme */
 pre {
   width: 100%;
-  background-color: $base03;
+  background-color: $bg;
+  box-shadow: $box-shadow;
   margin: 2em 0;
-  color: $base1;
+  color: $fg;
   code {
-    font-size: $font-size--1;
+    font-size: $font-size--2;
     box-sizing: border-box;
     display: block;
     padding: 1em;
     margin: 0;
-    background-color: $base03;
+    background-color: $bg;
+    box-shadow: none;
     border: none;
     top: 0;
     width: 100%;
-    line-height: 1.25;
+    line-height: 1.35;
     overflow: auto;
   }
 }
 
 .css, .js, .bash, .html, .yaml {
-  background: $base03;
-  color: $base0;
+  color: $fg;
 }
 
 .hljs-comment,
-.hljs-quote,
-.hljs-tag {
-  color: $base01;
+.hljs-quote {
+  color: $comment;
+  font-style: italic;
+}
+
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-attr,
+.hljs-regexp,
+.hljs-link,
+.hljs-selector-id {
+  color: $keyword;
+}
+
+.hljs-number,
+.hljs-meta,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: $modified;
+}
+
+.hljs-string,
+.hljs-bullet {
+  color: $regexp;
+}
+
+.hljs-title,
+.hljs-built_in,
+.hljs-section,
+.hljs-selector-class,
+.hljs-selector-id {
+  color: $constant;
 }
 
 .hljs-keyword,
 .hljs-selector-tag,
+.hljs-symbol {
+  color: $keyword;
+}
+
+.hljs-name {
+  color: $entity;
+}
+
+.hljs-tag {
+  color: $modified;
+}
+
 .hljs-addition {
-  color: $s-green;
-}
-
-.hljs-number,
-.hljs-string,
-.hljs-meta .hljs-meta-string,
-.hljs-literal,
-.hljs-doctag,
-.hljs-regexp,
-.hljs-selector-id {
-  color: $s-cyan;
-}
-
-.hljs-title,
-.hljs-section,
-.hljs-name,
-.hljs-selector-class,
-.hljs-function {
-  color: $s-blue;
-}
-
-.hljs-attribute,
-.hljs-attr,
-.hljs-variable,
-.hljs-template-variable,
-.hljs-class .hljs-title,
-.hljs-type,
-.hljs-params {
-  color: $s-yellow;
-}
-
-.hljs-symbol,
-.hljs-bullet,
-.hljs-subst,
-.hljs-meta,
-.hljs-meta .hljs-keyword,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-link {
-  color: $s-orange;
-}
-
-
-.hljs-built_in {
-  color: $s-violet;
+  color: $added;
 }
 
 .hljs-deletion {
-  color: $s-red;
-}
-
-.hljs-formula {
-  background: $base02;
-}
-
-.hljs-emphasis {
-  color: $base1;
-}
-
-.hljs-strong {
-  font-weight: bold;
+  color: $removed;
 }

@@ -56,13 +56,13 @@ collections:
       {% for article in collections.articles %}
       {% if loop.index < 4 %}
       <div class="flex flex-no-wrap trailer-2 constrain-narrow">
-        <time datetime="{{article.date|date('Y-m-d')}}" class="flex-0">
+        <time datetime="{{article.date|date('Y-m-d')}}" class="time">
           <span class="time-month">{{article.date|date('F')}}</span>
           <span class="time-day">{{article.date|date('d')}}</span>
           <span class="time-year">{{article.date|date('Y')}}</span>
         </time>
         <div class="margin-left-1 flex-1">
-          <h3 class="leader-0 trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
+          <h3 class="leader-1 trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
           <p class="font-size--1">{{article.description}}</p>
         </div>
       </div>

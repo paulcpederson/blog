@@ -27,10 +27,13 @@
   }
   pre {
       margin-left: -4vw;
-      width: 110.8%;
-      padding-left: 4.25%;
+      width: calc(100% + 8vw);
+      padding-left: 4vw;
       max-width: 100vw;
       box-sizing: border-box;
+    code {
+      padding: 1.5rem 1.5rem 1.5rem 0;
+    }
   }
   .caption {
     font-size: 0.75em;

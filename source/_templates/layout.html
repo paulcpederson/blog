@@ -29,20 +29,20 @@
     {% for stylesheet in css %}<link rel="stylesheet" href="/css/{{stylesheet}}.css">{% endfor %}
   </head>
 
-  <body class="padding-trailer-3 {{dark}}">
+  <body class="{{dark}}">
     <!-- Top Navigation -->
     <header class="constrain-wide leader-2 trailer-1 nav">
       <nav>
-        <a href="/" class="nav-link logo">
+        <a href="/" class="logo">
           <svg width="40px" height="40px" viewBox="0 0 40 40" xml:space="preserve">
             <title>Paul C Pederson</title>
             <polygon fill="none" stroke-width="3" stroke-miterlimit="10" points="37.125,3 3,3 3,37.125 25.559,37.125 37.125,25.559 "/>
           </svg>
         </a>
         <div class="right">
-          <a href="/articles/" class="nav-link">Articles</a>
-          <a href="/work/" class="nav-link margin-left-2">Work</a>
-          <a href="/lab/" class="nav-link margin-left-2">Lab</a>
+          <a href="/articles/" class="nav-link {% if url == '/articles/'%} is-active {% endif %}" >Articles</a>
+          <a href="/work/" class="nav-link margin-left-2 {% if url == '/work/'%} is-active {% endif %}">Work</a>
+          <a href="/lab/" class="nav-link margin-left-2 {% if url == '/lab/'%} is-active {% endif %}">Lab</a>
         </div>
       </nav>
     </header>

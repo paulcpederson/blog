@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block page %}
+<div class="bg-gray">
+  <div class="fade delay-1 constrain-wide padding-leader-6 padding-trailer-2">
+    <h1 class="leader-2 font-size-2">{{title}}</h1>
+    <p class="fade delay-2 flex-1 padding-leader-0 trailer-0 font-size--1 text-light constrain-narrow">{{description}}</p>
+  </div>
+  <div class="constrain-wide snippet-container fade delay-3 padding-trailer-4">
+    {% block content %}{% endblock %}
+  </div>
+</div>
+{% endblock %}
