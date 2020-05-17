@@ -6,7 +6,7 @@ $base02:    #003a44;  // background highlights
 $base03:    #002b36;  // background
 
 $s-yellow:    #b38600;
-$s-orange:    #ea632a;
+$s-orange:    #cf5b29;
 $s-red:       #ff4a47;
 $s-magenta:   #fa429b;
 $s-violet:    #8185df;
@@ -79,7 +79,8 @@ pre {
 .hljs-title,
 .hljs-section,
 .hljs-name,
-.hljs-selector-class {
+.hljs-selector-class,
+.hljs-function {
   color: $s-blue;
 }
 
@@ -88,7 +89,8 @@ pre {
 .hljs-variable,
 .hljs-template-variable,
 .hljs-class .hljs-title,
-.hljs-type {
+.hljs-type,
+.hljs-params {
   color: $s-yellow;
 }
 
@@ -103,7 +105,11 @@ pre {
   color: $s-orange;
 }
 
-.hljs-built_in,
+
+.hljs-built_in {
+  color: $s-violet;
+}
+
 .hljs-deletion {
   color: $s-red;
 }
