@@ -36,7 +36,7 @@ I also wrote up some additional notes on this process for my future self in [thi
 Now that you have a working https cert, you need to tell whatever your local server is to use it. For this project I wanted to play with [Parcel](https://parceljs.org/). Parcel is nice in a new project because it's a sort of "batteries-included" approach to tooling. You just `npm install --save-dev parcel-bundler` and then in your `package.json`, tell parcel where your html file is, and it will do all the rest! My `scripts` section ended up looking like this:
 
 ``` json
-"scripts": {
+{
   "prestart": "rm -rf dist/",
   "start": "parcel index.html --https --cert dev.ranalog.club.crt --key dev.ranalog.club.key"
 }
