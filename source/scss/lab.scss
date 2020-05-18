@@ -19,8 +19,8 @@
 .lab-info {
   width: 48px;
   height: 48px;
-  background-color: $base03;
-  color: $white;
+  background-color: $white;
+  color: $dark-gray;
   position: absolute;
   padding: 0;
   right: 1vw;
@@ -28,9 +28,10 @@
   z-index: 5;
   border-radius: 50%;
   box-sizing: border-box;
+  box-shadow: $box-shadow;
   border: none;
   cursor: pointer;
-  transition: background-color 100ms linear;
+  transition: all 100ms linear;
   outline: none;
   font-family: $monospace;
   font-size: 18px;
@@ -42,15 +43,17 @@
 }
 
 .lab-info:hover, .lab-info:focus {
-  background-color: $base02;
+  color: $darkest-gray;
+  box-shadow: $box-shadow-2;
 }
 
 .lab-shrunk {
-  transform: scale3d(.1, .1, .1);
+  transform: scale3d(.2, .2, .2);
+  box-shadow: 0 0 80px rgba(0,0,0,.125);
 }
 
 .lab-thumbnail {
-  border: none;
+  border: 1vw solid transparent;
   outline: none;
   opacity: 0;
   display: block;
@@ -63,6 +66,7 @@
   left: 0;
   pointer-events: none;
   background-color: transparent;
+  transition: all 100ms linear;
   z-index: 9;
 }
 
