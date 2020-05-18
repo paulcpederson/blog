@@ -65,7 +65,10 @@ Because this data is fetched dynamically on the client, it's important to tell u
 ```html
 <noscript>
   <h2>This page requires JavaScript</h2>
-  <p>Because this page is dynamically populated with content from Reddit, it requires JavaScript to be turned on to fetch the latest content.</p>
+  <p>
+    Because this page is dynamically populated with content from Reddit,
+    it requires JavaScript to be turned on to fetch the latest content.
+  </p>
 </noscript>
 ```
 

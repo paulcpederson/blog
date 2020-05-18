@@ -31,6 +31,10 @@
   border-bottom-color: $blue;
 }
 
+.nav-link.is-active {
+  font-weight: 500;
+}
+
 .dark .nav-link {
   color: #ccc;
 }

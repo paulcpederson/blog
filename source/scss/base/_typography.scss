@@ -13,6 +13,9 @@ html {
     color: #333;
     line-height: 1.55;
     font-size: calc(1em + .25vw);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 h1, h2, h3, h4, h5, h6 {
