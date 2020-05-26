@@ -98,6 +98,18 @@ expect(changedEvent).toHaveReceivedEventTimes(1);
 
 ---
 
+
+### Check the detail of a custom event
+
+```ts
+const changedEvent = await page.spyOnEvent("myEventName");
+// perform actions that should fire the event
+await page.waitForChanges();
+expect(changedEvent).toHaveFirstReceivedEventDetail(true);
+```
+
+---
+
 ### Check that an element has an attribute
 
 ```ts
