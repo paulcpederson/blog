@@ -87,6 +87,16 @@ expect(visible).toBe(true);
 
 ---
 
+### Check that an element has an attribute
+
+```ts
+const component = await page.find("my-comp");
+expect(component).toHaveAttribute("attribute");
+expect(component).toEqualAttribute("attribute", "value");
+```
+
+---
+
 ### Check that an event was fired
 
 ```ts
@@ -106,16 +116,6 @@ const changedEvent = await page.spyOnEvent("myEventName");
 // perform actions that should fire the event
 await page.waitForChanges();
 expect(changedEvent).toHaveFirstReceivedEventDetail(true);
-```
-
----
-
-### Check that an element has an attribute
-
-```ts
-const component = await page.find("my-comp");
-expect(component).toHaveAttribute("attribute");
-expect(component).toEqualAttribute("attribute", "value");
 ```
 
 ---
