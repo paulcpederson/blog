@@ -1,4 +1,0 @@
-This is a Brave Rewards publisher verification file.
-
-Domain: paulcpederson.com
-Token: 40aa9fc2c716768a4aeb43a12e4d2618f4b10dd190f46e4de9b73f7e4a7fbc96

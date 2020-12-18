@@ -7,7 +7,6 @@
     "postsass": "postcss -u autoprefixer -r www/css/*.css",
     "img": "imagemin-newer source/ www/",
     "html": "static-site -b www -h source/_helpers/*.js -f xml",
-    "precopy": "cp -r source/.well-known www/",
     "copy": "copyfiles -u 1 'source/**/*.{ico,mp4,mp3,woff,woff2,vtt,pdf,txt}' www/",
     "rerun": "rerun-script",
     "serve": "live-server www/ --port=7777 --no-browser",
