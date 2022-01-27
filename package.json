@@ -40,7 +40,7 @@
     "d3": "^5.9.7",
     "esri-leaflet": "^1.0.0-rc.8",
     "leaflet": "^0.7.3",
-    "three": "^0.81.2",
+    "three": "^0.137.0",
     "tone": "^0.7.1"
   },
   "devDependencies": {
