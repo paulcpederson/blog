@@ -39,7 +39,7 @@ collections:
       </h2>
       <div class="flex card-container align-top">
       {% for project in collections.work %}
-      {% if loop.index < 4 %}
+      {% if loop.index < 5 && !project.retired %}
       <a href="{{project.url}}" class="card project link-plain trailer-2 fade delay-{{loop.index + 2}}">
         <img src="/img/{{project.thumbnail}}" alt="{{project.title}}" class="project-img">
         <h3 class="leader-1 font-size-0 trailer-0">{{project.title}}</h3>

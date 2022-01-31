@@ -9,7 +9,10 @@ canvas: gray
 spot: blue
 site: 'http://soundfinder.io'
 description: Sound Finder allows you to find SoundCloud users that have the same taste as you.
+retired: "true"
 ---
+
+⚠️ **I've since let this domain name go. Leaving the article published as a fun time capsule.** ⚠️
 
 ## Origins
 
