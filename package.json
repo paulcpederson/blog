@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "barba.js": "^1.0.0",
-    "d3": "^5.9.7",
+    "d3": "^7.6.1",
     "esri-leaflet": "^1.0.0-rc.8",
     "leaflet": "^0.7.3",
     "three": "^0.81.2",
