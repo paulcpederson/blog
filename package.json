@@ -47,7 +47,7 @@
     "a11y": "^0.4.1",
     "autoprefixer": "^6.3.3",
     "babel-preset-es2015": "^6.3.13",
-    "babelify": "^7.2.0",
+    "babelify": "^10.0.0",
     "copyfiles": "^1.0.0",
     "delaunay-fast": "^1.0.1",
     "imagemin-newer": "^1.0.1",
