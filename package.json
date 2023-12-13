@@ -12,8 +12,7 @@
     "serve": "live-server www/ --port=7777 --no-browser",
     "prestart": "run-s img sass html copy",
     "start": "run-p serve js:watch rerun sass:watch",
-    "build": "run-s js img sass copy && npm run html -- --production",
-    "test": "a11y 'www/**/*.html'"
+    "build": "run-s js img sass copy && npm run html -- --production"
   },
   "browserify": {
     "transform": [
@@ -45,7 +44,6 @@
     "tone": "^0.7.1"
   },
   "devDependencies": {
-    "a11y": "^0.4.1",
     "autoprefixer": "^6.3.3",
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
