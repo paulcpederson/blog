@@ -1,32 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, height=device-height">
-    <meta name="author" content="Paul C Pederson">
-    <meta name="description" content="{{ description }}">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, height=device-height" />
+    <meta name="author" content="Paul C Pederson" />
+    <meta name="description" content="{{ description }}" />
     <title>{{title}} | Paul C Pederson</title>
-    <link rel="shortcut icon" href="/img/favicon.ico">
-    <link rel="alternate" type="application/rss+xml" title="Paul C Pederson Feed" href="https://paulcpederson.com/feed.xml" />
-    {% set card_image = twitter_image || thumbnail %}
-    {% if card_image %}
-      <meta name="twitter:card" content="summary_large_image">
-      <meta name="twitter:image" content="https://paulcpederson.com/img/{{card_image}}">
-      <meta property="og:image" content="https://paulcpederson.com/img/{{card_image}}">
+    <link rel="shortcut icon" href="/img/favicon.ico" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="Paul C Pederson Feed"
+      href="https://paulcpederson.com/feed.xml"
+    />
+    {% set card_image = twitter_image || thumbnail %} {% if card_image %}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:image"
+      content="https://paulcpederson.com/img/{{card_image}}"
+    />
+    <meta
+      property="og:image"
+      content="https://paulcpederson.com/img/{{card_image}}"
+    />
     {% else %}
-      <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="summary" />
     {% endif %}
-    <meta name="twitter:site" content="@paulcpederson">
-    <meta name="twitter:creator" content="@paulcpederson">
-    <meta name="twitter:title" content="{{title}}">
-    <meta name="twitter:description" content="{{description}}">
-    <meta property="og:title" content="{{title}}">
-    <meta property="og:url" content="https://paulcpederson.com{{url}}">
-    <link href="https://plus.google.com/+PaulCPederson" rel="publisher">
-    <link rel="alternate" href="/feed.xml" type="application/rss+xml" title="I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet.">
-    <link rel="stylesheet" href="/css/style.css">
-    {% for stylesheet in css %}<link rel="stylesheet" href="/css/{{stylesheet}}.css">{% endfor %}
+    <meta name="twitter:site" content="@paulcpederson" />
+    <meta name="twitter:creator" content="@paulcpederson" />
+    <meta name="twitter:title" content="{{title}}" />
+    <meta name="twitter:description" content="{{description}}" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:url" content="https://paulcpederson.com{{url}}" />
+    <link href="https://plus.google.com/+PaulCPederson" rel="publisher" />
+    <link
+      rel="alternate"
+      href="/feed.xml"
+      type="application/rss+xml"
+      title="I'm a web designer and developer living in Portland, OR. I write about art, maps, design, and the internet."
+    />
+    <link rel="stylesheet" href="/css/style.css" />
+    {% for stylesheet in css %}
+    <link rel="stylesheet" href="/css/{{stylesheet}}.css" />
+    {% endfor %}
   </head>
 
   <body class="{{dark}}">
@@ -34,52 +51,56 @@
     <header class="constrain-wide leader-2 trailer-1 nav">
       <nav>
         <a href="/" class="logo">
-          <svg width="40px" height="40px" viewBox="0 0 40 40" xml:space="preserve">
+          <svg
+            width="40px"
+            height="40px"
+            viewBox="0 0 40 40"
+            xml:space="preserve"
+          >
             <title>Paul C Pederson</title>
-            <polygon fill="none" stroke-width="3" stroke-miterlimit="10" points="37.125,3 3,3 3,37.125 25.559,37.125 37.125,25.559 "/>
+            <polygon
+              fill="none"
+              stroke-width="3"
+              stroke-miterlimit="10"
+              points="37.125,3 3,3 3,37.125 25.559,37.125 37.125,25.559 "
+            />
           </svg>
         </a>
         <div class="right">
-          <a href="/articles/" class="nav-link {% if url == '/articles/'%} is-active {% endif %}" >Articles</a>
-          <a href="/work/" class="nav-link margin-left-2 {% if url == '/work/'%} is-active {% endif %}">Work</a>
-          <a href="/lab/" class="nav-link margin-left-2 {% if url == '/lab/'%} is-active {% endif %}">Lab</a>
+          <a
+            href="/articles/"
+            class="nav-link {% if url == '/articles/'%} is-active {% endif %}"
+            >Articles</a
+          >
+          <a
+            href="/work/"
+            class="nav-link margin-left-2 {% if url == '/work/'%} is-active {% endif %}"
+            >Work</a
+          >
+          <a
+            href="/lab/"
+            class="nav-link margin-left-2 {% if url == '/lab/'%} is-active {% endif %}"
+            >Lab</a
+          >
         </div>
       </nav>
     </header>
 
     <!-- Content for Each Page -->
     <div id="barba-wrapper">
-      <div class="barba-container ready">
-        {% block page %}{% endblock %}
-      </div>
+      <div class="barba-container ready">{% block page %}{% endblock %}</div>
     </div>
 
     <script src="/js/script{% if production %}.min{% endif %}.js"></script>
     {% for script in js %}
-      <script src="/js/{{script}}{% if production %}.min{% endif %}.js"></script>
-    {% endfor %}
-
-    {% if !production %}
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.8.2/html-inspector.js"></script>
-      <script> HTMLInspector.inspect() </script>
+    <script src="/js/{{script}}{% if production %}.min{% endif %}.js"></script>
+    {% endfor %} {% if !production %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-inspector/0.8.2/html-inspector.js"></script>
+    <script>
+      HTMLInspector.inspect();
+    </script>
+    {% endif %} {% if production %}
+    <script async="" defer="" src="https://ping.pushbroom.co/ping.min.js"></script>
     {% endif %}
-
-    {% if production %}
-      <!-- Fathom - simple website analytics - https://usefathom.com -->
-      <script>
-        (function(f, a, t, h, o, m){
-        a[h]=a[h]||function(){
-            (a[h].q=a[h].q||[]).push(arguments)
-        };
-        o=f.createElement('script'),
-        m=f.getElementsByTagName('script')[0];
-        o.async=1; o.src=t; o.id='fathom-script';
-        m.parentNode.insertBefore(o,m)
-        })(document, window, 'https://cdn.usefathom.com/tracker.js', 'fathom');
-        fathom('set', 'siteId', 'IXNRMAJT');
-        fathom('trackPageview');
-      </script>
-    {% endif %}
-
   </body>
 </html>
