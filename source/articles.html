@@ -10,20 +10,22 @@ collections:
 ---
 
 <!-- blog roll -->
-<pushbroom></pushbroom>
+<pushbroom url="/articles/"></pushbroom>
 <div class="constrain-wide leader-6 padding-leader-4 padding-trailer-4">
   <h1 class="trailer-3 fade delay-1">Articles</h1>
   {% for article in collections.articles %}
-    <div class="flex flex-no-wrap trailer-2 constrain-narrow">
-      <time datetime="{{article.date|date('Y-m-d')}}" class="time">
-        <span class="time-month">{{article.date|date('F')}}</span>
-        <span class="time-day">{{article.date|date('d')}}</span>
-        <span class="time-year">{{article.date|date('Y')}}</span>
-      </time>
-      <div class="margin-left-1 flex-1">
-        <h3 class="leader-1 trailer-0 font-size-1"><a href="{{article.url}}">{{article.title}}</a></h3>
-        <p class="font-size--1">{{article.description}}</p>
-      </div>
+  <div class="flex flex-no-wrap trailer-2 constrain-narrow">
+    <time datetime="{{article.date|date('Y-m-d')}}" class="time">
+      <span class="time-month">{{article.date|date('F')}}</span>
+      <span class="time-day">{{article.date|date('d')}}</span>
+      <span class="time-year">{{article.date|date('Y')}}</span>
+    </time>
+    <div class="margin-left-1 flex-1">
+      <h3 class="leader-1 trailer-0 font-size-1">
+        <a href="{{article.url}}">{{article.title}}</a>
+      </h3>
+      <p class="font-size--1">{{article.description}}</p>
     </div>
+  </div>
   {% endfor %}
 </div>
