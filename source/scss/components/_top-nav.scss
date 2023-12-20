@@ -19,6 +19,9 @@
   line-height: 40px;
   font-size: $font-size-0;
   transition: all 100ms linear;
+  transition-property: border-bottom, color;
+  transition-duration: 100ms;
+  transition-timing-function: linear;
   padding: .5rem 0;
   border-bottom: 2px solid transparent;
 }
