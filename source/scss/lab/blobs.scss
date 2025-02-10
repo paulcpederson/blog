@@ -29,6 +29,7 @@
 }
 
 .play-pause {
+  opacity: 1;
   background: transparent;
   border: none;
   position: absolute;
@@ -40,6 +41,10 @@
   cursor: pointer;
   outline: none;
   z-index: 20;
+}
+
+.play-pause svg {
+  pointer-events: none;
 }
 
 .play-pause .btn-pause { display: none; }

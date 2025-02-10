@@ -204,7 +204,7 @@ function showResults (term) {
     $suggestions.innerHTML = music.artists
       .filter(artist => artist.name.toLowerCase().indexOf(term) > -1)
       .slice(0, 5)
-      .map(artist => `<a href="#" class="search-result" data-name="${artist.name}"><img src="/img/artist-images/${artist.id}.jpg" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}</a>`)
+      .map(artist => `<a href="#" class="search-result" data-name="${artist.name}"><img src="/img/artist-images/${artist.id}.webp" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}</a>`)
       .join('')
     $search.classList.add('is-searching')
   }
@@ -243,7 +243,7 @@ function select (d) {
       return `
         <li class="similar__artist">
           <a href="#" class="similar__artist__link" data-name="${artist.name}">
-            <img src="/img/artist-images/${artist.id}.jpg" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}
+            <img src="/img/artist-images/${artist.id}.webp" class="artist-thumb artist-thumb--small" alt="${artist.name}">${artist.name}
           </a>
         </li>`
     })
@@ -251,7 +251,7 @@ function select (d) {
 
   $info.innerHTML = `
     <div class="artist">
-      <img src="/img/artist-images/${d.id}.jpg" class="artist-thumb" alt="${d.name}">
+      <img src="/img/artist-images/${d.id}.webp" class="artist-thumb" alt="${d.name}">
       <h2 class="artist-title">${d.name}</h2>
     </div>
     <div class="padding-left-1 padding-right-1 trailer-half">

@@ -14,7 +14,7 @@ Switzerland has become known for beautiful cartography. It should come as no sur
 General Guillaume-Henri Dufour founded the Federal Office of Topography in 1838, which published its first map in 1844. After an extensive effort, the entirety of Switzerland had been mapped by 1864. Generally, the office began work on a new map immediately after they had finished the old map. Most of the time the country was using two maps at the same time, some areas having the older map and some areas having the newer map. Below are the three major maps that were completed and their use dates.
 
 ### Dufour Map
-![Image of Dufour Map](dufour.jpg)
+![Image of Dufour Map](dufour.webp)
 <p class="caption">
   The Dufour map was used from 1844 until 1939.
 </p>
@@ -24,7 +24,7 @@ Although the first surveys of Switzerland took place as early as 1809, it wasn't
 The Dufour Map (named after the first leader of the Office of Topography, General Guillaume-Henri Dufour) was finished in 1864, and a year later, its namesake General retired and a new map was begun.
 
 ### Siegfried Map
-![Image of Siegfried Map](siegfried.jpg)
+![Image of Siegfried Map](siegfried.webp)
 <p class="caption">
   The Siegfried map was used from 1870 until 1949.
 </p>
@@ -34,7 +34,7 @@ Its publication was begun by the Federal Topographic Bureau under Hermann Siegfr
 The Siegfried Map added contour lines to symbolize relief as well as three colors for printing. These color allowed the map to use brown for contour lines on vegetation, blue for contour lines on water and glaciers, and black for lines on everything else.
 
 ### National Maps
-![Image of National Map](national-map.jpg)
+![Image of National Map](national-map.webp)
 <p class="caption">
   The National maps were used from 1938 and are still used today.
 </p>

@@ -16,7 +16,7 @@ Recently I was pairing with a seasoned front-end developer and I told him to "ju
 2. Go to the console tab.
 3. Type `$0` and hit enter
 
-![Chrome's $0 variable in action]($0-explained.jpg)
+![Chrome's $0 variable in action]($0-explained.webp)
 <p class="caption">Look carefully to the right of the element, you'll see <code>== $0</code></p>
 
 

@@ -44,6 +44,7 @@
     "tone": "^0.7.1"
   },
   "devDependencies": {
+    "@crazyfactory/webp-converter-cli": "^1.4.0",
     "autoprefixer": "^6.3.3",
     "babel-preset-es2015": "^6.3.13",
     "babelify": "^7.2.0",
