@@ -1,0 +1,83 @@
+---
+title: Sparkler
+date: 2025-02-17
+template: _templates/lab.html
+thumbnail: sparkler-thumb.png
+spot: blue
+description: SVG circles transition with native animate elements to create a sparkler.
+css:
+  - lab
+  - lab/blobs
+js:
+  - lab
+  - sparkler
+collections:
+  labs: /lab/*
+---
+
+<div class="fullscreen-canvas flex flex-center flex-justify-center">
+  <svg
+    xmlns="http://www.w3.org/4000/svg"
+    version="1.1"
+    viewBox="0 0 800 800"
+    width="800"
+    height="800"
+  >
+    <defs>
+      <style>
+        .st0 {
+          fill: none;
+          stroke: #13406b;
+          stroke-miterlimit: 10;
+          stroke-width: 5.26px;
+        }
+        .st2 {
+          fill: #be4c40;
+        }
+        .st3 {
+          fill: #13406b;
+        }
+      </style>
+    </defs>
+    <g>
+      <animateTransform
+        attributeName="transform"
+        attributeType="XML"
+        type="rotate"
+        from="0 400 400"
+        to="360 400 400"
+        dur="20s"
+        repeatCount="indefinite"
+      />
+      <circle cx="400" cy="400" r="1" fill="#fff" class="particle">
+        <animate
+          attributeType="XML"
+          attributeName="cy"
+          from="400"
+          to="400"
+          dur="1s"
+          repeatCount="1"
+          begin="infinite"
+        />
+        <animate
+          attributeType="XML"
+          attributeName="cx"
+          from="400"
+          to="1200"
+          dur="1s"
+          repeatCount="1"
+          begin="infinite"
+        />
+        <animate
+          attributeType="XML"
+          attributeName="opacity"
+          from="1"
+          to="0"
+          dur="1s"
+          repeatCount="1"
+          begin="infinite"
+        />
+      </circle>
+    </g>
+  </svg>
+</div>
