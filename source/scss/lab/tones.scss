@@ -1,21 +1,22 @@
-@import "../_config.scss";
+@use "../_config.scss";
 
 .lab {
   top: 0;
 }
 
 .tone-button {
-  border: 2px solid $base03;
+  border: 2px solid config.$base03;
   width: 20vw;
   height: 20vh;
   display: block;
   float: left;
   transition: opacity 100ms linear;
   box-sizing: border-box;
-  opacity: .6;
+  opacity: 0.6;
 }
 
-.tone-button:focus, .tone-button:hover {
+.tone-button:focus,
+.tone-button:hover {
   outline: none;
   opacity: 1;
 }

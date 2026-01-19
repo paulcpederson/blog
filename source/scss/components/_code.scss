@@ -1,46 +1,49 @@
+@use "../config";
+
 // Ayu light theme
-$accent: #FF9940;
-$bg: #FAFAFA;
-$fg: #6C7680;
-$ui: #959DA6;
-$tag: #55B4D4;
-$func: #F2AE49;
-$entity: #399EE6;
-$string: #86B300;
-$regexp: #4CBF99;
-$markup: #F07171;
-$keyword: #FA8D3E;
-$special: #E6BA7E;
-$comment: #ABB0B6;
-$constant: #A37ACC;
-$operator: #ED9366;
-$error: #F51818;
+$accent: #ff9940;
+$bg: #fafafa;
+$fg: #6c7680;
+$ui: #959da6;
+$tag: #55b4d4;
+$func: #f2ae49;
+$entity: #399ee6;
+$string: #86b300;
+$regexp: #4cbf99;
+$markup: #f07171;
+$keyword: #fa8d3e;
+$special: #e6ba7e;
+$comment: #abb0b6;
+$constant: #a37acc;
+$operator: #ed9366;
+$error: #f51818;
 
-$added: #99BF4D;
-$modified: #709ECC;
-$removed: #F27983;
+$added: #99bf4d;
+$modified: #709ecc;
+$removed: #f27983;
 
-code, kbd {
-  font-family: $monospace;
+code,
+kbd {
+  font-family: config.$monospace;
   font-weight: 400;
-  padding: .25em 0.5em;
+  padding: 0.25em 0.5em;
   border-radius: 3px;
   position: relative;
   top: -0.05em;
   background: $bg;
-  box-shadow: $box-shadow;
-  font-size: $font-size--2;
+  box-shadow: config.$box-shadow;
+  font-size: config.$font-size--2;
   margin: 0 4px;
 }
 
 pre {
   width: 100%;
   background-color: $bg;
-  box-shadow: $box-shadow;
+  box-shadow: config.$box-shadow;
   margin: 2em 0;
   color: $fg;
   code {
-    font-size: $font-size--2;
+    font-size: config.$font-size--2;
     box-sizing: border-box;
     display: block;
     padding: 1em;
@@ -55,7 +58,11 @@ pre {
   }
 }
 
-.css, .js, .bash, .html, .yaml {
+.css,
+.js,
+.bash,
+.html,
+.yaml {
   color: $fg;
 }
 

@@ -1,13 +1,15 @@
+@use "../config";
+
 .browser {
-  border: 1px solid $lighter-gray;
+  border: 1px solid config.$lighter-gray;
   border-radius: 4px;
   position: relative;
   padding-top: 2rem;
   display: inline-block;
   width: auto;
-  background-color: $white;
+  background-color: config.$white;
   overflow: hidden;
-  box-shadow: 0 0 12px rgba(0,0,0,.05);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
 }
 
 .browser-image {
@@ -22,20 +24,20 @@
   font-size: 15px;
   font-weight: bold;
   line-height: 2.5;
-  text-indent: .5rem;
+  text-indent: 0.5rem;
   width: 100%;
   position: absolute;
   top: 0;
   height: 2rem;
-  border-bottom: 1px solid $lighter-gray;
-  color: $lighter-gray;
+  border-bottom: 1px solid config.$lighter-gray;
+  color: config.$lighter-gray;
 }
 
 .browser:after {
   content: attr(data-site);
   position: absolute;
   font-size: 12px;
-  font-family: $monospace;
+  font-family: config.$monospace;
   font-weight: 300;
   line-height: 3.2;
   color: #ddd;

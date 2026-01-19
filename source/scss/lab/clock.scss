@@ -1,4 +1,4 @@
-@import "../_config.scss";
+@use "../_config.scss";
 
 .clock-container {
   position: relative;
@@ -14,10 +14,18 @@
   height: 100%;
 }
 
-.clock-hour   { animation: rotate linear 60 * 60 * 12s infinite; }
-.clock-minute { animation: rotate linear 60 * 60s infinite; }
-.clock-second { animation: rotate 60s infinite steps(60); }
+.clock-hour {
+  animation: rotate linear 60 * 60 * 12s infinite;
+}
+.clock-minute {
+  animation: rotate linear 60 * 60s infinite;
+}
+.clock-second {
+  animation: rotate 60s infinite steps(60);
+}
 
 @keyframes rotate {
-  100% { transform: rotate(360deg); }
+  100% {
+    transform: rotate(360deg);
+  }
 }

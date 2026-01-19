@@ -1,3 +1,5 @@
+@use "../config";
+
 .tooltip {
   position: relative;
   cursor: pointer;
@@ -14,11 +16,11 @@
   z-index: 1000001;
   width: 0;
   height: 0;
-  color: rgba(0,0,0,0.8);
+  color: rgba(0, 0, 0, 0.8);
   pointer-events: none;
   content: "";
   border: 5px solid transparent;
-  border-bottom-color: rgba(0,0,0,0.8);
+  border-bottom-color: rgba(0, 0, 0, 0.8);
   opacity: 0;
 }
 
@@ -31,18 +33,20 @@
   margin-top: 5px;
   position: absolute;
   z-index: 1000000;
-  padding: .6rem .5rem .5rem;
+  padding: 0.6rem 0.5rem 0.5rem;
   line-height: 1;
-  font-size: $font-size--2;
+  font-size: config.$font-size--2;
   color: #fff;
   text-align: center;
   pointer-events: none;
-  background: rgba(0,0,0,0.8);
+  background: rgba(0, 0, 0, 0.8);
   opacity: 0;
 }
 
 .tooltip {
-  &:hover, &:active, &:focus {
+  &:hover,
+  &:active,
+  &:focus {
     text-decoration: none;
     &:before,
     &:after {

@@ -1,3 +1,5 @@
+@use "../config";
+
 .overflow-auto {
   overflow: auto;
 }
@@ -5,21 +7,22 @@
 table {
   width: 100%;
   margin-bottom: 2em;
-  font-size: .875rem;
-  background-color: $white;
+  font-size: 0.875rem;
+  background-color: config.$white;
   border-collapse: collapse;
   border-spacing: 0;
-  border: 1px solid mix($lightest-gray, $lighter-gray);
+  border: 1px solid config.$lighter-gray;
   text-align: left;
 
   > thead {
-    background-color: mix($off-white, $lightest-gray);
-    border-bottom: 1px solid mix($lightest-gray, $lighter-gray);
+    background-color: config.$lightest-gray;
+    border-bottom: 1px solid config.$lighter-gray;
   }
 
-  th, td {
-    border-left: 1px solid mix($lightest-gray, $lighter-gray);
-    border-right: 1px solid mix($lightest-gray, $lighter-gray);
+  th,
+  td {
+    border-left: 1px solid config.$lighter-gray;
+    border-right: 1px solid config.$lighter-gray;
     padding: 12px;
   }
 
@@ -28,15 +31,17 @@ table {
   }
 
   tr {
-    border-bottom: 1px solid mix($lightest-gray, $lighter-gray);
+    border-bottom: 1px solid config.$lighter-gray;
     text-align: left;
     &:last-child {
       border-bottom: none;
     }
   }
 
-  thead, tfoot, tr.divider {
-    font-size: .925rem;
+  thead,
+  tfoot,
+  tr.divider {
+    font-size: 0.925rem;
     font-weight: bold;
   }
 }

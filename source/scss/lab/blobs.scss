@@ -1,4 +1,4 @@
-@import "../_config";
+@use "../_config";
 
 .fullscreen-canvas {
   position: absolute;
@@ -9,7 +9,8 @@
   z-index: 4;
 }
 
-.blob-canvas, .lab-canvas {
+.blob-canvas,
+.lab-canvas {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -23,8 +24,8 @@
   left: 1vw;
   bottom: 1vw;
   z-index: 10;
-  color: $base0;
-  font-size: .9rem;
+  color: config.$base0;
+  font-size: 0.9rem;
   margin-bottom: 0;
 }
 
@@ -47,11 +48,19 @@
   pointer-events: none;
 }
 
-.play-pause .btn-pause { display: none; }
-.play-pause .btn-play { display: block; }
+.play-pause .btn-pause {
+  display: none;
+}
+.play-pause .btn-play {
+  display: block;
+}
 
-.playing .btn-pause { display: block; }
-.playing .btn-play { display: none; }
+.playing .btn-pause {
+  display: block;
+}
+.playing .btn-play {
+  display: none;
+}
 
 .play-pause-white {
   background-color: white;

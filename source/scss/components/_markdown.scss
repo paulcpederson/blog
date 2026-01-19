@@ -1,3 +1,5 @@
+@use "../config";
+
 // Styling raw elements here, as it is hard to add classes in markdown
 .article {
   img {
@@ -37,20 +39,20 @@
   }
   .caption {
     font-size: 0.75em;
-    color: $light-gray;
+    color: config.$light-gray;
     line-height: 1.25em;
     margin: .5em 0 2em -4vw;
     padding-left: 1em;
-    border-left: 2px solid $light-gray;
+    border-left: 2px solid config.$light-gray;
     font-style: italic;
   }
   blockquote {
     max-width: 20em;
     margin: 2em 0 2em -4vw;
-    color: $blue;
-    border-left: 2px solid $blue;
+    color: config.$blue;
+    border-left: 2px solid config.$blue;
     padding-left: 4vw;
-    font-size: $font-size-1;
+    font-size: config.$font-size-1;
     line-height: 1.25;
   }
   .full-width {

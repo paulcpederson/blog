@@ -1,23 +1,51 @@
-.hide { display: none; }
+@use "../config";
 
-.link-plain { color: #333; }
-.link-plain:hover {text-decoration: none; }
+.hide {
+  display: none;
+}
 
-.font-size-4  { font-size: $font-size-4; }
-.font-size-3  { font-size: $font-size-3; }
-.font-size-2  { font-size: $font-size-2; }
-.font-size-1  { font-size: $font-size-1; }
-.font-size-0  { font-size: $font-size-0; }
-.font-size--1 { font-size: $font-size--1; }
-.font-size--2 { font-size: $font-size--2; }
+.link-plain {
+  color: #333;
+}
+.link-plain:hover {
+  text-decoration: none;
+}
 
-.text-center { text-align: center; }
-.text-min { min-width: 15rem; }
+.font-size-4 {
+  font-size: config.$font-size-4;
+}
+.font-size-3 {
+  font-size: config.$font-size-3;
+}
+.font-size-2 {
+  font-size: config.$font-size-2;
+}
+.font-size-1 {
+  font-size: config.$font-size-1;
+}
+.font-size-0 {
+  font-size: config.$font-size-0;
+}
+.font-size--1 {
+  font-size: config.$font-size--1;
+}
+.font-size--2 {
+  font-size: config.$font-size--2;
+}
+
+.text-center {
+  text-align: center;
+}
+.text-min {
+  min-width: 15rem;
+}
 .text-light {
   font-weight: 300;
   color: #444;
 }
-.text-medium { font-weight: 500; }
+.text-medium {
+  font-weight: 500;
+}
 
 .block-1of4 {
   max-width: 25%;
@@ -102,62 +130,153 @@
   clear: all;
 }
 
-.right { float: right; }
-.left { float: left; }
+.right {
+  float: right;
+}
+.left {
+  float: left;
+}
 
-.full-width { width: 100%; }
-.offset { transform: translate3d(-2vw,-2vw,0)}
+.full-width {
+  width: 100%;
+}
+.offset {
+  transform: translate3d(-2vw, -2vw, 0);
+}
 
-.l-block { display: block; }
+.l-block {
+  display: block;
+}
 
-.leader--4   { margin-top: -4rem; }
-.leader--1   { margin-top: -1rem; }
-.leader-0    { margin-top: 0;     }
-.leader-half { margin-top: .5rem; }
-.leader-1    { margin-top: 1rem;  }
-.leader-2    { margin-top: 2rem;  }
-.leader-3    { margin-top: 3rem;  }
-.leader-4    { margin-top: 4rem;  }
-.leader-5    { margin-top: 5rem;  }
-.leader-6    { margin-top: 6rem;  }
+.leader--4 {
+  margin-top: -4rem;
+}
+.leader--1 {
+  margin-top: -1rem;
+}
+.leader-0 {
+  margin-top: 0;
+}
+.leader-half {
+  margin-top: 0.5rem;
+}
+.leader-1 {
+  margin-top: 1rem;
+}
+.leader-2 {
+  margin-top: 2rem;
+}
+.leader-3 {
+  margin-top: 3rem;
+}
+.leader-4 {
+  margin-top: 4rem;
+}
+.leader-5 {
+  margin-top: 5rem;
+}
+.leader-6 {
+  margin-top: 6rem;
+}
 
-.trailer-0    { margin-bottom: 0; }
-.trailer-half { margin-bottom: .5rem; }
-.trailer-1    { margin-bottom: 1rem; }
-.trailer-2    { margin-bottom: 2rem; }
-.trailer-3    { margin-bottom: 3rem; }
-.trailer-4    { margin-bottom: 4rem; }
-.trailer-5    { margin-bottom: 5rem; }
-.trailer-6    { margin-bottom: 6rem; }
+.trailer-0 {
+  margin-bottom: 0;
+}
+.trailer-half {
+  margin-bottom: 0.5rem;
+}
+.trailer-1 {
+  margin-bottom: 1rem;
+}
+.trailer-2 {
+  margin-bottom: 2rem;
+}
+.trailer-3 {
+  margin-bottom: 3rem;
+}
+.trailer-4 {
+  margin-bottom: 4rem;
+}
+.trailer-5 {
+  margin-bottom: 5rem;
+}
+.trailer-6 {
+  margin-bottom: 6rem;
+}
 
-.padding-leader-half { padding-top: .5rem; }
-.padding-leader-1    { padding-top: 1rem; }
-.padding-leader-2    { padding-top: 2rem; }
-.padding-leader-3    { padding-top: 3rem; }
-.padding-leader-4    { padding-top: 4rem; }
-.padding-leader-5    { padding-top: 5rem; }
-.padding-leader-6    { padding-top: 6rem; }
+.padding-leader-half {
+  padding-top: 0.5rem;
+}
+.padding-leader-1 {
+  padding-top: 1rem;
+}
+.padding-leader-2 {
+  padding-top: 2rem;
+}
+.padding-leader-3 {
+  padding-top: 3rem;
+}
+.padding-leader-4 {
+  padding-top: 4rem;
+}
+.padding-leader-5 {
+  padding-top: 5rem;
+}
+.padding-leader-6 {
+  padding-top: 6rem;
+}
 
-.padding-trailer-1 { padding-bottom: 1rem; }
-.padding-trailer-2 { padding-bottom: 2rem; }
-.padding-trailer-3 { padding-bottom: 3rem; }
-.padding-trailer-4 { padding-bottom: 4rem; }
-.padding-trailer-5 { padding-bottom: 5rem; }
-.padding-trailer-6 { padding-bottom: 6rem; }
+.padding-trailer-1 {
+  padding-bottom: 1rem;
+}
+.padding-trailer-2 {
+  padding-bottom: 2rem;
+}
+.padding-trailer-3 {
+  padding-bottom: 3rem;
+}
+.padding-trailer-4 {
+  padding-bottom: 4rem;
+}
+.padding-trailer-5 {
+  padding-bottom: 5rem;
+}
+.padding-trailer-6 {
+  padding-bottom: 6rem;
+}
 
+.margin-right-1 {
+  margin-right: 1rem;
+}
+.margin-right-2 {
+  margin-right: 2rem;
+}
+.margin-right-4 {
+  margin-right: 4rem;
+}
+.margin-left-1 {
+  margin-left: 1rem;
+}
+.margin-left-2 {
+  margin-left: 2rem;
+}
 
-.margin-right-1 { margin-right: 1rem; }
-.margin-right-2 { margin-right: 2rem; }
-.margin-right-4 { margin-right: 4rem; }
-.margin-left-1 { margin-left: 1rem; }
-.margin-left-2 { margin-left: 2rem; }
+.padding-left-1 {
+  padding-left: 1rem;
+}
+.padding-left-2 {
+  padding-left: 2rem;
+}
 
-.padding-left-1 { padding-left: 1rem; }
-.padding-left-2 { padding-left: 2rem; }
-
-.padding-right-1 { padding-right: 1rem; }
-.padding-right-2 { padding-right: 2rem; }
-.padding-right-3 { padding-right: 3rem; }
+.padding-right-1 {
+  padding-right: 1rem;
+}
+.padding-right-2 {
+  padding-right: 2rem;
+}
+.padding-right-3 {
+  padding-right: 3rem;
+}
 
 .bg-white {
   z-index: 3;
@@ -165,20 +284,38 @@
   background-color: white;
 }
 
-.bg-gray { background-color: #fafafa; }
-.bg-blue { background-color: #f4f9fb; }
-.bg-pink { background-color: #fdf2f5; }
-.bg-green { background-color: #f1f9f2; }
-.bg-cyan { background-color: #f1f9f7; }
-.bg-orange {background-color: #faf5ef; }
-.bg-red { background-color: #fdf2f5; }
-.bg-yellow { background-color: #faf5ef; }
-.bg-magenta { background-color: #faeff9; }
+.bg-gray {
+  background-color: #fafafa;
+}
+.bg-blue {
+  background-color: #f4f9fb;
+}
+.bg-pink {
+  background-color: #fdf2f5;
+}
+.bg-green {
+  background-color: #f1f9f2;
+}
+.bg-cyan {
+  background-color: #f1f9f7;
+}
+.bg-orange {
+  background-color: #faf5ef;
+}
+.bg-red {
+  background-color: #fdf2f5;
+}
+.bg-yellow {
+  background-color: #faf5ef;
+}
+.bg-magenta {
+  background-color: #faeff9;
+}
 
 .bg-dotted {
-  background-image: radial-gradient(#dfdfdf 15%,transparent 16%);
-  background-size: .75vw .75vw;
-  background-position: 0 0,40px 40px;
+  background-image: radial-gradient(#dfdfdf 15%, transparent 16%);
+  background-size: 0.75vw 0.75vw;
+  background-position: 0 0, 40px 40px;
 }
 
 .fullscreen {

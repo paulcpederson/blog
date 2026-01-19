@@ -1,23 +1,20 @@
-// Base
-@import 'config';
-@import 'base/reset';
-@import 'base/typography';
+@use "base/typography";
 
 // Components
-@import 'components/animation';
-@import 'components/card';
-@import 'components/top-nav';
-@import 'components/tooltips';
-@import 'components/code';
-@import 'components/tables';
-@import 'components/time';
-@import 'components/markdown';
-@import 'components/browser';
-@import 'components/roll';
-@import 'components/snippet';
+@use 'components/animation';
+@use 'components/card';
+@use 'components/top-nav';
+@use 'components/tooltips';
+@use 'components/code';
+@use 'components/tables';
+@use 'components/time';
+@use 'components/markdown';
+@use 'components/browser';
+@use 'components/roll';
+@use 'components/snippet';
 
 // Pages
-@import 'home';
+@use 'home';
 
 // Helper Classes
-@import 'base/helpers';
+@use 'base/helpers';

@@ -1,3 +1,4 @@
+@use "../config";
 
 .nav {
   position: absolute;
@@ -10,19 +11,20 @@
   transition: all 100ms linear;
 }
 
-.logo:hover svg, .logo:focus svg {
+.logo:hover svg,
+.logo:focus svg {
   stroke: #333;
 }
 
 .nav-link {
   color: #666;
   line-height: 40px;
-  font-size: $font-size-0;
+  font-size: config.$font-size-0;
   transition: all 100ms linear;
   transition-property: border-bottom, color;
   transition-duration: 100ms;
   transition-timing-function: linear;
-  padding: .5rem 0;
+  padding: 0.5rem 0;
   border-bottom: 2px solid transparent;
 }
 
@@ -31,7 +33,7 @@
 .nav-link.is-active {
   color: #222;
   text-decoration: none;
-  border-bottom-color: $blue;
+  border-bottom-color: config.$blue;
 }
 
 .nav-link.is-active {

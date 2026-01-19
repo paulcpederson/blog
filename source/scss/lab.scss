@@ -1,4 +1,4 @@
-@import "_config";
+@use "_config";
 
 .lab {
   position: fixed;
@@ -6,7 +6,7 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: $base03;
+  background-color: config.$base03;
   transform-origin: bottom right;
   transition: all 300ms ease-in-out;
   z-index: 4;
@@ -19,8 +19,8 @@
 .lab-info {
   width: 48px;
   height: 48px;
-  background-color: $white;
-  color: $dark-gray;
+  background-color: config.$white;
+  color: config.$dark-gray;
   position: absolute;
   padding: 0;
   right: 1vw;
@@ -28,12 +28,12 @@
   z-index: 5;
   border-radius: 50%;
   box-sizing: border-box;
-  box-shadow: $box-shadow;
+  box-shadow: config.$box-shadow;
   border: none;
   cursor: pointer;
   transition: all 100ms linear;
   outline: none;
-  font-family: $monospace;
+  font-family: config.$monospace;
   font-size: 18px;
 }
 
@@ -43,8 +43,8 @@
 }
 
 .lab-info:hover, .lab-info:focus {
-  color: $darkest-gray;
-  box-shadow: $box-shadow-2;
+  color: config.$darkest-gray;
+  box-shadow: config.$box-shadow-2;
 }
 
 .lab-shrunk {
@@ -71,7 +71,7 @@
 }
 
 .lab-thumbnail:hover, .lab-thumbnail:focus {
-  border: 1vw solid $blue;
+  border: 1vw solid config.$blue;
   cursor: pointer;
 }
 

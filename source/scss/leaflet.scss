@@ -1,4 +1,4 @@
-@import "leaflet/dist/leaflet";
+@use "leaflet/dist/leaflet";
 
 .map-div {
   position: absolute;
@@ -16,7 +16,8 @@
     content: "";
     z-index: 2;
     pointer-events: none;
-    box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.45), inset 0 0 200px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 0 100px 200px rgba(0, 0, 0, 0.45),
+      inset 0 0 200px rgba(0, 0, 0, 0.7);
   }
 }
 
@@ -30,6 +31,6 @@
   position: absolute;
   bottom: 1em;
   left: 2em;
-  z-index:3;
+  z-index: 3;
   font-size: 1em;
 }
