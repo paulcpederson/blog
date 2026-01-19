@@ -15,9 +15,9 @@ featured: true
 Over the past twenty years, I've gone through my share of cameras. I've used phones, digital cameras, medium format, rangefinders, plastic toy cameras, and disposable cameras. In 2018 I bought a Fuji Klasse S from Japan. When I clicked the buy now button I had no idea that this camera would end the revolving carousel of cameras and become my main carry-everywhere camera for a eight years.
 
 <div class="photo-grid">
-  <img src="rowing.jpg" alt="top view of crew team rowing">
-  <img src="wall.jpg" alt="crane lifting a wall section">
-  <img src="building.jpg" alt="OHSU campus building on south waterfront">
+  <img src="rowing.webp" alt="top view of crew team rowing">
+  <img src="wall.webp" alt="crane lifting a wall section">
+  <img src="building.webp" alt="OHSU campus building on south waterfront">
 </div>
 
 <p class="caption">Kodak Tri-X 400 pushed two stops</p>
@@ -37,8 +37,8 @@ Fujifilm intended to bring great optics, premium build, and photographer-friendl
 I think they succeeded. Maybe they were too late for a market that was already going digital, but for people who want to shoot film, this is an incredible camera.
 
 <div class="photo-grid">
-  <img src="double-girl.jpg" alt="double exposure of a girl and plants">
-  <img class="landscape" src="double-bubble.jpg" alt="double exposure of sphere sculpture and plants">
+  <img src="double-girl.webp" alt="double exposure of a girl and plants">
+  <img class="landscape" src="double-bubble.webp" alt="double exposure of sphere sculpture and plants">
 </div>
 
 <p class="caption">Leave the leader out on rewind and shoot the roll twice for double exposures.</p>
@@ -50,8 +50,8 @@ You can easily take this camera anywhere. That is not true for most cameras. Man
 I have tried several other film cameras that are heralded as "portable" and most of them are very clunky to carry. They all but require a neck strap or a bag. The Klasse, however can be slid into your jacket pocket while you go about your day. I am still trying to find a digital camera that captures images onto a full frame sensor with a normal lens that is this small. Please let me know if such a thing exists...
 
 <div class="photo-grid">
-  <img src="yellowstone.jpg" alt="geyser formation at Yellowstone National Park" class="landscape">
-  <img src="forest.jpg" alt="foggy treeline in the northwest" class="landscape">
+  <img src="yellowstone.webp" alt="geyser formation at Yellowstone National Park" class="landscape">
+  <img src="forest.webp" alt="foggy treeline in the northwest" class="landscape">
 </div>
 
 <p class="caption">Fuji color 200 and Porta 800</p>
@@ -71,10 +71,10 @@ To focus, just point the center at the element you want to focus on and half pre
 </div>
 <div class="photo-grid">
   <div class="flex">
-  <img src="purple-timbers.jpg" alt="inside Providence Park at the timbers game on lomo purple">
+  <img src="purple-timbers.webp" alt="inside Providence Park at the timbers game on lomo purple">
     <div class="flex">
-      <img src="purple-wetlands.jpg" alt="wetlands landscape on lomo purple">
-      <img src="purple-plant.jpg" alt="southwest plant against sky on lomo purple">
+      <img src="purple-wetlands.webp" alt="wetlands landscape on lomo purple">
+      <img src="purple-plant.webp" alt="southwest plant against sky on lomo purple">
     </div>
   </div>
 </div>
@@ -90,9 +90,9 @@ It has a serviceable built-in flash. If you want this off, it _remembers that_ a
 The body is made of metal. It is covered in an almost perfect textured finish in places you need to hold it. The auto exposure brain in this thing is the best. It understands exposure much better than other point and shoots I've used over the years. Way higher ratio of keepers.
 
 <div class="photo-grid">
-  <img src="waves.jpg" alt="black and white waves">
-  <img src="bridge.jpg" alt="foggy bridge in black and white">
-  <img src="worker.jpg" alt="lumber yard worker at night" class="landscape-wide">
+  <img src="waves.webp" alt="black and white waves">
+  <img src="bridge.webp" alt="foggy bridge in black and white">
+  <img src="worker.webp" alt="lumber yard worker at night" class="landscape-wide">
 </div>
 <p class="caption">Under-exposing (Tri-x) two stops and pushing in development gives you enough elbow room for night photography.</p>
 
