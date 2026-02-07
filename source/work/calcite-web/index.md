@@ -2,14 +2,17 @@
 title: Calcite Web
 date: 2016-07-24
 template: _templates/work.html
-feature: calcite-web.png
+feature: calcite-web.webp
 thumbnail: calcite-web.svg
-twitter_image: calcite-web-twitter.png
+twitter_image: calcite-web-twitter.webp
 canvas: gray
 spot: green
 site: 'http://esri.github.io/calcite-web/'
 description: Responsive CSS Framework and Design Pattern Library for Esri
+retired: true
 ---
+
+<strong> ⚠️ Calcite Web has now been replaced with the more robust [calcite design framework](https://developers.arcgis.com/calcite-design-system/). While the subject of this post is no longer in active use, proud of how design thinking continues to evolve at Esri from these humble origins. ⚠️ </strong>
 
 ## Origins
 
@@ -20,7 +23,7 @@ I was tasked with developing a CSS framework that could codify these design deci
 ## Design
 
 <div class="browser" data-site="esri.github.io/examples/">
-  <img class="browser-image" src="design.png" alt="Screenshot of examples documentation">
+  <img class="browser-image" src="design.webp" alt="Screenshot of examples documentation">
 </div>
 <p class="caption">Design documentation</p>
 

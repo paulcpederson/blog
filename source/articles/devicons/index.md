@@ -2,7 +2,7 @@
 title: Devicons
 date: 2013-08-06
 template: _templates/article.html
-thumbnail: devicons-thumb.jpg
+thumbnail: devicons-thumb.webp
 background: devicons.svg
 canvas: navy
 spot: green

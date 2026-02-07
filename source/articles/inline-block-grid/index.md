@@ -2,7 +2,7 @@
 title: Inline-Block Grid
 date: 2013-12-06
 template: _templates/article.html
-thumbnail: inline-block-thumb.jpg
+thumbnail: inline-block-thumb.webp
 background: inline-block.svg
 canvas: navy
 spot: orange

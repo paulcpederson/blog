@@ -5,7 +5,7 @@ template: _templates/article.html
 description: What is important when building for the web? Here's five things I think are critical.
 background: web.svg
 thumbnail: web-thumb.svg
-twitter_image: web-thumb.jpg
+twitter_image: web-thumb.webp
 feature: web-thumb.svg
 canvas: tan
 spot: red

@@ -2,9 +2,9 @@
 title: The Magic of Chrome's $0
 date: 2023-12-13
 template: _templates/article.html
-background: $0-thumb.jpg
-thumbnail: $0-thumb.jpg
-twitter_image: $0-thumb.jpg
+background: $0-thumb.webp
+thumbnail: $0-thumb.webp
+twitter_image: $0-thumb.webp
 canvas: blue
 spot: red
 description: "This one weird trick will let you get a reference to a DOM Element in the Chrome DevTools console"

@@ -2,8 +2,8 @@
 title: Make your own Heroku
 date: 2014-04-24
 template: _templates/article.html
-thumbnail: dokku-thumb.jpg
-background: dokku.jpg
+thumbnail: dokku-thumb.webp
+background: dokku.webp
 canvas: navy
 spot: cyan
 description: Make a cheap, DIY Heroku and GitHub Pages clone with Dokku and DigitalOcean.

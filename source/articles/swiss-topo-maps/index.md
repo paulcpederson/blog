@@ -2,8 +2,8 @@
 title: Swiss Topo Maps
 date: 2013-12-15
 template: _templates/article.html
-thumbnail: swiss-thumb.jpg
-background: swiss.jpg
+thumbnail: swiss-thumb.webp
+background: swiss.webp
 canvas: tan
 spot: red
 description: Since 1844 Switzerland has produced some of the most effective and beautiful topographic maps in the world.

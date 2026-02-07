@@ -2,7 +2,7 @@
 title: USGS Topo Maps
 date: 2013-11-15
 template: _templates/article.html
-thumbnail: usgs-thumb.jpg
+thumbnail: usgs-thumb.webp
 spot: green
 white: true
 map: usgs

@@ -2,7 +2,7 @@
 title: Work
 template: _templates/layout.html
 description: Client, Open Source, and Personal Projects
-twitter_image: work-twitter.png
+twitter_image: work-twitter.webp
 spot: blue
 block: page
 collections:
@@ -12,7 +12,7 @@ collections:
 <pushbroom url="/work/"></pushbroom>
 
 <div class="constrain-wide leader-6 padding-leader-4">
-  <h1 class="padding-trailer-2">Work</h1>
+  <h1 class="padding-trailer-2 fade delay-1">Work</h1>
 
   <div class="flex phone-flex-column">
     <div class="flex-2">
@@ -27,11 +27,7 @@ collections:
             <h3 class="font-size-0 constrain-narrow leader-1 trailer-0">{{collections.work[2].title}}</h3>
             <p class="text-light font-size--1 constrain-narrow leader-half">{{collections.work[2].description}}</p>
           </a>
-        <a href="{{collections.work[4].url}}" class="flex-1 padding-right-2 project link-plain fade delay-4">
-            <img src="../img/{{collections.work[4].thumbnail}}" alt="{{collections.work[4].title}}" class="project-img">
-            <h3 class="font-size-0 constrain-narrow leader-1 trailer-0">{{collections.work[4].title}}</h3>
-            <p class="text-light font-size--1 constrain-narrow leader-half">{{collections.work[4].description}}</p>
-          </a>
+
       </div>
     </div>
     <div class="flex-1 padding-right-2">

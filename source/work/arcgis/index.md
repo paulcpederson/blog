@@ -2,9 +2,9 @@
 title: ArcGIS Online
 date: 2019-10-19
 template: _templates/work.html
-feature: arcgis-feature.jpg
-thumbnail: arcgis.jpg
-twitter_image: arcgis.jpg
+feature: arcgis-feature.webp
+thumbnail: arcgis.webp
+twitter_image: arcgis.webp
 canvas: gray
 spot: blue
 site: 'https://arcgis.com'
@@ -65,7 +65,7 @@ By using a flexible-width grid along with a responsive navigation and layout, we
 
 ### Accessibile
 
-![Lighthouse score](a11y.png)
+![Lighthouse score](a11y.webp)
 <p class="caption">Managed to get 100/100 in the Chrome audits tab!</p>
 
 When we began work, accessibility was starting to become very important for many organizations. Customers were beginning to ask for more accessible web experiences. As we redesigned and reimplmented legacy interfaces, we also made an effort to ensure the new work would be WCAG 2.0 AA-compliant. This meant using accessible contrast, ensuring screen reader support, and taking care to structure the application markup semantically.

@@ -3,8 +3,8 @@ title: r/analog
 date: 2020-05-17
 template: _templates/article.html
 background: css.svg
-thumbnail: ranalog-thumb.jpg
-twitter_image: ranalog-thumb.jpg
+thumbnail: ranalog-thumb.webp
+twitter_image: ranalog-thumb.webp
 canvas: navy
 
 site: 'https://ranalog.club/'
@@ -92,22 +92,22 @@ My manifest looked something like this:
   "background_color": "#fff",
   "theme_color": "#fff",
   "icons": [{
-    "src": "img/icon-32.png",
+    "src": "img/icon-32.webp",
     "sizes": "32x32",
     "type": "image/png"
   },
   {
-    "src": "img/icon-64.png",
+    "src": "img/icon-64.webp",
     "sizes": "64x64",
     "type": "image/png"
   },
   {
-    "src": "img/icon-256.png",
+    "src": "img/icon-256.webp",
     "sizes": "256x256",
     "type": "image/png"
   },
   {
-    "src": "img/icon-512.png",
+    "src": "img/icon-512.webp",
     "sizes": "512x512",
     "type": "image/png"
   }]

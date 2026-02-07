@@ -3,7 +3,7 @@ title: Stencil Testing Cheatsheet
 date: 2020-05-18
 template: _templates/snippets.html
 description: A collection of useful code snippets and examples for writing End to End tests in a Stencil project.
-twitter_image: stencil-tests-thumb.jpg
+twitter_image: stencil-tests-thumb.webp
 snippet: true
 ---
 

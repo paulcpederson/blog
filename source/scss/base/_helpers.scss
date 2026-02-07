@@ -72,18 +72,22 @@
 
 .flex-0 {
   flex: 0 0 0;
+  min-width: 0;
 }
 
 .flex-1 {
   flex: 1 0 0;
+  min-width: 0;
 }
 
 .flex-2 {
   flex: 2 0 0;
+  min-width: 0;
 }
 
 .flex-3 {
   flex: 3 0 0;
+  min-width: 0;
 }
 
 @media screen and (max-width: 640px) {
@@ -315,7 +319,9 @@
 .bg-dotted {
   background-image: radial-gradient(#dfdfdf 15%, transparent 16%);
   background-size: 0.75vw 0.75vw;
-  background-position: 0 0, 40px 40px;
+  background-position:
+    0 0,
+    40px 40px;
 }
 
 .fullscreen {

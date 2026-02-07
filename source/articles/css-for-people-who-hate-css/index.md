@@ -4,7 +4,7 @@ date: 2016-2-9
 template: _templates/article.html
 background: css.svg
 thumbnail: css-thumb.svg
-twitter_image: css-thumb.jpg
+twitter_image: css-thumb.webp
 canvas: navy
 spot: blue
 description: "CSS can quickly become an unmanageable nightmare of important rules and overly-specific selectors, don't let it."

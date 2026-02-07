@@ -4,15 +4,15 @@ date: 2026-1-19
 template: _templates/article.html
 description: A love letter to one of the greatest pocketable cameras of all time.
 background: web.svg
-thumbnail: klasse-thumb.png
-twitter_image: klasse-thumb.png
-feature: klasse-thumb.png
+thumbnail: klasse.webp
+twitter_image: klasse.webp
+feature: klasse.webp
 canvas: tan
 spot: gray
 featured: true
 ---
 
-Over the past twenty years, I've gone through my share of cameras. I've used phones, digital cameras, medium format, rangefinders, plastic toy cameras, and disposable cameras. In 2018 I bought a Fuji Klasse S from Japan. When I clicked the buy now button I had no idea that this camera would end the revolving carousel of cameras and become my main carry-everywhere camera for a eight years.
+Over the past twenty years, I've gone through my share of cameras. I've used phones, digital cameras, medium format, rangefinders, plastic toy cameras, and disposable cameras. In 2018 I bought a Fuji Klasse S from Japan. When I clicked the buy now button I had no idea that this camera would end the revolving carousel of cameras and become my main carry-everywhere camera for eight years.
 
 <div class="photo-grid">
   <img src="rowing.webp" alt="top view of crew team rowing">
@@ -58,7 +58,7 @@ I have tried several other film cameras that are heralded as "portable" and most
 
 ## 2. Easy
 
-The Klasse S has one of the best shooting workflows (for me) that I've used. You can put it in full auto and not really think about anything ever again if you want to. If you need more control, you can set the aperature with a simple thumb dial on the top. Half press and you'll see what your shutter speed would be, adjust with the +/- exposure compensation if you need something else.
+The Klasse S has one of the best shooting workflows (for me) that I've used. You can put it in full auto and not really think about anything ever again if you want to. If you need more control, you can set the aperture with a simple thumb dial on the top. Half press and you'll see what your shutter speed would be, adjust with the +/- exposure compensation if you need something else.
 
 Loading film? Just put the film in, with the leader sticking out a bit and close the back. I never had this fail to load the film correctly.
 

@@ -4,7 +4,7 @@ date: 2019-10-22
 template: _templates/article.html
 background: css.svg
 thumbnail: storybook-thumb.svg
-twitter_image: storybook-thumb.jpg
+twitter_image: storybook-thumb.webp
 canvas: navy
 spot: blue
 description: Learn how to generate stellar documentation for all of your Stencil.js components using Storybook.

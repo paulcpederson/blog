@@ -3,7 +3,7 @@ title: Stencil Icons
 date: 2020-05-05
 template: _templates/article.html
 thumbnail: icon-thumb.svg
-twitter_image: icon-thumb.png
+twitter_image: icon-thumb.webp
 canvas: navy
 spot: green
 description: How we created a stencil-based web component for displaying SVG icons

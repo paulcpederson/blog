@@ -3,7 +3,7 @@ title: Using NPM as a Task Runner
 date: 2015-4-8
 template: _templates/article.html
 background: npm-run.svg
-thumbnail: npm-run-thumb.jpg
+thumbnail: npm-run-thumb.webp
 canvas: tan
 spot: blue
 description: "Use npm to automate front-end development tasks such as image optimization, Sass compilation, and running a local server."

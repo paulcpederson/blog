@@ -3,9 +3,9 @@ title: Sublime Writer
 date: 2012-11-21
 template: _templates/article.html
 description: Bringing the beauty and simplicity of iA Writer to Sublime Text 2
-background: sublime-writer.jpg
-feature: sublime-writer-feature.png
-thumbnail: sublime-writer-thumb.jpg
+background: sublime-writer.webp
+feature: sublime-writer-feature.webp
+thumbnail: sublime-writer-thumb.webp
 canvas: navy
 spot: cyan
 ---
